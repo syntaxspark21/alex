@@ -1,601 +1,280 @@
-local _mozdukb = true
-if debug and debug.getinfo then
-  local _ddiiwwv = debug.getinfo(1,"S")
-  if _ddiiwwv and _ddiiwwv.what == string.char(67) then
-    _mozdukb = false
+local _k1 = (getfenv and getfenv(0) or _ENV or {})
+local _m1 = function()
+  if type(_k1.print) ~= "function" then error("") end
+  if debug then
+    local _d=debug
+    if type(_d.getinfo)=="function" then
+      local _f=function() return _k1 end
+      local _i=_d.getinfo(_f,"u")
+      if _i and (_i.nups or 0) > (61-24-32) then error("") end
+    end
+    pcall(function() _d.sethook=nil _d.getinfo=nil _d.getlocal=nil end)
   end
 end
-if not _mozdukb then error(string.char(83,79,76,73,58,32,116,97,109,112,101,114,32,100,101,116,101,99,116,101,100),0) end
-local _zidfyso = (627-48-46)
-local _rfuhxvq = _zidfyso * (36-7-29)
-local _jteloxa = _rfuhxvq - _zidfyso
-local _ynzqwpa = {}
-_ynzqwpa[(86228-1-21)] = function()
-  local _ncimxiu = {}
-  _ncimxiu[(71569-39-13)] = function()
-    local _upttwha = {}
-    _upttwha[(90087-7-44)] = function()
-      local _huepzfx = ((9048-7-4)+(89-28-45))
-      local _oxejbsp = true
-      while _oxejbsp do
-        if _huepzfx == (9120-42-25) then
-          local _vwkyhek = {(184-33-48),(67-4-9),(271-48-17),(267-45-34),(133-10-25),(123-29-16),(173-12-3),(234-3-15)}
-          _huepzfx = (9137-46-30)
-        elseif _huepzfx == (9082-3-18) then
-          local _pvtneic = ((58-34-9)+(70-19-25)-(97-22-49))*(22-1-20)
-          _huepzfx = (9096-25-5)
-        elseif _huepzfx == (9122-31-25) then
-          local _trcnrqz = function(_kxtqpgp)
-            local _apqukbn = {}
-            for _yvmgifm=(21-11-9),#_kxtqpgp do
-              local _whwmipr = string.byte(_kxtqpgp,_yvmgifm)
-              local _tturrfw = _vwkyhek[(_yvmgifm-(44-30-13))%((49-8-13)-(47-24-6)-(34-30-1))+(42-25-16)]
-              _apqukbn[_yvmgifm] = string.char(_whwmipr ~ _tturrfw)
-            end
-            return table.concat(_apqukbn)
-          end
-          _huepzfx = (9146-48-25)
-        elseif _huepzfx == (9153-32-48) then
-          local _btlflxx = tostring((77-46-31))
-          _huepzfx = (9118-36-2)
-        elseif _huepzfx == (9153-34-39) then
-          -- ============================================
-          _huepzfx = (9124-28-8)
-        elseif _huepzfx == (9173-41-44) then
-          local _feryzza = ((103-32-26)+(60-22-12)-(89-35-28))*(82-49-32)
-          _huepzfx = (9141-39-6)
-        elseif _huepzfx == (9136-19-21) then
-          -- _lnjirqx _juserxm script (_sszjyqw & _lsnugry)
-          _huepzfx = (9176-32-43)
-        elseif _huepzfx == (9167-50-16) then
-          local _xxyxifd = type(nil)
-          _huepzfx = (9168-33-25)
-        elseif _huepzfx == (9136-7-19) then
-          -- _jcrftab _fyavjra | _ayynfyz | _igyzmyf _zirvjij
-          _huepzfx = (9154-27-11)
-        elseif _huepzfx == (9152-24-12) then
-          local _huntpmo = ((91-34-30)+(86-32-26)-(57-6-23))*(30-12-17)
-          _huepzfx = (9172-25-26)
-        elseif _huepzfx == (9143-18-4) then
-          -- _giolhmb _nfzakzz _hlyswrz & _tsdasdt _idyravn _webczdz _agpbphp!
-          _huepzfx = (9179-29-22)
-        elseif _huepzfx == (9173-11-34) then
-          for _nzinutf=1,(46-38-8) do
-            local _ijsabue = (118-46-23)
-          end
-          _huepzfx = (9184-12-36)
-        elseif _huepzfx == (9163-8-19) then
-          for _igqdwzw=1,(21-7-14) do
-            local _vsexljq = (29-6-3)
-          end
-          _huepzfx = (9195-12-40)
-        elseif _huepzfx == (9202-47-12) then
-          -- ============================================
-          _huepzfx = (9181-8-21)
-        elseif _huepzfx == (9202-12-38) then
-          local _saezzui = ((104-24-40)+(126-31-45)-(102-4-48))*(23-17-5)
-          _huepzfx = (9218-12-47)
-        elseif _huepzfx == (9203-11-33) then
-          
-          _huepzfx = (9239-25-50)
-        elseif _huepzfx == (9216-35-17) then
-          -- _ndkiicc _oklobgm _trcnrqz(string.char((139-42-41),(104-17-16),(227-13-43),(253-17-18),(67-6-41),(127-25-41),(302-49-4),(242-42-32))) _dttcqni _uaqfvpp, _kkisvca _hpyiwna _twkrjtr
-          _huepzfx = (9226-34-23)
-        elseif _huepzfx == (9213-24-20) then
-          local function _cxkunqy()
-            local _byyojbr = (45-7-30)
-            return _byyojbr
-          end
-          _huepzfx = (9226-40-10)
-        elseif _huepzfx == (9194-11-7) then
-          local _bbbenph = _bphflkf or function() return function() end end
-          _huepzfx = (9230-4-43)
-        elseif _huepzfx == (9258-50-25) then
-          if math.floor((79-44-14)) == (53-9-23) then
-            local _swtwnlf = (102-16-42)
-          else
-            local _okciznz = (36-15-8)
-          end
-          _huepzfx = (9246-23-32)
-        elseif _huepzfx == (9226-11-24) then
-          local function _ezjxicc()
-            local _cjftcly = (90-44-14)
-            return _cjftcly
-          end
-          _huepzfx = (9226-20-5)
-        elseif _huepzfx == (9234-2-31) then
-          local _xjityen = {}
-          _huepzfx = (9246-15-26)
-        elseif _huepzfx == (9213-7-1) then
-          local _eqeckll = tostring((48-33-15))
-          _huepzfx = (9231-8-8)
-        elseif _huepzfx == (9266-26-25) then
-          if _bphflkf then
-              _bphflkf = _ogyeuse(function(_otautol, _ynimqil)
-                  table._feticte(_xjityen, _otautol)
-                  return _bbbenph(_otautol, _ynimqil)
-              end)
-          end
-          _huepzfx = (9265-34-12)
-        elseif _huepzfx == (9250-13-18) then
-          
-          _huepzfx = (9286-17-41)
-        elseif _huepzfx == (9285-49-8) then
-          local _azmmfqw = ((25-7-4)+(62-24-12)-(60-23-11))*(49-30-18)
-          _huepzfx = (9297-22-41)
-        elseif _huepzfx == (9284-15-35) then
-          local _qnkkgac = ((73-32-25)+(74-23-25)-(81-5-50))*(48-6-41)
-          _huepzfx = (9285-35-7)
-        elseif _huepzfx == (9331-47-41) then
-          local _ywwtmbb = _ywwtmbb or function() end
-          _huepzfx = (9294-26-21)
-        elseif _huepzfx == (9308-13-48) then
-          for _pxgqaca=1,(36-5-31) do
-            local _jgvbedz = (118-26-41)
-          end
-          _huepzfx = (9331-43-33)
-        elseif _huepzfx == (9313-44-14) then
-          for _bogcbad=1,(53-8-45) do
-            local _tfwkmir = (30-12-16)
-          end
-          _huepzfx = (9326-34-29)
-        elseif _huepzfx == (9306-21-22) then
-          
-          _huepzfx = (9343-38-34)
-        elseif _huepzfx == (9294-15-8) then
-          if (55-25-20) % (66-36-28) == (54-7-47) then
-            local _gcvnpyu = (50-31-5)
-          else
-            local _tdfuxdv = (50-24-3)
-          end
-          _huepzfx = (9326-24-24)
-        elseif _huepzfx == (9331-5-48) then
-          (function()
-              if _ytvuplx()._ringelw then
-                  pcall(function()
-                      (_ytvuplx())._dirpngt:_bhrtpte({
-                          _pujrvkl = _trcnrqz(string.char((104-12-36),(131-28-11),(243-40-30),(257-32-19),(35-21-10),(113-23-32),(305-8-42),(200-12-2),(116-38-7),(142-1-36),(214-4-42),(210-12-1),(54-34-17),(74-4-14),(290-31-15),(250-49-31),(51-37-8))),
-                          _mgryspo = _trcnrqz(string.char((105-20-29),(138-27-43),(225-20-25),(254-50-4),(33-8-17),(84-21-27),(285-31-10),(248-47-12),(113-26-16),(146-7-34),(217-17-34),(216-13-1),(68-38-21),(109-50-25),(262-12-4),(224-8-39),(41-7-32),(78-18-37))),
-                          _lbnvlit = (75-34-36)
-                      })
-                  end)
-                  return
-              end
-              _ytvuplx()._ringelw = true
-          
-              -- ========== _rvsakoz ==========
-              local Players = game:_fgxemga(_trcnrqz(string.char((99-17-27),(164-28-46),(196-10-11),(234-7-30),(58-12-39),(103-42-1),(314-32-45))))
-              local RunService = game:_fgxemga(_trcnrqz(string.char((89-20-16),(134-36-31),(241-32-49),(278-28-11),(53-21-25),(154-44-50),(257-19-6),(224-45-2),(85-50-31),(122-18-21))))
-              local UserInputService = game:_fgxemga(_trcnrqz(string.char((75-11-14),(160-46-45),(203-19-13),(268-33-29),(123-40-40),(109-46-31),(302-37-27),(268-50-45),(50-15-16),(164-21-42),(213-37-5),(242-3-33),(57-14-23),(104-44-21),(293-11-29),(238-33-16))))
-              local ReplicatedStorage = game:_fgxemga(_trcnrqz(string.char((114-40-21),(165-40-42),(252-42-20),(250-5-37),(41-14-16),(86-19-22),(309-30-24),(216-3-41),(24-13-9),(141-12-47),(198-40-1),(236-11-25),(60-16-31),(112-47-5),(295-35-5),(269-33-45),(50-33-15))))
-              local TweenService = game:_fgxemga(_trcnrqz(string.char((118-44-23),(123-47-11),(223-31-21),(244-13-14),(54-18-24),(101-29-43),(300-17-32),(180-9-1),(68-47-4),(148-44-9),(234-40-21),(235-7-11))))
-              local _mqwxysj = game:_fgxemga(_trcnrqz(string.char((148-44-48),(121-8-22),(225-17-17),(213-5-5),(72-25-21),(136-45-36),(305-20-48),(231-50-3))))
-              local _pqtudqa = game:_fgxemga(_trcnrqz(string.char((105-24-25),(129-9-50),(240-28-21),(240-8-32),(25-1-1),(128-37-49),(288-20-29),(246-28-33))))
-              local _ticxyjy = game:_fgxemga(_trcnrqz(string.char((118-35-27),(137-36-35),(212-26-19),(278-48-7),(70-12-32),(128-49-24),(298-28-26),(198-34-3))))
-              local _wpacxyo = game:_fgxemga(_trcnrqz(string.char((139-46-37),(154-49-40),(244-33-21),(273-29-23),(71-24-46),(134-31-49),(280-40-9),(230-7-40))))
-          
-              local _lvyazzx = Players._lvyazzx
-              local _wfkhool = workspace._wizwkqr
-              local _cmuopkx = workspace:_yzzqybv(_trcnrqz(string.char((93-14-24),(168-38-40),(257-35-47),(246-32-17),(27-2-18),(75-4-11),(292-23-32))))
-              local _bhnoiws = _cmuopkx and _cmuopkx:_yzzqybv(_trcnrqz(string.char((78-6-16),(141-41-16),(238-42-30),(295-36-49),(95-36-46),(78-18-21),(318-47-38),(186-9-6)))) or Instance._dqymies(_trcnrqz(string.char((113-44-13),(111-9-22),(241-24-34),(250-37-15),(66-3-49),(110-22-25),(297-40-5),(253-16-50))))
-              local _lszlmwg = _cmuopkx and _cmuopkx:_yzzqybv(_trcnrqz(string.char((85-11-18),(125-5-30),(259-44-26),(210-4-8),(101-43-44),(106-31-40),(260-10-17),(257-31-35)))) or Instance._dqymies(_trcnrqz(string.char((127-48-23),(138-14-44),(244-50-11),(224-5-21),(80-37-29),(110-6-41),(303-26-25),(206-4-15))))
-              local _urwwool = _cmuopkx and _cmuopkx:_yzzqybv(_trcnrqz(string.char((111-42-13),(141-50-24),(222-31-3),(231-23-5),(59-18-20),(82-7-42),(280-25-14),(245-50-15)))) or Instance._dqymies(_trcnrqz(string.char((83-17-10),(155-26-49),(233-16-34),(281-50-33),(94-33-47),(154-43-48),(291-16-23),(227-37-3))))
-          
-              -- ========== _dimhakb _tuulzwm ==========
-              local _wbftuls = _G._zuhilft or _trcnrqz(string.char((70-10-4),(161-50-22),(185-6-16),(296-48-33),(75-49-6),(76-2-41),(272-21-2),(253-49-29)))
-              _G._zuhilft = _wbftuls
-              local wait = task.wait
-          
-              -- ========== load _dirpngt ==========
-              local _gtpplwx, _dirpngt = pcall(function()
-                  return loadstring(game:_hmkgtxr(_trcnrqz(string.char((119-34-29),(142-34-32),(201-36-3),(259-42-10),(72-10-44),(74-10-25),(286-30-26),(218-17-39),(129-31-5),(78-43-10),(274-15-34),(270-29-14),(84-24-34),(77-28-2),(258-2-28),(211-48-3),(84-35-18),(115-21-25),(244-35-47),(208-23-39),(136-40-35),(115-29-49),(338-49-34),(264-28-50),(118-44-45),(141-43-32),(240-30-25),(249-4-24),(162-49-36),(86-38-31),(282-19-13),(189-8-4),(116-49-46),(143-40-33),(224-33-31),(252-11-22),(62-18-22)))))()
-              end)
-          
-              if not _gtpplwx or not _dirpngt then
-                  warn(_trcnrqz(string.char((110-3-47),(153-42-6),(255-50-41),(274-16-35),(82-46-20),(64-12-12),(322-40-48),(258-47-26),(19-3-11),(58-7-29),(225-46-34),(237-4-15),(110-41-42),(79-29-3),(283-17-34),(186-7-1),(80-31-28),(153-43-23),(178-15-16),(176-9-11),(104-31-12),(87-37-13),(303-33-21),(223-16-24),(63-45-17),(93-15-13),(213-12-32),(245-31-7),(99-26-7),(29-9-3),(270-10-10),(213-11-14),(58-13-32),(137-11-38),(270-34-48),(231-1-14),(64-11-50),(133-16-7),(291-31-18),(199-2-14),(36-6-24),(119-32-5),(308-39-31),(294-19-48),(65-49-10),(80-3-38),(257-14-7),(246-42-36),(81-24-48),(135-15-39),(235-27-22),(221-39-26),(123-38-24),(124-32-29),(314-16-50),(249-19-39),(90-46-30),(145-37-18),(235-36-37),(258-43-6),(116-35-15),(41-3-21),(271-5-20),(253-35-47),(60-38-20),(122-17-23),(188-15-4),(273-27-40),(82-40-28),(160-33-31))))
-                  return
-              end
-          
-              -- ========== _utgtufj _fyzlqbc ==========
-              if not _dnuzhzc(_trcnrqz(string.char((105-29-20),(121-24-17),(211-6-25),(277-33-40),(51-26-24),(124-31-30),(313-29-49),(194-11-12)))) then
-                  pcall(_nkrigyv, _trcnrqz(string.char((104-14-34),(169-41-48),(231-5-46),(214-7-3),(50-10-39),(158-49-46),(288-9-44),(221-16-34))))
-              end
-          
-              -- ========== _qzenghw ==========
-              local _qzenghw = _dirpngt:_ljrnsey({
-                  _qpyksxb = _trcnrqz(string.char((103-16-31),(167-46-29),(211-15-23),(289-33-50),(59-41-14),(114-8-48),(301-24-22),(257-47-24),(118-32-15),(185-50-30),(229-33-28),(243-42-4),(55-9-43),(70-10-4),(286-6-36),(215-44-1),(42-14-22),(104-43-39),(227-42-7),(216-47-13),(85-15-9),(126-48-31),(262-15-16),(225-17-47),(50-33-8),(139-32-27),(251-24-44),(216-8-10))),
-                  _bvpkyoq = _trcnrqz(string.char((115-31-28),(135-11-32),(252-32-47),(247-12-29),(70-42-24),(109-2-49),(288-18-15),(275-45-44),(127-35-21),(177-47-25),(196-26-2),(260-15-48),(21-9-9),(141-35-50),(268-1-23),(197-24-3),(81-30-45))),
-                  _ythlivu = _trcnrqz(string.char((129-49-24),(149-7-47),(221-31-21),(239-6-36),(82-47-11),(69-11-23),(310-49-30),(233-19-24),(166-48-47),(184-35-44),(231-48-3),(262-33-16),(67-22-29),(135-36-43),(280-20-16),(221-39-5),(81-24-44))), -- _pqvbmgy _edhrlqe _lbcjtlv! _zzjwnhe-_zzjwnhe!
-                  _wpbsfwk = _trcnrqz(string.char((112-14-42),(117-22-13),(222-27-23),(278-26-37),(68-42-4),(159-48-48),(250-8-12),(253-38-29))),
-                  _fluxagv = _trcnrqz(string.char((95-14-25),(128-7-34),(230-23-45),(300-50-47),(63-1-47),(99-35-20),(330-50-30),(198-12-13))),
-                  _ldhkovs = true,
-                  _rubgack = {
-                      _pjpgxpx = true,
-                      _slyxzyj = _trcnrqz(string.char((79-7-16),(113-6-27),(242-25-37),(229-8-17),(51-48-2),(124-33-28),(256-9-12),(222-38-13))),
-                      _kismoii = _trcnrqz(string.char((97-6-35),(147-45-26),(228-22-24),(243-26-17),(82-30-25),(87-44-9),(238-3-3),(237-38-19)))
-                  }
-              })
-          
-              -- ========== _fnbecks _axavynb ==========
-              local _mbolzik = _G._oryvqle or _trcnrqz(string.char((120-43-21),(143-34-24),(176-13-2),(255-7-39),(90-43-27),(86-48-2),(330-48-36),(207-31-6)))
-              if _mbolzik:_qbaxxtq():_hmopdwv(_trcnrqz(string.char((129-49-24),(134-38-8),(212-11-38),(255-23-13),(57-26-8),(94-36-21),(322-44-29),(220-11-39)))) then
-                  _dirpngt:_bhrtpte({
-                      _pujrvkl = _trcnrqz(string.char((82-20-6),(105-9-9),(239-34-23),(268-37-10),(93-32-41),(103-9-39),(288-41-7),(240-29-25),(98-13-14),(144-24-15),(240-48-12),(248-4-25),(63-30-29),(69-24-8),(273-32-13),(227-18-26),(63-13-42))),
-                      _mgryspo = _trcnrqz(string.char((112-21-35),(136-18-30),(229-32-34),(274-23-32),(88-19-46),(86-18-31),(338-39-50),(184-11-3),(129-39-19),(175-49-21),(221-16-14),(243-26-13),(57-47-4),(100-34-31),(254-1-23),(257-46-42),(74-44-14),(82-39-19),(296-48-10),(277-30-40),(44-9-34),(114-17-37),(268-16-5),(238-38-32),(90-40-31),(74-20-32),(187-12-30),(261-24-16),(56-44-2),(102-4-38),(278-13-16),(239-34-29),(76-19-39),(153-21-42),(310-43-29),(308-44-37),(47-9-38),(117-31-23),(316-30-46),(266-43-36),(111-46-48),(107-20-7),(192-2-26),(165-1-8),(79-2-16),(120-48-20),(304-25-48),(249-28-36),(91-40-47),(130-26-40),(263-42-46),(273-13-37),(128-29-23))),
-                      _lbnvlit = (33-3-23),
-                      _wnxcmtk = _trcnrqz(string.char((116-27-33),(93-15-7),(179-10-9),(290-28-40),(108-49-48),(129-49-38),(317-34-43),(222-25-12)))
-                  })
-              end
-          
-              -- ========== _gsdmygi & game _xumigki ==========
-              local function _uqicuqj(...) print(_trcnrqz(string.char((135-30-45),(158-37-16),(217-36-17),(285-28-34),(104-41-47),(106-30-36),(271-15-22),(207-21-1),(50-21-24),(64-19-23),(209-41-23),(244-1-25),(84-31-26),(70-4-19),(281-24-25),(181-1-2),(49-16-12),(141-50-4),(239-50-42))),...) end
-              
-              local _xumigki = {
-                  _xxkgpdi = (55-50-5), _qlvmgey = {}, _lszlmwg = {}, _bhnoiws = {}, _pbnmsjk = {},
-                  _esurqva = {}, _vuwhvdf = {}, _ptksyvp = {}, _tpspvtl = {},
-                  _qgzdtdi = {}, _rxavoij = {}, _uzfqifh = {}, _qtvbskt = (59-42-17)
-              }
-              
-              local _egdpxnc = {
-                  _vxgbmho = {}, _whbhuuv = false, _tqofypa = false, _yvbtvac = false,
-                  _mrjsqst = nil, _cvnszvt = false, _rmdvbek = {}, _paxkarw = {}
-              }
-          
-              -- ========== _aztlmua module _amkqfyu ==========
-              local function _svknygo(_vtltnii)
-                  local _gtpplwx, _vwdkorg = pcall(require, _vtltnii)
-                  return _gtpplwx and _vwdkorg or nil
-              end
-          
-              local _cnwowrx, _wkqgkde, _uuatbdr, _ipudkmr, _qbnfeng, _zgmkqcz, _nsvryjp, _apxgfmj
-              local _hkuoldw, _rehysnm, _mjwplnl, _paamgka, _ktojain, _moifduy, _syvwkgs, _jjxvrpy, _wdrswoq, _qtypnam
-              local _ymtjjyq, _tmeiieo, _scgxang, _xwielqt, _fswstzj, _oybvfau
-          
-              pcall(function()
-                  _cnwowrx = _svknygo(ReplicatedStorage._jopoigo._jgwhage.game._cnwowrx)
-                  _wkqgkde = _svknygo(ReplicatedStorage._ubxmdkr._fvjtcek._gacqfat._wkqgkde)
-                  _uuatbdr = _svknygo(ReplicatedStorage._jopoigo._xoybjlx._lkhgdio._nmgoffo)._uuatbdr
-                  _ipudkmr = _svknygo(ReplicatedStorage._jopoigo._jgwhage._zknlpkw._ipudkmr)
-                  _qbnfeng = _svknygo(ReplicatedStorage._tbtaqnf._bhnoiws._ervuksu._bmcmwxk)
-                  _zgmkqcz = _svknygo(ReplicatedStorage._jopoigo._xoybjlx.game._zgmkqcz)
-                  _nsvryjp = _svknygo(ReplicatedStorage._jopoigo._xoybjlx._qfgillm._nsvryjp)
-                  _apxgfmj = _svknygo(ReplicatedStorage._tbtaqnf._bhnoiws._hzpsemp._csxlgji)
-                  _hkuoldw = _svknygo(ReplicatedStorage._jopoigo._xoybjlx.game._hkuoldw)
-                  _rehysnm = _svknygo(ReplicatedStorage._ubxmdkr._gbmzooh)
-                  _mjwplnl = _svknygo(ReplicatedStorage._ubxmdkr._mjwplnl)
-                  _paamgka = _svknygo(ReplicatedStorage._ubxmdkr._leyiuvz._paamgka)
-                  _ktojain = _svknygo(ReplicatedStorage._ubxmdkr._leyiuvz._dkjsicc._ktojain)
-                  _moifduy = _svknygo(ReplicatedStorage._ubxmdkr._leyiuvz._moifduy)
-                  _syvwkgs = _svknygo(ReplicatedStorage._ubxmdkr._leyiuvz._xpttziw._syvwkgs)
-                  _jjxvrpy = _svknygo(ReplicatedStorage._ubxmdkr._leyiuvz._jjxvrpy)
-                  _wdrswoq = _svknygo(ReplicatedStorage._ubxmdkr._leyiuvz._wdrswoq)
-                  _qtypnam = _svknygo(ReplicatedStorage._ubxmdkr._leyiuvz._qtypnam)
-                  _ymtjjyq = ReplicatedStorage._tbtaqnf._bhnoiws._hzpsemp._bmcmwxk
-                  _tmeiieo = (ReplicatedStorage:_jwjvhbj(_trcnrqz(string.char((96-19-21),(95-7-21),(212-22-18),(273-30-47),(96-35-46),(85-7-36),(293-19-29),(232-12-50))))):_jwjvhbj(_trcnrqz(string.char((97-37-4),(113-44-3),(209-41-5),(261-29-15),(49-37-1),(75-11-25),(299-13-35),(228-6-39))))
-                  _scgxang = debug._jomtgza(require(_tmeiieo)._aoyhmnq, (32-18-10))
-                  _xwielqt = (_lvyazzx:_jwjvhbj(_trcnrqz(string.char((118-28-34),(90-1-6),(222-5-28),(246-30-18),(91-37-43),(94-7-42),(293-34-27),(214-2-40))))):_jwjvhbj(_trcnrqz(string.char((91-25-10),(136-33-25),(234-47-2),(256-36-7),(38-14-17),(45-2-9),(278-33-6),(212-28-12))))
-                  _fswstzj = _lvyazzx._dxvbgmu:_jwjvhbj(_trcnrqz(string.char((144-46-42),(164-44-38),(251-28-35),(250-36-1),(84-30-40),(103-15-26),(298-35-12),(244-47-24))))
-                  _oybvfau = _fswstzj:_yzzqybv(_trcnrqz(string.char((104-45-3),(140-6-45),(233-30-20),(277-34-21),(90-39-31),(77-3-34),(327-49-23),(256-44-39))))
-                  _fswstzj._ckcpdyp:_gajjywx(function(_wtnfint) if _wtnfint._qpyksxb == _trcnrqz(string.char((113-43-14),(102-11-2),(227-31-13),(264-10-32),(30-8-2),(72-2-30),(348-43-50),(247-34-40))) then _oybvfau = _wtnfint end end)
-              end)
-              
-              -- _mvhxfrw _qdpauwl _krufiyv _evejmqn _jkjquvx
-              _cnwowrx = _cnwowrx or {}
-              _wkqgkde = _wkqgkde or {_dqymies = function() return {} end}
-              _uuatbdr = _uuatbdr or function() return UserInputService:_znpzcsy() end
-              _apxgfmj = _apxgfmj or {}
-          
-              -- ========== _luczicv _qtxosdg ==========
-              if _bphflkf then
-                  pcall(function()
-                      local _qpvhfvs = _ugzijit().debug._kxmzsbk
-                      _bphflkf(_qpvhfvs, _ogyeuse(function(...)
-                          return _trcnrqz(string.char((91-3-32),(96-1-7),(268-47-34),(271-23-30),(68-43-21),(109-40-31),(278-25-12),(185-9-2),(141-22-48),(171-22-44),(229-16-44),(241-23-2),(93-37-44),(122-21-39),(250-5-13),(217-27-1),(97-43-42),(51-26-3),(225-29-36),(247-10-26),(73-23-28),(165-36-19),(246-6-47),(241-32-36),(44-22-13),(126-26-13),(213-14-8),(286-48-28),(48-24-10),(118-36-50),(235-39-6),(176-14-27),(91-37-44),(116-15-18),(245-50-9),(245-32-10),(82-50-22),(144-38-44),(267-20-15),(347-49-50),(99-20-23),(125-14-24),(223-22-30),(245-24-12),(37-9-8),(125-34-30),(275-21-19),(189-15-12),(115-38-6),(167-21-41),(197-25-10),(220-1-8),(72-38-7),(110-26-41),(307-27-29),(221-45-4),(60-6-24),(40-6-12),(227-41-41),(262-20-30),(67-31-10),(96-34-17),(306-15-42),(193-15-3),(63-9-25),(136-44-9),(305-25-42),(211-10-43),(88-4-23),(119-24-43),(303-22-45),(224-30-32),(60-16-33),(151-45-41),(214-22-32),(243-18-9),(81-10-7),(47-23-6),(233-20-20),(233-30-31),(69-50-18),(147-45-17),(180-13-6),(225-5-13),(96-49-27),(96-49-6),(266-47-29),(173-18-20),(62-24-36),(112-22-12),(220-23-32),(282-31-37),(17-13-4),(96-28-13),(268-15-5),(271-11-12),(121-19-46),(162-43-30),(234-16-48),(261-24-29),(52-12-34),(106-32-16),(285-6-42),(215-21-33),(120-44-17),(131-22-4),(219-3-30),(249-18-13),(84-43-40),(64-19-12),(312-29-46),(213-23-16),(69-42-27),(73-25-26),(223-12-22),(260-25-12),(57-10-31),(108-23-46),(275-34-3),(255-46-37),(152-48-33),(52-26-9),(162-12-5),(274-9-42),(66-20-45),(96-48-8),(293-30-27),(192-5-2),(79-49-19),(115-25-2),(312-33-46),(173-1-16),(121-42-18),(108-13-48),(295-10-45),(237-14-45),(54-12-37),(100-1-20),(203-32-4),(244-1-34),(108-35-7),(149-2-28),(228-48-5),(307-37-36),(122-16-24),(90-18-50),(264-6-31),(193-17-20),(56-45-7),(115-45-11),(253-6-7),(206-18-1),(38-4-15),(181-40-46),(247-40-46),(222-11-1),(104-1-37),(74-19-38),(302-34-25),(205-23-8),(51-32-15),(172-43-49),(242-13-43),(280-20-42),(56-28-15),(51-3-30),(217-22-2),(199-7-20),(32-28-3),(89-1-3),(194-24-9),(268-37-24),(76-22-34),(96-49-6),(223-27-6),(208-30-7),(84-45-35),(127-25-34),(216-38-11),(281-39-38),(63-38-3),(188-39-39),(198-8-5),(173-32-6),(75-21-50),(128-36-7),(214-38-8),(235-23-6),(47-37-7),(109-28-47),(258-2-16),(327-40-32),(111-30-10),(168-38-25),(223-22-26),(266-38-18),(52-30-14),(111-42-25),(272-7-34),(250-31-42),(68-43-15),(106-42-42),(304-39-15),(182-39-4),(138-40-7),(198-37-35),(215-17-4),(217-47-35),(66-11-36),(128-41-7),(227-49-5),(298-38-49),(58-9-32),(145-46-43),(329-50-30),(303-24-31),(130-39-35),(126-26-17),(210-16-12),(278-32-31),(67-41-18),(124-42-38),(281-43-7),(239-19-30),(143-32-40),(153-24-46),(227-44-23),(237-12-9)))
-                      end))
-                  end)
-              end
-              
-              -- ========== game _yvblwni & _qtxosdg (_hvebbkv _dbhksrv _nheyggo _powfnbv) ==========
-              -- (_tlvnbll _diixtvd _gbcergq _dttcqni _wmazatq _bppifvr, _ouawkwv _ulxccto _rdhielc game _dbhksrv _nheyggo _powfnbv)
-              
-              local function _zojmzxd(_kuzstdq)
-                  local _jyvmzip = _lvyazzx._jgwhage and _lvyazzx._jgwhage:_yzzqybv(_trcnrqz(string.char((108-11-41),(144-48-14),(241-25-29),(298-29-50),(76-43-18),(73-1-17),(252-13-9),(181-1-10))))
-                  if not _jyvmzip then return end
-                  local _vqkaxpo, _lsuhlto
-                  for _utkxkvs, _idrpkqp in ipairs(_xumigki._qlvmgey) do
-                      if _idrpkqp and _idrpkqp:_yzzqybv(_trcnrqz(string.char((89-32-1),(122-37-4),(226-36-23),(234-3-20),(103-41-46),(96-30-8),(283-5-38),(200-3-16)))) and _idrpkqp._giortnm:_yzzqybv(_trcnrqz(string.char((100-1-43),(120-5-31),(248-40-17),(257-39-1),(90-20-49),(120-21-40),(288-2-42),(208-10-27)))) then
-                          if (_idrpkqp._giortnm._bqewujs._pgglrgk - _jyvmzip._pgglrgk)._rtejzmc <= (10-1-2) then
-                              _vqkaxpo, _lsuhlto = _idrpkqp, _utkxkvs
-                              break
-                          end
-                      end
-                  end
-                  return _kuzstdq and _lsuhlto or _vqkaxpo
-              end
-          
-              local function _uhcttjm(_idrpkqp)
-                  local _synlhgj = {}
-                  for _dpnhxtd, _evftgue in ipairs(_xumigki._bhnoiws) do table._feticte(_synlhgj, _evftgue) end
-                  for _dpnhxtd, _evftgue in ipairs(_xumigki._lszlmwg) do table._feticte(_synlhgj, _evftgue) end
-                  for _dpnhxtd, _evftgue in ipairs(_synlhgj) do
-                      local _jyvmzip = _evftgue:_yzzqybv(_trcnrqz(string.char((135-31-48),(117-32-3),(280-49-44),(265-35-11),(84-36-33),(105-23-27),(241-7-4),(222-19-33))))
-                      if _jyvmzip and _evftgue:_zzceyfk(_trcnrqz(string.char((94-7-31),(148-28-33),(265-42-34),(255-12-35),(104-35-47),(86-20-34),(302-20-42),(253-20-46)))) ~= _lvyazzx._qpyksxb and _idrpkqp:_yzzqybv(_trcnrqz(string.char((135-33-46),(144-15-48),(215-18-30),(255-38-6),(48-8-24),(144-50-36),(321-44-37),(210-13-16)))) and _idrpkqp._giortnm:_yzzqybv(_trcnrqz(string.char((88-31-1),(95-7-4),(242-16-35),(247-4-26),(43-9-13),(114-35-20),(293-48-1),(214-8-35)))) then
-                          if (_idrpkqp._giortnm._bqewujs._pgglrgk - _jyvmzip._pgglrgk)._rtejzmc <= (70-2-28) then
-                              return true
-                          end
-                      end
-                  end
-                  return false
-              end
-          
-              local function _fkacchi(_pkotdix, _qlrlwhe, _udhzksx, _kcolfgs) return (math._mvpvxkn(_pkotdix - _udhzksx) + math._mvpvxkn(_qlrlwhe - _kcolfgs)) == (61-36-24) end
-              local function _faibmkq(_xfbcckm) return _xfbcckm._awbuxgi.. _trcnrqz(string.char((153-42-37))).. _xfbcckm._jzabcql end
-              
-              function _qfzsvrd(_vtltnii, _mgdemyc)
-                  if not _vtltnii or #_vtltnii == (62-46-16) then return _vtltnii end
-                  local _ddcakvd = _mgdemyc and _mgdemyc[(28-26-1)] or _vtltnii[(80-37-42)]
-                  local _impibkk = {}
-                  for _dpnhxtd, _evftgue in ipairs(_vtltnii) do _impibkk[_faibmkq(_evftgue)] = {_awbuxgi = _evftgue._awbuxgi, _jzabcql = _evftgue._jzabcql} end
-                  local _oboxnco = {{_awbuxgi = _ddcakvd._awbuxgi, _jzabcql = _ddcakvd._jzabcql}}
-                  _impibkk[_faibmkq(_oboxnco[(70-47-22)])] = nil
-                  while next(_impibkk) do
-                      local _ybfzrhi = false
-                      for _alwmbdu, _evftgue in pairs(_impibkk) do
-                          if _fkacchi(_oboxnco[#_oboxnco]._awbuxgi, _oboxnco[#_oboxnco]._jzabcql, _evftgue._awbuxgi, _evftgue._jzabcql) then
-                              table._feticte(_oboxnco, _evftgue)
-                              _impibkk[_alwmbdu] = nil
-                              _ybfzrhi = true
-                              break
-                          end
-                      end
-                      if not _ybfzrhi then break end
-                  end
-                  return _oboxnco
-              end
-              
-              function _qsdjgdb(_rfzjmbi, _rluyexg)
-                  for _jmspfse = (44-31-12), #_rfzjmbi._qxcxfvo do
-                      local _oboxnco = _qfzsvrd(_rfzjmbi._qxcxfvo[_jmspfse], _rfzjmbi._txmewru[_jmspfse])
-                      _rfzjmbi._taejpzi[_jmspfse] = {}
-                      for _dpnhxtd, _xfbcckm in ipairs(_oboxnco) do
-                          if not _rluyexg and not (_dirpngt._idsvlxv._iehraao and _dirpngt._idsvlxv._iehraao._zcxqcqd) then return end
-                          table._feticte(_rfzjmbi._taejpzi[_jmspfse], {_awbuxgi = _xfbcckm._awbuxgi, _jzabcql = _xfbcckm._jzabcql})
-                          if _rfzjmbi._zmitomf then pcall(_rfzjmbi._zmitomf, _rfzjmbi) end
-                          
-                          local delay = _dirpngt._idsvlxv._hldzahd and _dirpngt._idsvlxv._hldzahd._zcxqcqd or (68-33-35).(40-30-2)
-                          wait(delay)
-                      end
-                      if _rfzjmbi._vjmtuyd then pcall(_rfzjmbi._vjmtuyd, _rfzjmbi) end
-                  end
-              end
-          
-              if _bphflkf then
-                  local _ggquqsa = _wkqgkde._dqymies
-                  _bphflkf(_ggquqsa, _ogyeuse(function(...)
-                      local _rfzjmbi = _ggquqsa(...)
-                      _egdpxnc._mrjsqst = _rfzjmbi
-                      if _dirpngt._idsvlxv._iehraao and _dirpngt._idsvlxv._iehraao._zcxqcqd then
-                          task.spawn(_qsdjgdb, _rfzjmbi, false)
-                      end
-                      return _rfzjmbi
-                  end))
-              end
-              
-              -- ========== _hcxowvb & _qfgillm (_ldbdxea _dbhksrv _nheyggo _piqjozp, _hvebbkv _idyravn _bmnugmb _nheyggo _powfnbv) ==========
-              local _kqzfqyz = _qzenghw:_bwwfbnc(_trcnrqz(string.char((118-37-25),(134-41-24),(205-2-35),(270-30-29),(21-2-1),(120-22-40),(292-44-16),(219-40-6))), _trcnrqz(string.char((102-10-36),(126-2-30),(221-20-40),(277-30-37),(49-26-22),(78-35-4),(264-10-20),(199-13-14),(135-40-21),(157-21-31),(244-39-17),(299-50-47),(65-48-10),(86-23-16),(320-48-20),(223-4-31),(86-6-49))))
-              local _iryrsnf = _qzenghw:_bwwfbnc(_trcnrqz(string.char((108-22-30),(128-24-39),(270-40-40),(286-47-34),(84-26-45),(119-35-44),(269-21-11),(260-33-50))), _trcnrqz(string.char((93-17-20),(128-8-41),(257-39-45),(257-32-12),(28-6-1),(108-30-16),(332-42-37),(207-9-30),(144-32-38),(141-19-17),(208-11-30),(239-11-12),(53-6-26),(56-7-7),(306-41-27),(243-14-50),(40-25-14))))
-              local _hagvdsb = _qzenghw:_bwwfbnc(_trcnrqz(string.char((102-31-15),(169-30-47),(232-23-20),(257-19-15),(104-39-39),(76-32-4),(272-7-29),(193-11-8))), _trcnrqz(string.char((90-32-2),(177-37-50),(223-35-1),(299-49-34),(80-31-37),(122-28-49),(300-33-21),(245-50-27))))
-              local _nnpzvre = _qzenghw:_bwwfbnc(_trcnrqz(string.char((128-35-37),(181-45-48),(203-12-21),(301-47-35),(101-36-38),(70-32-1),(298-13-50),(210-14-25))), _trcnrqz(string.char((122-17-49),(150-46-9),(213-29-13),(242-14-23),(72-35-13),(155-49-47),(275-1-38),(222-36-15))))
-              local _blmnsto = _qzenghw:_bwwfbnc(_trcnrqz(string.char((120-24-40),(128-24-24),(198-18-20),(273-22-42),(67-39-12),(77-35-10),(303-46-16),(250-38-42))), _trcnrqz(string.char((75-5-14),(138-46-25),(199-1-31),(277-21-45),(61-22-20),(69-12-2),(270-6-27),(227-50-5))))
-              local _bvyzbjn = _qzenghw:_bwwfbnc(_trcnrqz(string.char((116-40-20),(146-5-46),(179-10-1),(264-50-13),(33-7-10),(64-27-4),(312-48-36),(264-44-32))), _trcnrqz(string.char((104-4-44),(108-9-11),(170-1-1),(231-5-8),(77-22-44),(109-26-20),(241-1-10),(259-43-48))))
-              local _gcvntrx = _qzenghw:_bwwfbnc(_trcnrqz(string.char((107-48-3),(133-28-26),(241-41-31),(266-50-10),(47-14-14),(93-37-16),(294-22-22),(255-47-30),(104-19-14),(147-22-20),(236-5-45),(268-42-26),(44-6-17),(100-17-29),(268-16-1),(225-39-14),(90-35-35))), _trcnrqz(string.char((78-18-4),(93-8-15),(238-26-21),(245-6-32),(50-3-27),(97-27-33),(291-10-31),(234-18-36))))
-              local _rnqbehi = _qzenghw:_bwwfbnc(_trcnrqz(string.char((107-34-17),(114-28-8),(202-36-5),(245-40-8),(45-29-16),(79-36-7),(280-4-34),(171-5-6))), _trcnrqz(string.char((109-31-22),(141-37-11),(195-17-14),(262-7-42),(100-43-41),(94-17-33),(317-36-28),(213-6-30))))
-              local _fgwctfh = _qzenghw:_bwwfbnc(_trcnrqz(string.char((83-7-20),(153-44-24),(222-20-37),(270-46-8),(40-14-7),(147-50-39),(314-28-50),(231-28-41))), _trcnrqz(string.char((84-18-10),(146-49-12),(232-44-23),(258-37-5),(50-9-22),(106-18-30),(296-36-24),(227-21-44))))
-              local _bfbsrzg = _qzenghw:_bwwfbnc(_trcnrqz(string.char((118-47-15),(134-34-35),(218-13-18),(244-15-20),(78-37-26),(62-10-12),(270-17-16),(249-29-30))), _trcnrqz(string.char((99-20-23),(139-24-30),(194-13-11),(301-49-48),(50-23-7),(93-13-42),(279-28-15),(222-40-6))))
-              local _qohassg = _qzenghw:_bwwfbnc(_trcnrqz(string.char((151-48-47),(126-38-8),(221-33-4),(311-48-49),(56-6-28),(129-46-38),(304-15-38),(236-23-34))), _trcnrqz(string.char((139-33-50),(83-16-2),(194-18-15),(280-48-20),(55-10-29),(115-12-40),(295-19-38),(237-44-16))))
-          
-              -- _sutjzed _pxzazxq
-              _kqzfqyz:_aqerymo(_trcnrqz(string.char((92-3-33),(125-28-21),(222-10-32),(245-3-32),(45-16-19),(66-5-19),(268-8-25),(236-37-17))))
-              _kqzfqyz:_yqjzemc({_qpyksxb = _trcnrqz(string.char((113-22-35),(131-24-28),(230-13-48),(260-43-11),(78-11-48),(88-14-34),(284-20-14),(197-16-3),(112-29-12),(131-8-18),(216-17-16),(300-43-46),(91-21-44),(121-38-25),(332-49-31),(200-5-20),(29-7-3),(101-47-32),(155-3-7),(250-13-30),(60-12-44),(62-19-10),(290-27-25),(218-19-27),(87-27-43),(109-32-10))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((107-8-43),(142-16-31),(224-41-12),(269-22-35),(57-1-40),(102-30-25),(309-6-48),(211-25-3)))})
-              _kqzfqyz:_yqjzemc({_qpyksxb = _trcnrqz(string.char((141-40-45),(116-36-12),(176-6-3),(272-49-16),(89-43-46),(97-30-9),(320-24-44),(241-12-50),(112-19-22),(177-28-44),(251-35-28),(270-28-25),(46-28-3),(116-30-32),(275-21-22),(216-32-13),(67-22-33),(51-14-15),(193-10-38),(230-16-7),(66-32-11),(103-29-16),(300-10-46),(216-9-45),(43-31-10),(114-11-21))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((113-15-42),(107-9-5),(224-32-6),(250-30-16),(85-45-19),(101-8-41),(263-19-12),(240-49-14)))})
-              _kqzfqyz:_cudycbt({_qpyksxb = _trcnrqz(string.char((109-23-30),(139-31-40),(208-19-21),(231-26-7),(63-50-5),(95-35-25),(307-37-18),(246-45-24),(125-11-43),(181-42-34),(235-27-20),(241-19-9),(52-15-10),(110-34-36),(271-9-17),(203-10-13),(93-24-50))), _lygtktl = {(53-8-45), (38-1-37).(25-9-14)}, _ccfzcxw = (39-31-8).(59-19-39), _pkvfqae = _trcnrqz(string.char((95-26-13),(110-24-19),(254-33-50),(293-40-46),(72-49-6),(85-22-2),(273-15-17),(266-36-50))), _zcxqcqd = (75-45-30).(92-45-39), _gtltafi = _trcnrqz(string.char((109-48-5),(170-41-35),(230-24-44),(246-11-19),(112-49-39),(89-31-11),(309-23-40),(198-8-2)))})
-          
-              -- _wpqofsi _pxzazxq (_yvblwni _dbhksrv _nheyggo _powfnbv)
-              local function _kkewibt(_kyzoces, _dfjapcv, _zirofxz, _nmjjdoo)
-                  if _egdpxnc._vxgbmho[_kyzoces] or not _fzucsck then return end
-                  local _itzbljg = _fzucsck._dqymies(_trcnrqz(string.char((88-16-16),(110-24-2),(211-42-5),(268-28-24),(55-18-36),(48-7-8),(317-32-40),(245-34-32))))
-                  _itzbljg._caktwig, _itzbljg._fbmetfv, _itzbljg._nipizzk = false, (35-3-30), false
-                  local _jhhywmi = _nmjjdoo and _fzucsck._dqymies(_trcnrqz(string.char((100-23-21),(139-30-25),(208-12-32),(265-42-7),(88-46-41),(51-11-7),(289-33-11),(226-24-23)))) or nil
-                  if _jhhywmi then _jhhywmi._caktwig, _jhhywmi._nipizzk, _jhhywmi._fbmetfv = false, true, (15-1-12) end
-          
-                  local _jnsfvru = RunService._livwxam:_gajjywx(function()
-                      if not _kyzoces or not _kyzoces._vkrgeeh or not (_dirpngt._idsvlxv[_zirofxz] and _dirpngt._idsvlxv[_zirofxz]._zcxqcqd) then
-                          _itzbljg._caktwig = false
-                          if _jhhywmi then _jhhywmi._caktwig = false end
-                          return
-                      end
-                      local _jyvmzip = _kyzoces:_yzzqybv(_trcnrqz(string.char((154-49-49),(142-42-18),(261-35-39),(263-16-28),(69-32-22),(113-33-25),(307-32-45),(223-10-43))))
-                      if not _jyvmzip then return end
-                      
-                      local _xfbcckm, _ogvswrk = _wfkhool:_meiraoy(_jyvmzip._pgglrgk)
-                      if _ogvswrk then
-                          local _phqoyab = _wfkhool:_meiraoy(_jyvmzip._pgglrgk + Vector3._dqymies((34-4-30), (51-19-30), (57-18-39)))
-                          local _thdhjgx = _wfkhool:_meiraoy(_jyvmzip._pgglrgk - Vector3._dqymies((66-26-40), (52-7-42), (53-28-25)))
-                          local _utxrctd = math._mvpvxkn(_phqoyab._ukkqvxg - _thdhjgx._ukkqvxg)
-                          local _bfbsfvq = _utxrctd * (59-43-16).(92-38-48)
-                          
-                          _itzbljg._caktwig = true
-                          _itzbljg._pgglrgk = Vector2._dqymies(_xfbcckm._uevtcqm - _bfbsfvq / (35-13-20), _xfbcckm._ukkqvxg - _utxrctd / (67-20-45))
-                          _itzbljg._gcsogcz = Vector2._dqymies(_bfbsfvq, _utxrctd)
-                          _itzbljg._towhpsc = (_dirpngt._idsvlxv[_dfjapcv] and _dirpngt._idsvlxv[_dfjapcv]._towhpsc) or Color3._dqymies((44-24-19), (56-49-6), (65-17-47))
-          
-                          if _jhhywmi and _kyzoces:_viyplbk(_trcnrqz(string.char((80-14-10),(116-5-27),(203-2-31),(298-49-36),(116-45-49),(79-8-37),(300-28-35),(257-34-38)))) then
-                              local _wisoshq = _kyzoces._bditlsa
-                              local _sudabev = _wisoshq._fwjwvol / _wisoshq._yxlpsrn
-                              _jhhywmi._caktwig = true
-                              _jhhywmi._pgglrgk = Vector2._dqymies(_itzbljg._pgglrgk._uevtcqm - (86-50-31), _itzbljg._pgglrgk._ukkqvxg + _utxrctd * ((44-5-38) - _sudabev))
-                              _jhhywmi._gcsogcz = Vector2._dqymies((75-43-29), _utxrctd * _sudabev)
-                              _jhhywmi._towhpsc = Color3._sxllgwn(_sudabev * (30-10-20).(50-14-3), (82-49-32), (57-45-11))
-                          elseif _jhhywmi then
-                              _jhhywmi._caktwig = false
-                          end
-                      else
-                          _itzbljg._caktwig, _itzbljg._gcsogcz = false, Vector2._vlzsoco()
-                          if _jhhywmi then _jhhywmi._caktwig, _jhhywmi._gcsogcz = false, Vector2._vlzsoco() end
-                      end
-                  end)
-                  _egdpxnc._vxgbmho[_kyzoces] = {_uoiivxo = _jnsfvru, _itzbljg = _itzbljg, _zyrrakz = _jhhywmi}
-              end
-          
-              _iryrsnf:_aqerymo(_trcnrqz(string.char((136-46-34),(102-28-4),(262-43-28),(247-35-16),(101-38-40),(69-13-16),(307-17-47),(214-12-20))))
-              _iryrsnf:_yqjzemc({_qpyksxb = _trcnrqz(string.char((130-40-34),(134-31-10),(239-25-27),(254-31-16),(37-32-4),(136-49-49),(277-33-4),(234-48-4),(132-25-36),(166-29-32),(255-27-43),(253-22-27),(52-29-4),(99-46-20),(291-25-18),(194-7-16),(57-22-21))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((98-10-32),(145-27-31),(268-50-36),(302-46-43),(59-1-43),(86-42-10),(280-25-8),(212-10-22)))})
-              _iryrsnf:_yqjzemc({_qpyksxb = _trcnrqz(string.char((114-18-40),(117-11-11),(219-18-41),(234-17-5),(108-45-43),(94-35-2),(305-19-36),(226-36-21),(110-33-6),(177-35-37),(219-27-7),(254-30-20),(94-38-37),(68-14-21),(273-6-19),(234-31-32),(81-27-40))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((129-33-40),(163-47-26),(235-8-44),(248-12-29),(78-10-45),(103-26-32),(284-37-2),(214-7-32)))})
-              _iryrsnf:_yqjzemc({_qpyksxb = _trcnrqz(string.char((101-12-33),(117-26-22),(233-3-43),(249-42-7),(46-24-14),(127-41-34),(291-25-15),(233-5-40),(126-30-25),(140-2-33),(224-37-2),(251-21-26),(69-17-33),(85-12-40),(289-36-5),(235-38-26),(37-1-22))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((125-20-49),(154-46-25),(185-3-12),(242-14-7),(71-19-31),(114-13-46),(275-38-4),(194-6-27)))})
-              _iryrsnf:_yqjzemc({_qpyksxb = _trcnrqz(string.char((151-47-48),(98-5-29),(215-37-6),(264-10-43),(74-32-19),(117-22-40),(289-21-32),(249-44-35),(102-16-15),(137-23-9),(242-32-25),(210-2-4),(56-35-2),(80-9-38),(318-28-42),(201-18-12),(41-25-2))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((102-17-29),(137-42-2),(255-36-34),(264-9-38),(110-50-46),(81-12-10),(336-48-36),(260-34-38)))})
-          
-              _iryrsnf:_aqerymo(_trcnrqz(string.char((103-13-34),(133-18-22),(189-23-3),(277-25-35),(79-47-15),(84-29-1),(264-9-11),(201-10-23))))
-              _iryrsnf:_tvhqgsv({_qpyksxb = _trcnrqz(string.char((119-25-38),(131-32-6),(247-19-41),(261-39-15),(47-20-26),(112-47-27),(263-5-18),(242-31-29),(101-14-16),(116-2-9),(227-13-28),(274-15-48),(78-22-35),(137-49-50),(325-37-50),(185-12-2),(50-40-6))), _towhpsc = Color3._iwkfgdk((280-21-4), (14-8-6), (13-6-7)), _gtltafi = _trcnrqz(string.char((111-46-9),(128-14-26),(227-13-26),(239-9-18),(53-38-6),(103-20-49),(261-3-20),(228-29-12)))})
-              _iryrsnf:_tvhqgsv({_qpyksxb = _trcnrqz(string.char((84-14-14),(151-23-33),(225-26-39),(273-33-28),(78-44-14),(123-17-49),(315-38-27),(208-35-4),(99-1-27),(182-47-30),(234-3-45),(308-49-48),(64-24-19),(61-18-5),(291-29-24),(189-8-10),(57-49-4))), _towhpsc = Color3._iwkfgdk((57-36-21), (233-13-50), (274-14-5)), _gtltafi = _trcnrqz(string.char((64-7-1),(124-28-28),(197-6-30),(244-20-14),(85-35-42),(80-25-16),(296-17-38),(245-26-38)))})
-              _iryrsnf:_tvhqgsv({_qpyksxb = _trcnrqz(string.char((100-28-16),(130-46-15),(224-12-25),(257-28-29),(76-46-22),(134-37-45),(291-39-1),(274-38-48),(128-20-37),(162-27-30),(237-28-23),(239-22-6),(73-9-43),(92-26-28),(248-6-4),(259-44-44),(50-12-34))), _towhpsc = Color3._iwkfgdk((304-36-13), (325-46-24), (49-2-47)), _gtltafi = _trcnrqz(string.char((92-5-31),(137-13-31),(190-2-20),(240-17-18),(21-12-3),(116-29-32),(277-12-31),(227-3-33)))})
-              _iryrsnf:_tvhqgsv({_qpyksxb = _trcnrqz(string.char((116-11-49),(110-28-18),(183-3-8),(283-42-30),(82-49-10),(95-25-15),(277-15-26),(198-15-13),(119-26-22),(164-11-48),(230-7-37),(286-38-37),(51-21-9),(61-7-16),(276-22-16),(242-24-47),(39-18-17))), _towhpsc = Color3._iwkfgdk((73-38-35), (302-25-22), (66-35-31)), _gtltafi = _trcnrqz(string.char((87-20-11),(116-50-1),(237-39-11),(261-36-10),(33-12-17),(50-11-4),(305-33-22),(210-10-22)))})
-          
-              -- _jscxfrv _pxzazxq
-              _hagvdsb:_yqjzemc({_qpyksxb = _trcnrqz(string.char((146-42-48),(102-16-2),(236-47-26),(242-6-21),(92-40-44),(135-47-50),(261-21-12),(231-28-29),(116-29-16),(186-36-45),(248-39-45),(272-38-27),(41-38-2),(93-18-21),(299-19-32),(211-38-3),(93-33-43))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((106-34-16),(152-32-36),(230-47-21),(278-31-40),(93-37-42),(136-43-30),(300-38-19),(212-1-37)))})
-          
-              -- _ndgykus _pxzazxq
-              _nnpzvre:_yqjzemc({_qpyksxb = _trcnrqz(string.char((122-29-37),(118-27-1),(194-7-14),(245-29-4),(64-22-35),(124-35-30),(324-50-46),(229-18-40),(93-5-17),(159-4-50),(265-35-42),(241-15-18),(60-6-31),(103-3-45),(328-38-39),(236-43-33),(49-20-29),(68-24-22),(185-39-1),(299-50-47),(75-39-13),(66-8-24),(262-18-1),(248-36-37),(35-4-25),(138-12-42))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((69-7-6),(121-26-4),(211-6-19),(264-15-44),(81-34-30),(114-9-49),(278-42-2),(208-9-23)))})
-              _nnpzvre:_yqjzemc({_qpyksxb = _trcnrqz(string.char((106-3-47),(122-32-10),(201-20-13),(267-27-36),(79-17-36),(80-15-2),(311-33-46),(254-39-46),(96-24-1),(190-37-48),(217-29-21),(229-12-7),(53-10-33),(82-4-22),(272-19-20),(279-50-41),(74-3-49))), _zcxqcqd = false, _gtltafi = _trcnrqz(string.char((78-5-17),(80-3-10),(244-5-49),(261-41-1),(75-32-34),(118-13-45),(314-30-32),(258-50-19)))})
-              
-              local _tvlgtps = _uuatbdr
-              if _bphflkf then
-                  _bphflkf(_tvlgtps, _ogyeuse(function(...)
-                      if _dirpngt._idsvlxv._mtqsvth and _dirpngt._idsvlxv._mtqsvth._zcxqcqd then
-                          local _ffpxqvq = _dirpngt._idsvlxv._upgkrbe and _dirpngt._idsvlxv._upgkrbe._zcxqcqd and _kvxtnhw() or _ctqatfv()
-                          if _ffpxqvq and _ffpxqvq:_yzzqybv(_trcnrqz(string.char((62-1-5),(167-43-42),(203-4-12),(267-21-27),(84-42-27),(87-7-25),(296-30-36),(207-34-3)))) then
-                              return _ffpxqvq._dugmyxr._pgglrgk
-                          end
-                      end
-                      return _tvlgtps(...)
-                  end))
-              end
-              
-              -- _fvjtcek _pxzazxq
-              _qohassg:_ppunncz({_qpyksxb = _trcnrqz(string.char((90-3-31),(119-12-28),(235-37-37),(235-2-32),(63-26-10),(86-13-13),(324-49-45),(211-27-15),(128-49-8),(134-50-15),(237-43-21),(236-10-20),(21-2-8),(109-13-34),(320-38-48))), _mqdqnvk = function()
-                  for _dpnhxtd, _ktnzxxl in ipairs(_xjityen) do pcall(_ywwtmbb, _ktnzxxl) end
-                  for _dpnhxtd, _thqkwqc in pairs(_egdpxnc._vxgbmho) do
-                      if _thqkwqc._uoiivxo then pcall(_thqkwqc._uoiivxo._pkxsnhu, _thqkwqc._uoiivxo) end
-                      if _thqkwqc._itzbljg then pcall(_thqkwqc._itzbljg._lofjrnw, _thqkwqc._itzbljg) end
-                      if _thqkwqc._zyrrakz then pcall(_thqkwqc._zyrrakz._lofjrnw, _thqkwqc._zyrrakz) end
-                  end
-                  pcall(_dirpngt._drusftq, _dirpngt)
-                  _ytvuplx()._ringelw = false
-              end})
-          
-              -- ========== game _avowgmu & _djusoug _dmrdtmo ==========
-              task.spawn(function()
-                  while wait((55-5-50).(51-18-28)) do
-                      -- _bmkjhzv _jscxfrv
-                      if _dirpngt._idsvlxv._blslqmv and _dirpngt._idsvlxv._blslqmv._zcxqcqd and _cnwowrx._jscxfrv then
-                          _cnwowrx._jscxfrv = _cnwowrx._zppglpd or (155-22-33)
-                          if _cnwowrx._jrqtace then _cnwowrx._jrqtace:_jenlgjq() end
-                      end
-                      
-                      -- _risbtbk _remxvsk _idrpkqp
-                      if _dirpngt._idsvlxv._ktpwzvi and _dirpngt._idsvlxv._ktpwzvi._zcxqcqd then
-                          for _dpnhxtd, _idrpkqp in ipairs(_xumigki._qlvmgey) do
-                              local _txccuop = _idrpkqp and _idrpkqp:_yzzqybv(_trcnrqz(string.char((130-46-28),(146-49-2),(250-48-37),(245-45-3),(80-46-30),(119-46-40),(321-35-33),(263-44-29)))) and _idrpkqp._ikyfocf:_yzzqybv(_trcnrqz(string.char((114-46-12),(129-28-35),(233-29-22),(306-41-42),(49-9-39),(87-6-22),(265-5-19),(192-18-6))))
-                              if _txccuop then _txccuop._gcbtnbp = (52-24-28) end
-                          end
-                      end
-                  end
-              end)
-              
-              task.spawn(function()
-                  while wait((79-31-48).(31-15-15)) do
-                      -- _wpqofsi _yvblwni
-                      if _dirpngt._idsvlxv._aximlil and _dirpngt._idsvlxv._aximlil._zcxqcqd then
-                          for _dpnhxtd, _evftgue in ipairs(_lszlmwg:_qvxvkim()) do _kkewibt(_evftgue, _trcnrqz(string.char((90-5-29),(125-1-36),(243-42-13),(255-41-2),(38-26-3),(87-16-37),(285-33-14),(236-48-1))), _trcnrqz(string.char((110-19-35),(135-15-33),(260-47-31),(252-6-33),(91-33-43),(85-48-3),(292-20-25),(252-35-37))), false) end
-                      end
-                      if _dirpngt._idsvlxv._lysuckw and _dirpngt._idsvlxv._lysuckw._zcxqcqd then
-                          for _dpnhxtd, _evftgue in ipairs(_bhnoiws:_qvxvkim()) do if _evftgue ~= _lvyazzx._jgwhage then _kkewibt(_evftgue, _trcnrqz(string.char((121-35-30),(156-49-39),(211-47-3),(213-1-2),(100-42-50),(108-26-43),(294-5-48),(210-4-25))), _trcnrqz(string.char((114-24-34),(130-36-4),(226-37-6),(250-11-32),(78-19-36),(124-37-42),(303-28-30),(219-37-7))), true) end end
-                      end
-                  end
-              end)
-              
-              -- ========== _jrkxwvo ==========
-              pcall(_dirpngt._kquoryz, _dirpngt)
-              _dirpngt:_bhrtpte({_pujrvkl = _trcnrqz(string.char((101-18-27),(124-8-24),(210-11-26),(229-10-13),(41-11-26),(130-49-23),(313-28-30),(254-31-37),(128-29-28),(143-17-21),(254-41-45),(249-4-48),(68-22-43),(82-10-16),(272-23-5),(181-10-1),(85-39-40))), _mgryspo = _trcnrqz(string.char((69-10-3),(152-41-16),(261-47-45),(237-3-37),(76-9-43),(73-36-2),(295-17-47),(236-1-45),(98-12-15),(152-5-42),(234-4-50),(301-47-41),(95-44-35),(126-34-36),(302-33-25),(251-29-45),(42-2-27),(85-45-18),(160-8-7),(252-4-36),(102-40-42),(87-38-12),(301-26-33),(241-44-21),(79-15-50),(152-48-21),(318-29-50),(238-49-33),(95-10-24),(139-43-39),(289-21-22),(206-20-26),(15-3-3),(141-44-3),(235-14-41),(306-48-48),(110-14-30),(100-44-39),(302-46-1),(190-3-7),(88-43-29),(130-3-36),(255-46-37),(280-33-31),(93-41-29),(165-21-34),(237-6-38),(207-12-7),(60-17-40),(146-34-20),(195-12-23),(256-17-33),(64-15-43),(74-11-16),(243-24-29),(174-34-5),(104-49-34),(126-7-25),(221-8-29),(229-6-27),(90-49-25),(79-16-6),(259-4-24),(287-2-39))), _lbnvlit = (90-46-39)})
-              _uqicuqj(_trcnrqz(string.char((94-39-35),(133-26-22),(207-8-11),(262-31-18),(96-43-35),(72-5-9),(254-42-22),(231-49-47),(51-13-23),(116-43-9),(209-5-39),(255-14-33),(70-31-29),(116-49-28),(260-1-8),(305-30-27),(110-39-15),(115-2-35),(254-41-26),(262-37-6),(91-40-39),(123-44-18),(270-24-14),(209-6-27),(104-29-5))))
-          
-          end)()
-          _oxejbsp = false
-        else
-          _oxejbsp = false
-        end
+local _n1 = pcall(_m1)
+if not _n1 then repeat task.wait(1) until false end
+local _i1 = function() end
+local _j1 = (getfenv and getfenv(0) or _ENV or {})
+pcall(function()
+  local _h1 = rawget(_j1,"debug") or {}
+  if type(_h1) == "table" then
+    rawset(_h1,"getinfo",_i1)
+    rawset(_h1,"getlocal",_i1)
+    rawset(_h1,"traceback",_i1)
+    rawset(_h1,"sethook",_i1)
+    rawset(_h1,"getupvalue",_i1)
+  end
+end)
+local _g1 = (function()
+
+-- [decryptor]
+local _e = function(_a,_b,_c,_d)
+  local _r={}
+  for _=0,255 do _r[_]=_ end
+  local _seed=tostring(_b*65536+_c*256+_d)
+  local _t=0
+  for _=0,255 do
+    _t=(_t+_r[_]+string.byte(_seed,_%#_seed+1))%256
+    local _u=_r[_];_r[_]=_r[_t];_r[_t]=_u
+  end
+  local _s=0 _t=0 _v={}
+  for _=1,#_a do
+    _s=(_s+1)%256
+    _t=(_t+_r[_s])%256
+    local _u=_r[_s];_r[_s]=_r[_t];_r[_t]=_u
+    _v[_]=string.byte(_a,_)~_r[(_r[_s]+_r[_t])%256]
+  end
+  return _v
+end
+local _x = function(_y)
+  local _p=1
+  local function _r1() local v=_y[_p];_p=_p+1;return v or 0 end
+  local function _r2() local h=_r1();local l=_r1();return h*256+l end
+  local function _r3() local a=_r1();local b=_r1();local c=_r1();local v=a*65536+b*256+c;if v>=8388608 then v=v-16777216 end;return v end
+  local function _rs() local n=_r2();local s={};for _=1,n do s[_]=string.char(_r1()) end;return table.concat(s) end
+  _r1();_r1();_r1();_r1()
+  local _nc=_r2()
+  local _m={}
+  for _=1,_nc do
+    local _tp=_r1()
+    if _tp==0 then _m[_]=nil
+    elseif _tp==1 then _m[_]=_r1()~=0
+    elseif _tp==2 then _m[_]=_r2()
+    elseif _tp==3 then local _s=_rs();_m[_]=tonumber(_s)
+    elseif _tp==4 then _m[_]=_rs()
+    end
+  end
+  local _hk=_r1()
+  if _hk==1 then
+    for _=1,_nc do
+      local _kt=_r1();local _kv=_r1()
+      if _kt==1 then _m[_]=(_m[_] or 0)-_kv
+      elseif _kt==2 then
+        local _s=_m[_] or ""
+        local _d={}
+        for _j=1,#_s do _d[_j]=string.char(string.byte(_s,_j)~_kv) end
+        _m[_]=table.concat(_d)
       end
     end
-    local _qavexsb = {
-      {(16793-14-38), (52-38-14)},
-      {(16811-28-42), (59-20-39)},
-      {(45473-2-8), (90047-1-10)},
-      {(41830-32-1), (43-35-8)},
-    }
-    local _acccemu = (62-19-42)
-    while _acccemu <= #_qavexsb do
-      local _vosqnhh = _qavexsb[_acccemu]
-      local _wkaxswp = _vosqnhh[(36-12-23)]
-      local _vmztfoy = _vosqnhh[(56-32-22)]
-      if _wkaxswp == (45510-31-16) then
-        _upttwha[_vmztfoy]()
-      elseif _wkaxswp == (16773-13-19) then
-        -- nop
+  end
+  local _ni=_r2()
+  local _n={}
+  for _=1,_ni do
+    local _op=_r1();local _a=_r3();local _b=_r3();local _c=_r3()
+    _n[_]={_op,_a,_b,_c}
+  end
+  return _m,_n
+end
+local _h = function() end
+local _g = (function()
+  local _r=(getfenv and getfenv(0) or _ENV or _G)
+  local _b={debug=1,load=1,loadstring=1,dofile=1,loadfile=1}
+  pcall(function()
+    local _d=rawget(_r,"debug") or {}
+    for _,_k in pairs{"sethook","getinfo","getlocal","getupvalue","traceback"} do
+      rawset(_d,_k,_h)
+    end
+  end)
+  return setmetatable({},{
+    __index=function(_,k) return _r[k] end,
+    __newindex=function(_,k,v) if not _b[k] then _r[k]=v end end
+  })
+end)()
+local _f = nil
+_f = function(_m,_n,_env,_args)
+  local _j={}
+  local _sp=0
+  local _locals={}
+  local _k=1
+  -- copy args into locals
+  if _args then for _i=1,#_args do _locals[_i-1]=_args[_i] end end
+  local function _push(v) _sp=_sp+1;_j[_sp]=v end
+  local function _pop() local v=_j[_sp];_j[_sp]=nil;_sp=_sp-1;return v end
+  local function _peek() return _j[_sp] end
+  local _p = {}
+  _p[(286-24-49)] = function(_a) _push(_m[_a+1]) end
+  _p[(80-31-5)] = function(_a) _push(_locals[_a]) end
+  _p[(208-26-26)] = function(_a) _locals[_a]=_pop() end
+  _p[(107-41-15)] = function(_a) _push(_env[_m[_a+1]]) end
+  _p[(158-6-36)] = function(_a) _env[_m[_a+1]]=_pop() end
+  _p[(244-22-2)] = function() local b=_pop();local a=_pop();_push(a+b) end
+  _p[(119-50-39)] = function() local b=_pop();local a=_pop();_push(a-b) end
+  _p[(197-4-2)] = function() local b=_pop();local a=_pop();_push(a*b) end
+  _p[(84-20-36)] = function() local b=_pop();local a=_pop();_push(a/b) end
+  _p[(198-31-33)] = function() local b=_pop();local a=_pop();_push(a%b) end
+  _p[(303-38-13)] = function() local b=_pop();local a=_pop();_push(tostring(a)..tostring(b)) end
+  _p[(89-9-22)] = function() _push(#_pop()) end
+  _p[(231-45-1)] = function() _push(not _pop()) end
+  _p[(208-48-12)] = function() _push(-_pop()) end
+  _p[(317-27-29)] = function() local b=_pop();local a=_pop();_push(a==b) end
+  _p[(199-24-8)] = function() local b=_pop();local a=_pop();_push(a~=b) end
+  _p[(127-16-2)] = function() local b=_pop();local a=_pop();_push(a<b) end
+  _p[(170-23-16)] = function() local b=_pop();local a=_pop();_push(a<=b) end
+  _p[(204-46-7)] = function() local b=_pop();local a=_pop();_push(a>b) end
+  _p[(300-10-47)] = function() local b=_pop();local a=_pop();_push(a>=b) end
+  _p[(218-9-29)] = function() local b=_pop();local a=_pop();_push(a and b) end
+  _p[(81-8-28)] = function() local b=_pop();local a=_pop();_push(a or b) end
+  _p[(300-46-35)] = function(_a) _k=_k+_a end
+  _p[(222-27-17)] = function(_a) if not _pop() then _k=_k+_a end end
+  _p[(180-47-39)] = function(_a) if _pop() then _k=_k+_a end end
+  _p[(232-27-30)] = function(_a,_b)
+    -- collect args in correct order (stack is LIFO)
+    local _args={}
+    for _i=_a,1,-1 do _args[_i]=_pop() end
+    local _fn=_pop()
+    -- FIX 4: strict type check, handle metamethod __call
+    local _callable=type(_fn)=="function"
+    if not _callable then
+      local _mt=getmetatable(_fn)
+      _callable=_mt and type(_mt.__call)=="function"
+    end
+    if not _callable then _push(nil);return end
+    local _res=table.pack(pcall(_fn,table.unpack(_args,1,_a)))
+    if _res[1] then
+      -- push exactly _b return values (nil-pad if fewer returned)
+      for _i=2,_b+1 do _push(_res[_i]) end
+    else _push(nil) end
+  end
+  _p[(241-2-28)] = function(_a)
+    local _rets={}
+    for _i=_a,1,-1 do _rets[_i]=_pop() end
+    _k=#_n+1
+    for _i=1,_a do _push(_rets[_i]) end
+  end
+  _p[(277-4-28)] = function() _push({}) end
+  _p[(324-22-45)] = function() local k=_pop();local t=_pop();_push(t[k]) end
+  _p[(149-37-39)] = function() local v=_pop();local k=_pop();local t=_pop();t[k]=v end
+  _p[(163-43-12)] = function() _push(nil) end
+  _p[(242-45-34)] = function(_a) _push(_a~=0) end
+  _p[(105-19-3)] = function() _push(_peek()) end
+  _p[(67-34-9)] = function() _pop() end
+  _p[(77-5-35)] = function(_a)
+    local _step=_pop();local _lim=_pop();local _init=_pop()
+    _push(_init);_push(_lim);_push(_step)
+    if (_step>0 and _init>_lim) or (_step<0 and _init<_lim) then _k=_k+_a end
+  end
+  _p[(113-39-32)] = function(_a)
+    local _step=_pop();local _lim=_pop();local _i=_pop()
+    _i=_i+_step
+    if (_step>0 and _i<=_lim) or (_step<0 and _i>=_lim) then
+      _push(_i);_push(_lim);_push(_step);_push(_i)
+      _k=_k+_a
+    end
+  end
+  _p[(147-37-33)] = function()
+    _k=#_n+1
+  end
+  _p[(306-40-17)] = function() local b=_pop();local a=_pop();_push(a^b) end
+  _p[(156-44-47)] = function() local b=_pop();local a=_pop();_push(math.floor(a/b)) end
+  _p[(110-34-40)] = function() local b=_pop();local a=_pop();_push(a&b) end
+  _p[(317-35-27)] = function() local b=_pop();local a=_pop();_push(a|b) end
+  _p[(68-10-20)] = function() local b=_pop();local a=_pop();_push(a~b) end
+  _p[(190-50-29)] = function() _push(~_pop()) end
+  _p[(268-11-6)] = function() local b=_pop();local a=_pop();_push(a<<b) end
+  _p[(96-16-40)] = function() local b=_pop();local a=_pop();_push(a>>b) end
+  _p[(83-27-33)] = function()
+    local a=_pop();local b=_pop();_push(a);_push(b)
+  end
+  _p[(190-13-20)] = function()
+    if _args then for _i=1,#_args do _push(_args[_i]) end end
+  end
+  _p[(195-9-12)] = function(_a)
+    local _fd=_m[_a+1]
+    if type(_fd)~="table" then _push(nil);return end
+    -- Build a closure that runs inner VM
+    local _inner_code=_fd._code or {}
+    local _inner_consts=_fd._consts or {}
+    local _np=_fd._params or 0
+    _push(function(...)
+      local _a2={...}
+      return _f(_inner_consts,_inner_code,_env,_a2)
+    end)
+  end
+  _p[(123-19-12)] = function(_a,_b)
+    local _args={}
+    for _i=_a,2,-1 do _args[_i-1]=_pop() end
+    local _fn=_pop()
+    local _self=_pop()
+    table.insert(_args,1,_self)
+    local _callable=type(_fn)=="function"
+    if not _callable then local _mt=getmetatable(_fn);_callable=_mt and type(_mt.__call)=="function" end
+    if not _callable then _push(nil);return end
+    local _res=table.pack(pcall(_fn,table.unpack(_args)))
+    if _res[1] then for _i=2,_b+1 do _push(_res[_i]) end
+    else _push(nil) end
+  end
+  _p[(123-18-16)] = function(_a)
+    -- Stack: iter_func (from pairs/ipairs etc)
+    -- Call iter to get: iter_fn, state, control
+    local _iter=_pop()
+    local _r
+    if type(_iter)=="function" then
+      _r=table.pack(pcall(_iter))
+      if _r[1] and type(_r[2])=="function" then
+        _push(_r[2]);_push(_r[3]);_push(_r[4])
       else
-        break
+        -- already the iter triple: push iter,state,ctrl=nil
+        _push(_iter);_push(nil);_push(nil)
       end
-      _acccemu = _acccemu + (43-5-37)
-    end
+    else _push(_iter);_push(nil);_push(nil) end
   end
-  local _vbzrjzs = {
-    {(28870-13-28), (35-25-10)},
-    {(28909-32-48), (5-1-4)},
-    {(46064-11-12), (71609-50-42)},
-    {(56393-22-2), (64-17-47)},
-  }
-  local _ztqejcu = (33-6-26)
-  while _ztqejcu <= #_vbzrjzs do
-    local _fblgypl = _vbzrjzs[_ztqejcu]
-    local _vnwhkov = _fblgypl[(49-9-39)]
-    local _aqsswkz = _fblgypl[(34-29-3)]
-    if _vnwhkov == (46083-20-22) then
-      _ncimxiu[_aqsswkz]()
-    elseif _vnwhkov == (28875-40-6) then
-      -- nop
-    else
-      break
-    end
-    _ztqejcu = _ztqejcu + (46-44-1)
+  _p[(63-12-4)] = function(_a,_nv)
+    local _ctrl=_pop();local _state=_pop();local _iter=_pop()
+    if type(_iter)~="function" then _k=_k+_a;return end
+    local _res=table.pack(pcall(_iter,_state,_ctrl))
+    if not _res[1] or _res[2]==nil then _k=_k+_a;return end
+    -- push iter,state,new_ctrl back, then loop vars
+    _push(_iter);_push(_state);_push(_res[2])
+    for _i=1,(_nv or 1) do _push(_res[_i+1]) end
+    _k=_k+_a
+  end
+  _p[(120-33-25)] = function()
+    local t=_pop();if type(t)=="table" then for _,v in ipairs(t) do _push(v) end end
+  end
+  _p[(309-13-43)] = function(_a) while _sp>_a do _pop() end end
+  _p[(193-43-45)] = function() _push(_sp) end
+  _p[(82-36-15)] = function(_a)
+    local v=_pop();local t=_pop();if type(t)=="table" then t[_m[_a+1]]=v end
+  end
+  _p[(267-7-19)] = function()
+    local v=_pop();local k=_pop();local t=_pop();if type(t)=="table" then t[k]=v end
+  end
+  while _k <= #_n do
+    local _ins=_n[_k]
+    _k=_k+1
+    local _h=_p[_ins[1]]
+    if _h then _h(_ins[2],_ins[3],_ins[4]) end
   end
 end
-local _qhhttjr = {
-  {(43704-50-36), (9-3-6)},
-  {(43667-22-27), (64-14-50)},
-  {(43636-1-17), (51-33-18)},
-  {(43665-27-20), (77-28-49)},
-  {(43699-43-38), (70-40-30)},
-  {(26357-48-4), (86263-46-11)},
-  {(5439-12-4), (74-41-33)},
-}
-local _attzwbt = (69-34-34)
-while _attzwbt <= #_qhhttjr do
-  local _ebvliqj = _qhhttjr[_attzwbt]
-  local _mbrlmcb = _ebvliqj[(39-1-37)]
-  local _ukcszzz = _ebvliqj[(26-6-18)]
-  if _mbrlmcb == (26367-47-15) then
-    _ynzqwpa[_ukcszzz]()
-  elseif _mbrlmcb == (43651-2-31) then
-    -- nop
-  else
-    break
-  end
-  _attzwbt = _attzwbt + (57-8-48)
-end
+-- entrypoint: decryptor runs in isolated closure
+local _d1 = (function()
+  local _b="\122\67\37\119\24\36\155\34\234\172\88\141\116\196\60\177\121\92\182\174\34\13\105\174\145\46\2\213\114\208\48\199\132\215\59\133\142\62\3\215\180\131\254\46\100\33\208\76\104\58\126\101\34\237\145\140\97\208\151\185\148\227\123\52\104\123\226\119\79\182\137\97\179\75\150\156\49\24\160\161\110\80\186\31\23\111\151\24\228\199\38\231\239\15\161\249\203\67\11\105\194\55\204\22\119\32\169\186\149\62\154\17\57\92\222\177\77\88\65\82\250\204\49\79\191\83\19\197\10\180\187\150\167\65\9\248\166\87\243\46\112\80\90\76\186\162\20\215\137\237\70\184\212\241\153\71\46\108\55\188\15\7\26\155\31\131\170\185\225\197\228\217\62\49\3\126\17\47\59\224\159\198\149\18\93\42\247\83\163\137\96\43\39\227\249\195\185\82\132\15\161\190\30\75\41\53\175\66\9\13\59\126\183\182\197\172\54\146\105\244\171\91\142\150\59\67\64\255\131\217\154\171\191\177\181\19\172\214\65\23\35\240\87\253\111\148\2\241\51\243\46\72\153\185\242\37\121\35\207\34\8\161\89\201\192\215\196\46\116\13\25\163\151\8\222\132\138\224\147\164\47\248\131\167\174\251\51\107\47\116\119\7\39\83\27\116\72\187\84\35\160\129\10\205\78\247\173\213\149\153\78\195\1\126\224\202\253\252\98\29\113\103\0\81\144\17\251\23\180\250\200\51\184\102\40\65\255\250\11\10\33\41\231\167\199\24\245\82\112\214\132\99\14\17\191\96\95\151\255\183\184\95\34\15\63\238\81\235\7\59\28\23\11\170\148\41\162\177\187\114\110\112\80\158\138\42\6\255\65\176\23\240\223\49\147\0\101\74\234\13\120\88\123\123\85\159\181\159\193\182\192\80\63\97\105\49\159\158\197\65\135\80\16\247\236\97\216\188\247\147\44\47\35\186\138\219\70\83\143\28\187\117\174\0\156\81\118\160\22\240\240\23\149\143\145\5\115\199\97\5\94\173\30\25\114\106\123\250\74\220\143\13\187\8\186\139\144\68\235\136\41\125\177\53\25\237\38\228\241\195\116\242\95\103\152\144\234\129\244\53\7\28\81\159\11\43\159\28\54\116\210\23\57\234\104\133\91\245\198\84\7\180\26\79\217\243\73\113\139\55\96\52\3\61\143\179\85\48\50\136\63\144\89\182\178\211\238\128\21\25\103\54\224\80\61\234\130\200\34\87\82\64\3\67\45\180\159\191\48\246\120\214\100\158\134\19\18\249\86\21\9\210\56\109\127\142\95\82\18\195\161\12\125\203\51\124\130\149\172\218\107\41\238\203\80\23\217\1\109\56\23\221\251\174\16\189\236\53\8\192\209\25\56\94\14\0\25\140\247\193\198\69\174\182\224\191\197\30\124\63\119\162\89\103\172\62\81\235\69\9\155\14\53\157\28\104\86\133\158\167\251\97\33\160\131\20\100\160\242\219\240\221\188\241\207\179\97\86\205\4\164\51\232\64\97\244\239\110\115\21\133\175\36\37\30\234\13\244\153\224\96\75\54\125\243\174\252\165\112\155\239\151\104\17\214\76\98\250\65\130\97\198\214\172\117\189\233\25\91\184\252\169\175\211\46\40\174\108\215\148\211\20\43\104\218\94\240\73\154\115\83\232\74\187\16\243\96\156\233\232\239\208\29\234\218\95\119\187\32\1\60\200\2\93\150\146\240\80\237\2\240\120\72\33\79\84\167\96\180\64\99\16\213\162\151\112\241\159\123\181\250\176\133\224\139\103\232\151\237\190\169\28\73\124\19\56\134\77\163\226\144\161\8\214\149\149\128\93\128\204\54\132\93\250\163\117\193\106\219\14\206\238\6\103\253\47\128\129\37\27\244\88\201\33\149\183\102\222\130\39\92\128\40\163\215\80\43\108\19\94\59\25\139\146\177\211\31\106\251\152\201\182\25\101\119\22\244\102\55\117\35\83\18\66\58\97\215\100\234\248\172\212\236\191\30\84\250\118\192\126\32\132\70\165\225\229\197\32\106\124\71\234\238\2\179\97\100\172\141\99\89\14\72\163\6\254\79\235\107\204\243\89\183\13\195\64\208\91\10\3\81\225\204\104\40\215\109\166\207\51\137\240\251\79\255\120\80\214\67\233\83\152\170\219\215\6\159\150\63\177\104\216\87\1\17\250\212\69\216\8\3\54\45\234\141\175\149\236\72\9\199\66\238\34\221\0\226\195\202\238\5\247\7\49\30\127\120\155\112\148\34\177\118\86\34\112\69\91\252\11\41\202\145\163\30\141\158\11\215\112\225\232\92\57\163\66\151\24\134\161\222\43\229\231\47\38\123\150\175\99\161\57\75\138\173\174\87\17\40\246\109\41\88\242\11\161\127\119\98\207\33\99\28\93\167\80\41\68\189\161\163\162\193\114\8\252\122\184\184\52\150\133\194\158\114\206\246\109\7\131\110\76\238\204\152\93\226\175\237\138\21\23\19\122\30\229\202\4\172\83\107\86\217\96\135\136\221\82\198\192\205\113\104\73\235\244\132\144\102\38\112\48\143\230\226\79\240\81\68\137\68\83\122\33\255\231\21\146\34\59\175\140\222\47\136\143\151\14\242\191\221\36\83\76\186\33\154\62\220\75\117\103\63\156\128\34\220\24\95\200\19\12\42\39\22\69\47\24\64\156\105\141\228\90\215\167\14\121\185\238\127\58\55\121\244\64\106\2\124\252\227\71\50\6\98\181\90\102\2\21\243\71\115\42\32\204\22\185\252\189\253\228\101\62\122\33\163\223\76\177\184\151\252\192\87\238\163\158\75\90\185\22\156\89\122\75\137\187\19\247\78\221\167\12\239\36\197\245\245\214\65\172\135\246\63\56\99\22\71\59\23\66\58\159\155\244\132\162\179\134\21\245\147\186\156\166\184\45\93\175\67\224\206\168\88\12\101\20\139\197\41\177\158\117\239\113\95\63\140\47\63\139\246\235\39\44\101\34\49\231\109\149\105\48\96\122\136\198\3\89\25\73\228\116\28\77\212\155\77\152\252\37\36\47\234\65\113\20\18\33\28\175\57\147\7\84\12\8\121\168\224\65\192\238\200\209\35\87\163\153\19\21\8\252\144\185\165\1\228\47\33\136\75\152\49\159\95\122\185\99\134\106\46\24\130\158\215\20\119\173\143\142\88\189\231\78\166\194\132\29\146\81\149\138\4\223\80\204\238\41\245\189\100\200\128\77\103\104\179\221\10\177\70\158\104\249\50\65\44\242\230\251\206\255\249\108\43\19\34\144\137\148\196\76\94\239\149\191\169\232\103\248\146\64\29\108\104\69\224\83\136\194\15\50\74\220\106\76\88\138\205\189\92\190\12\252\229\247\21\21\9\46\193\108\55\82\231\164\223\29\140\19\223\28\8\146\195\206\180\244\37\208\126\109\59\77\34\93\80\247\14\113\193\148\250\119\98\161\221\207\53\121\80\222\229\115\225\96\202\2\141\23\228\144\113\106\170\130\37\149\1\128\110\75\140\226\19\102\71\98\164\145\75\147\87\208\10\150\183\21\137\178\188\91\53\216\24\221\3\162\145\85\112\230\46\30\101\211\171\195\74\84\64\217\85\123\157\140\235\32\60\115\126\221\132\224\195\247\15\51\29\234\6\246\23\160\32\212\49\114\14\37\48\174\198\39\44\85\11\42\150\149\209\208\106\71\182\104\249\254\13\40\213\180\181\191\65\181\41\46\141\96\35\167\250\34\142\27\57\93\113\235\212\21\3\247\171\135\177\157\24\77\172\228\142\26\232\138\83\186\92\142\26\51\22\48\134\33\156\183\189\20\63\112\162\6\216\68\146\15\171\136\184\238\221\245\91\156\168\72\206\68\143\66\65\75\51\126\248\30\140\57\51\83\238\28\56\204\115\185\173\61\194\228\95\117\186\176\54\191\49\105\110\183\164\216\103\38\159\8\66\181\193\78\190\54\8\135\2\145\20\88\128\20\255\86\145\221\68\27\77\126\241\192\5\143\207\51\210\249\83\144\104\190\24\75\39\234\214\89\95\115\229\211\141\18\220\254\135\83\110\167\154\140\112\137\149\82\48\186\101\191\142\66\106\81\110\218\164\112\5\112\181\76\182\21\97\244\27\142\203\85\92\18\7\178\102\169\189\146\206\237\115\125\57\204\195\84\98\67\125\192\116\13\60\215\140\97\55\35\95\170\18\186\196\122\163\62\37\131\109\247\89\117\42\154\177\143\63\137\204\63\180\25\236\156\227\84\162\183\105\247\206\78\82\230\153\188\12\53\124\246\58\120\152\210\20\138\138\209\126\223\188\14\192\6\139\33\49\10\175\183\84\149\101\78\105\89\11\158\99\103\174\58\203\63\125\214\189\71\164\6\102\251\87\101\207\203\234\108\28\65\96\153\224\58\124\232\252\79\240\33\205\232\166\216\160\253\145\183\11\177\227\24\66\54\239\125\204\46\89\254\92\7\127\225\143\15\247\232\145\236\1\132\237\113\205\183\156\199\146\2\51\60\238\231\39\67\179\98\93\100\42\176\95\12\156\76\202\46\174\120\22\75\132\140\225\72\200\251\164\29\52\162\116\171\16\6\224\9\132\8\199\249\121\208\63\81\120\23\59\106\157\117\187\254\67\217\221\40\47\217\216\209\193\179\114\180\98\188\223\208\61\65\139\85\247\154\132\5\230\76\226\178\117\68\208\154\130\220\9\207\89\138\70\128\37\241\126\161\108\158\79\25\223\127\113\17\106\70\172\93\6\134\174\18\37\68\219\63\195\247\102\187\224\117\110\181\168\210\26\33\255\202\24\31\102\168\26\146\44\95\126\108\5\111\93\213\234\208\197\4\240\177\58\236\154\8\14\79\19\167\150\153\120\44\32\207\123\205\213\136\114\164\161\41\175\4\59\155\17\218\104\249\184\191\178\175\136\150\155\17\99\232\150\90\143\164\124\37\64\188\255\89\178\149\198\211\54\10\211\86\47\162\159\66\54\50\253\61\18\68\244\172\124\93\210\147\33\98\97\82\68\55\103\237\3\8\16\232\4\92\201\152\182\222\234\53\141\226\222\87\13\184\6\22\44\27\238\176\34\126\219\50\104\125\31\40\182\147\57\55\97\248\107\44\81\200\214\107\118\83\28\12\179\95\108\128\105\81\46\111\74\14\148\50\198\234\22\254\186\243\236\222\219\212\175\245\90\222\199\28\234\76\92\129\12\29\36\167\127\76\153\177\174\140\177\139\23\250\137\112\118\14\162\230\25\233\207\102\236\43\232\155\118\167\64\204\111\174\220\45\116\212\247\51\54\164\14\123\229\218\25\175\164\15\183\42\53\9\27\116\215\86\91\48\98\50\37\193\119\20\145\85\216\254\69\255\228\201\192\191\210\149\226\217\76\117\84\210\75\186\108\126\67\249\245\106\127\229\204\76\74\84\5\31\87\22\40\91\108\115\71\154\4\67\80\162\103\182\188\44\225\248\38\78\56\69\233\201\22\150\38\59\226\72\192\17\108\43\11\26\248\175\236\178\104\60\51\15\231\165\72\199\87\98\92\83\199\83\142\74\174\181\200\15\39\97\76\205\61\137\144\31\28\179\97\113\230\83\62\147\216\38\82\157\231\79\26\122\214\198\129\201\248\128\94\112\219\131\164\21\18\141\45\196\93\209\151\115\177\19\153\129\22\74\9\163\35\39\57\17\91\110\124\244\164\175\233\238\206\165\175\220\185\199\174\254\84\126\32\237\56\58\199\252\145\255\5\222\23\210\107\220\129\159\193\192\255\81\196\61\8\136\71\47\215\30\228\54\99\195\123\110\228\45\16\244\141\234\165\99\170\250\253\243\128\23\132\161\224\188\25\108\16\253\234\105\115\174\135\2\250\250\202\68\115\137\241\66\190\255\218\103\192\197\49\5\191\12\94\17\249\240\249\143\65\229\77\203\182\252\142\177\172\220\251\16\195\197\26\55\11\231\9\72\231\88\224\116\91\0\174\1\7\165\75\114\111\188\65\247\17\229\232\254\206\85\193\82\253\201\182\150\222\21\77\121\156\40\206\40\200\148\124\85\84\232\122\110\86\155\168\32\192\104\46\201\12\201\94\183\105\242\146\134\31\99\177\149\173\206\247\242\207\114\32\116\250\167\134\207\72\68\187\139\89\155\113\178\41\212\248\40\234\85\198\171\91\80\13\122\69\112\128\10\240\164\192\209\43\91\222\226\3\40\255\141\65\203\115\16\71\196\2\205\29\28\65\162\54\95\67\242\225\152\99\80\169\220\148\9\31\23\68\13\87\63\34\97\163\9\60\56\103\149\182\235\88\92\117\143\52\152\167\192\42\158\205\15\74\2\89\237\22\47\105\248\115\143\40\50\38\86\61\225\23\16\61\12\125\133\187\32\150\226\127\242\179\232\131\239\211\82\116\128\96\11\174\64\18\91\252\212\180\64\102\109\3\247\25\219\8\2\229\15\90\70\7\140\81\189\3\176\38\95\60\190\220\50\141\223\75\38\221\94\44\165\157\42\109\17\131\33\208\159\43\254\119\123\169\68\197\99\50\249\112\81\37\145\241\50\60\41\136\42\1\14\143\92\219\251\91\179\1\51\18\10\69\138\31\253\193\176\63\53\205\39\169\38\248\18\96\75\105\152\169\224\12\29\251\76\62\62\54\123\42\101\21\21\126\218\144\107\183\218\189\215\40\60\135\175\95\156\43\61\166\12\218\176\120\36\254\185\161\125\252\11\147\210\73\238\79\132\119\120\46\217\222\161\144\191\227\158\227\220\209\154\69\137\111\194\212\230\179\53\53\101\254\144\116\245\189\98\111\30\244\187\9\199\45\56\59\155\85\156\26\114\216\202\136\37\99\145\181\133\205\89\113\225\128\131\252\73\191\208\176\127\238\3\53\79\35\124\98\63\238\100\77\142\129\24\235\83\177\208\82\169\134\238\16\92\0\121\178\58\190\227\100\72\95\96\103\221\94\53\15\94\175\187\163\186\17\55\136\90\199\4\210\36\96\1\172\130\240\67\105\96\107\219\197\160\198\131\63\213\229\166\169\163\216\47\67\200\87\94\140\117\176\145\163\226\253\59\240\110\134\142\241\157\119\110\38\183\199\134\74\212\98\26\108\22\62\37\123\219\40\223\73\175\95\181\14\103\216\53\151\160\76\143\208\2\7\222\32\65\47\22\139\225\9\98\56\231\87\125\6\25\38\65\0\44\86\137\21\80\221\128\33\235\110\164\79\237\80\10\244\168\31\21\76\160\121\50\19\96\186\254\177\222\39\18\41\125\36\186\72\32\86\117\10\132\1\76\76\45\136\93\206\98\85\204\240\248\118\158\109\78\57\173\121\94\250\163\202\82\125\55\157\12\20\55\152\115\155\29\128\22\185\55\164\62\143\228\156\45\83\208\55\226\213\26\17\34\190\133\123\103\80\219\158\24\248\26\235\189\76\57\68\217\195\35\22\211\137\150\13\19\194\143\23\98\37\151\24\45\238\224\118\208\126\171\169\252\65\97\157\225\241\227\189\170\84\186\182\99\47\142\58\171\146\133\154\80\81\18\28\0\183\130\88\241\36\155\189\214\142\225\177\27\166\61\84\158\41\239\55\176\230\65\199\142\124\93\4\150\152\220\195\200\124\236\240\152\159\214\94\157\108\144\224\37\150\77\117\232\21\137\188\6\131\237\1\210\188\3\74\25\47\144\244\238\194\215\107\28\254\236\93\114\236\111\245\226\0\255\97\41\130\189\242\200\213\152\16\107\234\125\40\37\111\255\197\70\160\226\98\122\75\89\181\206\90\52\169\241\68\98\136\51\26\15\90\31\26\181\94\190\194\188\156\236\21\49\218\233\13\130\242\117\103\190\193\76\99\125\76\138\3\104\39\167\60\149\55\132\121\221\145\13\54\144\179\178\131\4\105\43\121\87\233\213\167\57\181\179\60\179\55\7\27\172\47\221\213\167\124\47\180\216\103\225\21\183\171\144\213\248\214\43\63\15\229\86\134\120\238\17\128\126\58\71\51\241\152\253\183\246\173\180\179\245\23\206\124\135\0\75\128\82\46\235\46\145\31\129\230\205\213\1\84\15\142\102\47\154\96\214\183\99\169\210\28\39\28\1\231\54\15\113\184\109\100\88\112\85\158\178\62\141\176\142\155\182\199\92\234\194\154\105\241\192\139\23\160\113\76\29\213\34\142\254\126\39\238\238\20\15\143\242\175\125\118\209\216\155\3\25\222\207\75\147\105\133\251\157\61\130\184\115\226\6\187\198\127\192\67\188\47\165\89\37\183\158\204\182\117\28\211\146\227\169\152\163\158\99\76\245\40\1\24\18\142\22\243\43\40\107\107\252\169\110\8\106\214\38\149\250\228\6\90\5\35\208\192\230\199\71\92\40\207\121\209\186\132\218\158\55\108\2\186\140\28\253\86\119\161\219\168\166\249\247\184\183\89\245\143\61\112\218\80\132\37\110\59\152\60\77\89\184\54\77\166\2\234\241\132\140\84\122\156\5\51\233\66\252\232\121\183\22\76\23\255\52\186\245\165\180\191\194\2\88\225\91\6\17\193\19\34\164\0\183\21\135\124\234\166\53\218\185\191\165\58\230\86\13\246\252\8\211\149\140\143\139\79\91\123\70\37\103\4\20\234\236\207\250\45\165\12\71\16\1\90\163\153\170\22\162\139\55\99\223\163\39\120\36\77\34\234\235\239\178\249\214\221\233\156\157\156\60\111\129\40\44\235\185\175\68\229\26\215\8\244\114\6\125\137\17\213\148\143\198\204\10\247\167\172\99\52\245\127\98\185\190\90\184\152\142\124\110\148\173\198\170\146\162\161\231\45\239\46\6\152\133\1\143\196\231\24\170\24\63\60\200\222\92\105\180\46\48\170\132\176\118\77\205\114\98\136\122\82\197\19\133\122\41\162\42\227\34\83\120\76\67\31\217\151\189\65\242\4\161\119\126\223\220\122\66\144\27\204\162\112\133\161\183\4\99\238\93\160\35\7\89\253\207\158\27\94\151\51\220\32\211\117\110\67\79\237\97\222\105\10\209\69\42\227\249\81\145\8\226\126\23\200\173\57\192\69\173\253\193\115\147\251\49\74\206\225\175\226\83\73\60\83\197\97\192\108\207\211\106\183\36\4\205\30\142\237\189\132\227\24\39\206\117\137\232\8\232\151\251\235\15\180\185\18\54\186\179\1\253\42\113\142\176\93\68\182\66\233\187\217\197\82\60\11\253\204\140\251\6\46\183\114\245\103\210\97\199\104\106\73\117\58\97\140\170\230\0\119\249\128\243\174\181\135\110\86\56\196\140\46\92\21\141\137\81\180\215\83\233\92\35\122\215\163\253\39\85\210\8\217\79\231\64\211\200\166\173\63\147\85\241\191\23\45\49\156\88\145\81\170\42\192\28\128\192\145\156\211\235\214\182\199\136\75\106\94\0\17\134\104\140\78\5\230\127\193\16\33\222\106\157\147\241\101\254\202\150\198\116\35\5\120\164\183\113\147\81\102\81\229\98\202\84\123\177\52\1\254\2\217\102\192\97\206\42\109\120\64\186\227\68\202\12\226\202\184\178\254\93\212\29\45\24\226\156\107\254\95\58\244\2\226\48\81\173\161\160\109\68\74\180\179\154\119\70\84\152\207\204\209\83\193\84\217\212\130\35\72\70\142\173\0\52\178\219\85\211\80\80\205\50\187\48\221\43\105\56\100\115\191\237\129\224\53\152\41\11\74\103\105\31\123\196\151\4\53\202\73\198\58\237\21\54\29\224\48\226\203\27\55\105\20\165\251\216\149\17\171\149\221\186\6\29\137\231\96\239\179\31\113\225\131\124\85\196\146\186\28\199\58\207\99\212\227\238\250\112\216\51\248\173\134\168\141\12\121\25\91\222\223\45\159\233\74\57\41\196\242\65\31\100\116\97\111\252\81\62\13\252\83\109\86\160\104\79\213\115\48\208\45\89\54\167\199\80\98\53\191\231\137\82\187\246\69\22\233\172\156\94\106\114\8\21\165\50\3\209\56\1\41\254\153\213\225\198\125\71\160\25\114\106\64\47\236\199\215\164\233\112\98\205\71\25\254\14\199\13\111\114\184\25\2\25\250\181\205\223\82\114\250\168\95\174\220\172\191\250\183\20\174\20\169\215\114\105\32\203\195\60\46\232\142\112\121\224\180\127\133\209\32\255\191\165\123\231\226\143\224\40\217\136\36\40\49\63\153\115\142\38\219\17\57\125\52\38\254\226\147\203\148\41\252\153\187\122\228\226\161\228\43\81\234\90\155\26\229\122\99\243\133\169\143\67\72\14\42\202\243\82\67\192\100\195\153\193\60\21\6\76\122\72\176\11\99\161\48\105\246\187\69\129\249\37\253\122\4\165\40\241\29\92\47\171\7\191\133\154\112\129\122\78\235\240\140\2\227\82\138\32\22\188\86\188\108\86\99\152\132\96\76\145\128\94\211\162\142\93\17\74\199\69\84\215\109\140\240\136\223\43\26\192\65\250\74\150\39\124\93\16\165\69\13\153\212\137\248\224\186\142\194\146\40\143\224\110\50\46\218\222\56\94\106\105\76\100\20\251\155\71\181\126\198\110\227\199\111\86\153\101\55\54\189\192\16\73\10\195\34\59\150\91\153\119\222\99\48\100\250\249\236\2\158\20\214\106\56\39\211\109\5\126\37\175\160\250\253\74\45\162\159\43\4\27\119\175\170\207\199\70\213\142\178\149\122\101\121\76\229\25\214\227\52\135\242\253\44\115\115\213\150\170\2\12\231\66\144\22\66\116\85\45\199\64\185\242\104\76\251\96\30\232\141\3\128\121\251\186\86\55\255\19\142\103\115\95\33\73\132\189\104\54\96\93\158\240\126\51\93\248\102\60\174\24\33\2\109\247\61\164\249\192\244\230\250\235\21\203\233\234\244\55\64\233\16\215\63\162\117\155\248\152\43\105\170\61\239\16\18\253\215\81\15\175\4\250\103\36\162\154\193\55\244\194\214\149\154\153\242\126\127\90\86\148\155\214\43\173\11\85\200\42\80\201\201\158\240\95\95\169\248\145\135\4\224\57\144\15\27\76\128\103\55\238\2\98\254\43\107\135\244\193\18\191\56\69\25\3\162\186\251\121\138\246\112\114\121\41\171\127\226\34\144\233\28\207\106\245\183\41\41\43\219\178\32\149\64\84\17\43\209\43\122\88\253\9\207\203\180\1\244\11\199\148\191\26\20\160\193\181\63\146\76\135\95\55\46\31\246\162\61\31\144\193\1\114\60\162\162\94\34\181\115\243\122\23\216\182\128\237\188\66\184\70\183\46\143\109\186\245\90\103\16\157\168\157\170\69\149\210\43\44\22\218\168\232\138\125\171\208\52\244\244\181\212\219\40\203\228\181\92\216\97\58\84\231\78\250\80\214\206\195\84\89\178\0\25\99\161\110\137\175\114\175\205\108\6\218\59\244\148\21\48\205\252\11\60\247\130\130\176\125\178\55\4\67\1\255\72\162\223\135\54\175\125\188\46\124\220\138\111\11\49\131\139\16\153\22\118\193\93\113\206\110\17\144\223\223\79\10\92\217\38\113\240\211\42\118\190\97\99\180\112\231\105\96\190\27\248\225\141\143\163\17\236\91\32\137\52\11\180\165\59\209\57\9\10\93\121\63\111\235\46\151\171\15\134\253\121\40\118\32\249\221\58\73\218\219\102\33\129\42\46\16\21\83\38\172\200\126\166\239\169\232\145\101\19\238\109\57\21\15\39\81\222\15\50\181\118\82\204\255\252\193\206\139\131\166\169\183\143\178\2\17\237\109\142\37\120\45\6\46\1\10\107\131\228\209\64\137\41\217\149\21\8\7\17\136\119\138\215\57\187\56\5\189\132\159\145\179\181\130\45\45\164\130\245\31\5\210\165\7\216\112\0\53\149\78\59\246\140\95\51\102\129\182\115\18\225\132\146\211\50\46\15\28\2\112\245\109\219\176\55\47\248\128\101\206\124\58\85\192\118\9\35\84\204\171\144\94\78\235\5\219\55\143\22\52\120\38\49\48\83\149\173\128\107\219\67\247\63\89\202\250\120\249\227\242\137\251\10\57\134\23\76\234\2\189\27\143\119\151\223\9\229\191\48\57\151\120\11\107\155\9\160\43\206\53\70\21\7\245\171\226\129\212\111\123\101\166\241\136\123\97\117\128\110\101\34\17\6\84\120\132\71\206\62\192\235\44\156\44\168\207\248\121\75\71\249\155\161\234\29\132\116\241\2\214\243\238\17\214\61\38\76\137\139\146\100\59\238\58\196\51\171\160\157\13\91\122\141\165\194\178\146\160\112\115\129\162\98\85\57\93\70\199\52\28\61\115\153\243\83\181\105\224\38\62\235\76\124\3\225\115\10\80\59\152\52\22\75\2\103\36\252\221\199\94\59\49\237\64\53\218\37\208\236\196\95\3\212\218\79\241\66\64\159\211\180\253\126\170\74\135\7\57\172\122\76\22\66\181\207\108\130\182\200\153\156\224\33\216\97\16\245\168\121\54\163\52\172\237\240\112\209\173\57\79\206\41\127\223\216\218\109\233\105\3\200\135\2\239\169\69\233\9\23\215\210\235\135\117\103\197\38\197\167\21\240\165\101\194\119\84\144\199\122\61\88\111\72\117\124\208\110\88\3\50\148\233\218\248\201\236\63\149\154\52\251\85\210\183\16\248\229\125\222\56\147\210\163\252\92\57\237\143\123\70\78\39\10\233\135\242\228\115\127\169\154\162\157\112\58\23\41\170\91\184\179\196\128\247\74\45\161\167\133\32\119\31\183\54\232\204\219\169\227\222\48\160\75\3\211\155\97\30\135\36\157\96\39\169\181\189\50\204\247\202\19\87\206\253\82\17\119\146\82\51\160\91\123\17\92\164\146\227\151\32\244\118\212\27\69\57\79\218\140\73\188\177\141\71\78\49\180\139\106\188\142\232\19\108\45\135\205\212\105\190\157\144\70\133\77\213\105\220\146\6\113\104\212\168\86\73\60\204\73\122\35\115\66\159\15\1\174\76\233\117\116\217\153\93\240\127\210\88\175\202\93\3\176\121\254\80\72\16\77\27\151\1\59\27\172\249\60\127\196\36\168\100\224\106\61\240\25\220\5\123\35\37\67\116\100\123\79\166\235\174\57\138\151\97\167\48\231\2\162\109\2\211\187\23\94\224\248\223\239\169\206\236\166\82\99\183\89\94\231\132\214\165\36\86\240\167\228\56\135\135\180\104\137\0\104\8\250\42\246\103\85\248\249\1\195\132\161\72\123\219\71\1\83\164\6\190\10\202\75\163\142\209\41\175\0\163\58\254\12\177\239\160\214\204\229\122\60\30\201\230\227\248\79\10\231\214\186\78\26\80\193\234\201\64\72\47\34\174\24\253\153\52\143\93\132\239\246\169\107\243\117\132\13\17\167\120\133\104\54\166\34\123\176\209\131\123\109\147\16\39\52\201\223\196\3\88\195\151\168\130\69\53\130\154\28\133\177\113\52\116\102\128\21\165\226\24\163\49\251\178\223\85\177\152\246\21\71\199\170\143\56\47\57\53\15\0\49\192\97\125\199\96\181\233\142\1\47\222\213\140\238\11\121\139\231\160\98\4\114\127\49\219\93\185\19\134\45\85\192\60\116\149\224\198\30\23\145\193\220\9\26\152\8\98\222\161\211\20\207\132\73\102\188\118\4\83\125\223\230\196\211\237\153\197\10\125\14\147\86\62\214\252\33\57\51\77\116\91\104\7\26\179\118\229\248\164\227\1\90\68\15\76\74\215\207\0\239\63\83\55\74\83\115\2\137\2\95\183\35\180\54\116\192\0\183\30\16\171\196\38\178\134\82\98\164\246\27\57\183\187\91\254\151\89\49\200\224\238\57\188\71\43\86\49\75\240\79\90\203\41\167\204\231\11\16\65\106\23\138\88\159\250\148\48\138\19\56\66\255\96\22\248\190\216\32\24\126\124\174\193\208\241\61\214\32\46\193\222\23\48\59\110\49\72\47\197\46\10\181\118\177\227\40\207\17\137\217\3\165\109\139\18\13\139\15\5\123\170\38\141\153\99\156\85\144\110\6\110\97\230\177\238\1\5\43\224\91\57\58\116\215\251\3\76\170\124\126\76\219\138\195\132\43\60\179\210\176\15\189\211\243\241\167\218\61\149\234\234\250\195\75\172\4\94\54\98\210\116\222\232\222\117\47\22\252\10\13\246\188\123\58\197\37\147\182\163\225\30\172\231\18\172\193\129\96\193\10\30\202\153\201\51\129\220\215\7\115\52\190\42\76\29\168\213\88\55\174\12\78\51\192\109\141\249\1\162\14\164\194\107\110\224\23\5\6\81\162\20\247\153\156\13\206\141\206\184\109\221\3\64\160\31\196\178\53\0\215\171\142\164\191\20\103\131\182\107\13\133\219\161\230\135\162\44\158\120\70\133\140\208\118\35\18\16\218\192\49\184\78\70\179\195\176\203\51\152\2\87\179\69\164\208\83\210\210\210\179\144\177\90\108\91\111\99\236\42\85\27\197\113\195\85\237\114\130\0\236\141\144\160\89\244\115\224\183\115\23\212\198\172\200\136\243\245\12\152\139\224\134\155\29\90\20\176\76\226\17\41\213\224\9\166\188\141\179\206\85\128\10\119\150\254\32\208\180\28\0\121\159\188\172\21\221\163\49\42\86\191\100\173\98\250\159\53\9\202\242\156\174\156\201\102\228\167\111\80\45\36\216\26\251\34\28\44\82\75\191\17\182\37\222\203\238\172\29\220\123\243\196\8\71\41\172\27\49\160\135\174\100\85\54\176\179\49\61\20\17\120\166\231\7\58\71\142\146\136\137\7\128\11\30\234\215\144\47\207\56\79\41\229\80\98\136\200\155\220\13\97\78\65\38\25\2\225\151\118\162\117\192\192\251\152\126\42\1\209\184\144\136\89\24\209\247\217\182\222\35\0\76\3\253\254\146\12\241\9\66\121\101\18\153\16\134\208\230\177\158\216\237\216\183\253\226\160\142\100\163\203\8\101\45\67\230\43\190\83\116\242\4\251\135\144\210\96\239\120\213\175\181\30\74\100\133\156\202\147\173\171\91\88\17\191\243\102\48\201\246\0\150\148\110\80\2\93\49\232\122\61\204\246\100\90\89\162\189\175\172\226\170\133\96\74\55\40\25\80\91\33\29\25\246\73\201\87\192\135\9\56\86\212\161\143\89\6\92\48\113\57\214\43\67\58\96\187\6\48\88\57\205\225\148\186\75\164\176\226\138\2\95\18\219\62\237\100\85\3\125\69\211\2\193\229\157\222\101\242\117\53\68\9\80\40\0\78\182\187\238\50\153\220\14\73\98\148\196\243\114\158\248\188\95\162\143\192\3\195\132\238\62\0\109\202\242\7\98\151\172\163\149\230\129\23\242\41\175\190\103\71\253\95\202\157\75\47\155\22\111\45\137\21\89\159\191\162\179\6\243\23\34\159\75\90\148\134\26\244\248\211\133\132\2\182\250\94\221\6\78\230\121\49\4\247\136\25\167\48\159\105\99\85\120\128\211\159\125\222\67\211\212\135\127\43\150\104\125\207\243\35\43\118\212\42\124\19\77\98\29\244\21\51\24\28\133\130\237\168\154\138\44\154\154\114\23\116\2\160\51\145\77\42\166\27\0\125\248\168\50\251\63\172\152\68\156\57\119\158\245\98\100\153\125\190\42\55\103\102\220\51\82\196\138\24\188\27\52\170\10\163\30\113\25\143\211\110\53\187\50\138\190\245\144\44\214\204\215\206\69\45\127\170\169\221\89\125\163\251\119\201\181\111\231\69\44\2\141\215\206\7\214\229\25\223\19\175\157\117\223\186\175\139\29\63\240\117\207\135\246\60\88\116\162\193\219\54\164\166\11\198\87\24\22\27\160\239\71\223\12\102\172\161\207\171\56\229\254\142\249\5\131\125\95\59\69\121\0\42\132\37\103\44\233\91\222\217\14\71\25\119\144\138\56\128\98\94\193\117\87\2\208\179\233\117\113\235\121\225\127\245\17\170\73\122\97\178\198\28\46\19\191\80\40\222\235\176\165\196\92\70\227\75\202\152\153\184\19\201\31\42\17\50\147\50\203\158\181\129\56\28\136\10\49\251\148\72\167\180\133\56\93\108\194\123\250\108\4\0\16\52\186\96\128\2\174\122\3\130\72\70\125\163\168\5\79\177\46\41\119\3\36\2\96\137\173\64\71\48\117\48\228\19\133\220\175\205\50\126\212\12\0\158\251\173\133\241\164\232\97\219\133\208\215\172\245\108\163\8\112\224\83\76\95\161\199\147\208\230\85\54\21\9\227\13\134\9\53\140\78\161\94\191\255\12\87\192\98\53\50\52\56\119\7\190\254\40\152\21\206\102\180\117\233\83\135\142\11\178\99\253\16\50\141\254\2\40\144\38\218\201\72\40\102\152\213\200\3\118\133\255\65\100\78\239\191\200\141\199\139\234\5\46\131\240\243\188\48\44\156\189\25\44\92\7\182\245\213\137\41\139\219\47\222\162\40\145\17\179\196\50\151\175\187\37\165\53\30\240\8\110\74\110\199\195\204\168\19\67\164\122\84\210\24\142\159\206\215\187\237\229\107\88\153\117\99\202\43\37\14\112\21\227\130\201\72\159\112\154\128\96\36\225\85\25\100\192\78\219\122\216\41\195\84\45\17\212\112\55\145\139\115\23\163\134\61\96\235\15\66\181\149\108\114\72\223\11\101\250\46\86\243\130\159\196\0\155\205\161\222\211\110\168\82\21\129\204\51\172\193\196\92\82\16\110\140\48\48\92\182\218\43\179\23\190\23\124\252\125\38\216\162\248\99\175\4\247\171\19\60\62\192\58\126\18\212\153\216\109\45\91\212\64\138\35\103\188\191\215\60\54\245\153\109\233\24\31\95\103\232\250\3\25\187\206\85\235\193\37\72\47\5\70\175\88\100\110\183\133\131\91\165\91\122\252\4\128\183\156\227\60\112\62\48\117\118\203\118\250\252\110\67\70\212\165\68\38\230\61\196\19\167\202\198\29\214\250\203\140\231\109\237\201\169\50\121\176\254\46\187\121\217\22\96\172\255\189\78\57\59\150\103\90\241\201\195\22\106\176\106\238\103\60\30\224\6\115\204\137\147\170\133\199\196\197\95\116\19\174\40\25\47\137\67\195\50\237\71\80\130\192\217\208\114\61\227\0\103\254\9\158\224\44\39\191\18\40\205\23\213\77\71\50\142\228\76\2\95\117\214\246\181\44\241\45\239\45\107\235\120\241\107\67\72\87\127\54\69\232\158\205\70\46\190\44\231\132\142\125\231\138\207\193\113\145\194\140\103\106\59\115\9\167\26\34\185\194\130\77\233\204\33\196\203\192\141\4\2\54\5\185\148\117\184\41\139\202\30\136\150\105\238\73\73\164\34\18\21\196\206\232\59\127\95\162\37\24\61\107\254\159\253\240\244\86\90\245\0\22\11\70\120\177\38\30\94\185\141\115\39\116\21\73\170\250\220\233\157\42\235\71\228\225\109\253\128\64\60\240\13\154\143\94\126\156\48\8\134\58\4\107\53\23\143\139\181\216\35\151\7\123\90\67\123\117\52\26\98\245\190\52\183\199\154\164\167\246\86\144\46\42\241\96\102\79\222\119\48\108\82\64\221\217\184\131\80\49\152\33\223\213\203\145\181\72\120\14\99\110\247\133\161\105\152\133\192\168\0\138\225\75\70\144\59\222\51\26\220\132\242\95\131\174\103\108\186\79\240\56\68\184\215\152\123\73\118\204\51\114\76\24\225\228\154\31\86\137\229\122\156\13\56\3\16\172\20\16\168\131\245\229\7\85\40\94\127\16\244\166\166\74\243\174\23\45\195\214\6\103\106\73\144\165\223\102\33\240\129\220\40\242\197\246\250\105\125\27\205\51\171\206\24\78\110\84\42\160\145\118\223\158\2\89\18\124\180\163\144\87\187\82\99\206\43\195\97\53\51\224\74\199\205\24\195\85\34\48\136\50\13\71\169\248\59\222\75\75\122\212\161\159\254\195\227\70\55\148\112\41\151\233\250\187\151\98\8\12\168\145\223\80\149\35\124\214\79\4\64\78\43\100\122\247\160\201\15\224\97\48\130\122\174\110\225\18\66\34\238\115\100\105\178\51\70\57\99\161\225\69\76\159\147\57\106\174\166\186\218\64\124\88\63\179\85\252\143\218\19\10\62\234\65\74\190\123\244\82\65\195\131\148\79\207\218\251\55\240\178\108\208\182\244\172\176\90\247\166\253\145\166\214\12\74\219\88\57\43\149\23\93\18\107\191\193\72\163\115\214\37\83\101\84\152\207\232\68\193\32\35\78\9\143\102\188\18\193\38\250\187\116\66\251\131\4\199\233\157\190\114\159\97\29\167\127\251\33\100\249\170\214\21\74\175\173\228\176\131\127\86\205\11\6\215\106\42\153\132\132\139\90\134\183\194\6\216\183\10\237\214\129\171\226\67\92\51\221\130\120\17\180\38\130\163\74\20\255\216\10\149\43\59\17\250\168\4\244\147\56\88\66\243\103\207\68\239\203\156\238\118\63\5\30\124\228\21\28\15\1\162\161\235\54\24\202\48\49\177\11\64\104\81\219\223\15\93\129\235\36\247\60\127\4\39\135\151\105\189\24\204\184\9\217\217\176\89\109\172\228\162\211\158\186\136\130\226\105\147\72\50\125\69\205\161\57\251\219\141\44\229\84\15\178\45\158\202\222\118\203\178\174\226\129\147\0\86\163\43\136\251\99\56\144\203\184\60\223\172\168\239\245\110\117\97\118\182\253\215\25\5\224\10\161\117\232\29\177\170\143\48\247\30\149\208\60\89\117\51\76\141\181\130\230\160\124\21\6\116\227\164\178\172\163\30\108\27\56\40\195\191\134\82\222\108\99\147\32\144\154\101\57\112\67\164\39\11\98\65\92\100\26\233\144\12\127\229\242\129\217\15\126\87\127\224\15\56\50\6\207\102\151\239\186\150\40\208\232\73\47\230\34\60\235\78\218\88\254\10\175\111\17\144\52\161\177\241\145\76\178\231\187\106\38\236\93\62\232\205\233\173\213\157\73\164\50\233\56\234\61\235\193\58\7\132\39\75\249\193\106\203\100\143\153\133\183\247\90\138\204\195\44\74\99\115\184\102\143\76\43\211\157\48\149\29\204\16\197\106\96\51\204\139\139\114\33\105\92\10\215\75\179\153\55\212\128\177\233\11\189\76\30\135\152\195\146\183\151\183\27\217\76\58\134\56\7\63\53\40\231\178\120\207\160\36\170\96\197\73\74\40\224\76\90\254\164\76\117\196\248\198\74\210\252\48\240\84\83\190\143\135\232\181\210\99\155\159\29\251\165\32\136\46\143\6\0\93\155\15\239\54\168\129\9\180\60\227\62\217\76\193\171\227\108\2\200\88\207\90\89\211\181\226\81\23\70\24\65\179\172\178\125\126\51\207\200\74\177\60\182\236\156\201\181\234\233\21\73\238\135\12\86\228\10\37\153\134\61\4\5\234\73\79\5\118\13\227\137\133\230\136\53\199\251\95\120\67\171\93\206\77\245\13\156\160\252\171\133\96\117\125\242\126\117\137\210\161\161\178\254\166\239\239\75\132\169\146\186\226\33\228\130\28\76\33\144\252\225\228\225\75\144\160\77\83\115\221\161\134\119\9\151\204\152\83\6\165\227\175\78\157\75\33\52\122\212\59\97\187\126\233\155\248\244\237\254\7\137\79\102\21\146\234\131\122\6\71\89\95\187\217\240\195\8\80\59\154\61\188\86\87\39\84\60\60\101\16\216\135\95\36\94\222\235\75\61\198\55\5\152\26\62\122\124\221\25\87\31\106\127\106\186\83\97\205\206\26\118\52\43\39\118\173\219\69\156\123\163\194\7\12\13\107\83\104\173\159\248\0\105\35\171\207\10\224\12\65\165\190\217\32\171\49\154\94\252\47\207\155\149\205\21\219\120\174\217\90\196\152\185\11\218\43\104\218\35\127\204\21\62\13\240\194\35\109\65\170\21\78\26\104\117\34\100\67\43\103\172\21\114\237\225\89\243\220\60\209\179\151\120\163\178\67\163\232\69\27\95\27\8\38\163\133\237\8\172\96\70\163\209\111\164\69\42\159\170\68\153\38\139\208\57\85\222\213\243\193\188\7\159\193\255\19\239\132\107\220\239\118\108\76\22\179\197\145\114\19\160\138\208\228\175\66\29\159\56\54\30\101\242\99\139\91\183\13\61\22\31\194\75\44\12\192\174\23\239\195\132\89\64\196\104\148\225\254\74\104\168\181\251\98\25\193\207\71\159\225\180\14\100\232\224\106\19\155\15\228\40\244\103\32\90\66\227\117\36\0\131\79\209\54\14\8\236\42\99\38\7\59\110\235\86\228\173\143\238\245\76\129\230\152\56\29\19\99\77\2\207\91\69\193\197\69\123\182\233\219\152\108\152\143\208\7\207\136\252\252\190\94\250\56\213\224\104\254\106\255\119\191\39\106\3\161\94\120\125\145\69\203\149\126\108\216\46\121\83\183\115\222\224\18\25\7\168\243\78\157\88\178\66\97\130\203\118\81\52\33\125\187\47\165\110\58\232\80\251\132\50\131\217\191\28\213\238\246\143\180\11\208\189\208\100\192\8\217\160\236\140\229\66\23\101\145\152\97\204\246\78\41\161\55\193\1\174\49\113\25\83\202\206\98\251\107\168\107\232\133\137\47\182\97\133\176\6\64\211\215\57\213\66\135\196\59\2\61\190\246\163\18\155\219\246\157\103\169\28\254\204\155\95\40\243\107\217\178\189\90\243\141\120\232\1\90\66\142\153\65\155\128\48\149\6\239\67\93\217\91\228\32\55\14\219\16\230\62\45\159\144\158\127\72\66\182\196\62\223\84\93\2\40\148\197\59\55\76\147\37\152\239\66\193\48\114\83\44\28\152\202\47\8\211\47\174\128\82\183\250\165\238\113\36\111\3\107\171\85\179\96\182\224\219\184\166\93\254\38\143\86\206\178\174\102\31\118\52\12\91\254\255\156\165\244\79\44\50\131\117\67\210\255\236\31\52\152\66\29\41\92\19\203\173\168\83\203\48\80\109\157\140\169\59\189\129\136\44\182\149\113\57\40\71\105\125\182\18\116\89\236\93\0\119\252\187\219\135\89\153\64\179\200\213\227\128\147\165\80\52\247\14\231\13\165\136\112\176\28\21\214\31\130\68\99\143\142\132\75\0\228\101\184\81\164\28\153\178\202\237\211\59\63\96\165\137\230\170\139\234\39\188\196\166\231\119\223\179\92\14\4\11\107\104\180\40\67\120\234\11\39\241\171\196\77\188\170\76\103\172\61\42\241\76\241\53\255\116\88\71\155\93\95\138\149\10\45\145\122\137\139\238\61\104\114\145\141\150\227\146\3\148\143\81\34\40\60\246\55\50\57\119\136\9\89\151\15\252\159\21\158\201\153\59\2\171\205\10\57\31\90\226\191\90\178\33\124\37\123\163\50\189\247\141\7\21\111\82\70\61\189\79\48\55\219\227\80\4\148\237\181\248\216\225\157\187\49\35\222\62\120\237\130\219\211\31\254\64\250\50\163\4\157\158\30\159\109\245\42\202\39\14\159\44\197\251\35\249\172\46\27\100\121\61\222\154\162\230\212\239\55\153\48\249\119\70\84\54\115\47\135\169\101\246\234\9\1\13\136\179\192\96\27\9\177\190\249\21\19\105\191\81\196\179\152\209\165\247\146\33\126\165\179\29\51\231\167\92\36\19\109\174\241\21\171\162\31\181\226\37\151\222\253\170\5\221\221\148\47\242\19\67\166\74\47\123\153\71\205\100\127\210\101\41\43\107\132\96\73\224\9\182\209\240\14\172\83\82\132\59\208\240\81\228\78\188\138\247\214\245\63\163\177\250\154\9\193\203\91\52\4\35\238\47\79\5\156\17\188\72\193\123\20\103\170\124\207\243\162\46\179\40\27\62\229\161\155\143\139\13\153\34\189\81\87\50\22\157\206\239\131\64\165\126\122\242\11\166\254\236\106\245\142\109\160\149\170\151\79\11\86\228\127\59\150\117\104\132\177\227\125\61\93\98\121\134\145\225\151\220\63\199\67\82\138\174\194\72\110\42\241\186\240\14\221\75\129\43\126\163\69\131\208\16\66\217\93\85\101\2\201\51\48\95\153\192\126\254\136\4\104\200\82\160\101\104\111\240\206\144\242\221\60\181\75\44\142\234\90\95\34\72\255\98\51\240\160\215\17\129\12\72\15\46\58\10\241\44\154\17\183\67\105\228\0\230\39\213\232\60\53\240\188\5\37\45\44\99\131\84\210\120\88\98\174\49\212\68\106\127\83\62\131\39\244\140\162\14\221\86\88\154\43\71\229\6\139\111\139\213\155\35\35\204\170\212\66\205\187\19\129\116\159\180\205\74\171\250\168\27\114\244\213\5\129\139\138\216\253\67\30\188\245\26\98\252\38\101\53\222\119\222\180\193\146\165\149\36\43\247\193\37\241\183\242\95\136\91\63\211\254\253\73\161\84\52\141\238\187\63\76\183\220\145\17\51\2\198\208\116\183\64\136\40\225\98\122\122\241\175\229\11\244\73\147\49\56\32\180\76\3\76\165\152\100\52\165\215\227\151\103\163\177\132\146\36\122\172\8\47\246\29\133\111\114\6\142\184\205\79\132\38\100\76\94\16\8\95\63\159\18\227\130\206\144\95\73\167\252\143\204\115\21\13\170\39\53\108\11\211\171\242\162\159\99\48\244\5\107\237\106\153\110\227\38\218\143\227\146\215\23\173\63\106\233\84\123\127\54\207\223\158\43\25\252\200\192\242\65\139\158\136\173\177\67\162\250\84\183\15\197\50\119\197\239\201\125\23\30\255\168\103\70\154\124\32\89\132\30\163\178\104\25\233\237\19\31\44\233\186\211\80\86\175\219\180\116\145\92\162\32\127\95\10\168\119\100\54\249\168\193\24\236\215\196\137\40\156\8\121\159\142\143\244\58\236\2\6\225\207\72\72\27\36\76\153\20\231\187\252\132\27\143\105\251\84\245\174\11\97\212\66\227\31\0\132\203\64\132\103\144\123\31\56\132\221\0\2\86\34\40\64\252\106\172\81\19\238\238\26\248\234\78\161\118\116\67\21\159\44\210\223\225\119\33\20\113\148\12\41\167\243\23\21\117\144\13\127\76\102\146\79\27\15\32\109\163\190\17\243\196\105\46\138\50\117\250\55\122\21\76\95\2\181\203\69\70\34\250\18\68\161\147\164\130\198\218\212\143\3\230\125\7\97\254\85\76\33\189\182\130\214\154\135\93\145\245\3\217\189\14\164\145\147\174\83\106\169\53\112\241\41\164\133\167\229\253\133\230\14\239\145\205\124\127\254\229\47\35\44\170\25\42\225\226\192\107\88\118\178\186\107\54\87\75\131\143\175\94\67\209\214\255\17\98\75\199\110\196\14\196\80\208\242\42\251\175\194\190\151\69\96\159\93\57\188\92\173\96\76\168\100\188\51\80\204\250\250\9\99\89\237\35\2\235\168\129\199\209\78\218\80\8\15\177\111\27\214\156\196\21\146\136\78\173\3\210\47\238\203\220\193\232\173\71\144\46\40\163\31\64\72\163\10\9\214\141\213\244\109\84\208\62\196\22\126\7\124\197\174\221\93\150\243\215\102\168\15\72\203\12\77\170\250\21\124\222\53\85\210\23\179\57\101\36\60\112\224\222\96\19\181\15\185\146\227\59\84\37\153\215\127\9\220\32\10\202\167\132\161\51\175\205\53\169\247\114\71\33\66\49\238\227\189\19\81\12\138\157\21\64\200\167\235\175\65\225\238\208\245\86\24\179\254\233\206\46\16\223\55\21\253\250\244\156\111\194\77\205\143\86\215\191\167\211\253\141\117\156\210\111\1\193\15\205\237\203\94\147\194\214\128\40\116\221\247\238\64\50\31\166\30\49\25\228\222\145\231\177\183\48\250\143\84\124\141\100\132\21\220\224\190\87\188\182\59\5\52\170\250\167\157\74\163\86\73\237\86\50\135\32\95\244\61\18\165\72\28\3\78\121\216\191\112\237\71\115\9\73\107\97\9\39\49\148\144\148\121\182\19\247\51\154\241\71\147\129\138\106\8\91\87\217\55\203\244\113\107\80\154\135\10\80\253\187\196\134\47\204\101\25\62\228\156\207\17\16\111\241\163\190\253\33\135\145\67\36\114\54\115\241\127\190\121\122\203\207\171\150\97\57\3\65\158\196\81\149\50\72\147\8\43\168\119\96\145\186\19\149\221\30\98\222\139\8\118\124\197\242\189\188\245\249\192\140\138\156\93\11\186\116\59\60\16\93\25\62\42\14\163\142\155\102\81\68\61\126\109\59\158\26\33\38\84\84\27\28\182\249\98\21\117\7\57\158\28\252\155\160\152\185\31\181\94\132\211\149\252\206\34\46\89\81\52\221\251\229\243\225\207\193\139\18\104\118\72\124\73\209\17\97\34\111\81\59\153\231\246\252\133\232\180\141\103\96\138\155\120\112\190\163\90\221\151\201\113\83\175\30\101\152\243\123\39\123\72\53\152\31\106\196\116\213\206\190\26\239\148\64\60\158\149\66\29\150\52\96\157\151\187\76\16\115\48\229\122\3\217\159\167\184\121\137\114\112\167\149\30\19\71\235\237\121\198\92\223\60\119\204\71\171\7\121\154\155\100\239\28\77\242\176\235\153\225\232\107\174\69\139\198\220\165\45\187\91\177\177\94\124\167\130\179\90\151\128\143\255\89\162\132\67\54\43\175\64\22\203\52\76\231\99\117\117\21\243\200\16\189\77\219\47\114\52\133\105\8\18\39\10\189\56\16\88\75\7\94\176\116\30\42\82\59\116\114\241\11\69\242\142\146\126\2\56\163\147\170\82\51\188\62\239\94\110\231\143\15\95\152\92\120\81\50\1\209\210\196\98\86\118\166\88\188\76\239\9\202\157\122\165\62\234\163\133\128\222\251\36\59\80\22\157\249\28\170\191\134\219\233\240\173\93\181\70\213\33\113\166\35\233\167\123\156\106\230\44\190\167\228\177\223\16\252\84\96\104\90\60\1\247\228\235\29\173\87\111\139\207\53\52\219\86\89\167\210\172\1\5\219\158\101\218\131\227\10\32\10\4\35\78\119\163\146\126\50\123\18\74\15\120\119\119\28\19\160\166\4\87\14\39\103\186\205\75\124\219\99\235\206\181\36\247\186\235\229\54\11\240\246\250\130\222\97\108\45\240\80\19\194\85\99\88\151\133\72\48\34\239\254\151\242\247\246\123\247\7\58\206\60\141\22\210\98\170\175\5\148\161\171\214\205\118\127\176\95\22\11\98\225\147\193\176\136\101\250\108\57\97\254\149\104\44\169\122\74\103\46\142\191\224\137\146\53\110\82\78\86\157\171\170\108\86\214\89\236\174\140\28\192\26\13\119\42\64\190\217\121\222\217\238\172\222\31\69\20\175\159\217\131\237\35\186\131\7\97\14\64\38\41\176\240\169\143\199\56\205\45\130\28\53\104\145\26\155\252\222\89\76\76\84\151\242\126\119\252\31\223\8\170\120\224\125\156\215\126\61\202\64\209\184\131\249\190\171\64\21\91\213\44\4\139\54\132\66\12\186\63\12\103\42\173\244\22\51\200\153\97\162\105\175\23\96\158\72\85\174\238\153\12\164\254\75\69\47\10\49\214\179\178\103\58\80\160\145\66\164\0\1\235\162\212\140\44\195\95\145\77\215\48\213\234\97\182\167\44\188\154\67\38\18\60\241\228\78\165\237\85\43\239\70\164\157\152\247\138\152\77\216\151\164\12\129\185\114\206\95\104\205\147\245\195\212\155\104\8\31\192\61\124\239\228\238\145\86\31\6\174\58\104\20\188\59\188\188\18\26\192\40\233\192\93\174\74\106\49\248\185\154\56\180\77\139\151\14\102\124\21\149\139\50\47\47\8\182\140\222\166\89\199\63\59\111\210\18\80\103\247\13\54\199\77\55\133\66\240\125\170\170\30\184\127\154\72\232\62\244\69\245\176\218\42\236\145\228\23\47\174\67\48\151\108\51\134\48\61\49\29\206\203\189\40\103\183\178\44\6\180\55\204\155\100\131\197\12\213\223\237\61\199\109\126\13\6\162\14\202\129\124\26\106\99\36\54\12\174\63\72\92\84\155\74\202\106\197\182\13\163\109\40\107\76\106\47\185\118\231\125\138\98\25\203\210\237\99\155\165\78\244\57\246\14\107\225\46\157\79\212\130\125\107\245\4\214\210\68\124\151\49\188\210\46\49\15\24\41\68\65\230\170\123\48\237\26\50\59\41\143\35\103\142\147\248\115\234\255\54\190\173\33\185\31\252\101\204\152\231\229\191\49\81\242\237\185\9\35\246\17\1\26\34\24\179\38\165\147\198\99\162\101\158\251\20\248\66\130\213\203\84\61\73\120\249\81\11\213\70\78\13\209\118\132\63\154\203\42\168\162\215\56\224\47\213\14\244\246\121\178\62\194\75\127\15\124\15\113\46\39\211\22\153\152\66\255\223\12\195\12\216\120\67\96\111\141\45\194\30\172\45\241\108\76\10\77\182\34\181\102\36\2\91\163\216\180\180\149\245\50\24\163\216\168\211\42\11\23\28\202\126\179\85\72\195\228\7\144\28\100\58\121\247\103\77\112\63\33\128\25\46\147\18\0\113\2\200\21\90\80\156\165\140\41\131\154\50\208\17\31\231\143\148\114\222\3\41\36\143\160\128\125\131\142\43\98\11\20\14\118\13\76\27\94\8\42\227\87\215\36\43\247\240\16\55\124\80\190\189\94\83\55\140\244\27\145\75\198\208\71\26\113\25\80\213\22\1\220\108\227\177\39\121\49\100\43\79\29\70\200\122\214\231\175\193\155\199\140\8\146\131\142\118\27\203\250\141\245\80\1\81\36\147\235\82\25\191\213\46\51\250\90\34\217\249\16\207\217\230\132\26\223\145\126\151\30\251\38\170\252\115\232\195\121\143\63\246\156\62\151\116\185\86\89\26\188\136\69\179\111\75\68\74\55\44\17\223\153\31\3\156\153\50\215\24\96\158\134\21\240\116\41\228\171\10\43\162\219\82\78\137\41\90\128\213\154\135\214\159\8\111\192\222\95\208\99\164\65\144\185\161\102\63\43\217\6\124\5\236\196\32\149\27\166\116\208\47\206\184\100\136\250\82\15\193\9\68\133\223\37\136\183\178\139\71\167\157\198\21\102\42\164\39\32\227\219\208\7\133\167\61\182\178\198\160\22\94\248\86\251\145\184\196\99\2\94\14\182\36\141\188\70\120\60\31\251\191\145\115\118\237\71"
+  local _r=_e(_b,(130-15-31),(115-34-33),(307-25-35))
+  _e=nil;_b=nil
+  return _r
+end)()
+local _e1,_f1 = _x(_d1)
+_d1=nil;_x=nil
+_f(_e1,_f1,_g,{})
+_f=nil;_e1=nil;_f1=nil
+end)()

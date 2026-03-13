@@ -1,717 +1,280 @@
-local _iihsijg = true
-if debug and debug.getinfo then
-  local _xblycqe = debug.getinfo(1,"S")
-  if _xblycqe and _xblycqe.what == string.char(67) then
-    _iihsijg = false
+local _k1 = (getfenv and getfenv(0) or _ENV or {})
+local _m1 = function()
+  if type(_k1.print) ~= "function" then error("") end
+  if debug then
+    local _d=debug
+    if type(_d.getinfo)=="function" then
+      local _f=function() return _k1 end
+      local _i=_d.getinfo(_f,"u")
+      if _i and (_i.nups or 0) > (70-17-48) then error("") end
+    end
+    pcall(function() _d.sethook=nil _d.getinfo=nil _d.getlocal=nil end)
   end
 end
-if not _iihsijg then error(string.char(83,79,76,73,58,32,116,97,109,112,101,114,32,100,101,116,101,99,116,101,100),0) end
-local _fgcxrsr = (898-15-27)
-local _jvzjewh = _fgcxrsr * (46-19-27)
-local _dgcbrjq = _jvzjewh - _fgcxrsr
-local _vvdrswh = {}
-_vvdrswh[(26948-23-50)] = function()
-  local _uqhqjrf = {}
-  _uqhqjrf[(59518-44-19)] = function()
-    local _tnmzjeb = {}
-    _tnmzjeb[(92820-45-1)] = function()
-      local _dxuyhjh = ((44464-42-5)-(107-4-41))
-      local _voythyq = true
-      while _voythyq do
-        if _dxuyhjh == (44403-18-30) then
-          local _uooclfb = {(154-38-10),(106-46-30),(93-29-9),(100-24-37),(285-50-50),(99-7-23),(142-12-41),(133-44-39)}
-          _dxuyhjh = (44398-38-2)
-        elseif _dxuyhjh == (44426-40-28) then
-          if string.len(string.char(120)) == (80-45-34) then
-            local _jkfuzrf = (44-1-6)
-          else
-            local _qdoqlzg = (65-10-35)
-          end
-          _dxuyhjh = (44418-22-31)
-        elseif _dxuyhjh == (44381-10-6) then
-          local _rsoagzj = function(_senigjz)
-            local _timkrcp = {}
-            for _wamjsei=(21-4-16),#_senigjz do
-              local _njarlyb = string.byte(_senigjz,_wamjsei)
-              local _eoxgqsl = _uooclfb[(_wamjsei-(73-46-26))%((120-42-43)-(62-6-37)-(52-12-32))+(42-14-27)]
-              _timkrcp[_wamjsei] = string.char(_njarlyb ~ _eoxgqsl)
-            end
-            return table.concat(_timkrcp)
-          end
-          _dxuyhjh = (44402-5-22)
-        elseif _dxuyhjh == (44447-38-34) then
-          if type(nil) == string.char(110,105,108) then
-            local _spgvsdk = (95-41-8)
-          else
-            local _gjtupor = (111-18-50)
-          end
-          _dxuyhjh = (44429-10-38)
-        elseif _dxuyhjh == (44413-4-28) then
-          -- ================================================
-          _dxuyhjh = (44448-17-41)
-        elseif _dxuyhjh == (44397-6-1) then
-          -- ⚡ _jaladur script (_fyuwfcq & _mvfxnns _dloiybf)
-          _dxuyhjh = (44432-26-10)
-        elseif _dxuyhjh == (44452-43-13) then
-          for _mobjtic=1,(10-5-5) do
-            local _ehhunae = (67-36-18)
-          end
-          _dxuyhjh = (44454-15-36)
-        elseif _dxuyhjh == (44482-49-30) then
-          -- _vlfkcvt _ysujnku _unsusse _bbycvtn _dhqfdgr & _yybpohj
-          _dxuyhjh = (44454-27-20)
-        elseif _dxuyhjh == (44483-27-49) then
-          if math.floor((47-3-17)) == (91-23-41) then
-            local _mrsqczz = (43-9-2)
-          else
-            local _fkphcen = (88-17-42)
-          end
-          _dxuyhjh = (44451-23-12)
-        elseif _dxuyhjh == (44498-35-47) then
-          -- _qosrrip _illxqst _nwhixuq-_hzolfil _qhpcvfc, _ytzukwn _hyacumr _czuxsko!
-          _dxuyhjh = (44511-44-44)
-        elseif _dxuyhjh == (44432-2-7) then
-          -- ================================================
-          _dxuyhjh = (44487-33-25)
-        elseif _dxuyhjh == (44500-41-30) then
-          if (99-35-50) % (23-18-3) == (51-36-15) then
-            local _jpscnkd = (83-33-30)
-          else
-            local _bruvhhu = (93-38-33)
-          end
-          _dxuyhjh = (44477-14-25)
-        elseif _dxuyhjh == (44521-49-34) then
-          
-          _dxuyhjh = (44473-25-5)
-        elseif _dxuyhjh == (44502-43-16) then
-          while type(nil) == string.char(110,117,109,98,101,114) do
-            local _ubzozug = (46-19-8)
-          end
-          _dxuyhjh = (44533-48-32)
-        elseif _dxuyhjh == (44531-43-35) then
-          if (83-6-43) % (48-29-17) == (14-13-1) then
-            local _pqmazpe = (59-18-28)
-          else
-            local _gcvhczc = (50-11-5)
-          end
-          _dxuyhjh = (44501-3-41)
-        elseif _dxuyhjh == (44521-47-17) then
-          -- _jwzoaxw _fioomdy _txgscjy _ldfqdui _fpexcte
-          _dxuyhjh = (44555-47-44)
-        elseif _dxuyhjh == (44540-41-35) then
-          local _znmjqcm = ((99-48-19)+(55-16-18)-(67-14-32))*(45-35-9)
-          _dxuyhjh = (44508-5-30)
-        elseif _dxuyhjh == (44524-10-41) then
-          if _bomhegr()._xsfsvue then return end
-          _dxuyhjh = (44537-8-49)
-        elseif _dxuyhjh == (44538-38-20) then
-          local _sxbnyud = ((35-17-16)+(72-29-35)-(29-20-1))*(50-31-18)
-          _dxuyhjh = (44486-1-1)
-        elseif _dxuyhjh == (44529-15-30) then
-          local _lxtbyuq = ((35-6-2)+(82-12-45)-(75-13-37))*(47-44-2)
-          _dxuyhjh = (44514-8-11)
-        elseif _dxuyhjh == (44552-42-15) then
-          _bomhegr()._xsfsvue = true
-          _dxuyhjh = (44573-34-37)
-        elseif _dxuyhjh == (44563-35-26) then
-          
-          _dxuyhjh = (44551-19-27)
-        elseif _dxuyhjh == (44551-11-35) then
-          -- ================================================
-          _dxuyhjh = (44576-27-36)
-        elseif _dxuyhjh == (44563-49-1) then
-          local _umddfpt = ((66-12-48)+(68-22-37)-(53-8-36))*(66-17-48)
-          _dxuyhjh = (44592-37-33)
-        elseif _dxuyhjh == (44553-18-13) then
-          -- _zzhpixs
-          _dxuyhjh = (44553-11-12)
-        elseif _dxuyhjh == (44622-50-42) then
-          local function _oyvduow()
-            local _pxcciah = (132-32-49)
-            return _pxcciah
-          end
-          _dxuyhjh = (44576-4-38)
-        elseif _dxuyhjh == (44573-12-27) then
-          local _ajfvguc = ((123-31-48)+(61-13-21)-(41-12-2))*(67-44-22)
-          _dxuyhjh = (44590-30-16)
-        elseif _dxuyhjh == (44582-9-29) then
-          -- ================================================
-          _dxuyhjh = (44610-20-43)
-        elseif _dxuyhjh == (44569-19-3) then
-          local Lighting = game:_egvxujb(_rsoagzj(string.char((93-24-31),(171-43-9),(107-17-10),(138-26-33),(270-20-45),(82-34-4),(89-27-7),(148-20-43))))
-          _dxuyhjh = (44613-17-40)
-        elseif _dxuyhjh == (44593-36-1) then
-          if (110-16-49) % (74-29-43) == (67-35-31) then
-            local _aoincge = (119-35-40)
-          else
-            local _vrhciyu = (51-21-17)
-          end
-          _dxuyhjh = (44606-13-31)
-        elseif _dxuyhjh == (44593-13-18) then
-          local RunService = game:_egvxujb(_rsoagzj(string.char((68-3-9),(148-10-31),(125-8-28),(161-29-16),(290-35-35),(116-15-46),(54-6-1),(121-5-25),(94-49-36),(131-7-1))))
-          _dxuyhjh = (44644-36-38)
-        elseif _dxuyhjh == (44605-1-34) then
-          local function _cgzujej()
-            local _urkhkbt = (91-8-42)
-            return _urkhkbt
-          end
-          _dxuyhjh = (44620-37-8)
-        elseif _dxuyhjh == (44628-7-46) then
-          local _vuxcrwr = game:_egvxujb(_rsoagzj(string.char((108-15-40),(140-1-35),(99-31-2),(146-32-19),(249-9-22),(135-42-38),(96-45-5),(141-42-35))))
-          _dxuyhjh = (44610-18-7)
-        elseif _dxuyhjh == (44630-12-33) then
-          local Players = game:_egvxujb(_rsoagzj(string.char((150-48-44),(183-20-49),(141-39-16),(148-36-18),(303-45-38),(75-12-8),(85-29-14))))
-          _dxuyhjh = (44630-7-34)
-        elseif _dxuyhjh == (44669-41-39) then
-          local _tlojbig = type(nil)
-          _dxuyhjh = (44672-50-26)
-        elseif _dxuyhjh == (44648-19-33) then
-          local TweenService = game:_egvxujb(_rsoagzj(string.char((114-35-17),(161-23-33),(156-49-25),(142-35-41),(243-2-26),(57-13-22),(138-46-32),(99-8-27),(68-37-3),(181-20-42),(122-9-29),(95-26-3))))
-          _dxuyhjh = (44623-18-2)
-        elseif _dxuyhjh == (44663-32-28) then
-          while math.floor((74-8-31)) == (112-28-48) do
-            local _qlpvprr = (93-46-8)
-          end
-          _dxuyhjh = (44671-20-39)
-        elseif _dxuyhjh == (44673-33-28) then
-          local UserInputService = game:_egvxujb(_rsoagzj(string.char((111-16-32),(138-6-23),(148-23-43),(144-28-31),(305-17-48),(71-26-2),(103-37-25),(121-25-25),(76-13-33),(108-16-15),(154-40-32),(110-23-2),(222-12-3),(72-9-19),(124-19-47),(152-33-32))))
-          _dxuyhjh = (44660-10-33)
-        elseif _dxuyhjh == (44681-41-23) then
-          local StarterGui = game:_egvxujb(_rsoagzj(string.char((135-31-47),(160-28-26),(141-29-26),(180-46-49),(262-24-33),(114-38-44),(118-38-37),(128-7-4),(102-33-38),(146-25-2))))
-          _dxuyhjh = (44678-29-21)
-        elseif _dxuyhjh == (44640-9-3) then
-          local _paxgiwo = type(nil)
-          _dxuyhjh = (44715-49-34)
-        elseif _dxuyhjh == (44679-32-15) then
-          local _zyxvklp = game:_egvxujb(_rsoagzj(string.char((78-13-12),(137-23-14),(112-22-12),(150-44-11),(241-21-13),(118-49-23),(136-33-50),(115-1-48))))
-          _dxuyhjh = (44719-49-31)
-        elseif _dxuyhjh == (44692-36-17) then
-          for _zrjaehq=1,(69-46-23) do
-            local _xmxqmto = (100-30-28)
-          end
-          _dxuyhjh = (44670-7-16)
-        elseif _dxuyhjh == (44675-13-15) then
-          
-          _dxuyhjh = (44708-43-13)
-        elseif _dxuyhjh == (44720-45-23) then
-          for _puftbhw=1,(75-50-25) do
-            local _evewlvy = (37-19-3)
-          end
-          _dxuyhjh = (44687-9-16)
-        elseif _dxuyhjh == (44692-11-19) then
-          local _hbkoneg = tostring((31-24-7))
-          _dxuyhjh = (44742-38-38)
-        elseif _dxuyhjh == (44734-37-31) then
-          -- _uflwdwg _pdykptx (_pymwewu (70-40-25) _kkrfkvz)
-          _dxuyhjh = (44719-13-33)
-        elseif _dxuyhjh == (44719-6-40) then
-          local _qhlfvua = Players._pdykptx
-          _dxuyhjh = (44766-48-36)
-        elseif _dxuyhjh == (44715-11-22) then
-          if type(nil) == string.char(110,105,108) then
-            local _dbqiwvs = (90-34-47)
-          else
-            local _vobidwh = (72-22-37)
-          end
-          _dxuyhjh = (44740-37-12)
-        elseif _dxuyhjh == (44764-27-46) then
-          local function _tyrayxr()
-            local _csprepj = (56-9-17)
-            return _csprepj
-          end
-          _dxuyhjh = (44725-3-27)
-        elseif _dxuyhjh == (44747-46-6) then
-          if not _qhlfvua then
-              local _rfohjcp = os._vbjhyzf()
-              repeat task.wait()
-                  _qhlfvua = Players._pdykptx
-              until _qhlfvua or os._vbjhyzf() - _rfohjcp > (49-17-27)
-          end
-          _dxuyhjh = (44747-7-37)
-        elseif _dxuyhjh == (44726-19-4) then
-          local _sojybkq = type(nil)
-          _dxuyhjh = (44760-27-21)
-        elseif _dxuyhjh == (44737-4-21) then
-          local _jbaflfb = ((103-23-47)+(67-16-41)-(82-32-40))*(59-24-34)
-          _dxuyhjh = (44773-14-43)
-        elseif _dxuyhjh == (44747-27-4) then
-          if not _qhlfvua then return end
-          _dxuyhjh = (44763-15-25)
-        elseif _dxuyhjh == (44762-2-37) then
-          
-          _dxuyhjh = (44810-37-42)
-        elseif _dxuyhjh == (44755-23-1) then
-          local _gomdbxt = type(nil)
-          _dxuyhjh = (44758-15-3)
-        elseif _dxuyhjh == (44789-16-33) then
-          local _sybudcp = type(nil)
-          _dxuyhjh = (44830-39-47)
-        elseif _dxuyhjh == (44808-46-18) then
-          -- ================================================
-          _dxuyhjh = (44793-5-36)
-        elseif _dxuyhjh == (44842-45-45) then
-          local _zgckomz = tostring((57-38-19))
-          _dxuyhjh = (44846-43-46)
-        elseif _dxuyhjh == (44799-30-12) then
-          -- _vvcjiie (_ihayjep _kjnmglw _minfdss _jdsoetj)
-          _dxuyhjh = (44800-30-2)
-        elseif _dxuyhjh == (44795-26-1) then
-          -- ================================================
-          _dxuyhjh = (44856-34-47)
-        elseif _dxuyhjh == (44817-13-29) then
-          local _lwemkti = tostring((56-38-18))
-          _dxuyhjh = (44823-8-36)
-        elseif _dxuyhjh == (44815-26-10) then
-          if math.floor((132-45-40)) == (96-4-45) then
-            local _zkusnji = (48-20-7)
-          else
-            local _xrsjxod = (58-3-50)
-          end
-          _dxuyhjh = (44880-44-49)
-        elseif _dxuyhjh == (44846-33-26) then
-          local _vvcjiie = {
-          _dxuyhjh = (44827-24-9)
-        elseif _dxuyhjh == (44806-3-9) then
-          while type(nil) == string.char(110,117,109,98,101,114) do
-            local _ycmrqhx = (48-3-15)
-          end
-          _dxuyhjh = (44860-49-12)
-        elseif _dxuyhjh == (44856-24-33) then
-              _bmzzoua = true,
-          _dxuyhjh = (44829-2-20)
-        elseif _dxuyhjh == (44854-40-7) then
-          local _lnteglc = tostring((61-11-50))
-          _dxuyhjh = (44838-21-1)
-        elseif _dxuyhjh == (44885-36-33) then
-              _rzcujlp = true,
-          _dxuyhjh = (44876-8-47)
-        elseif _dxuyhjh == (44876-5-50) then
-          local _oeaexfi = type(nil)
-          _dxuyhjh = (44846-16-1)
-        elseif _dxuyhjh == (44881-34-18) then
-          local _pptavyj = type(nil)
-          _dxuyhjh = (44855-3-16)
-        elseif _dxuyhjh == (44893-43-14) then
-              _atsnulc = true,
-          _dxuyhjh = (44856-4-10)
-        elseif _dxuyhjh == (44916-32-42) then
-          local _cjbkquz = type(nil)
-          _dxuyhjh = (44922-45-27)
-        elseif _dxuyhjh == (44912-24-38) then
-          for _oxjvmen=1,(63-48-15) do
-            local _ugqpuzq = (46-12-26)
-          end
-          _dxuyhjh = (44916-42-17)
-        elseif _dxuyhjh == (44926-21-48) then
-              _bywyywg = true,
-          _dxuyhjh = (44884-15-3)
-        elseif _dxuyhjh == (44891-12-13) then
-          if string.len(string.char(120)) == (48-17-30) then
-            local _gpcfacp = (79-28-31)
-          else
-            local _khvewbw = (99-44-21)
-          end
-          _dxuyhjh = (44941-38-30)
-        elseif _dxuyhjh == (44914-15-26) then
-              _ofagfpy = false,
-          _dxuyhjh = (44896-13-6)
-        elseif _dxuyhjh == (44884-1-6) then
-          local _uzdvxmc = ((88-2-46)+(90-15-25)-(111-48-13))*(83-43-39)
-          _dxuyhjh = (44913-28-2)
-        elseif _dxuyhjh == (44900-16-1) then
-              _cykewgk = false,
-          _dxuyhjh = (44971-33-47)
-        elseif _dxuyhjh == (44943-23-29) then
-              _igkdcky = false,
-          _dxuyhjh = (44935-4-34)
-        elseif _dxuyhjh == (44915-11-7) then
-          local function _lopnuvp()
-            local _coxereb = (119-33-35)
-            return _coxereb
-          end
-          _dxuyhjh = (44993-43-46)
-        elseif _dxuyhjh == (44944-19-21) then
-          }
-          _dxuyhjh = (45005-46-44)
-        elseif _dxuyhjh == (44970-8-47) then
-          
-          _dxuyhjh = (44935-11-3)
-        elseif _dxuyhjh == (44947-16-10) then
-          -- ================================================
-          _dxuyhjh = (44994-42-24)
-        elseif _dxuyhjh == (44982-48-6) then
-          local _afvfuez = ((83-29-16)+(81-33-32)-(90-38-36))*(65-50-14)
-          _dxuyhjh = (45002-47-20)
-        elseif _dxuyhjh == (44981-43-3) then
-          -- _qzeomfp _urwrits _nwhixuq-_hzolfil
-          _dxuyhjh = (44996-9-48)
-        elseif _dxuyhjh == (44988-43-6) then
-          local _elugewc = type(nil)
-          _dxuyhjh = (45026-32-48)
-        elseif _dxuyhjh == (44994-20-28) then
-          -- ================================================
-          _dxuyhjh = (44981-2-24)
-        elseif _dxuyhjh == (44987-17-15) then
-          local function _rywobtw()
-            local _vtvwoia = (121-23-50)
-            return _vtvwoia
-          end
-          _dxuyhjh = (45000-7-32)
-        elseif _dxuyhjh == (45015-36-18) then
-          local _aklzkhf = type(nil)
-          _dxuyhjh = (45032-20-42)
-        elseif _dxuyhjh == (45011-36-5) then
-          local function _wtexhbv(_xxpudbx, _dxmgxlk)
-              _dxmgxlk = _dxmgxlk or (190-4-36)
-              local _glmgoho = workspace:_ehyjzwk()
-              for _tjgxttd = (69-21-47), #_glmgoho, _dxmgxlk do
-                  for _vlvmxqd = _tjgxttd, math._ffduzxg(_tjgxttd + _dxmgxlk - (44-31-12), #_glmgoho) do
-                      pcall(_xxpudbx, _glmgoho[_vlvmxqd])
-                  end
-                  task.wait()
-              end
-          end
-          _dxuyhjh = (45044-25-42)
-        elseif _dxuyhjh == (45051-50-24) then
-          for _izslrif=1,(70-38-32) do
-            local _iniurjx = (66-16-37)
-          end
-          _dxuyhjh = (45026-21-22)
-        elseif _dxuyhjh == (45035-18-34) then
-          
-          _dxuyhjh = (45065-26-50)
-        elseif _dxuyhjh == (45028-28-11) then
-          local _siqaioo = tostring((96-49-47))
-          _dxuyhjh = (45073-46-30)
-        elseif _dxuyhjh == (45090-46-47) then
-          local _pcztmrb = {
-          _dxuyhjh = (45066-24-39)
-        elseif _dxuyhjh == (45070-39-28) then
-          for _gfehlkv=1,(61-28-33) do
-            local _jlkfgtc = (47-10-10)
-          end
-          _dxuyhjh = (45064-1-50)
-        elseif _dxuyhjh == (45065-4-48) then
-              _cugytrd = function(_bbvljwn)
-                  _wtexhbv(function(_iavmoex)
-                      if _iavmoex:_fxozpxz(_rsoagzj(string.char((66-6-7),(146-13-18),(154-25-34),(103-14-22),(236-5-23),(125-43-35),(118-44-34),(132-16-29)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((85-12-20),(158-2-31),(155-43-46),(146-32-46),(249-14-28),(83-16-35),(114-15-43),(140-21-26)))) then
-                          _iavmoex._holnaga = _bbvljwn and (55-41-13) or (12-2-10)
-                          if _bbvljwn then _iavmoex._eylyfsy = _rsoagzj(string.char()) end
-                      elseif _iavmoex:_fxozpxz(_rsoagzj(string.char((110-17-40),(137-10-10),(142-32-32),(105-11-9),(252-18-13),(111-37-24),(85-25-8),(89-14-7)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((100-5-42),(152-44-6),(137-49-23),(80-10-3),(256-41-11),(126-38-43),(116-35-34),(116-12-15)))) then
-                          _iavmoex._jhonhuf = not _bbvljwn
-                      elseif (_iavmoex:_fxozpxz(_rsoagzj(string.char((100-21-26),(161-44-5),(120-23-7),(123-41-17),(265-14-29),(67-12-10),(93-23-17),(132-13-24)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((79-23-3),(164-30-21),(128-32-28),(139-36-9),(266-49-12),(82-29-10),(83-15-28),(126-31-29))))) and _bbvljwn then
-                          _iavmoex._eylyfsy = _rsoagzj(string.char())
-                          _iavmoex._kcdkdsa = (98-48-49)
-                      end
-                  end)
-              end,
-              _spwdxus = function(_bbvljwn)
-                  _wtexhbv(function(_iavmoex)
-                      if _iavmoex:_fxozpxz(_rsoagzj(string.char((107-8-46),(124-12-8),(139-30-14),(146-39-29),(239-36-3),(85-27-19),(102-27-12),(141-30-43)))) then
-                          _iavmoex._jhonhuf = not _bbvljwn
-                          if _bbvljwn then _iavmoex._jlnxaki, _iavmoex._obslxwt, _iavmoex._mnstyem = (38-36-2), _mdzermc._pysrbbh((46-12-34)), _mdzermc._pysrbbh((37-15-22)) end
-                      elseif _iavmoex:_fxozpxz(_rsoagzj(string.char((126-49-24),(181-35-36),(102-10-15),(131-13-32),(256-19-14),(62-10-18),(96-40-12),(87-9-8)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((112-33-26),(164-29-26),(102-26-9),(104-35-2),(252-4-41),(98-33-5),(97-15-32),(98-11-18)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((72-2-17),(171-32-35),(117-17-32),(131-23-23),(264-33-19),(96-42-9),(85-37-6),(123-11-48)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((106-16-37),(175-33-27),(116-32-14),(132-30-33),(275-37-29),(77-17-19),(147-45-50),(123-23-12)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((69-7-9),(145-12-29),(133-13-40),(164-39-48),(256-39-10),(82-48-2),(105-14-30),(135-8-47)))) then
-                          _iavmoex._jhonhuf = not _bbvljwn
-                      end
-                  end)
-              end,
-              _bgzhawp = function(_bbvljwn)
-                  Lighting._ggbzsye = not _bbvljwn
-                  Lighting._pzintbh = _bbvljwn and (79-48-31) or (46-15-31).(48-35-11)
-                  Lighting._lydfktl = _bbvljwn and (46-36-10) or (55-48-6)
-                  Lighting._mwoztsy = _bbvljwn and (93-46-47) or (71-33-37)
-                  _wtexhbv(function(_iavmoex)
-                      if _iavmoex:_fxozpxz(_rsoagzj(string.char((92-35-4),(131-15-3),(130-33-33),(158-45-45),(257-30-19),(74-7-19),(145-38-46),(154-46-44)))) then _iavmoex._gvkcjdy = not _bbvljwn end
-                  end, (288-50-38))
-              end,
-              _bywyywg = function(_bbvljwn)
-                  if not _bbvljwn then return end
-                  _wtexhbv(function(_iavmoex)
-                      if _iavmoex:_fxozpxz(_rsoagzj(string.char((94-36-5),(190-36-41),(102-21-17),(91-11-12),(261-33-20),(86-21-17),(107-11-35),(117-9-44)))) and _iavmoex._nnjojba._kktzugr < (46-12-34).(44-31-12) and not _iavmoex:_nvfnxux(_qhlfvua._xxqakve) then
-                          _iavmoex:_izfuauk()
-                      end
-                  end, (542-16-26))
-              end,
-              _olnunec = function(_bbvljwn)
-                  pcall(function()
-                      _zqibapr()._rpjubxh._lcgpoax = _bbvljwn and Enum._lcgpoax._vrfxbva or Enum._lcgpoax._kgbixtb
-                  end)
-              end
-          }
-          
-          -- ================================================
-          -- _rganqyg _ebqevlx (_ihayjep _ivapxnw _ucwkwqo _ecvsgnm _xgfgjfb)
-          -- ================================================
-          workspace._jhfohms:_vmeuxxs(function(_iavmoex)
-              pcall(function()
-                  if _vvcjiie._bmzzoua then
-                      if _iavmoex:_fxozpxz(_rsoagzj(string.char((103-14-36),(167-50-2),(124-21-8),(146-31-48),(233-15-10),(126-44-35),(99-11-48),(141-14-40)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((102-6-43),(203-40-38),(142-28-48),(137-19-50),(256-10-39),(75-29-14),(122-25-41),(113-3-17)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((92-20-19),(163-42-4),(103-3-22),(144-45-14),(299-50-28),(96-19-27),(96-18-26),(96-13-15)))) then
-                          _iavmoex._jhonhuf = false; _iavmoex._holnaga = (58-13-44); _iavmoex._eylyfsy = _rsoagzj(string.char())
-                      end
-                  end
-                  if _vvcjiie._rzcujlp then
-                      if _iavmoex:_fxozpxz(_rsoagzj(string.char((138-39-46),(171-17-50),(163-21-47),(128-29-21),(265-32-33),(59-4-16),(118-44-11),(114-13-33)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((122-27-42),(197-39-48),(102-24-1),(163-36-41),(264-12-29),(57-10-13),(79-15-20),(113-10-33)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((69-8-8),(161-14-38),(72-4-1),(93-9-17),(286-47-32),(101-29-12),(129-34-45),(118-47-2)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((98-7-38),(190-48-38),(121-50-3),(135-46-4),(300-48-40),(135-42-48),(98-34-22),(95-12-19)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((96-19-24),(185-42-28),(75-1-4),(108-10-29),(275-26-40),(83-33-9),(133-40-41),(111-8-15)))) or _iavmoex:_fxozpxz(_rsoagzj(string.char((95-12-30),(139-5-30),(110-18-12),(124-41-6),(258-38-13),(101-40-29),(122-14-47),(109-11-18)))) then
-                          _iavmoex._jhonhuf = false
-                      end
-                  end
-                  if _vvcjiie._atsnulc and _iavmoex:_fxozpxz(_rsoagzj(string.char((112-11-48),(186-28-45),(97-16-17),(129-43-18),(273-39-26),(109-28-33),(144-35-48),(141-37-40)))) then
-                      _iavmoex._gvkcjdy = false
-                  end
-                  if _vvcjiie._bywyywg and _iavmoex:_fxozpxz(_rsoagzj(string.char((112-14-45),(193-38-42),(122-44-14),(143-41-34),(251-5-38),(65-9-8),(98-35-2),(103-17-22)))) and _iavmoex._nnjojba._kktzugr < (18-16-2).(58-36-21) then
-                      _iavmoex:_izfuauk()
-                  end
-              end)
-          end)
-          
-          -- ================================================
-          -- _iqxijkv _bamiaza
-          -- ================================================
-          local _dkczfjq = (_vqnktgf and _vqnktgf()) or _zyxvklp
-          if _dkczfjq:_irqevvr(_rsoagzj(string.char((110-48-9),(182-37-32),(102-1-20),(139-33-30),(285-36-44),(108-34-36),(132-36-48),(170-48-47)))) then _dkczfjq._ofktciy:_izfuauk() end
-          
-          local _rjpaeve = Instance._pysrbbh(_rsoagzj(string.char((122-40-29),(176-25-45),(93-2-10),(91-7-9),(310-45-47),(101-31-27),(108-50-17),(160-50-41))))
-          _rjpaeve._tzyrbzh = _rsoagzj(string.char((139-39-47),(173-48-12),(113-12-20),(115-27-12),(239-22-12),(105-43-24),(86-12-26),(113-9-29)))
-          _rjpaeve._tythtzs = false
-          _rjpaeve._trufucq = true
-          _rjpaeve._szvnaqd = _dkczfjq
-          
-          local _wqaozum = Instance._pysrbbh(_rsoagzj(string.char((74-2-19),(175-25-42),(144-17-35),(126-34-22),(258-25-11),(113-19-43),(90-14-36),(104-13-10))))
-          _wqaozum._nnjojba = UDim2._pysrbbh((79-45-34), (288-45-13), (35-10-25), (337-18-29))
-          _wqaozum._uccrwlv = UDim2._pysrbbh((21-13-8), (85-32-43), (41-29-12).(27-18-4), -(175-19-11))
-          _wqaozum._umlgksi = Color3._omhizxw((47-16-16), (96-31-50), (37-7-10))
-          _wqaozum._szvnaqd = _rjpaeve
-          Instance._pysrbbh(_rsoagzj(string.char((110-37-20),(143-29-12),(110-9-21),(104-10-19),(222-11-9),(61-7-12),(102-46-10),(119-1-28))), _wqaozum)._ypatokx = UDim._pysrbbh((9-7-2), (96-37-49))
-          
-          local _zywofkn = Instance._pysrbbh(_rsoagzj(string.char((110-43-14),(177-40-29),(137-28-17),(133-34-29),(283-18-43),(113-22-40),(95-7-48),(110-7-22))))
-          _zywofkn._nnjojba = UDim2._pysrbbh((16-14-1), (46-7-39), (72-26-46), (67-7-28))
-          _zywofkn._umlgksi = Color3._omhizxw((63-8-25), (62-30-2), (49-6-3))
-          _zywofkn._szvnaqd = _wqaozum
-          Instance._pysrbbh(_rsoagzj(string.char((132-32-47),(143-38-3),(164-47-37),(88-6-7),(247-21-24),(63-2-19),(97-1-50),(125-26-9))), _zywofkn)._ypatokx = UDim._pysrbbh((14-2-12), (54-2-42))
-          
-          local _oidpxgi = Instance._pysrbbh(_rsoagzj(string.char((92-32-7),(194-33-37),(128-40-3),(109-20-5),(288-46-34),(87-6-35),(113-18-32),(116-16-16))))
-          _oidpxgi._nnjojba = UDim2._pysrbbh((50-30-19), -(84-15-9), (34-29-4), (62-14-48))
-          _oidpxgi._uccrwlv = UDim2._pysrbbh((55-12-43), (55-22-23), (32-11-21), (69-45-24))
-          _oidpxgi._kcdkdsa = (29-22-6)
-          _oidpxgi._rvbfgfj = _rsoagzj(string.char((9991-13-47),(118-9-47),(159-20-35),(159-36-46),(253-32-5),(106-38-27),(94-4-34),(140-12-42),(76-40-5),(177-31-38)))
-          _oidpxgi._hhdlogk = Color3._omhizxw((157-20-37), (237-17-20), (298-16-27))
-          _oidpxgi._penxpfd = Enum._penxpfd._fhcltqz
-          _oidpxgi._bhhhimy = Enum._bhhhimy._mfbdcnb
-          _oidpxgi._szvnaqd = _zywofkn
-          
-          local function _vvndtvf(_rvbfgfj, _bbrjcsm, _qrwuaxf)
-              local _midwvzw = Instance._pysrbbh(_rsoagzj(string.char((120-33-34),(191-37-47),(138-30-19),(111-15-11),(283-47-14),(55-5-5),(131-42-36),(119-5-34))), _zywofkn)
-              _midwvzw._nnjojba = UDim2._pysrbbh((28-18-10), (61-6-31), (75-48-27), (59-30-5))
-              _midwvzw._uccrwlv = UDim2._pysrbbh((70-25-44), _qrwuaxf, (60-16-44), (45-11-30))
-              _midwvzw._umlgksi = _bbrjcsm
-              _midwvzw._rvbfgfj = _rvbfgfj
-              _midwvzw._hhdlogk = Color3._omhizxw((312-41-16), (297-29-13), (320-21-44))
-              _midwvzw._penxpfd = Enum._penxpfd._fhcltqz
-              Instance._pysrbbh(_rsoagzj(string.char((129-44-32),(172-36-34),(162-34-48),(127-8-44),(245-17-26),(94-3-49),(95-47-2),(146-15-41))), _midwvzw)._ypatokx = UDim._pysrbbh((39-23-15), (63-44-19))
-              return _midwvzw
-          end
-          
-          local _yqmfodr = _vvndtvf(_rsoagzj(string.char((9653-40-35))), Color3._omhizxw((312-12-45), (253-50-23), (67-20-47)), -(111-33-22))
-          local _mjlqwnk = _vvndtvf(_rsoagzj(string.char((10183-39-33))), Color3._omhizxw((304-2-47), (106-19-27), (105-29-16)), -(77-31-18))
-          
-          local _dqmzpsr = Instance._pysrbbh(_rsoagzj(string.char((140-44-43),(183-34-41),(132-39-1),(123-42-11),(247-11-14),(91-7-33),(57-7-10),(112-20-11))), _wqaozum)
-          _dqmzpsr._nnjojba = UDim2._pysrbbh((31-21-9), (48-47-1), (38-10-27), -(77-36-9))
-          _dqmzpsr._uccrwlv = UDim2._pysrbbh((10-2-8), (30-11-19), (55-36-19), (87-13-42))
-          _dqmzpsr._kcdkdsa = (55-30-24)
-          
-          local _rvxxxzt = {
-              {_tqkukgu = _rsoagzj(string.char((68-14-1),(183-37-22),(174-48-36),(116-21-2),(225-15-15),(92-34-16),(95-15-36),(155-32-40))), _ucmzkft = _rsoagzj(string.char((104-33-18),(160-19-25),(157-48-32),(101-16-6),(235-23-2),(115-42-25),(134-40-40),(112-15-9),(126-4-48),(98-9-24),(106-5-10),(144-48-18),(223-6-3),(98-23-23),(117-31-25),(180-42-47),(93-46-31))), _yxvqtyb = _rsoagzj(string.char((55413-10-21),(57345-49-26))), _cusbxlg = _pcztmrb._cugytrd},
-              {_tqkukgu = _rsoagzj(string.char((78-18-7),(180-25-47),(114-14-23),(91-6-17),(229-12-13),(85-4-34),(134-46-35),(75-1-8))), _ucmzkft = _rsoagzj(string.char((102-38-11),(194-17-50),(117-8-17),(114-7-24),(257-17-38),(58-2-20),(54-4-17),(131-17-48),(118-34-10),(135-31-39),(114-47-1),(122-17-30),(272-32-31),(104-24-36),(91-23-12),(118-10-36),(78-47-6))), _yxvqtyb = _rsoagzj(string.char((10064-6-8))), _cusbxlg = _pcztmrb._spwdxus},
-              {_tqkukgu = _rsoagzj(string.char((111-13-45),(182-14-41),(111-12-32),(136-11-41),(241-14-12),(69-12-9),(88-24-11),(119-31-7))), _ucmzkft = _rsoagzj(string.char((70-13-4),(176-10-39),(155-14-49),(110-8-19),(241-2-37),(100-43-21),(94-49-12),(149-39-44),(103-13-16),(124-24-35),(143-21-41),(135-39-31),(260-36-17),(123-17-43),(127-46-49),(139-7-46),(31-3-16))), _yxvqtyb = _rsoagzj(string.char((55410-24-4),(57120-4-13))), _cusbxlg = _pcztmrb._bgzhawp},
-              {_tqkukgu = _rsoagzj(string.char((72-11-8),(142-6-12),(89-10-1),(122-25-17),(229-8-29),(95-32-3),(63-6-11),(133-8-40))), _ucmzkft = _rsoagzj(string.char((131-41-37),(144-3-36),(165-37-43),(125-38-23),(280-37-29),(100-22-18),(125-44-21),(133-15-27),(125-8-43),(113-20-28),(140-28-33),(154-49-37),(288-48-47),(111-33-24),(81-13-24),(162-29-46),(42-32-8))), _yxvqtyb = _rsoagzj(string.char((55451-18-50),(56679-42-4))), _cusbxlg = _pcztmrb._bywyywg},
-              {_tqkukgu = _rsoagzj(string.char((74-15-6),(187-38-36),(105-3-21),(133-34-29),(273-48-3),(103-21-47),(102-34-27),(119-43-1))), _ucmzkft = _rsoagzj(string.char((140-37-50),(186-10-49),(165-32-41),(138-25-30),(213-1-10),(82-30-16),(102-33-36),(106-12-28),(150-32-44),(129-16-48),(127-37-21),(115-9-19),(288-27-50),(127-46-33),(122-39-24),(167-48-45),(22-3-17))), _yxvqtyb = _rsoagzj(string.char((10088-28-38))), _cusbxlg = _pcztmrb._olnunec},
-          }
-          
-          for _tjgxttd, _naqqitp in ipairs(_rvxxxzt) do
-              local _enoizdq = Instance._pysrbbh(_rsoagzj(string.char((86-21-12),(159-17-34),(140-15-33),(103-30-3),(252-12-18),(97-16-30),(73-23-10),(120-21-18))), _dqmzpsr)
-              _enoizdq._nnjojba = UDim2._pysrbbh((67-41-25), -(68-19-29), (53-9-44), (95-50-15))
-              _enoizdq._uccrwlv = UDim2._pysrbbh((39-31-8), (12-1-1), (61-45-16), (_tjgxttd-(83-40-42)) * (83-37-12) + (28-3-17))
-              _enoizdq._umlgksi = Color3._omhizxw((80-34-21), (122-47-50), (71-6-30))
-              Instance._pysrbbh(_rsoagzj(string.char((95-31-11),(139-25-12),(133-27-26),(108-32-1),(243-39-2),(113-28-43),(53-1-6),(148-43-15))), _enoizdq)._ypatokx = UDim._pysrbbh((69-19-50), (62-16-40))
-          
-              local _gxgeonb = Instance._pysrbbh(_rsoagzj(string.char((112-30-29),(179-27-28),(139-16-38),(111-23-4),(221-11-2),(107-44-17),(134-47-24),(143-29-30))), _enoizdq)
-              _gxgeonb._nnjojba = UDim2._pysrbbh((44-23-20), -(103-7-31), (82-46-35), (28-23-5))
-              _gxgeonb._uccrwlv = UDim2._pysrbbh((40-25-15), (70-21-41), (39-29-10), (72-37-35))
-              _gxgeonb._kcdkdsa = (79-44-34)
-              _gxgeonb._rvbfgfj = _naqqitp._yxvqtyb.. _rsoagzj(string.char((135-43-18))).. _naqqitp._ucmzkft
-              _gxgeonb._hhdlogk = Color3._omhizxw((264-47-17), (221-20-1), (293-40-43))
-              _gxgeonb._penxpfd = Enum._penxpfd._afcestv
-              _gxgeonb._bhhhimy = Enum._bhhhimy._mfbdcnb
-          
-              local _fsnmvvh = Instance._pysrbbh(_rsoagzj(string.char((114-32-29),(129-4-18),(135-44-2),(123-34-4),(287-25-40),(66-20-1),(83-4-26),(95-7-8))), _enoizdq)
-              _fsnmvvh._nnjojba = UDim2._pysrbbh((36-19-17), (112-30-34), (61-28-33), (60-13-25))
-              _fsnmvvh._uccrwlv = UDim2._pysrbbh((55-38-16), -(105-4-48), (68-32-36).(83-29-49), -(99-41-47))
-              _fsnmvvh._hhdlogk = Color3._omhizxw((262-5-2), (276-7-14), (333-50-28))
-              _fsnmvvh._penxpfd = Enum._penxpfd._fhcltqz
-              Instance._pysrbbh(_rsoagzj(string.char((113-28-32),(153-46-5),(98-10-8),(143-25-43),(241-35-4),(97-20-35),(121-45-30),(111-11-10))), _fsnmvvh)._ypatokx = UDim._pysrbbh((78-44-34), (92-47-34))
-              
-              local function _gopbqiy()
-                  local _rksepir = _vvcjiie[_naqqitp._tqkukgu]
-                  _fsnmvvh._rvbfgfj = _rksepir and _rsoagzj(string.char((82-24-5),(140-5-27),(125-29-4),(135-38-13),(291-36-35),(100-32-15),(87-31-8),(115-22-29))) or _rsoagzj(string.char((129-48-28),(186-30-42),(136-9-41),(125-12-18),(266-8-42),(47-7-2),(140-38-46),(157-46-21)))
-                  TweenService:_qdgdslw(_fsnmvvh, _bioaaev._pysrbbh((46-8-38).(88-45-28)), {_umlgksi = _rksepir and Color3._omhizxw((98-16-2), (299-22-22), (168-42-6)) or Color3._omhizxw((282-3-24), (120-32-8), (115-19-16))}):_zxziorr()
-              end
-              _gopbqiy()
-          
-              _fsnmvvh._ypujetn:_vmeuxxs(function()
-                  _vvcjiie[_naqqitp._tqkukgu] = not _vvcjiie[_naqqitp._tqkukgu]
-                  _gopbqiy()
-                  pcall(_naqqitp._cusbxlg, _vvcjiie[_naqqitp._tqkukgu])
-              end)
-          end
-          
-          local _zbtjztk = Instance._pysrbbh(_rsoagzj(string.char((58-4-1),(194-33-37),(171-42-44),(146-47-15),(288-46-34),(87-38-3),(120-19-38),(107-4-19))), _dqmzpsr)
-          _zbtjztk._nnjojba = UDim2._pysrbbh((49-45-3), -(104-40-44), (78-39-39), (78-15-39))
-          _zbtjztk._uccrwlv = UDim2._pysrbbh((64-18-46), (44-15-19), (34-14-19), -(74-25-19))
-          _zbtjztk._umlgksi = Color3._omhizxw((53-12-21), (77-37-20), (81-16-35))
-          _zbtjztk._hhdlogk = Color3._omhizxw((136-15-21), (338-43-40), (205-30-25))
-          _zbtjztk._rvbfgfj = _rsoagzj(string.char((128-32-43),(146-17-20),(159-44-30),(119-6-37),(249-21-25),(106-24-28),(100-37-7),(121-21-28),(124-10-34),(151-45-44),(109-37-46),(45-31-4)))
-          _zbtjztk._penxpfd = Enum._penxpfd._fhcltqz
-          Instance._pysrbbh(_rsoagzj(string.char((66-5-8),(167-29-36),(137-7-50),(150-48-27),(227-18-7),(82-25-15),(81-11-24),(122-18-14))), _zbtjztk)._ypatokx = UDim._pysrbbh((63-18-45), (14-4-4))
-          
-          -- ================================================
-          -- _qzeomfp _bamiaza (_rbowshc, _qaykaud, _yzjvhtj)
-          -- ================================================
-          local _omhtwnh, _fkijrgd, _iculxue = false, nil, nil
-          _zywofkn._wzjdihn:_vmeuxxs(function(_aakrddf) if _aakrddf._tdlikgc == Enum._tdlikgc._qtligul then _omhtwnh, _fkijrgd, _iculxue = true, _aakrddf._uccrwlv, _wqaozum._uccrwlv end end)
-          _zywofkn._tldvynt:_vmeuxxs(function(_aakrddf) if _aakrddf._tdlikgc == Enum._tdlikgc._qtligul then _omhtwnh = false end end)
-          UserInputService._qsjcmqb:_vmeuxxs(function(_aakrddf)
-              if _omhtwnh and _aakrddf._tdlikgc == Enum._tdlikgc._kyszmfp then
-                  _wqaozum._uccrwlv = UDim2._pysrbbh(_iculxue._hgegvoa._okywyqc, _iculxue._hgegvoa._pphakop + (_aakrddf._uccrwlv - _fkijrgd)._hgegvoa, _iculxue._iscksau._okywyqc, _iculxue._iscksau._pphakop + (_aakrddf._uccrwlv - _fkijrgd)._iscksau)
-              end
-          end)
-          
-          _yqmfodr._ypujetn:_vmeuxxs(function()
-              _vvcjiie._igkdcky = not _vvcjiie._igkdcky
-              _dqmzpsr._gxwvmkv = not _vvcjiie._igkdcky
-              local _amxshkh = _vvcjiie._igkdcky and UDim2._pysrbbh((57-45-12), (285-11-44), (46-30-16), (90-49-9)) or UDim2._pysrbbh((67-17-50), (317-47-40), (46-23-23), (303-10-3))
-              TweenService:_qdgdslw(_wqaozum, _bioaaev._pysrbbh((50-24-26).(35-9-24)), {_nnjojba = _amxshkh}):_zxziorr()
-              _yqmfodr._rvbfgfj = _vvcjiie._igkdcky and _rsoagzj(string.char((9735-12-48))) or _rsoagzj(string.char((9654-43-33)))
-          end)
-          
-          _mjlqwnk._ypujetn:_vmeuxxs(function()
-              _wqaozum._gxwvmkv = not _wqaozum._gxwvmkv
-          end)
-          
-          -- ================================================
-          -- _sbkrsaz _fovcgyq & _vgrihuh _ytaezbp
-          -- ================================================
-          local _irbkuta = {}
-          RunService._rlqdxko:_vmeuxxs(function(_hjnheur)
-              -- _vitolyk _sbkrsaz _xumptgw _przkjfq _xtmkigt
-              local _sxtakpw = (64-32-31) / _hjnheur
-              table._siwaqpm(_irbkuta, _sxtakpw)
-              if #_irbkuta > (39-20-4) then table._jzhkuoj(_irbkuta, (35-2-32)) end
-              local _rznfpca = (27-23-4)
-              for _xbfxsta, _vcwuwko in ipairs(_irbkuta) do _rznfpca = _rznfpca + _vcwuwko end
-              local _cuqvqpo = math._xyaelzv(_rznfpca / #_irbkuta)
-              _zbtjztk._rvbfgfj = _rsoagzj(string.char((108-42-13),(149-36-4),(132-2-45),(137-41-20),(281-34-44),(103-39-10),(68-9-3),(102-27-3),(129-5-44),(127-34-31))).. _cuqvqpo
-              _zbtjztk._hhdlogk = _cuqvqpo < (55-19-16) and Color3._omhizxw((286-12-19), (155-36-39), (144-28-36)) or _cuqvqpo < (86-27-19) and Color3._omhizxw((287-20-12), (276-35-41), (60-33-27)) or Color3._omhizxw((103-2-1), (328-37-36), (190-32-8))
-          end)
-          
-          -- ================================================
-          -- _uqtyjxi & _gofnlhh
-          -- ================================================
-          task.delay((75-27-48).(37-4-28), function()
-              for _xbfxsta, _naqqitp in ipairs(_rvxxxzt) do
-                  if _vvcjiie[_naqqitp._tqkukgu] then pcall(_naqqitp._cusbxlg, true) end
-              end
-              pcall(function() StarterGui:_auiaiqq(_rsoagzj(string.char((102-36-13),(178-48-10),(151-36-34),(95-21-4),(252-17-31),(147-41-46),(120-27-40),(128-42-19))), {_lvpxlqe = _rsoagzj(string.char((62-4-5),(157-32-9),(125-25-14),(124-32-17),(255-2-37),(112-44-35),(96-17-35),(110-45-1))), _rvbfgfj = _rsoagzj(string.char((74-1-20),(157-26-20),(153-43-22),(137-44-9),(233-15-15),(81-4-22),(69-14-7),(106-19-21),(132-21-37),(138-26-47),(118-44-4),(119-40-1),(258-27-36),(147-45-50),(116-6-49),(152-47-36),(85-29-31),(71-5-4),(178-46-28),(143-43-31),(228-25-8),(74-6-24),(93-4-27),(102-9-25),(51-23-20),(205-43-43),(104-38-43),(146-23-3),(241-28-7),(86-30-18),(133-36-35),(88-2-1),(51-9-28),(155-44-8),(149-34-44),(40-20-14))), _wojqcma = (54-37-14)}) end)
-          end)
-          
-          _bomhegr()._ynaytml = function()
-              pcall(function()
-                  _zqibapr()._rpjubxh._lcgpoax = Enum._lcgpoax._kgbixtb
-                  Lighting._ggbzsye = true
-                  Lighting._lydfktl = (17-2-14)
-                  Lighting._mwoztsy = (48-17-30)
-              end)
-              if _rjpaeve then _rjpaeve:_izfuauk() end
-              _bomhegr()._xsfsvue = false
-          end
-          _dxuyhjh = (45088-44-28)
-        elseif _dxuyhjh == (45093-38-39) then
-          local _ezwlomt = ((96-22-23)+(56-27-1)-(79-37-14))*(58-21-36)
-          _dxuyhjh = (45114-41-48)
-        elseif _dxuyhjh == (45066-24-17) then
-          local function _kexwktr()
-            local _dbpngds = (41-8-2)
-            return _dbpngds
-          end
-          _voythyq = false
-        else
-          _voythyq = false
-        end
+local _n1 = pcall(_m1)
+if not _n1 then repeat task.wait(1) until false end
+local _i1 = function() end
+local _j1 = (getfenv and getfenv(0) or _ENV or {})
+pcall(function()
+  local _h1 = rawget(_j1,"debug") or {}
+  if type(_h1) == "table" then
+    rawset(_h1,"getinfo",_i1)
+    rawset(_h1,"getlocal",_i1)
+    rawset(_h1,"traceback",_i1)
+    rawset(_h1,"sethook",_i1)
+    rawset(_h1,"getupvalue",_i1)
+  end
+end)
+local _g1 = (function()
+
+-- [decryptor]
+local _e = function(_a,_b,_c,_d)
+  local _r={}
+  for _=0,255 do _r[_]=_ end
+  local _seed=tostring(_b*65536+_c*256+_d)
+  local _t=0
+  for _=0,255 do
+    _t=(_t+_r[_]+string.byte(_seed,_%#_seed+1))%256
+    local _u=_r[_];_r[_]=_r[_t];_r[_t]=_u
+  end
+  local _s=0 _t=0 _v={}
+  for _=1,#_a do
+    _s=(_s+1)%256
+    _t=(_t+_r[_s])%256
+    local _u=_r[_s];_r[_s]=_r[_t];_r[_t]=_u
+    _v[_]=string.byte(_a,_)~_r[(_r[_s]+_r[_t])%256]
+  end
+  return _v
+end
+local _x = function(_y)
+  local _p=1
+  local function _r1() local v=_y[_p];_p=_p+1;return v or 0 end
+  local function _r2() local h=_r1();local l=_r1();return h*256+l end
+  local function _r3() local a=_r1();local b=_r1();local c=_r1();local v=a*65536+b*256+c;if v>=8388608 then v=v-16777216 end;return v end
+  local function _rs() local n=_r2();local s={};for _=1,n do s[_]=string.char(_r1()) end;return table.concat(s) end
+  _r1();_r1();_r1();_r1()
+  local _nc=_r2()
+  local _m={}
+  for _=1,_nc do
+    local _tp=_r1()
+    if _tp==0 then _m[_]=nil
+    elseif _tp==1 then _m[_]=_r1()~=0
+    elseif _tp==2 then _m[_]=_r2()
+    elseif _tp==3 then local _s=_rs();_m[_]=tonumber(_s)
+    elseif _tp==4 then _m[_]=_rs()
+    end
+  end
+  local _hk=_r1()
+  if _hk==1 then
+    for _=1,_nc do
+      local _kt=_r1();local _kv=_r1()
+      if _kt==1 then _m[_]=(_m[_] or 0)-_kv
+      elseif _kt==2 then
+        local _s=_m[_] or ""
+        local _d={}
+        for _j=1,#_s do _d[_j]=string.char(string.byte(_s,_j)~_kv) end
+        _m[_]=table.concat(_d)
       end
     end
-    local _cqtyjsm = {
-      {(15859-26-2), (80-39-41)},
-      {(15918-40-47), (40-16-24)},
-      {(15872-31-10), (59-22-37)},
-      {(30823-16-35), (92825-9-42)},
-      {(61030-2-37), (41-10-31)},
-    }
-    local _ngrpzsr = (59-42-16)
-    while _ngrpzsr <= #_cqtyjsm do
-      local _bsufwox = _cqtyjsm[_ngrpzsr]
-      local _rmlsnqq = _bsufwox[(45-18-26)]
-      local _czpkeim = _bsufwox[(96-46-48)]
-      if _rmlsnqq == (30794-18-4) then
-        _tnmzjeb[_czpkeim]()
-      elseif _rmlsnqq == (15925-46-48) then
-        -- nop
+  end
+  local _ni=_r2()
+  local _n={}
+  for _=1,_ni do
+    local _op=_r1();local _a=_r3();local _b=_r3();local _c=_r3()
+    _n[_]={_op,_a,_b,_c}
+  end
+  return _m,_n
+end
+local _h = function() end
+local _g = (function()
+  local _r=(getfenv and getfenv(0) or _ENV or _G)
+  local _b={debug=1,load=1,loadstring=1,dofile=1,loadfile=1}
+  pcall(function()
+    local _d=rawget(_r,"debug") or {}
+    for _,_k in pairs{"sethook","getinfo","getlocal","getupvalue","traceback"} do
+      rawset(_d,_k,_h)
+    end
+  end)
+  return setmetatable({},{
+    __index=function(_,k) return _r[k] end,
+    __newindex=function(_,k,v) if not _b[k] then _r[k]=v end end
+  })
+end)()
+local _f = nil
+_f = function(_m,_n,_env,_args)
+  local _j={}
+  local _sp=0
+  local _locals={}
+  local _k=1
+  -- copy args into locals
+  if _args then for _i=1,#_args do _locals[_i-1]=_args[_i] end end
+  local function _push(v) _sp=_sp+1;_j[_sp]=v end
+  local function _pop() local v=_j[_sp];_j[_sp]=nil;_sp=_sp-1;return v end
+  local function _peek() return _j[_sp] end
+  local _p = {}
+  _p[(258-32-9)] = function(_a) _push(_m[_a+1]) end
+  _p[(289-34-7)] = function(_a) _push(_locals[_a]) end
+  _p[(259-1-14)] = function(_a) _locals[_a]=_pop() end
+  _p[(174-24-29)] = function(_a) _push(_env[_m[_a+1]]) end
+  _p[(232-45-25)] = function(_a) _env[_m[_a+1]]=_pop() end
+  _p[(310-33-26)] = function() local b=_pop();local a=_pop();_push(a+b) end
+  _p[(89-10-12)] = function() local b=_pop();local a=_pop();_push(a-b) end
+  _p[(285-43-26)] = function() local b=_pop();local a=_pop();_push(a*b) end
+  _p[(48-23-5)] = function() local b=_pop();local a=_pop();_push(a/b) end
+  _p[(106-45-28)] = function() local b=_pop();local a=_pop();_push(a%b) end
+  _p[(172-1-44)] = function() local b=_pop();local a=_pop();_push(tostring(a)..tostring(b)) end
+  _p[(282-13-49)] = function() _push(#_pop()) end
+  _p[(166-28-33)] = function() _push(not _pop()) end
+  _p[(277-25-11)] = function() _push(-_pop()) end
+  _p[(103-16-8)] = function() local b=_pop();local a=_pop();_push(a==b) end
+  _p[(184-45-39)] = function() local b=_pop();local a=_pop();_push(a~=b) end
+  _p[(310-15-30)] = function() local b=_pop();local a=_pop();_push(a<b) end
+  _p[(146-49-20)] = function() local b=_pop();local a=_pop();_push(a<=b) end
+  _p[(112-21-10)] = function() local b=_pop();local a=_pop();_push(a>b) end
+  _p[(142-4-7)] = function() local b=_pop();local a=_pop();_push(a>=b) end
+  _p[(230-43-20)] = function() local b=_pop();local a=_pop();_push(a and b) end
+  _p[(198-5-39)] = function() local b=_pop();local a=_pop();_push(a or b) end
+  _p[(87-46-26)] = function(_a) _k=_k+_a end
+  _p[(273-14-34)] = function(_a) if not _pop() then _k=_k+_a end end
+  _p[(268-37-18)] = function(_a) if _pop() then _k=_k+_a end end
+  _p[(93-30-12)] = function(_a,_b)
+    -- collect args in correct order (stack is LIFO)
+    local _args={}
+    for _i=_a,1,-1 do _args[_i]=_pop() end
+    local _fn=_pop()
+    -- FIX 4: strict type check, handle metamethod __call
+    local _callable=type(_fn)=="function"
+    if not _callable then
+      local _mt=getmetatable(_fn)
+      _callable=_mt and type(_mt.__call)=="function"
+    end
+    if not _callable then _push(nil);return end
+    local _res=table.pack(pcall(_fn,table.unpack(_args,1,_a)))
+    if _res[1] then
+      -- push exactly _b return values (nil-pad if fewer returned)
+      for _i=2,_b+1 do _push(_res[_i]) end
+    else _push(nil) end
+  end
+  _p[(218-39-47)] = function(_a)
+    local _rets={}
+    for _i=_a,1,-1 do _rets[_i]=_pop() end
+    _k=#_n+1
+    for _i=1,_a do _push(_rets[_i]) end
+  end
+  _p[(113-5-45)] = function() _push({}) end
+  _p[(170-50-45)] = function() local k=_pop();local t=_pop();_push(t[k]) end
+  _p[(165-31-12)] = function() local v=_pop();local k=_pop();local t=_pop();t[k]=v end
+  _p[(241-23-30)] = function() _push(nil) end
+  _p[(306-6-41)] = function(_a) _push(_a~=0) end
+  _p[(185-9-33)] = function() _push(_peek()) end
+  _p[(205-23-29)] = function() _pop() end
+  _p[(327-25-40)] = function(_a)
+    local _step=_pop();local _lim=_pop();local _init=_pop()
+    _push(_init);_push(_lim);_push(_step)
+    if (_step>0 and _init>_lim) or (_step<0 and _init<_lim) then _k=_k+_a end
+  end
+  _p[(117-42-35)] = function(_a)
+    local _step=_pop();local _lim=_pop();local _i=_pop()
+    _i=_i+_step
+    if (_step>0 and _i<=_lim) or (_step<0 and _i>=_lim) then
+      _push(_i);_push(_lim);_push(_step);_push(_i)
+      _k=_k+_a
+    end
+  end
+  _p[(288-11-20)] = function()
+    _k=#_n+1
+  end
+  _p[(228-3-47)] = function() local b=_pop();local a=_pop();_push(a^b) end
+  _p[(304-6-35)] = function() local b=_pop();local a=_pop();_push(math.floor(a/b)) end
+  _p[(68-19-7)] = function() local b=_pop();local a=_pop();_push(a&b) end
+  _p[(122-41-3)] = function() local b=_pop();local a=_pop();_push(a|b) end
+  _p[(91-1-20)] = function() local b=_pop();local a=_pop();_push(a~b) end
+  _p[(299-43-26)] = function() _push(~_pop()) end
+  _p[(287-32-15)] = function() local b=_pop();local a=_pop();_push(a<<b) end
+  _p[(296-38-19)] = function() local b=_pop();local a=_pop();_push(a>>b) end
+  _p[(58-23-19)] = function()
+    local a=_pop();local b=_pop();_push(a);_push(b)
+  end
+  _p[(239-9-4)] = function()
+    if _args then for _i=1,#_args do _push(_args[_i]) end end
+  end
+  _p[(208-36-12)] = function(_a)
+    local _fd=_m[_a+1]
+    if type(_fd)~="table" then _push(nil);return end
+    -- Build a closure that runs inner VM
+    local _inner_code=_fd._code or {}
+    local _inner_consts=_fd._consts or {}
+    local _np=_fd._params or 0
+    _push(function(...)
+      local _a2={...}
+      return _f(_inner_consts,_inner_code,_env,_a2)
+    end)
+  end
+  _p[(192-30-24)] = function(_a,_b)
+    local _args={}
+    for _i=_a,2,-1 do _args[_i-1]=_pop() end
+    local _fn=_pop()
+    local _self=_pop()
+    table.insert(_args,1,_self)
+    local _callable=type(_fn)=="function"
+    if not _callable then local _mt=getmetatable(_fn);_callable=_mt and type(_mt.__call)=="function" end
+    if not _callable then _push(nil);return end
+    local _res=table.pack(pcall(_fn,table.unpack(_args)))
+    if _res[1] then for _i=2,_b+1 do _push(_res[_i]) end
+    else _push(nil) end
+  end
+  _p[(258-25-27)] = function(_a)
+    -- Stack: iter_func (from pairs/ipairs etc)
+    -- Call iter to get: iter_fn, state, control
+    local _iter=_pop()
+    local _r
+    if type(_iter)=="function" then
+      _r=table.pack(pcall(_iter))
+      if _r[1] and type(_r[2])=="function" then
+        _push(_r[2]);_push(_r[3]);_push(_r[4])
       else
-        break
+        -- already the iter triple: push iter,state,ctrl=nil
+        _push(_iter);_push(nil);_push(nil)
       end
-      _ngrpzsr = _ngrpzsr + (36-32-3)
-    end
+    else _push(_iter);_push(nil);_push(nil) end
   end
-  local _rumozwm = {
-    {(42865-23-33), (45-25-20)},
-    {(42879-45-25), (19-4-15)},
-    {(42834-12-13), (17-1-16)},
-    {(42884-27-48), (43-22-21)},
-    {(42880-41-30), (14-4-10)},
-    {(44128-7-50), (59534-40-39)},
-    {(39202-3-12), (53-29-24)},
-  }
-  local _pigyhyw = (53-49-3)
-  while _pigyhyw <= #_rumozwm do
-    local _mzjhnou = _rumozwm[_pigyhyw]
-    local _sziuqgz = _mzjhnou[(49-3-45)]
-    local _hduyihi = _mzjhnou[(96-50-44)]
-    if _sziuqgz == (44117-1-45) then
-      _uqhqjrf[_hduyihi]()
-    elseif _sziuqgz == (42839-21-9) then
-      -- nop
-    else
-      break
-    end
-    _pigyhyw = _pigyhyw + (57-35-21)
+  _p[(135-17-44)] = function(_a,_nv)
+    local _ctrl=_pop();local _state=_pop();local _iter=_pop()
+    if type(_iter)~="function" then _k=_k+_a;return end
+    local _res=table.pack(pcall(_iter,_state,_ctrl))
+    if not _res[1] or _res[2]==nil then _k=_k+_a;return end
+    -- push iter,state,new_ctrl back, then loop vars
+    _push(_iter);_push(_state);_push(_res[2])
+    for _i=1,(_nv or 1) do _push(_res[_i+1]) end
+    _k=_k+_a
+  end
+  _p[(233-48-9)] = function()
+    local t=_pop();if type(t)=="table" then for _,v in ipairs(t) do _push(v) end end
+  end
+  _p[(64-16-30)] = function(_a) while _sp>_a do _pop() end end
+  _p[(259-4-41)] = function() _push(_sp) end
+  _p[(194-44-42)] = function(_a)
+    local v=_pop();local t=_pop();if type(t)=="table" then t[_m[_a+1]]=v end
+  end
+  _p[(204-26-21)] = function()
+    local v=_pop();local k=_pop();local t=_pop();if type(t)=="table" then t[k]=v end
+  end
+  while _k <= #_n do
+    local _ins=_n[_k]
+    _k=_k+1
+    local _h=_p[_ins[1]]
+    if _h then _h(_ins[2],_ins[3],_ins[4]) end
   end
 end
-local _bxswukn = {
-  {(9591-2-18), (48-42-6)},
-  {(9638-20-47), (51-18-33)},
-  {(9645-49-25), (50-26-24)},
-  {(9662-46-45), (47-10-37)},
-  {(59325-13-3), (26957-35-47)},
-  {(14140-34-21), (22-21-1)},
-}
-local _vjrtpcp = (98-48-49)
-while _vjrtpcp <= #_bxswukn do
-  local _pqzetza = _bxswukn[_vjrtpcp]
-  local _qeybgsh = _pqzetza[(31-3-27)]
-  local _vlbxryc = _pqzetza[(78-30-46)]
-  if _qeybgsh == (59348-25-14) then
-    _vvdrswh[_vlbxryc]()
-  elseif _qeybgsh == (9602-8-23) then
-    -- nop
-  else
-    break
-  end
-  _vjrtpcp = _vjrtpcp + (84-45-38)
-end
+-- entrypoint: decryptor runs in isolated closure
+local _d1 = (function()
+  local _b="\131\251\232\10\216\7\46\197\136\114\45\26\33\39\140\189\70\109\154\126\98\86\19\149\248\197\229\63\252\137\22\255\161\165\222\35\173\173\230\197\62\181\116\189\19\130\170\154\189\40\51\129\218\223\8\29\32\180\148\213\141\224\145\230\221\131\226\173\62\41\123\212\204\254\50\39\136\235\114\147\63\207\48\112\85\132\100\7\148\16\18\161\195\11\195\174\72\31\255\199\49\78\221\215\152\195\105\167\47\72\101\96\108\194\92\52\89\45\234\139\138\99\126\17\217\21\20\161\172\143\69\165\155\47\159\106\224\138\245\248\146\153\221\247\127\149\40\103\238\201\159\71\5\86\197\13\173\74\144\87\178\102\194\219\62\184\1\126\238\205\156\103\177\241\10\175\78\253\58\40\116\107\17\227\101\149\184\252\17\54\199\112\112\189\27\142\118\138\178\197\230\165\118\163\203\158\148\162\168\64\16\155\163\7\104\239\210\234\204\101\7\42\221\162\61\235\247\138\184\144\99\195\19\152\182\205\103\121\42\149\171\236\103\235\156\17\205\218\118\8\40\21\251\69\85\201\253\73\50\33\150\137\109\174\29\23\228\43\190\139\2\114\224\123\215\185\142\138\174\78\239\79\161\174\187\223\36\71\142\223\192\95\198\132\55\16\150\185\91\185\37\177\183\89\102\121\102\197\236\104\238\240\84\220\7\25\17\142\68\194\50\58\45\228\113\195\120\224\71\245\65\68\168\187\37\57\191\57\39\43\93\133\92\38\80\202\64\172\171\0\225\77\130\249\60\107\170\236\7\235\17\136\249\110\30\23\213\199\103\163\121\34\75\168\24\171\12\38\147\189\119\75\181\172\205\151\69\54\43\165\74\165\22\102\14\232\146\26\224\189\188\144\82\163\117\5\202\253\11\73\20\109\173\22\38\219\208\194\4\99\80\165\246\8\249\89\129\165\21\47\214\161\71\0\246\61\116\14\130\37\155\31\223\203\251\12\127\5\160\214\71\151\212\10\199\36\0\80\157\114\7\191\41\68\86\244\75\76\219\22\61\237\34\103\147\16\121\229\128\134\153\29\152\59\94\100\172\43\242\25\95\233\10\165\104\5\193\250\100\202\12\201\75\171\177\139\184\176\221\83\186\156\33\44\27\122\104\136\224\33\23\12\225\93\235\60\98\78\116\212\1\32\94\220\133\68\211\29\163\172\37\58\105\7\216\161\58\194\200\249\87\42\29\136\3\87\177\93\53\9\149\65\56\125\10\62\116\204\113\145\7\207\90\19\228\229\78\227\140\197\24\46\98\229\182\37\70\47\126\94\78\91\163\11\59\120\1\125\221\146\91\59\157\118\20\157\56\138\140\245\58\148\209\101\85\240\3\91\176\224\225\17\200\89\164\220\111\79\228\99\45\101\2\93\105\63\107\123\173\248\36\95\37\133\16\7\54\241\15\147\31\32\4\18\219\131\81\1\133\156\63\161\229\4\146\146\6\70\5\4\163\199\54\175\198\67\220\179\237\108\174\31\28\72\33\3\198\214\193\131\133\181\19\67\251\69\150\236\156\23\61\208\21\58\88\16\59\17\94\91\188\20\46\102\15\41\226\253\9\2\129\128\71\134\125\22\119\18\229\166\108\54\65\174\112\190\243\163\15\39\13\248\27\158\116\136\2\12\115\102\32\243\250\241\204\43\112\145\141\34\158\138\77\98\109\153\204\125\19\160\119\249\20\224\73\39\240\229\194\4\52\217\135\164\6\242\185\218\244\162\45\222\212\35\61\126\191\17\49\49\199\214\119\27\107\193\183\26\207\62\243\190\27\140\203\219\184\253\11\203\108\92\56\132\238\248\62\211\39\138\59\93\169\227\118\232\182\175\173\179\32\252\172\89\76\170\237\95\69\215\140\251\69\14\200\148\40\3\238\125\186\173\87\207\72\26\12\23\13\254\105\198\46\28\31\89\31\211\213\48\188\47\131\110\65\125\178\226\39\34\104\205\14\212\93\35\207\64\57\89\89\132\219\55\13\130\61\213\73\216\87\11\143\54\144\249\252\184\49\222\237\66\225\15\227\144\170\255\143\215\187\170\77\171\117\71\253\109\4\226\214\5\101\104\56\220\157\253\185\17\217\74\146\31\38\216\196\163\225\128\57\28\29\172\177\36\78\41\137\77\154\51\101\9\106\243\227\30\231\215\209\147\30\115\136\224\73\64\225\229\223\238\238\68\34\81\165\183\63\216\112\30\190\207\170\54\144\163\241\106\177\225\42\9\21\47\143\54\8\125\181\111\29\129\134\109\103\224\186\170\225\252\155\98\254\112\157\94\187\238\73\169\66\198\63\19\132\106\61\176\209\127\58\110\248\203\58\56\211\248\243\220\37\73\197\74\233\240\125\144\86\97\116\119\58\45\173\242\121\61\220\110\113\102\166\83\190\133\167\70\177\143\145\223\67\229\132\50\225\30\31\65\15\131\1\7\138\90\121\5\173\196\174\3\116\76\61\224\192\188\56\111\28\198\73\99\4\229\164\20\93\168\84\130\28\49\189\242\47\56\192\54\225\221\120\109\217\143\185\15\239\215\237\216\212\149\22\135\237\192\71\139\6\62\106\6\31\45\91\3\85\117\112\178\249\60\25\22\90\162\30\120\148\12\46\71\84\30\69\196\70\72\62\141\81\220\25\139\173\98\14\133\26\62\70\134\210\85\253\102\136\241\134\105\255\11\174\139\214\89\175\112\197\14\204\219\237\168\112\61\31\188\146\199\185\82\145\114\203\166\183\7\253\65\220\169\188\13\169\166\158\166\161\190\126\70\15\64\232\89\161\242\174\11\126\74\20\192\111\156\57\144\238\182\119\199\91\112\82\165\86\74\213\111\58\251\67\145\178\139\4\193\217\125\85\208\96\253\242\225\87\13\53\44\155\69\51\38\229\234\213\3\195\87\189\230\26\90\197\40\118\80\33\54\5\128\82\13\209\86\189\211\254\183\7\166\116\55\246\8\246\153\129\27\4\206\239\36\209\244\158\97\49\100\68\80\244\171\159\250\173\110\175\68\92\62\115\185\21\129\143\9\147\144\168\81\4\141\7\19\76\156\119\89\106\55\173\39\189\243\117\202\190\254\232\208\5\109\229\201\22\17\170\167\253\86\211\158\84\162\246\142\19\161\204\37\132\228\9\240\173\167\134\251\244\106\14\175\63\8\106\118\227\162\67\183\39\254\176\179\203\99\80\253\76\132\12\178\213\41\6\131\158\186\180\230\231\122\157\213\121\62\127\204\127\8\206\209\244\151\196\243\239\192\176\196\142\88\225\183\92\83\115\51\152\56\12\54\39\172\139\45\30\0\207\77\40\215\56\160\63\247\0\73\139\130\74\16\53\188\125\163\132\255\165\55\243\167\217\70\80\196\53\141\52\179\235\15\133\217\170\218\39\184\85\34\121\47\197\203\119\160\127\45\14\158\11\21\208\9\203\249\238\200\122\208\115\73\93\41\146\155\114\83\206\96\107\28\122\96\79\180\210\250\224\66\201\236\14\4\42\73\3\181\215\29\37\27\145\179\231\79\122\69\204\83\130\229\72\84\23\254\16\14\113\245\36\61\39\10\215\254\44\220\107\28\172\141\186\96\112\68\237\214\3\28\206\154\85\238\0\155\232\136\227\99\148\138\152\207\104\114\5\24\232\63\120\218\73\226\131\123\238\233\211\44\163\32\53\138\135\208\140\1\47\199\173\91\7\146\119\221\150\2\135\69\233\63\238\244\37\27\109\176\231\124\137\37\249\134\98\150\107\19\223\203\55\28\232\167\236\246\213\183\76\129\75\196\55\162\246\92\42\111\175\243\229\46\151\39\104\170\204\22\162\214\7\104\126\44\225\234\114\168\63\143\64\201\250\73\229\121\18\83\41\134\95\6\215\8\138\32\160\203\221\47\137\214\118\152\183\254\173\239\78\89\199\168\179\135\187\98\245\162\175\47\107\25\24\16\241\213\51\29\11\124\247\100\41\77\8\1\225\173\52\56\12\137\61\156\142\177\63\101\173\243\240\24\211\172\168\80\241\163\6\164\215\61\128\20\219\182\76\211\169\84\234\150\114\106\189\39\216\91\167\208\204\224\137\33\28\32\215\134\189\36\15\57\247\122\249\26\216\233\169\156\206\79\227\73\187\8\139\46\247\134\53\140\34\204\10\133\118\111\22\22\154\27\254\204\220\237\104\237\63\14\250\149\14\114\184\110\82\156\231\75\81\135\146\5\150\62\193\207\242\230\237\224\141\204\100\140\49\142\50\8\163\181\121\222\197\64\143\173\200\87\177\103\137\226\115\172\79\248\249\72\208\19\98\228\116\164\137\83\161\67\91\19\243\82\27\114\0\75\108\131\20\11\189\112\98\171\70\241\33\23\95\219\218\151\12\86\121\185\83\20\76\152\77\106\179\37\80\169\73\214\158\48\90\12\109\246\63\46\24\89\167\149\153\155\163\40\160\147\203\237\56\158\195\84\160\8\150\98\160\1\184\251\146\64\38\160\160\169\26\124\97\128\186\216\55\248\93\85\77\116\227\79\61\118\103\82\172\233\208\25\100\205\210\176\53\88\151\144\225\210\88\249\72\241\105\107\195\199\212\204\214\73\171\15\65\39\243\174\58\76\183\28\24\106\26\14\250\233\163\1\211\208\224\224\239\35\140\105\66\150\40\128\114\108\101\1\99\217\53\58\160\126\234\190\157\1\198\56\172\73\59\199\131\134\246\178\29\42\13\132\97\107\198\101\246\154\106\133\140\225\232\24\24\57\82\213\217\71\77\16\250\86\93\96\53\165\193\67\69\49\219\29\164\109\92\200\205\209\179\186\185\99\220\20\164\236\62\215\153\245\72\174\191\97\208\241\99\42\248\25\219\237\101\126\240\93\224\204\99\129\11\163\209\74\217\203\121\107\237\8\14\208\136\170\56\52\197\222\160\14\101\16\210\167\52\241\254\100\107\81\96\94\28\97\182\212\102\176\36\157\47\184\255\14\92\144\116\24\196\252\209\84\149\240\134\28\187\20\4\81\160\197\199\135\32\101\225\42\194\117\170\157\90\178\83\141\35\61\90\13\7\251\218\193\232\82\20\61\23\80\215\133\11\205\101\86\89\46\159\9\39\185\166\30\47\131\106\17\148\77\137\120\250\42\24\107\219\239\136\24\17\38\23\165\246\21\43\14\221\58\185\233\223\24\60\211\236\68\88\137\53\196\28\170\122\230\24\88\31\131\119\154\92\114\110\182\151\98\126\54\64\87\175\221\8\37\197\53\175\247\54\222\95\250\167\120\161\191\176\173\238\161\73\249\51\54\183\64\101\191\18\196\228\30\68\17\13\99\217\69\202\55\32\224\30\200\166\61\213\239\76\67\88\73\32\91\39\27\251\23\137\137\239\66\158\154\208\1\119\236\127\174\190\183\25\242\42\160\181\153\97\205\115\241\75\248\187\163\72\154\254\185\181\45\206\208\223\63\75\87\14\74\138\90\205\173\62\22\216\1\100\197\117\175\222\239\99\199\31\229\114\85\103\9\210\48\43\43\12\171\53\209\79\182\98\76\141\208\195\193\6\99\58\151\79\122\198\159\137\230\112\208\97\247\84\77\157\36\130\195\230\107\134\251\36\168\149\188\39\242\235\243\185\235\171\19\93\70\29\216\252\189\103\32\200\95\58\71\165\35\80\140\77\225\23\22\186\197\106\75\6\72\116\231\35\12\130\175\48\190\191\42\181\101\251\4\121\198\242\222\140\209\228\135\129\129\246\73\74\178\80\17\57\72\185\251\76\54\19\214\87\189\235\68\92\128\215\190\58\128\155\145\59\176\92\88\23\252\92\157\204\20\54\229\125\182\193\193\165\50\169\148\31\242\86\40\70\38\162\32\238\13\209\225\73\86\133\243\24\213\60\86\56\118\153\111\116\26\195\150\196\18\59\82\57\127\139\160\3\247\4\198\183\64\188\27\119\140\58\88\22\65\96\232\243\188\229\45\209\54\208\234\58\197\68\112\163\174\15\143\76\175\20\170\54\184\225\173\131\17\243\230\127\63\229\169\94\148\7\75\89\235\51\158\232\157\9\215\32\45\140\225\182\83\216\210\99\59\241\149\139\243\8\185\121\200\76\242\247\69\125\80\89\219\246\107\71\195\25\25\174\194\5\38\55\64\3\151\91\109\136\150\226\65\234\218\123\241\104\119\55\234\74\244\37\203\48\242\198\159\48\241\239\199\68\167\94\214\87\6\114\42\90\17\248\246\119\125\30\83\164\103\229\32\205\223\145\150\100\180\32\8\19\142\32\215\123\183\33\129\255\220\147\4\102\245\248\18\148\185\119\248\18\62\173\55\177\152\104\143\167\77\252\81\64\111\148\238\134\64\203\87\57\205\107\92\199\23\102\48\173\60\87\88\98\47\81\121\84\45\72\10\66\243\96\187\38\68\179\77\29\90\125\6\89\5\131\204\168\132\213\188\23\225\43\227\63\49\59\160\164\174\236\189\34\245\232\15\249\161\10\134\142\179\77\29\226\0\242\121\81\82\103\165\98\252\82\91\255\193\89\183\62\81\250\252\233\74\209\83\16\234\145\121\73\60\106\188\91\194\43\19\125\23\5\175\170\65\185\161\208\231\254\22\136\140\211\134\193\125\39\180\26\102\117\174\188\196\115\18\85\97\225\47\118\13\141\113\214\251\124\210\109\235\251\203\219\235\130\189\96\168\83\229\106\27\181\91\63\176\24\120\69\131\92\69\89\14\30\251\144\241\242\209\123\177\119\24\164\199\142\60\203\126\171\127\11\14\37\166\33\147\214\106\54\1\195\216\224\197\200\114\140\80\132\177\2\167\25\45\177\127\173\175\75\127\51\70\99\89\224\156\253\0\12\159\42\89\200\30\235\106\89\195\83\146\28\110\75\199\117\155\83\229\255\3\180\206\244\129\32\75\56\135\9\13\194\70\42\72\239\82\245\113\28\24\125\74\78\231\230\153\34\130\153\102\181\172\98\30\122\186\127\50\69\198\252\57\133\206\196\163\238\249\23\222\55\52\214\24\18\69\30\148\188\108\235\23\105\176\19\223\5\223\35\152\40\142\10\85\2\77\96\72\249\207\173\148\157\173\6\64\25\141\213\105\125\22\155\197\176\191\228\138\104\62\216\233\227\75\249\45\56\97\205\209\15\221\72\61\94\92\66\124\255\57\113\205\8\246\46\206\197\52\155\138\31\154\19\94\146\29\26\71\218\248\168\26\195\171\102\123\25\186\96\222\177\217\104\2\204\128\49\128\36\219\251\104\58\223\189\108\194\125\58\220\226\9\93\72\63\160\167\111\86\190\33\47\52\55\243\223\205\69\11\33\172\206\132\163\194\205\13\133\58\41\193\224\201\126\207\126\173\124\117\73\179\181\107\116\142\108\14\215\106\241\35\212\173\133\89\220\81\19\124\197\19\107\228\168\223\229\153\64\176\98\174\52\44\232\115\90\158\46\82\178\54\181\225\133\148\116\243\105\170\108\48\30\15\207\108\238\208\155\168\118\250\185\204\196\231\125\194\106\217\192\222\204\180\144\154\7\40\68\212\59\255\52\50\195\224\75\206\41\206\212\251\214\145\226\253\110\230\77\40\126\225\253\201\143\43\222\213\177\174\21\59\73\182\151\175\252\41\128\71\182\34\183\83\179\149\232\214\183\28\124\45\115\218\41\42\45\126\36\169\53\89\38\83\193\8\202\29\20\159\159\63\8\174\14\29\91\190\58\208\172\145\129\191\61\153\192\99\96\251\253\176\160\162\18\203\219\237\26\216\35\6\247\53\168\72\122\198\246\53\34\142\114\174\242\77\169\47\190\211\183\52\172\173\156\165\117\209\96\247\1\35\205\149\231\10\252\64\168\73\132\134\179\88\196\111\161\152\202\29\246\194\26\171\70\88\5\80\193\246\41\76\85\10\94\135\123\119\1\93\177\48\36\42\116\255\170\79\49\86\65\193\149\148\203\23\45\196\102\62\33\211\92\33\147\85\67\38\152\155\180\64\8\32\220\145\213\56\50\64\27\192\56\170\97\91\10\244\103\82\181\217\66\201\239\12\203\167\140\228\149\74\239\2\209\39\195\194\135\11\8\194\87\139\213\178\130\78\50\28\126\195\209\250\212\205\174\58\83\3\217\104\114\39\56\91\125\38\17\33\201\81\53\17\95\102\196\233\222\28\187\205\15\210\244\234\106\235\117\15\161\207\241\31\87\99\242\37\9\206\63\20\177\185\80\62\46\24\73\254\211\66\24\160\238\19\76\51\207\72\238\46\163\36\216\110\235\136\17\157\51\90\103\73\15\170\189\142\184\182\153\4\113\12\130\242\210\120\150\205\234\141\100\39\114\149\54\211\125\19\75\100\162\201\113\244\234\245\96\190\6\45\66\61\94\218\36\227\159\255\50\133\149\119\234\81\188\188\220\34\230\158\119\242\165\42\116\255\251\201\83\72\22\116\212\75\7\8\151\250\131\227\105\20\57\226\77\50\150\72\165\183\54\97\53\110\233\149\49\163\230\22\41\175\181\95\210\43\109\233\53\232\140\226\99\61\34\205\239\133\152\77\69\196\115\183\226\179\255\219\65\184\71\91\137\172\82\124\175\233\194\218\62\238\18\166\9\179\51\48\38\30\92\243\3\238\164\7\181\1\24\3\70\108\67\218\92\111\93\50\230\157\64\17\45\68\44\165\154\234\200\147\174\82\88\103\85\180\76\146\58\200\121\203\130\245\97\70\98\192\226\156\63\141\33\92\212\208\123\19\66\1\125\101\54\119\83\162\181\208\239\245\111\218\106\68\173\45\201\135\45\219\76\185\146\223\158\125\63\58\103\18\45\215\127\197\181\164\16\64\177\207\64\208\124\171\206\166\121\120\83\183\110\134\201\223\183\70\164\114\142\104\154\15\144\220\89\253\106\82\211\243\91\238\35\225\184\88\152\89\206\232\169\217\41\21\91\44\37\194\53\33\124\163\63\248\99\140\236\93\236\208\243\251\15\12\225\23\19\229\238\44\93\15\186\9\99\244\243\207\204\77\171\233\203\11\241\136\234\42\197\52\225\235\161\204\55\92\1\48\198\83\22\126\40\228\185\160\179\173\27\154\135\115\127\4\82\29\180\113\243\118\141\172\192\111\219\55\70\27\102\22\39\12\10\252\58\26\158\70\28\154\189\127\172\11\138\66\163\85\248\211\75\203\19\62\118\153\242\67\40\117\43\226\72\33\121\122\14\169\199\248\71\195\47\4\57\140\133\241\100\35\59\109\31\253\21\188\126\153\81\175\134\173\11\140\50\156\63\201\7\41\199\69\124\224\22\245\161\78\205\13\57\62\145\97\242\156\116\212\67\56\62\65\8\156\144\247\189\114\172\75\47\159\209\199\184\145\3\134\50\180\169\236\136\194\56\95\8\148\167\202\25\11\83\16\28\71\249\19\49\14\6\104\68\1\165\111\28\219\146\187\97\115\198\71\37\188\218\214\107\229\73\168\97\194\220\109\20\177\164\135\255\215\136\148\234\178\182\190\132\83\101\225\165\254\137\181\146\204\178\149\147\37\127\93\15\112\15\102\220\87\41\97\185\145\102\238\107\211\129\156\93\52\15\160\12\66\195\155\140\61\227\98\19\244\4\52\218\90\20\24\80\74\166\59\251\132\158\171\150\181\117\38\192\77\241\175\104\86\236\94\42\154\9\186\151\200\179\126\184\55\202\33\164\174\207\19\155\54\187\126\16\243\239\214\76\41\149\27\24\204\218\146\180\11\68\47\85\54\245\50\156\72\247\113\243\126\42\158\160\141\175\104\54\227\215\96\115\143\203\105\183\254\4\1\170\29\150\95\9\118\181\221\11\227\220\181\14\20\194\45\53\231\59\101\67\239\106\57\72\12\62\220\70\63\96\209\229\165\128\126\22\235\166\22\41\219\144\185\193\20\212\49\212\20\67\38\53\21\69\118\2\135\103\213\122\195\17\217\248\216\252\44\25\47\156\22\0\140\90\254\167\254\58\197\10\33\24\77\13\214\116\208\160\178\226\157\0\13\224\139\75\205\8\246\135\67\175\75\178\39\95\19\116\185\131\126\218\122\4\108\16\101\93\85\250\73\67\45\13\28\39\113\199\48\248\206\250\50\80\244\146\181\161\217\124\139\190\216\174\205\37\58\173\233\85\71\77\63\238\112\84\30\206\96\114\146\115\70\9\167\75\55\143\158\240\51\93\120\173\75\151\44\192\91\192\42\49\95\46\147\212\235\117\126\217\251\18\252\129\31\31\133\164\160\149\106\1\154\159\150\201\147\191\94\158\218\149\85\190\45\214\5\211\135\47\152\227\239\206\205\246\222\173\51\114\122\229\173\53\73\21\23\245\39\27\75\192\18\52\233\165\229\195\111\30\176\197\197\199\143\149\211\23\187\169\251\129\53\92\34\87\14\214\225\225\97\254\8\253\54\103\81\250\58\101\191\185\219\206\253\184\139\248\62\4\176\54\218\158\87\66\211\0\239\146\214\137\37\231\201\198\59\32\2\31\101\13\48\12\241\239\181\125\70\160\208\226\176\118\140\157\209\111\117\14\32\116\226\31\110\131\103\39\23\201\6\222\158\253\66\14\89\26\76\194\191\8\254\65\148\218\7\19\4\64\178\222\32\185\102\234\147\5\164\203\109\66\169\76\206\198\78\57\239\216\6\246\205\93\228\137\59\168\255\118\8\57\135\230\144\193\184\149\58\119\35\114\47\40\170\160\101\155\133\104\203\204\183\153\138\38\85\71\219\32\248\102\211\114\202\181\180\181\100\82\140\198\182\44\69\150\185\99\85\121\173\133\43\114\240\85\117\189\106\151\179\162\13\236\43\5\240\131\39\48\149\70\23\235\46\4\132\52\246\24\222\140\210\166\175\43\204\144\33\180\248\60\163\134\13\104\96\160\96\243\150\21\179\78\113\20\33\89\16\238\159\90\177\127\240\88\242\175\66\123\131\166\35\183\30\209\237\211\114\134\215\4\11\198\210\248\50\110\101\93\54\38\229\37\100\5\17\141\243\215\111\48\72\180\170\165\123\92\251\86\196\116\76\200\225\234\26\205\215\75\239\80\250\94\162\210\175\196\175\164\7\154\126\170\94\119\157\237\206\143\59\234\153\34\192\111\210\134\76\27\230\204\243\233\183\72\227\54\96\229\48\48\218\196\234\18\54\238\185\33\85\80\184\74\160\223\29\125\181\204\62\251\34\118\13\16\83\195\125\236\247\225\208\93\103\15\241\127\140\57\95\21\161\23\83\81\247\100\30\61\1\160\21\239\42\99\238\60\238\112\51\7\58\35\218\73\22\212\243\196\89\167\110\40\127\7\189\251\166\10\119\81\159\116\81\43\192\139\107\52\137\204\140\31\93\94\100\99\194\176\125\55\249\36\174\45\54\246\168\107\132\90\245\171\118\229\224\37\78\158\149\252\168\82\118\7\54\174\183\33\81\103\179\251\86\160\118\25\214\227\71\161\72\83\4\187\175\237\41\56\144\185\62\222\75\5\68\97\73\29\15\56\251\9\1\20\1\248\9\170\199\117\20\178\75\28\240\152\185\190\246\25\119\112\159\186\131\187\43\107\245\170\20\188\6\203\83\66\132\187\29\128\21\185\68\166\183\118\8\197\241\216\60\122\39\168\129\170\235\32\251\7\70\197\173\228\99\191\45\11\245\213\224\199\154\30\25\241\112\12\238\186\236\44\234\169\27\15\164\119\150\182\102\50\133\62\97\198\184\224\241\253\46\94\130\234\242\185\173\121\240\143\85\11\235\46\112\156\128\45\42\42\134\45\2\253\246\236\86\9\8\33\116\62\51\110\159\144\156\58\184\68\189\28\178\1\186\246\206\110\198\134\166\150\63\84\111\201\13\55\42\141\37\221\10\199\15\66\64\61\201\112\204\137\109\204\7\156\87\10\219\62\204\163\26\225\44\80\161\1\69\151\128\86\79\104\16\198\47\251\102\190\11\134\226\30\154\173\212\158\148\170\159\104\152\29\9\248\163\31\28\190\252\132\145\128\238\142\168\56\163\122\234\9\243\26\56\253\190\43\94\218\25\176\76\245\187\143\253\167\51\8\193\244\89\135\103\251\102\44\46\131\13\127\75\213\53\236\245\242\96\97\174\116\96\190\11\251\130\217\98\7\167\246\14\142\248\68\125\103\247\225\31\63\240\106\67\208\94\217\219\67\40\227\75\160\19\254\189\17\130\78\15\7\153\176\191\194\18\11\237\1\128\130\106\121\49\228\72\161\21\112\85\124\32\102\247\24\50\248\87\215\81\127\61\143\199\112\136\208\181\61\108\164\178\89\83\174\66\54\212\132\141\53\47\122\67\242\27\15\72\197\35\147\11\134\232\240\220\150\85\202\188\173\100\94\97\251\1\250\99\64\218\224\9\155\7\136\220\214\234\232\233\240\146\70\180\149\105\119\156\71\186\57\104\196\15\138\170\244\179\110\144\122\84\64\246\150\132\11\219\52\234\224\218\66\92\128\142\119\0\185\78\74\121\211\45\178\93\83\21\127\21\125\115\105\122\51\41\146\41\48\236\218\142\236\174\60\99\98\38\52\185\241\103\41\15\102\87\70\91\226\71\195\44\100\209\85\213\239\182\87\205\193\70\100\89\194\26\205\181\200\146\156\186\136\229\123\81\232\11\85\83\175\170\90\22\172\18\188\66\27\251\103\118\209\10\156\133\67\211\92\208\70\133\146\132\120\210\50\174\127\220\152\1\197\95\135\10\230\188\176\71\114\27\35\105\52\61\102\163\8\85\91\123\20\18\187\237\192\102\38\174\11\41\1\157\12\172\240\78\214\188\163\31\74\70\32\129\93\52\53\109\86\187\65\160\29\188\166\230\159\18\223\196\100\13\182\129\93\184\231\96\37\69\70\243\2\210\241\40\220\81\64\238\78\47\29\65\0\155\136\0\133\174\113\230\9\69\207\189\162\33\155\122\124\167\171\185\216\249\31\8\206\163\213\201\247\193\177\194\218\28\190\120\211\207\19\232\165\11\162\192\216\164\109\182\42\239\117\47\168\145\203\205\228\84\193\223\108\227\12\29\243\44\228\224\223\134\29\221\65\91\228\112\24\100\7\222\144\126\82\172\13\216\208\86\245\98\122\45\229\170\36\134\36\51\20\205\190\191\40\156\58\15\204\182\238\60\39\43\102\51\240\160\104\239\220\152\97\74\233\171\116\35\29\247\50\63\239\164\153\58\170\44\209\120\207\19\223\181\166\166\36\81\155\115\155\150\120\147\12\74\123\209\158\240\215\141\155\44\211\224\233\4\214\189\63\18\108\107\117\151\176\90\225\91\160\253\239\200\59\202\14\9\9\206\36\196\174\236\81\112\168\222\83\208\181\0\252\27\208\248\4\219\106\87\35\155\196\168\67\106\202\183\35\201\232\160\235\139\92\43\59\118\168\242\165\176\105\9\230\146\16\128\31\188\45\5\156\41\44\175\220\195\38\104\6\219\70\36\155\170\100\6\97\204\94\255\36\220\192\25\76\105\124\127\95\87\48\207\93\255\0\11\182\111\63\205\197\246\18\239\62\180\249\215\242\171\22\159\136\71\136\150\157\122\108\62\252\208\50\101\226\20\46\60\213\147\138\184\14\51\94\34\215\24\67\164\226\119\125\199\2\201\182\8\209\66\108\153\19\185\214\105\107\97\218\84\22\210\177\155\118\131\158\122\141\145\195\166\195\247\6\89\140\215\238\137\229\198\32\130\119\198\39\127\110\43\20\104\90\49\133\73\248\197\93\202\253\100\131\37\127\164\117\249\119\215\205\98\61\226\97\8\131\195\176\120\167\114\199\142\246\197\142\156\151\180\144\224\185\149\34\249\68\21\11\216\78\170\123\207\80\92\181\211\51\28\13\30\10\101\163\121\247\128\247\45\151\111\174\251\181\79\111\11\98\28\46\16\248\53\220\246\31\144\96\50\42\141\235\195\33\50\199\53\93\237\224\178\242\177\158\143\91\160\130\111\135\146\157\6\108\175\227\123\223\38\79\216\250\132\104\158\215\152\164\119\250\36\89\10\66\112\242\161\28\194\109\127\164\48\68\218\115\232\13\52\189\115\55\57\133\50\227\132\187\251\207\112\169\240\146\113\121\167\129\252\179\156\87\3\46\48\146\187\19\25\28\140\239\224\78\50\43\223\198\28\248\89\26\179\159\203\93\195\80\233\211\26\216\76\173\64\151\226\0\167\255\40\37\32\25\208\117\148\111\43\252\222\189\113\124\138\176\87\94\206\100\60\62\224\128\96\178\56\57\94\129\215\161\33\244\156\27\87\8\227\209\42\233\72\13\31\1\123\41\103\216\199\31\9\148\152\214\152\100\160\105\200\56\153\227\72\149\87\23\117\37\129\234\144\157\110\92\65\93\80\78\45\160\218\179\101\240\166\158\74\40\28\173\172\13\107\82\71\240\5\19\196\68\209\127\30\58\135\165\208\143\249\133\39\238\147\48\178\108\160\9\231\155\43\46\68\223\65\91\141\228\235\223\245\45\41\107\35\70\212\210\2\13\170\131\113\205\211\19\42\76\92\162\9\114\212\33\130\73\219\169\130\69\27\132\52\37\183\47\217\20\126\44\67\86\169\247\132\63\141\95\251\19\35\109\123\34\84\204\157\222\246\194\80\160\99\135\92\174\88\143\107\142\178\131\69\165\211\150\28\0\38\145\9\231\108\189\6\62\166\234\33\104\4\225\190\221\194\148\225\178\157\240\35\237\199\69\125\255\228\234\240\177\56\171\215\210\55\168\47\235\238\184\187\33\117\25\67\209\61\60\88\243\190\207\246\8\70\7\149\123\155\5\170\219\32\73\56\188\138\208\3\51\251\5\123\65\66\125\74\181\212\86\132\77\1\194\216\174\126\168\39\27\143\182\201\255\30\174\143\251\68\206\177\133\193\5\5\105\251\80\54\190\24\107\186\237\170\83\97\9\189\47\211\14\153\106\156\149\63\252\96\214\15\239\42\101\208\47\234\131\206\169\63\68\253\25\97\172\130\116\37\215\87\23\182\98\254\197\17\55\224\188\187\161\230\152\1\247\72\91\118\52\181\164\143\124\136\72\218\173\101\250\134\58\108\68\210\45\85\56\30\163\193\133\183\68\247\43\9\166\154\8\143\149\14\90\15\109\33\58\210\136\111\116\107\253\223\147\22\177\48\225\119\44\180\158\171\51\52\152\243\26\39\53\44\214\241\180\9\40\139\207\55\126\237\161\208\168\73\103\108\37\21\210\106\211\27\188\18\127\139\254\232\159\233\191\101\48\84\159\8\219\175\211\230\253\220\192\227\68\212\198\131\21\221\89\93\207\176\244\3\237\94\50\172\174\143\67\107\206\94\101\182\52\11\91\178\196\245\233\121\206\124\86\214\255\6\54\202\172\54\74\126\138\233\45\11\69\35\202\51\123\109\98\71\127\34\83\237\185\239\138\195\15\56\7\179\110\16\136\98\150\184\116\106\212\47\102\241\71\249\79\49\94\186\165\183\112\247\203\165\99\236\181\114\161\45\204\170\177\251\2\222\149\157\109\114\95\21\107\70\33\212\229\227\242\140\110\170\198\71\46\172\153\127\249\57\105\146\131\88\62\65\9\124\195\191\97\106\168\34\162\68\90\26\151\103\163\180\243\72\185\104\42\225\86\159\61\100\69\196\7\84\173\111\77\45\8\235\96\88\147\176\89\15\105\32\246\102\41\220\155\183\63\126\18\42\34\236\57\219\168\99\254\132\126\130\248\189\131\207\143\40\235\12\88\235\105\197\8\207\125\222\110\242\195\233\211\215\136\155\113\27\108\57\238\165\129\85\139\117\212\214\96\35\105\154\236\175\215\162\54\153\192\140\221\69\189\198\21\220\215\220\71\230\16\152\17\138\131\37\89\8\139\46\59\180\96\56\9\43\181\151\11\238\93\155\223\72\27\186\77\3\223\57\42\64\217\88\94\84\148\57\24\249\113\220\200\249\216\147\184\152\206\11\241\74\83\80\184\138\122\104\146\195\162\199\74\113\210\139\155\168\65\47\131\18\152\189\25\192\22\4\24\138\196\93\92\114\26\171\163\224\35\95\94\243\94\167\77\143\3\144\66\66\247\217\58\238\255\173\254\214\223\56\63\147\161\190\61\217\205\191\0\59\151\250\231\184\74\68\230\221\31\72\170\192\141\224\33\82\87\96\210\178\151\34\73\203\125\64\100\116\182\77\159\180\147\109\14\209\50\96\70\67\77\190\206\117\55\2\18\142\22\132\118\179\193\185\6\44\231\113\245\196\71\12\8\42\113\29\113\152\165\212\151\128\122\65\123\222\135\33\138\80\246\77\171\179\128\56\67\204\206\61\110\194\252\1\56\77\62\41\145\14\168\176\165\48\203\25\73\148\139\47\203\76\10\37\147\200\138\105\40\70\104\203\216\125\206\187\226\241\57\220\102\176\116\178\150\162\3\76\183\111\199\44\101\94\206\57\126\251\195\33\82\60\0\35\24\160\217\217\242\178\197\226\62\77\248\144\95\51\144\248\192\118\58\12\97\0\183\198\225\117\191\107\187\189\140\162\209\64\86\244\94\108\166\183\75\34\55\88\108\63\58\2\50\173\221\242\132\208\70\148\253\34\147\225\107\137\242\181\182\166\145\197\53\47\166\93\203\255\73\52\236\16\56\247\34\29\117\111\15\231\44\100\48\163\101\12\230\84\214\112\57\209\14\96\22\205\86\20\8\109\140\40\49\135\211\12\93\221\202\83\171\148\144\65\55\70\106\120\15\8\146\16\204\66\221\70\232\89\117\34\185\201\169\45\95\80\74\76\112\232\228\91\62\81\251\48\244\117\185\26\115\87\185\179\135\86\37\180\225\92\99\223\220\153\40\39\39\125\68\252\132\71\49\205\161\222\80\62\227\52\179\86\134\118\145\195\252\235\12\174\135\154\24\91\120\8\5\201\255\13\243\154\1\167\132\223\216\204\114\2\143\143\40\107\179\63\213\159\226\175\127\54\177\68\128\15\150\102\124\208\162\123\74\3\205\180\251\77\117\132\26\56\208\106\51\139\237\82\57\30\128\48\238\47\254\58\232\67\215\156\64\93\115\86\162\217\115\51\218\224\175\246\54\156\52\227\196\183\194\152\60\144\193\39\187\163\9\169\206\171\172\249\124\47\145\106\240\252\153\108\94\192\166\236\47\88\137\37\17\79\29\226\218\117\46\128\237\61\242\113\251\9\151\231\41\102\148\45\0\8\40\174\167\228\52\198\18\228\57\111\202\247\8\99\122\20\224\108\211\225\86\159\240\142\210\34\80\97\140\199\38\11\168\225\255\163\199\89\119\129\9\240\102\102\234\74\184\99\25\94\101\44\150\203\63\252\70\253\115\150\124\135\247\52\189\188\158\179\78\49\234\38\61\35\83\222\36\109\97\200\214\152\83\177\185\7\19\20\130\222\103\27\204\146\96\229\50\193\221\107\212\62\28\13\30\219\155\13\207\233\247\198\204\197\149\29\204\39\39\83\160\25\242\53\50\191\93\180\1\133\18\186\172\177\65\77\201\167\147\76\190\109\141\246\226\108\235\10\157\73\179\205\181\181\246\74\76\84\37\134\12\234\61\72\162\84\29\206\62\12\178\243\151\168\151\239\112\105\69\105\118\255\47\180\248\123\17\218\237\250\253\170\76\158\176\204\252\249\162\200\169\240\229\120\24\217\36\114\33\88\64\201\34\135\74\52\54\83\114\118\81\164\126\69\83\57\49\37\241\21\157\36\128\154\134\188\95\130\23\167\77\14\162\30\28\204\94\0\105\203\102\138\159\2\186\53\55\7\18\210\174\85\141\52\15\220\140\252\85\65\2\235\58\87\222\253\122\205\129\242\148\190\143\191\19\77\122\223\103\35\213\87\37\130\220\190\244\14\18\238\251\81\240\166\88\115\53\126\34\83\252\162\127\177\164\239\100\170\167\7\38\158\137\233\134\162\63\3\9\67\17\240\151\234\194\44\59\90\47\39\51\74\45\162\71\191\136\231\11\28\240\146\100\200\144\155\56\226\104\34\192\149\67\165\106\248\117\131\249\164\108\17\105\83\27\68\188\238\37\244\53\20\142\207\183\235\252\81\56\110\104\56\158\158\150\216\101\111\8\102\178\128\130\43\99\41\197\139\70\141\148\222\252\206\87\221\229\5\160\248\31\52\144\101\58\154\192\51\125\245\199\233\88\120\194\116\228\136\92\109\202\4\243\41\161\254\244\88\34\160\38\178\232\252\232\81\0\235\71\227\60\57\9\226\32\241\116\253\231\41\148\93\62\106\218\147\74\181\171\71\77\19\231\146\155\136\182\154\202\35\69\232\215\109\28\68\106\104\212\241\168\234\149\64\7\54\49\1\188\152\125\99\28\34\67\62\48\214\14\158\184\29\94\188\235\162\144\126\165\66\64\39\248\99\37\237\172\223\251\23\213\204\48\200\104\153\151\44\28\169\52\152\32\90\239\228\212\35\205\210\108\242\112\251\185\217\240\216\74\27\97\193\206\78\211\5\168\222\113\188\221\156\30\207\242\57\195\178\9\244\184\34\175\196\222\182\200\17\106\40\18\161\80\210\206\36\3\49\137\125\180\230\156\203\47\201\147\103\19\204\85\69\243\9\74\16\242\182\247\17\17\206\90\236\144\25\19\6\3\251\97\249\57\149\140\211\116\253\72\81\229\66\190\181\240\47\239\197\104\129\247\197\80\39\114\57\226\205\89\30\142\58\104\211\124\135\77\199\103\205\170\187\9\201\98\167\171\207\166\82\134\212\140\181\73\37\244\8\41\206\213\132\121\11\89\211\104\57\56\181\171\65\217\104\210\11\225\23\61\5\33\124\220\202\145\182\81\224\73\212\41\191\46\174\97\47\3\70\215\141\134\242\247\219\20\26\102\205\215\61\21\113\185\187\236\27\8\52\44\213\215\219\155\253\97\50\214\216\159\12\196\98\250\166\136\178\13\110\225\148\94\182\130\232\17\20\121\233\160\232\211\109\115\138\199\5\72\209\212\216\246\12\75\212\68\45\152\7\170\43\69\18\133\13\228\81\118\81\112\209\57\176\40\230\47\151\207\50\177\63\97\34\2\58\131\63\99\169\175\105\63\178\125\234\46\116\197\172\198\105\76\44\26\113\240\31\236\239\139\202\119\138\232\88\215\10\83\11\20\17\194\15\0\118\3\145\172\35\143\226\213\186\163\111\141\116\46\31\114\81\88\28\117\62\226\14\205\162\221\214\41\67\246\253\55\36\64\206\138\39\190\151\167\99\60\93\43\16\208\55\85\231\222\31\214\212\222\251\177\157\235\252\76\95\160\230\69\247\0\108\210\247\244\242\49\20\129\129\108\65\190\194\14\38\233\121\96\214\92\150\95\180\92\242\66\8\28\60\199\123\102\39\37\91\252\19\252\71\247\120\188\84\138\113\206\56\241\188\211\209\121\237\49\35\6\90\24\10\241\81\4\127\28\5\58\134\49\245\117\197\172\27\63\166\238\143\17\68\81\25\57\71\12\85\201\90\153\126\252\125\180\76\9\200\24\176\236\219\54\156\136\163\136\114\159\160\102\88\112\139\202\52\43\99\182\218\21\105\174\206\206\210\173\155\157\105\121\19\198\7\141\222\162\48\97\136\102\114\47\30\140\67\146\103\98\221\192\155\55\144\89\60\44\250\13\47\159\148\17\150\134\109\60\134\46\39\53\231\77\199\213\177\13\83\14\130\61\208\158\241\101\176\19\14\4\216\70\11\154\156\104\31\12\123\122\214\174\24\175\145\128\112\78\165\46\151\203\206\37\52\54\163\107\230\120\228\120\145\16\233\49\145\143\118\120\155\214\112\22\253\0\25\6\250\247\189\116\11\236\192\253\90\242\190\208\239\68\207\52\110\195\116\203\252\167\253\54\149\221\174\45\74\117\185\53\250\10\42\134\40\16\16\235\234\254\234\122\199\39\97\151\102\14\89\202\192\42\9\106\91\43\148\183\236\178\60\160\251\9\85\19\225\234\255\108\253\7\191\187\75\124\157\130\203\251\73\194\25\54\51\167\62\94\105\28\218\252\241\153\226\212\216\212\74\202\6\112\236\50\201\125\55\30\235\223\201\52\5\153\220\40\5\120\48\216\214\236\164\173\222\25\11\130\46\59\58\105\102\194\179\238\49\103\172\102\241\21\196\227\209\111\197\169\116\91\65\36\205\220\111\108\28\60\38\201\69\149\218\109\54\170\239\142\14\75\183\196\131\28\154\64\36\201\19\172\211\164\56\91\21\139\22\62\175\127\181\219\175\53\17\178\152\12\249\137\128\141\234\180\242\55\150\232\113\9\104\126\105\54\61\209\219\41\159\159\215\251\174\87\25\254\144\116\102\64\132\158\247\153\206\239\18\151\247\198\178\246\182\196\106\186\41\79\78\173\110\172\89\229\100\129\61\233\251\198\251\128\26\65\182\144\179\99\93\142\207\124\61\62\55\94\11\102\178\31\178\216\244\206\117\67\122\45\215\55\129\246\145\101\37\1\199\251\224\213\70\182\255\14\9\71\173\60\187\42\11\19\75\86\221\128\59\185\163\115\107\18\55\73\27\129\212\88\46\249\201\31\137\224\162\215\225\246\48\222\214\199\226\82\30\158\144\71\71\175\7\38\136\197\209\175\246\175\184\84\173\230\210\244\74\136\221\197\118\84\172\25\36\179\89\17\47\83\68\190\30\168\202\99\129\93\55\53\66\93\188\107\95\125\146\227\37\162\214\36\65\145\9\240\160\141\69\135\78\129\162\140\247\0\251\140\158\83\76\178\77\154\97\216\90\167\135\78\228\212\21\161\139\254\206\55\54\95\144\157\204\11\222\3\181\230\156\120\143\9\79\100\179\239\20\103\33\27\62\24\237\242\20\36\212\199\210\206\88\197\210\1\175\102\149\217\147\152\211\216\25\238\235\197\126\182\133\185\249\106\80\245\50\142\1\227\227\80\157\219\178\158\205\106\141\141\26\38\157\217\179\16\233\171\84\35\149\248\0\244\140\57\217\172\37\178\222\160\153\181\121\105\215\180\211\81\237\108\4\168\193\213\127\220\217\120\213\153\27\223\88\160\252\179\10\83\219\52\180\40\208\86\77\34\34\36\180\207\157\125\109\17\33\70\82\193\36\246\25\76\249\225\127\235\25\39\207\68\254\71\194\121\167\254\142\4\148\61\214\127\8\26\60\12\118\35\222\121\242\170\26\173\207\103\211\64\202\106\182\158\58\9\223\115\142\5\79\50\162\62\1\203\219\212\18\122\152\42\243\134\22\3\194\77\17\239\207\234\30\164\189\44\150\180\128\74\230\179\26\148\121\1\195\222\137\247\40\156\28\24\183\27\102\0\0\240\233\33\105\154\128\135\91\149\86\95\165\234\171\240\17\174\134\199\93\113\94\192\54\161\245\66\163\55\182\107\2\237\234\222\146\141\245\142\190\40\244\191\78\146\82\219\33\168\191\54\231\253\141\207\18\87\216\17\145\192\50\170\166\18\200\2\60\104\138\60\55\205\219\118\8\173\195\102\173\71\42\78\240\20\224\34\112\36\204\70\195\105\41\206\198\195\217\138\214\163\254\129\254\134\139\207\5\90\71\42\177\192\130\189\236\25\63\13\166\252\181\9\253\21\98\213\155\50\62\22\52\229\57\221\37\152\175\82\136\30\61\204\206\30\240\183\122\121\109\25\204\134\113\161\139\17\1\181\123\133\230\195\90\193\190\7\15\207\189\201\104\64\62\97\95\64\60\187\14\33\234\228\136\202\60\96\145\187\52\120\121\232\122\51\176\44\71\114\38\251\60\247\32\46\79\168\215\4\93\32\238\161\174\187\171\53\238\246\122\235\129\223\51\47\79\79\45\193\126\194\212\164\197\220\227\66\202\125\139\34\45\222\194\250\129\38\12\162\214\208\29\94\143\187\33\103\51\87\146\127\13\138\138\134\184\181\173\251\71\146\125\205\101\25\179\179\207\199\198\161\212\197\174\186\164\158\54\20\52\37\79\164\211\206\212\87\33\0\23\135\225\236\210\180\142\29\31\167\74\37\186\60\191\103\59\47\232\84\34\177\159\176\138\180\144\86\10\111\118\250\26\210\248\220\79\252\191\196\128\216\35\205\12\45\22\84\147\37\205\190\200\215\141\179\52\254\100\37\40\32\154\121\183\215\79\239\219\21\174\39\95\143\253\50\184\84\79\11\127\124\199\177\97\135\201\188\50\6\107\31\249\253\188\176\168\2\49\104\127\164\84\94\63\218\229\55\60\18\173\158\163\250\104\154\81\75\185\96\237\36\255\244\18\13\103\238\82\175\235\161\115\60\203\152\234\31\124\16\110\62\116\108\38\112\220\72\195\48\138\220\155\86\69\250\171\146\50\76\152\178\174\175\87\197\201\20\62\47\123\80\90\165\133\71\248\140\225\167\195\108\136\32\109\193\66\90\51\2\189\156\216\191\146\2\222\189\246\210\17\90\147\94\16\39\54\13\64\115\99\189\165\240\249\148\212\102\106\91\124\78\194\129\88\183\157\248\80\115\92\97\143\80\75\222\193\98\159\92\210\233\27\132\165\142\221\93\73\164\165\149\45\237\67\110\95\130\57\22\97\30\243\228\60\249\32\193\197\96\94\41\100\47\162\112\140\63\229\210\163\71\180\143\26\38\248\216\225\162\206\172\62\200\167\5\60\128\118\76\212\141\159\2\200\117\64\69\18\21\236\61\231\100\35\252\203\79\82\59\192\242\11\215\209\95\73\115\23\51\89\43\213\206\9\220\217\124\226\69\22\23\89\150\8\179\209\247\17\140\49\42\204\226\9\178\17\229\223\73\177\223\67\188\244\188\93\104\18\57\161\93\200\192\126\9\87\27\2\230\26\153\187\176\141\61\233\44\32\113\38\49\211\37\107\180\59\80\241\128\192\228\96\227\193\130\218\37\172\219\156\156\87\88\166\107\39\175\69\101\22\187\194\232\46\114\111\192\137\106\171\183\90\183\143\214\45\14\193\243\156\114\161\153\96\24\27\195\25\41\180\174\96\184\139\46\105\76\130\68\152\171\178\235\60\137\12\183\25\23\31\168\197\137\201\9\109\103\22\174\18\102\67\166\180\237\223\231\208\168\241\147\172\156\100\10\117\141\136\38\155\198\51\105\132\153\201\24\194\7\195\83\21\195\93\40\128\130\159\72\61\243\144\244\148\240\92\204\171\81\105\93\23\99\13\213\62\36\25\171\57\35\50\108\90\92\190\98\43\187\236\107\62\180\77\36\140\26\65\14\210\149\42\241\183\76\17\77\250\102\210\139\155\209\161\248\45\36\56\33\140\168\199\182\236\114\10\121\9\42\60\92\5\152\69\99\112\84\202\141\213\37\60\118\241\79\65\75\143\143\215\135\22\53\58\95\169\0\46\174\73\65\26\226\2\37\203\191\252\135\226\104\206\227\93\63\130\88\78\187\50\211\110\246\87\145\87\179\197\254\97\86\137\108\227\203\162\22\130\166\168\164\157\140\118\58\14\68\64\102\181\229\21\152\79\126\251\142\54\70\227\244\1\34\75\210\165\250\113\80\138\157\75\35\84\69\178\228\106\108\107\126\109\223\217\83\125\243\227\9\48\146\114\172\229\168\195\83\94\122\117\239\93\133\218\210\49\43\107\179\147\251\43\16\53\63\232\232\219\53\13\216\8\213\79\168\137\53\96\89\22\2\57\50\150\129\15\122\66\116\198\226\119\102\250\177\252\154\48\63\125\4\226\72\173\244\179\89\174\222\225\74\23\109\209\209\221\87\44\163\175\142\174\21\235\192\160\108\117\231\3\155\57\84\126\16\90\202\37\224\253\62\8\153\125\215\169\174\20\205\106\153\34\140\51\86\145\165\118\132\253\218\197\105\75\152\208\84\191\142\158\244\214\234\78\134\189\182\47\48\173\75\184\100\217\217\155\210\119\158\143\25\151\101\214\200\181\151\190\144\215\175\22\57\194\56\211\20\204\146\116\214\95\203\221\115\85\16\95\85\27\186\95\145\44\177\153\207\133\128\21\196\172\96\251\178\230\124\46\34\96\82\122\240\88\205\231\49\7\245\25\11\142\36\84\34\60\26\33\175\221\213\106\120\72\81\235\119\116\129\208\150\63\55\155\178\53\132\126\0\111\141\116\222\122\57\128\170\45\199\17\59\189\80\136\148\83\68\68\212\187\152\20\242\109\244\33\128\72\102\122\135\38\122\164\92\238\223\35\107\19\123\240\91\170\255\65\93\153\203\194\250\231\119\0\221\110\133\28\134\202\145\74\87\162\186\246\200\51\184\255\2\205\248\117\234\126\248\236\66\142\162\33\97\112\72\57\220\134\8\198\81\89\152\33\100\148\69\125\235\232\7\69\85\13\137\159\38\195\81\13\157\214\191\30\40\74\96\60\159\29\147\236\96\7\1\155\235\115\45\52\52\215\94\57\254\201\172\108\20\79\186\25\244\1\122\100\4\160\27\139\160\231\211\107\92\124\45\79\46\101\40\34\238\173\32\81\213\165\12\130\142\230\70\46\124\190\169\154\105\199\205\208\171\123\181\156\116\149\175\14\176\234\230\170\10\115\88\157\30\1\99\200\57\148\66\222\112\55\199\166\70\127\167\177\169\180\89\98\223\141\232\237\85\241\225\8\47\167\47\84\169\126\68\9\138\161\80\127\133\3\253\58\113\30\126\10\94\185\248\95\179\20\26\95\101\53\205\126\120\150\67\2\149\218\201\134\151\59\76\72\103\156\217\44\24\7\156\231\152\192\151\210\25\166\224\141\214\163\222\212\168\14\143\68\12\34\9\251\166\255\215\61\28\25\143\225\205\241\24\10\188\7\79\185\111\1\59\129\235\75\152\80\213\145\121\18\124\3\75\224\110\219\14\130\207\218\212\213\85\234\188\38\99\200\136\45\183\180\215\206\236\222\99\18\29\252\217\228\174\144\235\42\60\34\36\134\70\137\47\120\33\31\141\116\121\48\20\125\195\92\226\37\215\32\210\173\235\210\207\94\49\218\74\124\204\100\75\161\36\233\49\61\121\59\136\189\219\72\175\150\50\76\133\42\47\185\229\250\40\247\153\168\6\130\224\171\208\154\105\117\24\65\92\206\164\67\107\148\106\71\23\226\216\4\233\196\120\110\243\10\14\197\112\8\127\62\177\196\99\214\245\18\157\89\148\218\55\5\158\170\117\146\187\31\134\77\65\168\95\37\208\138\64\117\180\165\83\70\236\113\5\186\132\237\93\224\42\108\254\194\9\217\30\120\60\102\34\32\82\139\23\228\207\199\110\0\3\224\119\191\243\42\22\188\103\132\23\190\43\196\216\171\205\177\125\122\60\231\190\220\151\151\50\38\206\12\229\45\97\210\95\114\207\12\14\165\11\114\162\32\182\158\59\178\37\22\245\3\200\32\116\207\63\28\30\125\9\47\112\107\55\202\200\158\250\57\61\133\229\7\177\152\235\183\230\204\50\185\116\40\7\111\10\214\242\74\13\24\91\5\172\22\7\30\118\35\215\167\178\1\160\175\51\54\239\42\4\186\149\22\179\88\126\71\40\12\72\218\40\204\218\138\5\105\232\130\18\234\16\171\0\167\155\52\210\180\165\242\69\20\236\110\205\191\27\43\171\40\127\253\196\128\189\173\239\81\103\116\138\80\83\174\39\95\150\174\111\171\205\41\103\248\144\33\193\95\223\106\23\191\82\117\4\185\23\125\184\54\26\107\211\126\13\72\144\88\10\147\231\243\181\239\230\58\100\173\214\206\209\123\206\2\101\141\187\227\226\152\90\76\179\162\224\93\14\23\244\189\205\161\48\98\133\62\212\167\184\152\201\54\166\125\106\110\68\212\12\211\188\89\232\112\90\232\126\133\73\89\14\255\46\81\72\237\40\204\162\61\106\19\56\135\192\167\41\145\185\72\118\184\58\72\255\60\190\159\163\244\205\237\162\19\22\229\134\25\153\9\187\181\142\54\96\146\224\164\169\216\6\196\29\214\24\180\161\36\115\128\30\104\160\51\80\85\41\227\41\221\221\247\95\230\185\162\54\54\33\67\149\0\29\170\141\112\78\105\37\50\164\161\251\217\143\67\154\144\12\47\134\148\18\93\148\112\231\17\38\79\69\74\88\102\212\205\21\176\121\211\78\31\234\240\92\153\165\151\147\7\63\99\238\2\202\87\231\25\200\78\123\178\167\122\234\231\239\203\191\250\224\237\28\143\61\109\220\115\110\63\126\10\59\139\43\156\236\9\26\198\232\117\131\126\14\181\192\226\162\134\4\180\49\94\93\180\219\5\244\92\119\172\214\239\198\124\98\244\120\239\93\67\168\34\38\86\188\137\221\51\131\222\232\155\116\222\67\87\135\91\4\118\125\49\158\0\165\84\233\222\118\84\105\74\80\162\112\87\93\121\75\203\94\246\36\186\2\215\193\217\120\246\159\206\79\137\62\184\55\140\136\188\173\149\61\126\15\244\254\181\71\181\197\48\239\196\97\253\136\237\141\53\19\24\73\13\240\203\129\138\19\253\149\68\205\105\168\72\121\154\97\24\70\84\93\251\174\3\209\60\4\234\222\3\241\6\39\0\59\174\189\225\155\112\189\201\239\195\13\142\165\156\44\164\115\31\240\218\61\109\121\159\124\141\204\211\249\95\6\97\202\24\9\87\239\50\97\197\251\174\6\98\178\70\228\240\18\105\114\212\13\26\111\105\210\225\244\39\102\49\81\236\93\23\75\54\92\176\166\144\86\35\108\184\57\211\38\221\233\124\235\120\87\7\44\90\121\13\101\118\154\38\60\39\14\222\113\65\31\76\111\113\243\183\245\241\81\15\243\63\187\181\24\184\102\246\79\169\0\108\195\120\43\140\233\121\240\187\249\98\241\111\126\34\55\137\206\175\195\55\36\115\117\206\131\90\52\6\80\191\46\67\186\210\81\222\173\72\238\200\36\237\149\179\15\232\58\173\48\113\97\201\175\65\100\13\75\183\2\50\223\71\241\189\228\161\131\172\96\28\238\142\193\86\228\122\124\52\53\193\109\53\67\230\211\232\106\139\202\177\103\142\155\140\201\132\112\188\248\142\107\50\250\53\155\240\72\154\131\112\231\84\182\57\177\218\211\28\26\60\201\59\249\11\171\15\255\231\102\99\157\99\166\4\200\49\52\245\205\231\145\222\61\154\193\58\181\117\5\250\243\176\57\5\155\212\33\190\255\81\181\125\125\196\234\21\27\187\30\105\252\153\196\233\61\99\180\28\170\109\240\187\115\21\102\206\53\47\173\115\233\110\152\127\236\157\68\173\177\186\253\69\225\62\1\128\131\130\115\190\220\234\114\188\93\10\32\233\43\36\59\141\204\158\3\181\196\58\242\233\99\105\245\52\248\133\136\127\173\100\196\32\87\247\12\21\9\203\209\53\66\16\144\238\145\42\34\83\210\67\63\62\249\106\113\177\110\224\66\178\235\236\186\235\131\137\131\14\235\109\182\216\140\154\29\198\15\252\9\18\195\37\91\152\246\161\67\53\34\68\54\27\252\142\69\173\224\180\58\84\60\231\231\150\65\25\159\221\233\123\237\54\6\138\219\203\144\13\32\81\132\191\67\5\73\101\241\232\110\102\121\25\117\208\196\144\155\187\84\124\87\50\168\147\241\124\236\165\38\207\246\114\249\47\35\100\44\201\150\254\143\144\182\133\210\209\231\115\52\222\23\42\137\1\130\3\237\94\207\220\31\190\129\112\235\105\56\240\235\74\182\231\158\115\206\18\193\144\73\91\173\113\104\148\110\45\150\66\90\93\75\2\177\148\194\249\242\118\76\206\105\227\163\204\143\4\228\134\179\9\11\55\36\188\74\24\93\219\103\57\223\205\56\172\101\253\118\200\29\59\248\65\15\2\123\88\109\251\146\126\189\19\175\18\119\138\213\205\206\221\181\157\111\167\28\179\209\17\168\242\76\100\89\44\99\48\160\129\171\212\176\69\14\181\38\73\140\227\194\11\178\0\159\150\64\234\11\110\106\23\207\77\80\221\2\32\95\110\110\158\112\43\130\192\201\91\25\104\172\226\34\173\19\126\67\114\251\104\35\221\169\183\83\122\92\238\30\30\99\121\231\248\180\237\137\121\125\173\126\216\153\181\126\230\76\23\114\144\155\56\172\176\96\61\195\98\110\62\207\227\225\126\246\39\102\101\152\111\232\145\171\219\4\154\61\175\244\247\45\197\70\186\196\97\195\141\76\149\70\88\125\76\128\28\173\100\222\149\168\115\85\239\3\14\159\179\99\143\154\47\191\248\188\146\151\12\208\98\59\123\162\211\252\222\95\56\197\145\122\107\255\245\27\245\40\47\157\85\150\119\113\169\135\141\11\219\21\135\232\160\121\106\132\62\57\139\78\91\111\187\217\79\187\111\168\139\255\8\84\159\79\178\169\10\183\133\231\140\201\173\171\128\131\198\186\79\14\147\47\73\48\248\162\17\25\131\114\107\6\67\79\198\185\48\99\7\147\24\150\188\85\172\13\101\215\20\142\70\22\69\49\53\251\67\54\85\133\127\38\212\201\184\98\8\151\184\176\215\119\19\240\203\69\110\242\41\55\50\250\27\121\144\3\150\213\93\65\39\115\22\149\180\149\31\111\201\237\86\15\250\171\113\134\5\255\162\184\249\55\43\244\227\90\36\220\251\202\11\235\0\221\16\120\41\155\168\231\121\60\148\52\213\123\17\201\1\121\167\39\247\129\207\247\0\154\50\118\226\31\203\105\100\127\56\192\86\62\131\123\245\30\10\176\243\37\240\204\239\135\23\130\13\179\41\94\175\68\19\137\74\163\133\50\18\229\38\140\77\98\243\193\164\228\55\105\62\59\35\56\163\133\10\199\44\60\214\39\108\228\253\167\43\121\5\188\104\108\122\78\10\125\71\248\186\18\14\171\109\148\205\128\67\87\103\143\196\234\109\240\212\65\245\236\25\165\221\71\251\19\202\73\57\166\29\191\117\255\183\213\86\160\186\83\96\63\17\1\155\42\92\140\80\54\27\97\244\201\98\74\99\10\177\153\183\161\218\24\47\195\21\180\228\183\200\35\238\46\29\86\84\220\145\6\229\18\230\44\41\199\58\164\28\169\19\179\68\65\249\2\132\143\100\77\57\253\98\143\55\161\254\194\38\68\116\165\59\228\38\8\107\62\171\225\126\169\6\9\158\160\225\46\91\238\78\228\35\93\4\69\87\189\115\30\68\39\127\30\7\11\103\117\72\62\54\248\51\246\148\209\62\188\84\194\8\160\216\145\84\97\19\191\172\89\238\34\185\141\18\39\155\82\228\179\222\144\14\139\205\77\104\228\250\54\4\159\158\28\159\157\14\48\184\65\141\25\37\44\63\227\247\181\115\75\213\156\78\156\93\127\55\63\125\171\171\231\7\122\193\246\187\90\118\194\242\208\192\90\47\83\9\39\23\131\78\51\15\103\195\90\212\249\121\119\233\185\222\113\32\155\39\41\91\3\13\49\186\196\141\22\252\90\12\234\162\216\214\150\91\179\173\230\96\166\179\104\6\77\44\128\181\88\103\214\97\136\181\172\35\46\215\242\104\137\212\85\202\70\191\61\177\41\9\67\229\209\34\245\9\184\35\94\91\69\61\194\82\151\65\176\22\58\19\37\185\184\112\203\47\216\61\250\34\157\60\78\235\203\223\97\112\173\91\67\246\45\242\21\255\74\237\202\141\59\104\213\174\95\178\226\96\166\187\77\219\216\203\212\254\112\124\166\49\255\238\208\246\123\248\147\139\188\43\220\194\13\148\46\140\216\149\143\49\56\75\156\187\192\54\164\152\8\80\225\13\147\26\233\239\32\35\151\216\177\193\225\139\25\152\223\49\11\67\202\198\11\37\120\234\114\227\250\93\235\107\229\144\210\232\34\22\206\217\115\83\167\34\18\38\94\14\89\97\104\214\184\229\145\139\129\64\125\68\160\27\118\227\211\146\89\225\169\199\146\80\225\215\47\20\126\166\156\105\31\47\238\239\164\15\127\238\187\5\87\34\160\193\207\220\65\105\189\178\27\137\174\175\164\111\69\175\86\167\229\122\197\46\1\144\70\121\190\40\152\141\103\104\184\126\9\52\228\99\255\167\158\29\57\203\190\68\251\113\100\5\68\162\119\193\220\0\154\120\245\129\132\119\123\46\84\106\124\23\34\29\96\168\209\122\145\181\127\3\215\183\168\161\7\199\9\15\7\177\1\181\92\133\200\46\205\128\129\246\70\229\172\107\72\206\119\80\73\107\21\116\114\21\228\38\8\102\197\225\58\183\55\32\87\241\96\94\134\145\165\77\158\6\147\65\255\71\12\33\79\180\200\216\180\22\106\146\105\140\250\22\165\144\41\124\182\28\185\89\206\26\34\89\249\34\255\216\214\120\69\178\123\6\18\26\132\184\174\185\176\134\198\43\64\181\161\86\137\238\81\216\227\95\249\195\114\93\113\39\171\251\107\73\35\154\213\204\186\199\245\55\230\80\199\132\135\115\135\57\1\222\79\189\30\181\172\75\167\219\188\223\88\155\3\122\176\63\73\135\55\86\186\255\16\155\134\146\80\205\246\172\49\212\168\22\63\207\106\29\33\26\175\85\233\18\15\109\110\198\187\128\235\243\22\238\24\138\33\229\249\188\65\152\238\220\108\165\103\133\133\236\10\12\138\65\167\169\47\250\167\219\205\55\79\199\81\19\67\123\211\3\108\82\30\97\18\148\148\66\160\133\241\24\50\231\51\128\123\52\143\102\78\51\25\39\141\30\254\25\222\21\69\213\50\185\56\98\66\207\100\157\217\86\213\172\221\28\134\226\46\6\10\204\13\5\183\8\59\46\136\244\135\22\122\252\229\11\94\89\181\228\112\77\155\7\4\114\208\149\198\31\72\79\43\188\157\117\81\165\164\117\80\164\245\211\106\178\141\54\58\206\145\224\36\131\10\138\43\134\2\214\130\97\213\12\168\142\83\137\117\94\16\76\177\112\109\191\57\238\206\168\226\40\245\61\195\155\27\240\161\221\186\163\84\192\165\73\215\210\162\128\10\62\14\44\191\86\32\12\103\3\119\84\167\139\65\115\246\99\221\141\107\229\244\117\57\141\205\102\68\61\59\212\254\215\125\212\132\49\242\202\221\20\144\168\123\140\246\134\55\130\108\85\188\147\233\151\222\187\62\18\157\78\40\105\71\174\145\21\223\135\191\33\231\83\28\56\191\49\70\178\213\17\244\173\111\183\123\83\10\245\179\24\92\149\50\111\68\126\37\161\84\74\73\129\219\75\194\228\5\52\18\53\113\163\214\139\155\255\88\155\187\68\250\22\110\183\216\165\168\181\53\50\118\113\255\242\88\234\12\135\16\166\130\76\242\159\134\34\96\150\189\56\5\176\17\250\95\205\237\251\148\201\208\199\239\83\142\92\249\25\87\108\40\81\60\103\9\164\164\18\200\185\12\131\84\38\162\116\30\208\110\29\88\115\126\215\171\134\238\92\223\126\47\61\211\23\228\219\65\224\70\233\43\164\70\232\153\224\78\35\186\206\51\48\244\67\125\10\11\13\50\115\148\56\40\115\204\244\37\135\202\89\21\79\30\102\40\4\225\238\0\127\9\91\125\147\91\249\82\142\116\62\61\41\50\250\120\238\153\59\223\206\185\39\115\54\158\82\197\27\73\120\149\136\108\178\197\150\55\242\109\110\98\204\100\13\160\41\138\110\162\98\98\174\59\140\107\206\213\186\29\78\110\153\95\74\171\95\93\97\18\103\135\208\81\210\105\194\36\13\156\194\178\125\51\195\65\50\1\88\2\218\157\229\104\253\226\102\9\234\96\99\255\74\12\244\233\92\88\62\55\14\214\14\202\255\47\12\208\59\21\215\240\222\166\5\26\71\146\38\229\136\179\144\109\56\194\195\22\17\159\8\0\228\104\170\84\212\177\170\85\143\182\60\193\9\64\149\8\195\122\245\64\50\41\85\139\175\191\121\128\86\20\174\144\112\155\33\71\251\30\139\12\65\250\13\21\209\154\24\110\213\60\19\206\98\128\168\6\16\225\121\18\100\198\215\176\184\57\242\77\167\60\77\66\106\94\77\44\171\56\78\245\4\96\84\62\185\195\57\59\163\98\202\27\9\231\244\229\174\13\124\252\224\232\146\65\247\86\64\25\227\226\176\123\178\76\240\172\146\105\93\152\117\19\8\118\133\234\96\53\129\46\95\224\62\38\151\249\124\201\154\56\215\134\137\107\38\67\61\148\135\247\87\158\119\138\58\13\240\44\140\171\55\210\59\181\254\72\16\56\163\153\240\149\173\195\168\239\223\173\28\194\192\39\122\105\56\248\233\177\214\209\83\19\38\151\181\59\51\57\140\0\124\210\104\49\11\105\189\134\183\140\33\195\211\154\247\208\225\177\27\3\85\57\213\30\251\231\90\67\53\71\201\29\94\68\99\139\17\61\230\87\73\41\129\79\65\52\6\65\46\90\99\13\61\197\206\55\228\42\144\125\79\19\214\105\107\222\73\199\90\213\4\125\92\143\219\167\146\123\134\179\242\100\76\105\182\150\249\8\50\97\25\198\0\161\29\230\4\155\187\175\80\103\103\90\63\204\6\234\254\232\234\127\220\217\255\29\175\51\183\170\125\222\128\95\240\29\11\60\211\34\165\205\131\33\243\157\89\110\27\49\17\216\73\161\130\244\98\64\165\0\185\64\95\238\246\201\88\30\123\50\197\49\52\188\29\80\14\117\165\27\192\207\35\89\126\181\88\199\100\110\202\92\157\15\134\142\188\60\136\85\173\226\206\106\54\30\107\232\223\86\133\15\243\84\141\81\151\245\242\53\216\83\163\83\56\108\102\97\184\253\36\87\25\111\111\163\59\80\104\244\100\73\99\91\220\124\87\42\230\203\124\21\89\22\66\61\154\2\151\202\9\66\144\230\184\118\57\253\204\129\208\118\122\75\144\67\254\77\62\126\200\220\54\201\179\33\8\66\235\206\244\220\99\215\18\116\171\152\21\210\211\1\220\26\177\49\53\80\39\83\54\18\217\80\47\180\63\217\233\232\79\245\244\144\106\2\246\215\61\107\209\148\220\137\245\72\201\13\76\94\135\39\71\33\99\35\135\4\233\156\22\20\229\160\63\144\5\140\175\170\31\6\208\216\254\133\192\41\11\136\136\169\137\31\94\62\5\27\124\37\183\190\151\144\0\75\210\254\148\204\249\169\58\137\196\175\190\180\232\48\231\196\192\115\247\148\103\190\186\20\135\211\78\34\231\131\189\244\127\241\59\193\193\98\69\140\216\239\252\72\174\237\212\52\250\159\206\21\1\214\25\10\197\120\105\146\81\97\20\204\244\188\5\164\156\6\24\249\73\176\247\212\3\247\7\195\39\130\151\212\158\54\44\152\104\66\34\159\246\237\68\240\89\238\14\241\63\52\14\105\204\239\253\28\253\15\156\108\5\119\56\122\66\89\9\122\43\10\203\217\42\217\134\243\209\96\161\4\72\15\171\2\200\118\230\22\55\227\188\242\23\200\109\231\32\234\19\149\193\62\106\110\83\179\78\107\226\236\7\164\216\4\45\186\58\135\184\173\95\193\197\146\200\5\24\50\255\21\131\196\188\239\216\55\98\95\124\49\230\85\123\136\28\35\81\52\122\77\67\94\191\84\231\50\123\77\117\242\248\81\177\105\230\60\1\62\79\142\7\160\45\91\183\232\14\58\156\15\230\119\166\29\88\8\125\234\149\37\40\30\192\154\254\98\187\238\228\147\99\74\171\31\165\236\173\125\200\166\163\74\103\220\244\251\147\150\181\150\89\220\149\156\9\147\95\131\240\41\70\22\173\60\8\236\64\157\89\162\194\19\36\39\72\142\115\248\28\170\69\197\188\34\220\149\28\46\142\87\49\234\26\36\205\207\215\11\9\222\53\74\197\108\92\38\28\71\151\252\229\74\105\78\161\242\191\134\161\46\94\7\170\148\198\245\243\72\60\219\74\86\7\178\92\120\243\152\163\99\203\105\185\148\228\54\104\146\226\233\228\160\105\101\210\71\94\46\142\123\205\247\75\95\145\66\76\169\76\201\248\199\174\253\63\90\174\132\167\81\104\141\141\113\156\134\128\101\65\36\156\79\106\46\40\69\132\45\54\18\230\216\184\44\53\111\120\86\12\211\171\195\5\153\197\66\114\89\53\86\158\204\230\246\184\9\146\233\124\248\213\13\122\85\92\99\60\142\28\134\208\56\129\203\27\25\34\176\190\54\94\51\101\19\223\183\126\247\74\59\222\230\188\202\15\238\82\213\250\48\249\44\42\207\64\216\105\171\225\39\182\58\253\118\184\119\150\116\75\43\115\5\111\55\98\238\236\1\116\180\1\37\241\213\35\10\241\73\20\14\253\24\13\115\228\152\246\92\24\133\123\65\229\132\83\138\188\102\207\6\65\41\133\233\119\84\118\238\202\111\12\7\214\1\25\123\81\98\47\235\53\47\222\92\216\148\188\77\185\90\222\34\86\81\16\132\238\66\46\117\3\152\109\250\14\195\68\196\96\10\135\223\227\9\185\68\119\83\64\46\137\101\47\198\197\42\17\156\133\139\161\33\85\235\76\20\194\16\78\137\0\127\0\158\78\234\120\238\127\230\50\209\15\37\117\18\155\71\35\120\103\38\57\2\208\220\216\67\111\18\94\21\178\143\84\103\150\96\111\87\183\55\61\235\168\42\108\189\140\106\116\154\19\126\203\7\49\82\250\24\48\171\189\74\14\130\143\14\117\27\57\179\235\157\20\18\187\0\35\21\91\175\107\111\181\148\144\37\41\194\73\29\95\245\7\234\196\0\207\238\102\253\21\22\2\62\235\148\217\165\179\217\162\130\169\5\51\207\155\48\39\186\232\175\254\97\25\41\77\11\238\222\49\34\91\139\203\18\120\138\192\204\58\1\245\219\177\210\27\209\163\214\51\110\180\243\230\4\41\111\109\59\57\78\250\20\83\146\175\14\155\196\100\97\167\104\152\199\5\71\253\86\99\150\37\170\173\248\244\127\43\190\124\10\74\107\35\132\143\104\112\96\74\237\5\145\92\21\190\235\102\81\64\27\186\79\61\51\222\213\44\120\34\91\220\193\72\159\225\250\157\99\243\234\150\101\15\84\106\121\98\47\209\110\169\62\220\241\197\163\84\20\40\138\64\20\235\1\103\87\247\116\192\184\188\5\14\9\141\47\242\141\35\71\189\100\157\28\39\80\104\228\164\40\138\62\39\225\45\204\166\107\85\228\155\148\20\195\166\32\248\253\130\148\187\191\183\86\51\154\230\61\56\18\187\244\54\108\79\231\120\74\189\57\90\131\49\126\222\74\80\104\229\2\199\57\53\75\106\126\127\71\241\53\224\93\189\110\33\49\208\20\181\29\134\16\227\111\104\115\126\35\136\48\226\222\35\31\163\249\114\160\65\119\109\24\72\54\102\230\164\202\183\31\155\69\75\243\30\181\134\254\226\75\87\244\142\198\199\239\75\89\230\200\149\94\196\148\176\57\108\127\25\144\28\168\90\224\188\96\204\36\203\105\32\91\70\118\86\106\180\193\176\60\131\41\92\238\13\212\39\159\153\188\3\249\61\231\245\10\32\161\43\168\171\243\215\95\84\216\126\252\47\53\211\86\171\228\111\126\78\24\4\195\223\134\51\15\160\77\226\90\104\208\59\23\12\207\150\54\205\62\22\249\126\28\131\177\173\153\252\105\129\73\192\200\0\50\109\191\29\215\144\190\153\147\135\239\203\96\27\111\159\29\188\192\251\212\64\5\2\167\232\26\233\145\80\176\45\4\249\94\50\209\84\205\175\10\21\217\162\72\95\62\31\208\4\188\3\135\98\56\116\210\21\79\130\124\42\166\204\223\142\20\170\172\208\202\212\108\71\158\13\75\179\228\68\118\155\133\42\26\59\56\59\29\198\218\187\198\231\230\4\44\231\142\233\146\225\40\148\68\77\150\232\50\68\6\155\238\43\11\75\86\93\15\85\255\166\92\235\34\51\162\102\65\7\3\34\219\93\255\230\180\156\153\187\219\3\101\93\22\207\160\173\140\212\139\101\226\88\84\178\70\91\25\138\164\62\33\235\229\237\39\215\183\103\52\67\161\158\183\67\89\80\152\244\216\191\7\158\220\85\227\247\221\96\66\200\40\226\206\225\15\104\223\175\26\69\72\223\90\181\254\48\51\90\175\49\96\9\68\12\245\83\45\178\8\150\162\197\15\223\243\231\85\162\217\166\203\119\189\67\212\11\125\208\242\123\165\148\156\178\36\101\250\37\179\47\43\156\218\110\119\194\51\101\107\140\130\71\102\61\41\253\25\20\83\134\4\196\13\2\171\203\137\82\170\191\131\21\29\44\148\17\210\73\242\193\54\234\139\93\175\72\33\184\219\159\155\176\219\235\121\31\236\223\163\233\50\45\223\227\69\55\99\3\138\59\226\88\249\188\121\13\103\137\133\69\97\34\145\248\161\35\98\242\49\138\67\107\94\118\200\230\142\93\50\238\100\108\97\98\119\228\165\29\201\247\167\70\211\200\154\46\21\243\176\244\215\184\180\15\101\13\173\81\5\157\237\89\133\197\59\70\100\224\6\131\182\130\202\202\71\139\232\57\255\122\122\205\20\183\42\169\91\132\127\116\171\225\242\56\206\35\99\87\37\207\185\170\102\239\89\125\20\114\69\208\168\143\40\204\34\116\146\57\124\140\75\25\214\104\112\171\181\171\154\155\50\214\42\169\38\137\247\210\116\76\185\15\72\6\79\120\51\120\225\167\205\97\113\8\38\109\169\189\135\10\9\107\55\116\169\138\207\165\178\74\163\86\127\99\95\38\177\41\9\128\94\221\88\63\232\127\161\40\236\239\47\254\233\128\97\163\118\47\184\18\200\122\46\137\136\177\132\28\32\220\208\48\94\251\180\155\71\100\70\82\77\214\218\190\38\204\222\139\174\112\69\46\48\168\181\170\7\7\194\109\118\107\174\56\145\76\187\89\115\217\81\171\198\74\74\149\135\74\223\150\130\57\159\232\123\188\74\49\158\191\236\199\150\87\115\134\213\150\242\10\161\45\42\159\190\4\122\214\190\9\113\6\174\160\173\147\100\133\222\99\69\161\218\217\30\235\42\122\52\36\34\26\26\156\95\87\13\93\123\137\121\80\127\101\210\97\148\43\165\91\231\76\38\89\172\54\85\169\60\27\96\110\20\24\237\134\204\63\38\106\131\243\212\137\218\179\226\53\162\187\222\102\98\67\57\177\145\175\186\84\26\160\224\183\134\147\229\53\249\2\16\201\236\129\30\59\188\183\164\15\115\148\110\45\202\49\99\190\48\65\73\110\18\47\208\245\146\91\49\133\255\64\44\105\223\202\24\100\10\232\52\149\77\198\113\188\169\86\105\239\51\175\27\43\37\33\146\76\166\39\116\107\50\126\23\137\29\9\238\39\203\47\154\88\169\230\182\5\204\173\181\23\13\119\40\230\50\50\5\129\178\129\64\89\63\116\159\255\94\45\207\101\30\88\134\212\10\179\182\255\230\239\215\161\225\125\234\7\70\25\147\224\233\139\6\7\255\9\146\50\188\32\188\23\8\96\250\85\99\228\214\233\85\20\22\215\150\240\6\13\55\119\26\132\190\135\69\252\215\88\109\153\208\228\185\232\201\243\111\115\95\180\252\154\249\242\140\237\75\216\202\35\134\157\221\28\2\49\70\57\204\41\112\200\154\207\218\0\211\67\225\254\225\243\129\224\14\31\142\238\157\114\181\153\102\16\173\96\92\14\130\251\219\53\140\184\223\66\253\32\81\53\84\238\79\171\92\216\104\91\72\222\93\94\14\157\238\131\135\211\96\107\252\112\6\36\226\9\166\172\155\71\72\199\227\37\69\101\83\210\231\140\92\144\128\31\234\117\222\39\35\64\192\124\88\241\198\173\254\199\223\62\241\20\114\41\144\91\224\117\57\217\217\185\167\17\121\146\234\79\77\20\102\68\228\184\211\54\161\129\7\106\227\239\222\10\9\155\90\34\232\26\160\176\80\85\138\178\12\233\23\253\239\193\95\254\211\115\217\28\4\131\133\255\10\156\179\58\145\157\183\12\21\67\38\120\19\26\134\142\92\29\129\243\88\179\163\30\82\226\49\119\195\183\95\192\115\8\236\183\205\231\220\87\168\13\238\229\34\196\177\165\164\14\169\65\98\139\100\0\12\91\135\253\128\28\210\207\187\154\124\198\135\241\7\154\251\113\75\110\216\151\221\193\99\92\111\250\155\3\88\17\166\166\173\17\63\78\87\0\110\134\133\185\56\71\107\177\0\225\47\49\186\199\68\195\249\131\79\123\31\213\139\23\156\204\94\220\33\78\234\25\29\125\176\188\98\60\197\62\8\177\61\37\192\60\3\10\25\40\158\159\44\86\241\207\155\184\253\170\239\16\219\91\229\231\179\197\219\23\227\75\203\37\247\147\80\154\230\66\50\182\111\99\218\49\117\254\244\198\224\69\149\17\35\173\221\111\206\165\35\87\133\34\234\228\174\59\203\149\246\212\182\218\69\34\219\179\231\219\1\212\250\79\191\67\106\176\25\139\72\222\13\110\137\142\36\236\228\147\100\177\233\118\139\252\144\19\131\10\216\109\232\239\140\159\22\25\218\102\192\97\55\158\186\73\38\44\184\38\154\223\124\102\7\244\241\134\34\201\92\204\70\10\193\242\97\47\170\180\209\73\5\10\138\194\221\250\82\82\222\27\119\195\210\28\0\222\148\111\222\123\25\26\200\231\186\140\100\203\190\147\3\135\189\169\204\76\173\160\244\101\185\111\119\171\160\148\55\151\177\30\232\204\201\0\101\152\89\0\152\214\54\231\116\82\174\136\246\172\226\176\193\16\215\74\97\132\247\240\56\119\164\191\82\36\79\27\190\48\212\51\182\74\105\100\111\104\92\191\24\8\179\201\48\106\163\126\37\200\124\24\122\200\116\161\18\242\237\151\200\60\206\61\50\61\235\155\251\158\118\160\83\92\190\37\26\144\150\118\98\20\243\18\226\52\123\80\165\127\131\171\157\17\209\231\133\4\137\154\9\223\116\246\9\26\39\94\46\188\213\255\133\28\81\194\107\251\207\173\177\205\222\161\221\12\152\72\52\81\245\222\115\224\61\107\40\239\96\221\205\224\255\123\25\10\135\31\24\127\251\171\182\27\105\199\206\200\165\32\92\218\107\100\226\241\132\73\227\116\230\199\187\123\209\198\176\165\5\24\57\78\10\153\153\161\117\71\30\146\167\95\178\44\204\13\50\191\221\222\169\143\208\123\3\78\128\230\56\210\214\74\145\53\146\196\8\26\69\109\188\127\64\30\139\3\90\88\119\176\188\190\127\52\181\178\182\48\25\245\5\17\189\250\168\137\245\193\156\196\219\94\51\96\155\196\227\47\247\101\255\219\165\117\230\185\108\166\202\53\6\152\180\93\72\228\41\49\30\25\67\96\12\236\232\2\231\88\177\193\110\81\229\58\26\119\141\206\129\81\2\46\197\34\118\200\148\173\227\71\58\197\81\191\235\161\110\159\236\3\15\175\51\140\253\84\192\118\17\172\55\79\36\216\28\118\203\73\210\240\207\48\95\127\27\141\253\4\161\254\136\125\78\41\63\170\136\228\133\65\225\173\170\157\167\87\61\130\41\0\4\4\83\119\131\73\28\204\202\255\146\8\86\171\78\238\73\122\104\95\219\87\148\234\144\217\120\70\238\131\105\66\181\161\143\188\35\112\151\245\118\80\122\180\36\2\234\175\26\209\210\74\149\67\128\76\160\251\234\151\182\37\50\162\86\54\215\232\140\129\90\187\168\22\129\176\22\240\231\206\132\91\190\40\183\71\85\211\126\22\43\217\39\171\34\85\119\177\102\159\1\98\224\62\242\114\225\108\229\170\247\4\158\205\133\225\119\89\25\174\179\252\116\153\102\1\76\251\83\223\189\184\59\0\172\207\175\163\25\219\63\197\160\63\161\100\120\185\150\19\234\101\123\123\95\22\209\231\251\87\103\186\158\99\25\226\55\137\109\12\63\156\213\163\157\128\245\52\11\230\58\190\24\152\100\244\216\236\240\16\22\88\10\24\218\205\49\209\4\81\8\94\7\12\65\90\110\113\95\10\99\44\213\127\236\197\150\0\92\13\1\208\244\221\36\128\54\44\6\93\172\239\169\181\14\75\76\7\78\123\69\127\232\134\13\117\75\231\112\42\127\72\30\52\143\155\234\83\46\116\147\45\214\53\196\189\66\126\50\110\126\177\107\8\210\38\198\133\75\99\206\147\152\69\175\245\216\210\173\249\154\233\117\246\123\84\160\78\238\188\179\89\55\157\217\122\30\49\187\27\70\27\180\63\154\55\95\173\49\146\240\25\173\167\45\190\212\181\75\162\163\103\93\116\75\121\5\7\92\44\246\215\2\158\185\18\1\213\197\45\229\183\189\72\208\62\115\204\178\19\101\21\44\32\149\14\159\11\109\169\31\208\182\0\143\178\100\14\139\206\250\184\205\54\176\248\145\226\252\247\7\174\107\193\231\172\207\20\165\189\61\122\95\84\17\46\19\189\179\199\237\238\101\95\101\39\198\0\22\45\221\145\186\3\146\232\106\203\70\157\159\175\54\219\12\215\191\251\234\70\88\116\221\253\238\35\68\126\126\20\177\228\12\128\8\81\239\68\131\52\140\185\151\106\192\207\14\126\142\18\14\180\243\185\71\63\221\4\130\211\53\10\67\78\0\28\42\246\249\130\172\115\56\106\114\187\213\35\105\47\214\121\4\109\105\58\68\22\51\122\48\200\207\76\239\252\96\166\59\129\46\170\44\91\210\54\185\73\7\170\249\217\214\98\182\19\91\166\95\128\114\107\187\168\150\95\45\202\28\44\45\221\100\32\60\233\215\71\44\198\211\125\174\125\126\56\92\115\52\208\88\248\58\242\68\109\20\7\8\212\194\162\233\78\62\24\148\184\43\0\127\58\60\70\176\121\178\39\20\227\215\126\152\228\251\102\107\4\196\143\99\183\126\53\59\5\166\147\255\27\26\177\95\51\109\43\107\182\52\216\39\68\177\43\20\124\70\15\28\220\38\135\76\149\38\237\46\200\231\71\166\113\213\2\123\41\164\191\173\83\20\15\211\79\200\213\31\193\212\25\146\224\237\151\161\119\162\1\4\181\203\181\233\80\226\156\164\195\149\252\212\253\140\16\89\170\66\170\248\1\246\3\24\24\41\106\24\145\142\176\205\215\50\24\210\217\224\216\166\241\209\149\201\25\176\192\22\191\5\61\136\43\2\92\147\61\15\160\92\73\83\250\58\213\157\113\21\122\45\109\213\34\154\71\106\202\101\112\27\12\32\59\61\236\217\107\8\81\193\81\131\68\16\46\166\195\29\150\24\19\230\218\1\20\231\137\166\177\108\112\239\59\190\192\40\212\207\118\32\234\194\8\164\119\15\199\5\223\58\110\19\28\166\217\67\146\23\112\62\193\178\39\165\106\102\145\216\186\34\154\42\85\185\64\138\139\10\101\41\119\6\37\83\143\30\80\235\205\180\30\237\150\241\148\85\52\10\185\166\189\122\214\66\80\95\117\13\197\192\245\178\32\214\214\20\250\127\241\128\56\81\18\95\169\247\67\19\67\158\29\59\14\21\70\165\219\189\59\225\63\175\22\114\75\5\30\230\69\127\122\156\73\109\23\32\40\130\41\219\229\153\68\203\103\245\126\83\132\18\165\175\7\15\133\150\204\156\158\183\31\85\47\216\214\71\201\70\117\137\50\69\89\217\56\57\189\122\120\46\110\76\230\41\118\158\70\149\10\147\128\33\188\116\231\47\106\60\48\56\79\168\235\217\102\234\66\76\97\219\249\69\51\81\27\34\239\45\74\124\47\23\50\26\171\38\140\244\119\225\134\30\214\136\32\241\12\109\70\7\180\107\30\130\86\12\217\62\11\249\79\198\39\92\213\230\167\141\121\4\45\189\215\224\112\144\131\68\99\134\160\2\173\147\118\167\1\69\38\251\60\208\134\137\43\11\253\86\243\170\79\114\176\191\97\94\201\209\140\137\27\48\136\227\46\133\123\20\149\254\50\215\116\75\235\187\18\81\248\81\13\30\201\95\50\132\200\202\192\23\176\184\93\75\166\83\48\198\120\74\220\147\45\8\112\78\162\229\55\57\188\200\138\78\163\226\177\41\122\92\189\140\57\234\111\107\242\97\65\109\214\116\226\215\111\210\194\244\91\11\55\58\118\159\41\222\102\36\52\175\83\135\189\134\41\157\110\150\137\85\170\33\187\62\213\203\192\39\213\48\69\155\181\49\27\89\19\72\178\173\85\217\141\169\196\126\67\41\21\162\82\195\77\95\134\102\109\103\91\44\162\207\186\151\158\159\17\87\104\44\141\187\153\222\10\69\101\234\69\129\23\166\221\39\31\48\101\95\168\204\183\117\106\253\113\110\62\20\79\50\35\156\238\222\94\183\211\0\241\111\16\97\137\185\184\228\170\61\67\164\169\143\26\42\215\175\28\62\80\207\138\73\139\121\128\15\112\46\223\161\130\226\136\99\60\190\37\63\37\117\98\3\105\170\223\170\55\212\255\117\155\188\4\48\191\7\169\18\52\48\44\143\253\149\122\20\225\174\2\50\22\10\109\121\141\255\227\249\186\61\230\154\193\75\26\180\37\234\107\223\55\145\5\153\6\20\249\158\164\74\18\250\162\63\184\63\129\218\254\55\72\19\36\115\232\9\164\58\215\96\75\50\194\185\246\52\218\109\176\200\59\221\207\21\28\74\155\46\45\115\33\187\15\61\131\35\128\159\66\141\26\13\57\190\148\69\185\214\75\53\138\94\87\92\194\204\113\175\7\115\158\224\171\127\118\214\190\26\231\49\149\145\161\190\188\95\228\16\206\249\24\129\130\141\176\18\40\140\88\165\29\55\113\121\197\59\166\152\90\150\50\166\152\80\194\80\177\58\24\225\112\126\193\32\17\20\135\75\211\95\35\12\112\240\96\94\206\71\16\149\14\189\122\42\48\54\67\3\18\37\27\199\146\85\59\157\102\196\190\19\242\102\127\77\235\186\143\21\147\39\187\183\44\131\223\235\153\161\14\217\172\227\12\164\44\145\234\49\39\231\168\73\75\37\208\150\193\24\191\57\171\206\151\252\87\21\19\35\111\42\239\96\238\117\187\167\18\181\129\80\63\208\20\37\60\87\130\93\148\29\146\233\95\72\99\230\202\193\252\85\98\176\88\51\101\121\176\165\21\104\68\137\21\122\27\180\187\68\1\183\68\89\77\244\220\130\231\17\204\61\182\85\122\214\219\116\235\235\86\237\147\238\13\8\40\134\161\132\200\103\152\111\44\53\83\190\248\118\57\91\188\49\163\129\79\196\208\130\58\110\179\58\144\153\29\218\133\181\37\46\39\204\192\77\190\111\254\194\98\94\242\246\51\156\234\132\3\146\175\92\125\249\244\20\19\120\181\224\104\52\187\140\247\105\140\106\81\60\255\48\115\138\162\7\53\73\101\19\21\16\105\252\197\167\143\132\67\16\196\243\175\244\150\219\198\125\31\88\56\167\84\240\1\248\228\226\169\71\125\169\190\249\107\124\57\213\152\233\26\2\25\148\1\210\101\64\246\4\119\113\116\51\90\166\84\40\75\36\234\164\69\92\8\242\42\19\134\240\196\205\136\2\157\59\40\158\106\235\175\128\246\92\135\39\124\210\87\135\12\18\46\227\28\11\43\36\55\240\65\211\236\40\95\132\45\47\34\23\122\37\105\191\95\96\113\85\175\180\102\230\149\140\61\189\247\140\83\222\232\58\81\239\206\169\118\26\24\42\61\145\28\217\224\195\195\176\122\205\143\39\201\19\202\113\94\138\158\171\16\210\212\52\191\150\192\157\101\201\29\140\93\160\67\204\128\85\114\64\72\40\79\19\105\4\46\217\31\207\161\62\26\170\178\65\237\148\80\215\218\241\137\150\142\112\27\52\193\79\177\39\166\183\92\232\211\87\41\138\168\142\6\16\232\51\236\12\193\145\46\97\113\174\133\47\130\1\94\189\69\14\168\62\173\15\70\78\252\220\198\206\55\109\128\104\27\97\115\151\169\34\245\136\73\51\124\154\86\111\145\172\209\248\238\184\174\49\142\117\116\57\255\21\248\66\149\248\8\225\57\177\91\102\137\217\91\91\45\9\70\77\140\38\34\100\146\5\102\253\62\124\60\52\177\129\172\131\55\28\153\109\152\139\208\20\231\32\68\105\225\176\152\91\154\219\224\30\115\110\124\61\226\167\115\114\240\193\8\41\55\66\172\37\182\173\203\211\179\3\57\46\173\185\163\13\127\113\207\209\238\212\76\124\2\224\50\212\246\179\192\184\3\142\206\114\245\180\245\195\2\144\21\68\78\216\44\84\28\92\88\134\12\210\67\185\102\48\12\45\209\187\136\241\17\133\207\101\5\143\226\12\26\246\191\254\227\23\10\27\135\183\222\158\46\205\194\41\127\83\25\19\252\103\169\168\100\226\87\180\120\215\133\111\134\229\97\94\213\198\183\78\140\136\164\88\18\167\68\222\126\163\226\191\15\46\33\2\170\2\24\148\135\98\97\111\57\149\230\0\20\26\22\215\0\73\138\153\75\68\107\14\152\190\97\37\152\35\151\51\82\86\112\35\29\148\86\103\244\186\128\159\138\4\255\102\9\216\9\195\177\15\245\123\10\185\106\148\111\3\72\11\39\131\230\240\31\158\96\51\30\157\58\152\88\174\69\8\118\86\145\25\95\169\110\26\132\65\66\255\158\131\251\130\224\19\100\51\32\146\80\143\92\32\46\90\142\116\81\238\187\54\221\245\198\163\18\101\124\206\69\9\9\198\90\245\114\120\180\224\105\132\181\241\198\16\255\223\15\53\42\202\70\153\20\75\106\245\201\83\75\158\57\4\10\105\39\106\177\162\11\211\75\42\143\43\37\179\17\39\218\89\160\204\250\222\65\232\42\197\243\100\68\191\187\204\92\26\26\133\174\107\207\150\115\28\219\254\185\219\214\104\37\142\77\210\152\125\139\85\241\138\47\244\211\154\87\209\53\120\65\205\105\190\159\179\167\233\172\97\18\113\232\151\228\85\124\159\102\215\36\180\45\253\179\172\28\189\83\104\79\233\154\188\193\71\225\225\86\121\204\242\50\12\183\179\163\142\200\86\181\117\192\202\37\202\24\78\37\153\73\100\4\141\18\240\0\163\173\224\1\44\26\33\134\83\29\168\49\229\82\176\216\184\197\178\32\203\202\206\45\154\60\62\100\67\219\147\81\21\215\101\50\206\195\162\193\15\108\248\59\129\88\96\93\231\171\200\216\150\197\247\220\103\31\131\56\61\101\38\167\211\81\222\69\229\171\72\247\7\103\244\247\150\176\227\80\182\25\206\101\45\186\225\13\86\66\246\252\159\159\71\29\53\74\130\55\175\230\72\168\177\203\186\47\66\15\132\30\127\122\190\7\245\57\76\251\0\49\158\88\138\146\183\79\129\52\167\206\181\227\36\33\216\186\108\15\66\166\121\127\9\145\161\218\245\175\42\212\247\203\190\227\217\189\224\224\154\38\183\180\193\57\155\190\124\190\160\79\100\56\222\5\16\123\16\111\152\122\151\36\24\203\80\155\36\238\16\247\126\111\129\124\70\116\2\203\145\228\151\108\144\137\202\212\92\245\96\95\244\99\175\17\81\117\50\43\108\190\203\79\71\221\221\206\255\66\103\146\114\62\39\170\53\163\128\5\34\142\211\84\178\79\222\118\49\203\228\14\214\176\170\11\62\27\43\50\229\16\95\19\18\225\27\23\59\121\10\113\177\13\90\34\57\149\141\124\179\46\127\229\77\24\135\33\68\192\230\197\21\236\113\83\207\67\40\212\155\32\123\206\68\242\200\184\170\158\170\122\124\17\117\116\197\113\232\122\72\153\58\124\10\95\83\131\68\37\192\51\239\140\252\53\56\214\238\62\13\63\40\46\131\201\158\71\150\143\35\29\9\132\12\32\123\118\176\149\77\214\57\112\243\18\38\126\90\147\245\190\50\220\250\232\240\13\10\190\209\75\161\224\243\24\231\203\181\66\44\219\32\229\248\119\219\78\10\22\233\134\202\110\100\161\111\51\220\17\173\94\57\117\123\74\239\15\41\130\36\76\94\151\53\33\153\222\87\24\121\75\28\221\69\250\168\127\190\100\46\248\76\53\87\159\151\46\59\56\189\219\198\105\240\32\55\201\105\6\163\240\8\153\131\70\208\122\179\62\238\138\231\138\1\146\166\212\43\67\241\185\237\144\179\15\87\214\63\151\50\175\106\153\39\128\143\175\22\33\163\110\20\169\14\239\142\244\137\243\101\0\71\38\73\80\119\104\57\139\182\73\14\243\38\19\150\93\30\122\201\20\49\203\134\234\147\153\252\96\129\8\152\138\139\202\62\233\201\31\188\130\24\5\116\67\165\223\126\138\247\248\61\224\118\41\103\169\128\249\173\111\183\124\106\42\236\163\59\127\152\47\226\190\30\51\104\45\85\16\217\186\62\40\108\175\74\154\9\200\245\208\202\51\134\60\243\70\168\27\213\11\0\111\90\240\252\192\66\59\187\141\43\89\135\97\32\23\148\196\222\174\105\23\123\142\220\229\241\133\56\189\207\197\81\76\86\142\206\152\237\62\87\52\139\47\204\6\128\39\199\119\210\186\25\118\93\125\140\251\92\160\180\211\206\116\116\72\107\224\74\49\255\92\240\231\62\248\150\129\52\113\147\214\212\31\254\132\102\135\118\84\89\20\55\65\26\140\49\181\125\251\228\123\245\234\36\3\130\4\143\173\89\156\127\125\190\75\77\207\109\160\234\51\72\84\217\167\164\47\3\13\177\169\8\18\230\181\161\252\26\221\35\136\36\245\126\216\246\144\66\129\187\233\116\51\58\117\99\221\39\42\198\7\16\192\207\130\102\16\52\39\65\123\216\182\73\202\111\168\176\130\3\5\34\223\32\65\190\171\242\77\74\68\85\55\150\82\101\1\117\136\2\175\243\95\48\116\251\224\119\67\155\47\222\188\151\220\250\184\17\200\129\111\147\86\62\175\5\159\113\18\248\146\16\194\119\253\169\94\191\150\148\74\38\55\235\137\171\39\240\69\204\142\187\10\235\101\244\248\66\201\137\221\168\34\2\48\12\191\32\136\229\215\10\214\201\9\223\175\120\67\105\0\185\231\146\189\55\202\226\167\10\34\44\92\196\44\26\246\140\139\226\206\19\41\48\240\229\202\102\238\146\108\54\144\157\147\191\215\76\210\75\178\59\132\158\43\131\95\239\109\243\92\75\18\27\70\98\31\31\114\82\155\36\42\122\10\195\149\207\11\56\229\1\75\85\160\255\159\184\111\208\184\61\218\170\231\228\165\193\214\5\255\141\36\251\20\87\33\109\31\60\215\147\235\237\52\222\201\16\91\110\233\65\104\91\42\64\77\109\240\75\139\72\58\226\66\253\33\242\222\39\81\222\65\44\139\92\173\25\49\45\102\168\164\118\23\13\42\204\234\142\179\196\247\250\53\162\169\6\159\177\37\103\135\37\237\201\131\222\119\69\219\71\83\23\8\133\173\210\106\136\5\54\97\210\0\139\78\73\80\68\202\7\171\37\157\49\58\59\190\90\184\147\175\7\61\31\106\168\60\149\58\18\215\78\126\219\121\197\132\232\128\84\30\177\29\253\172\119\200\160\4\191\44\42\237\26\116\244\85\198\103\220\88\52\115\198\90\80\182\175\224\145\221\224\5\7\203\89\153\186\229\186\32\49\246\226\210\29\237\225\81\176\97\160\70\13\17\154\222\114\104\208\189\68\211\216\136\219\123\234\74\100\154\145\223\215\23\157\111\130\188\39\225\58\223\44\105\77\139\67\54\201\236\249\201\242\65\188\161\78\228\29\213\219\92\66\18\188\253\193\208\218\229\245\102\122\187\248\197\138\91\25\131\157\71\210\180\78\35\251\62\137\225\133\35\123\184\145\52\116\6\219\13\125\5\86\43\121\187\84\164\202\145\182\28\221\91\207\158\125\64\98\221\248\38\57\22\222\57\32\83\33\174\37\172\200\252\192\239\162\252\44\115\37\197\39\112\64\180\163\0\158\216\96\151\180\182\155\247\167\125\128\236\185\179\204\26\201\188\232\50\147\80\72\34\122\10\51\13\208\25\44\206\188\252\229\40\212\163\27\193\106\243\236\144\116\2\51\176\236\46\63\31\62\222\102\121\137\0\234\209\133\46\204\185\173\59\249\121\205\66\11\36\44\15\195\246\175\53\84\40\137\93\170\67\131\40\24\157\76\22\132\223\136\234\237\219\3\184\108\185\102\253\82\46\90\169\122\37\104\105\53\225\6\152\19\127\2\219\45\172\200\77\3\117\149\207\41\82\40\172\71\57\109\200\206\111\127\25\140\28\214\10\173\143\123\43\158\125\29\249\9\99\186\85\168\110\39\55\201\218\249\170\171\141\231\109\216\66\105\164\180\77\83\216\125\224\167\204\17\230\115\40\222\106\95\16\23\118\115\226\201\175\138\35\119\34\252\71\200\125\241\183\35\159\181\142\55\73\110\98\153\253\211\241\186\233\25\91\3\61\117\101\156\68\153\43\15\23\219\195\204\211\247\66\157\205\251\102\147\124\58\230\82\231\59\42\178\120\195\61\111\13\147\227\251\249\8\121\81\85\58\95\10\52\69\5\201\111\181\43\115\165\189\113\201\40\139\44\65\56\120\127\90\124\217\118\69\75\165\41\89\13\215\12\130\185\103\47\170\80\12\204\189\191\177\242\240\132\100\242\211\159\112\246\4\151\197\56\68\96\17\18\33\171\231\151\245\229\117\85\104\41\181\20\148\117\177\217\123\12\105\4\115\173\86\250\26\164\66\142\228\252\116\18\197\215\13\59\41\192\28\199\127\78\154\193\139\8\192\183\179\37\63\181\135\81\40\245\139\5\105\45\22\140\191\112\22\172\0\46\52\160\10\238\153\248\84\161\153\45\27\50\35\130\180\201\203\86\22\113\70\66\87\222\18\156\213\90\143\196\45\103\234\89\16\184\201\135\241\147\182\254\100\66\81\172\97\197\159\21\237\2\188\202\169\237\229\58\149\31\186\145\107\234\244\112\178\200\194\26\117\127\81\166\218\27\22\154\2\212\137\247\234\166\88\80\201\45\197\126\187\175\97\144\89\200\41\232\235\235\21\210\138\208\91\205\214\24\251\59\25\45\40\221\188\104\193\150\247\148\9\64\252\203\106\72\56\156\47\249\205\154\226\120\1\74\235\192\253\195\192\202\68\87\121\103\14\92\37\28\22\27\102\235\68\12\53\58\197\107\25\248\196\145\31\68\131\89\239\145\43\104\186\202\247\139\161\60\247\204\68\142\169\209\5\111\0\118\28\133\138\167\13\185\46\237\215\123\148\228\29\110\94\140\34\231\156\37\67\213\248\197\237\228\1\95\172\185\157\85\49\159\33\223\164\99\226\52\149\179\198\31\96\114\217\158\40\48\83\48\104\67\138\9\253\113\38\33\82\90\127\8\179\37\50\245\181\76\50\131\129\191\233\214\238\109\159\100\38\57\215\150\59\221\189\188\237\148\36\111\49\58\101\42\81\99\229\53\167\117\185\136\174\58\150\224\170\88\80\248\30\3\177\188\59\164\22\74\186\195\192\180\175\172\228\184\108\170\80\81\2\6\66\196\158\127\14\207\35\88\200\190\66\64\122\133\142\143\212\20\194\129\43\220\215\249\95\2\216\136\90\88\137\143\57\59\77\2\253\20\58\77\162\215\197\42\190\200\72\112\168\90\225\191\20\228\71\89\69\163\48\163\82\241\161\11\241\218\228\173\30\199\67\20\123\159\205\147\63\131\109\68\140\46\14\152\88\165\67\182\125\103\147\43\177\13\57\35\217\235\178\106\130\245\227\157\194\108\57\114\205\166\221\128\31\54\134\252\153\23\112\211\254\89\86\158\193\31\180\45\14\146\254\4\146\187\183\217\210\6\8\7\142\198\49\116\26\34\115\5\72\105\189\199\124\214\196\167\216\230\22\104\189\145\14\203\227\148\34\49\89\2\99\119\200\102\242\242\94\9\173\10\166\230\79\21\159\235\39\144\114\239\72\98\13\171\81\161\79\51\67\73\71\120\195\111\248\37\125\117\55\251\211\162\64\219\220\159\147\150\219\175\23\27\10\56\114\185\180\36\22\92\33\182\255\32\19\230\72\30\183\129\201\43\185\176\66\148\25\199\144\232\47\109\49\123\150\112\207\160\40\100\34\129\79\115\59\75\205\31\140\122\172\127\52\239\6\206\78\95\139\118\130\227\143\149\121\199\69\5\182\43\11\58\69\131\92\109\145\112\10\109\120\66\5\169\4\99\93\225\230\157\80\69\240\82\252\173\48\172\228\114\237\15\83\181\168\180\64\187\157\36\62\74\10\43\233\243\105\173\19\98\66\63\104\152\38\94\206\168\52\112\48\189\66\0\235\172\230\10\110\92\60\103\244\213\170\253\122\30\27\236\188\238\252\68\174\91\62\78\93\50\78\100\16\74\193\234\23\20\220\160\237\161\184\21\194\13\185\35\145\52\178\239\219\235\1\159\69\189\205\76\15\39\20\255\245\34\118\160\217\11\173\171\115\105\179\37\34\235\142\95\35\204\20\254\100\133\150\253\226\74\5\18\41\207\88\91\156\195\19\29\17\217\184\246\238\171\227\81\138\209\49\89\158\181\1\239\107\217\72\57\100\66\69\237\200\58\175\209\235\231\30\99\7\139\96\189\46\182\189\243\111\23\134\130\78\131\102\210\234\64\204\151\202\246\235\78\76\131\248\10\112\24\214\224\0\35\174\172\231\29\66\9\126\50\113\242\152\10\252\113\18\170\135\28\62\15\170\69\18\199\240\89\128\155\86\107\125\111\149\49\210\238\65\32\254\175\50\110\128\222\251\248\8\140\72\185\193\79\112\81\180\5\132\234\211\199\253\28\177\197\116\245\230\216\143\120\249\245\65\159\31\17\134\14\181\207\143\15\15\24\126\92\26\83\81\14\120\241\47\208\20\234\218\228\12\220\92\190\128\173\117\104\241\201\223\43\111\25\132\156\13\192\89\81\244\163\225\133\247\185\128\15\253\94\246\133\112\187\123\78\235\106\78\111\157\9\104\83\205\157\116\24\216\202\182\162\135\248\114\147\149\164\230\213\254\108\198\221\99\72\118\157\246\162\204\232\107\188\81\80\92\76\167\176\180\75\239\249\59\127\173\144\162\169\36\169\119\144\221\122\172\211\3\242\90\224\236\67\140\116\167\99\57\90\232\7\220\1\33\241\15\190\12\188\189\112\65\77\178\69\241\201\59\231\54\212\71\15\119\144\253\116\12\82\252\151\64\233\209\144\39\152\61\235\38\112\200\55\185\38\145\32\36\46\76\149\109\35\161\191\107\73\158\118\241\198\148\228\140\97\4\252\37\226\170\73\110\60\61\223\33\77\111\81\217\54\110\181\73\1\121\207\254\1\65\129\85\135\212\214\238\251\0\180\174\76\228\97\162\184\94\15\159\48\123\174\139\28\165\22\184\84\235\112\216\149\113\134\149\121\98\100\86\175\89\103\171\62\210\203\244\20\70\90\94\151\230\157\255\17\179\232\237\37\230\226\82\181\229\171\233\175\165\21\159\221\135\154\26\107\33\113\162\176\0\177\248\100\17\102\9\176\213\8\243\223\221\101\63\187\209\158\64\125\112\179\142\230\231\186\119\196\48\181\177\51\54\169\222\160\156\114\239\64\218\89\156\46\79\233\247\89\14\45\236\2\58\217\49\137\125\23\103\161\190\198\195\36\214\182\100\8\10\118\10\170\91\7\195\188\247\223\47\101\16\4\177\101\41\133\229\249\253\35\249\204\119\3\238\113\100\63\114\22\95\211\208\138\21\138\157\212\205\206\34\225\166\122\188\191\202\140\210\64\23\195\215\211\30\101\70\132\234\62\164\20\13\75\0\246\68\39\88\64\53\41\24\162\51\61\252\202\217\142\148\94\245\10\159\124\1\210\211\50\68\114\155\166\20\55\39\97\223\201\203\17\128\125\5\73\40\51\214\103\162\84\60\172\206\200\43\190\130\204\112\232\200\9\40\188\187\247\30\114\75\17\177\154\10\150\14\123\2\247\59\70\113\7\65\117\133\28\110\55\174\140\18\213\54\222\254\163\26\67\48\228\68\249\201\21\221\254\62\129\57\170\84\167\64\160\250\207\30\28\201\203\209\176\51\126\37\50\216\209\189\130\108\32\3\205\104\5\187\10\89\62\145\53\214\138\161\128\168\38\22\224\116\252\127\161\78\250\38\86\255\55\54\85\29\249\7\33\19\154\73\22\66\177\255\255\251\198\141\61\220\104\93\191\14\163\53\74\246\155\219\41\7\75\43\202\210\72\149\124\66\240\249\231\250\133\118\60\86\144\36\62\173\208\239\70\90\191\216\70\55\46\255\129\75\51\169\188\116\52\178\189\26\102\195\185\242\2\228\95\47\183\152\242\26\208\27\43\80\219\112\152\2\160\185\137\205\251\157\49\110\220\148\53\1\95\238\174\39\85\21\83\221\41\219\242\93\69\13\174\139\60\133\87\124\213\71\72\219\35\88\98\27\92\105\177\7\231\175\98\63\32\14\141\150\220\195\227\178\41\16\46\168\111\138\2\119\172\90\224\17\174\28\211\181\93\76\43\233\251\26\176\144\86\4\135\246\144\244\202\139\103\162\133\58\149\70\13\153\108\212\242\106\49\172\181\122\102\42\252\84\40\151\144\4\148\198\116\10\88\178\255\197\237\187\163\173\216\94\26\196\254\201\129\202\18\36\179\2\152\33\188\128\200\240\98\112\26\16\97\204\42\63\255\13\201\109\39\124\14\215\41\246\141\47\105\91\85\193\53\149\225\140\82\48\107\60\21\136\152\218\80\109\225\54\167\118\47\177\157\142\252\29\205\94\214\210\220\223\184\244\128\92\215\233\18\73\254\160\7\12\205\253\108\232\27\148\120\209\238\160\52\184\139\126\65\202\31\169\88\74\128\80\183\131\118\191\152\23\252\183\62\51\183\227\41\60\246\91\70\100\87\97\70\35\104\7\138\149\174\16\35\70\156\246\183\199\251\231\147\208\201\216\137\244\120\73\65\203\77\109\10\87\20\229\105\201\128\70\250\236\92\106\105\83\185\251\120\202\196\12\34\15\50\209\68\16\150\3\116\111\37\187\64\212\120\84\75\28\182\218\220\169\170\132\149\73\184\63\66\89\32\63\30\70\0\73\95\13\25\204\133\38\234\42\149\133\62\253\237\25\22\230\251\29\164\206\166\104\215\212\229\53\196\98\234\136\46\132\13\59\82\93\142\53\205\226\202\213\249\26\195\70\82\191\206\190\84\193\6\139\177\251\90\248\241\189\23\140\108\228\225\156\251\245\200\203\98\218\187\70\43\69\149\68\91\26\209\19\197\35\218\27\138\248\47\225\236\134\234\163\165\61\220\74\51\183\22\214\245\216\231\157\199\224\177\194\124\138\72\217\71\28\63\247\173\31\178\61\132\1\77\120\245\171\180\63\67\57\226\18\65\8\253\140\72\77\220\126\112\69\101\124\122\162\113\24\82\39\157\112\201\18\56\149\89\240\93\6\26\196\17\255\170\128\87\70\23\14\230\204\189\98\89\248\128\251\89\19\116\50\193\243\33\209\87\88\195\32\195\156\49\187\141\249\36\184\136\28\140\45\227\199\140\142\247\54\148\38\26\133\159\53\101\238\211\86\98\103\49\87\124\42\169\222\72\208\21\235\164\159\160\90\215\100\27\132\73\15\183\144\62\139\143\90\235\6\37\54\35\171\58\31\20\52\84\95\21\32\99\238\105\247\147\160\38\57\95\27\36\200\161\135\215\2\170\90\77\108\40\230\121\194\107\160\215\246\252\29\232\23\23\46\77\152\84\187\167\44\241\93\5\222\215\57\102\197\42\228\89\0\52\70\4\37\127\26\218\76\216\60\244\222\107\140\16\48\3\241\33\58\81\34\199\7\234\18\121\235\223\139\215\1\108\44\238\191\11\72\174\198\232\103\244\173\162\36\35\95\81\67\218\182\45\250\234\59\143\105\226\139\184\92\209\234\39\250\162\146\9\181\170\144\37\192\111\174\181\186\191\21\67\243\230\194\39\213\26\186\0\124\141\195\157\253\243\133\2\51\0\250\224\227\227\99\188\96\7\79\49\165\11\252\66\29\33\69\180\163\74\135\31\32\202\205\211\168\182\187\40\70\242\186\33\89\106\225\124\164\50\131\186\10\222\254\229\233\114\171\138\185\225\55\87\33\240\195\223\102\82\3\163\216\123\152\99\60\181\4\126\197\61\31\231\143\78\77\110\218\164\159\65\107\192\43\181\145\70\167\193\201\53\237\60\132\34\129\217\144\40\95\25\225\70\73\112\67\83\86\62\19\155\169\190\129\62\142\171\252\208\46\37\122\31\120\170\10\201\51\254\126\102\201\76\205\112\29\77\79\172\166\23\145\239\160\80\223\101\166\184\120\224\67\9\73\111\175\203\192\252\16\34\168\40\236\111\48\73\18\188\98\66\138\196\206\216\55\255\223\253\231\66\34\233\82\90\75\19\120\161\113\172\8\126\43\251\2\190\173\157\67\127\182\232\63\36\244\163\94\163\102\188\179\235\128\59\197\6\245\38\228\252\220\127\161\138\224\22\169\66\26\110\196\41\52\103\236\117\85\95\105\4\220\173\220\201\60\64\176\26\85\111\181\25\56\219\154\193\164\169\127\64\134\99\243\243\110\35\129\238\4\38\2\178\193\55\247\214\26\65\32\45\184\113\42\252\137\198\229\243\34\91\32\237\194\233\170\188\252\87\42\12\45\182\194\54\213\113\233\20\149\149\106\171\144\18\203\83\198\184\217\87\243\105\164\101\126\98\238\84\91\76\31\13\164\208\217\105\192\245\177\65\230\252\171\57\56\11\101\183\223\8\184\253\129\147\10\61\230\227\234\227\88\33\245\177\141\101\45\71\206\115\87\108\61\64\201\170\240\216\12\6\102\138\140\240\100\10\173\178\216\196\69\182\218\233\110\220\117\212\145\180\132\200\150\169\222\58\20\174\221\63\109\212\97\75\161\38\201\236\39\28\16\225\72\160\24\209\231\160\191\211\41\95\144\136\105\42\134\141\47\205\80\211\80\13\158\152\197\3\187\179\253\178\213\169\206\227\117\15\252\130\56\98\149\168\188\138\233\225\207\63\242\247\194\41\43\200\139\46\156\237\1\148\254\159\16\72\160\19\12\7\140\239\235\47\95\125\72\68\12\229\216\232\244\171\208\81\131\208\201\209\211\96\172\141\181\72\164\95\73\129\135\83\66\32\113\94\131\163\43\59\97\160\151\7\204\178\81\49\66\215\77\56\197\231\163\223\239\85\212\227\20\45\37\252\35\37\230\234\150\216\65\255\63\29\62\83\70\237\61\166\181\42\159\195\138\79\125\4\195\154\174\104\118\200\31\184\120\202\167\233\167\252\218\201\142\219\128\168\24\116\131\212\147\60\41\174\99\99\54\224\20\19\195\67\173\211\176\40\11\130\172\178\238\201\58\153\241\232\243\236\225\50\33\20\203\221\175\131\224\5\113\255\243\57\201\132\15\130\118\248\22\15\102\84\5\180\39\97\91\11\65\216\135\170\69\71\117\242\126\156\121\238\117\115\65\165\220\84\59\88\197\102\253\224\174\83\236\47\249\28\74\254\173\213\93\110\122\237\160\85\107\137\179\30\89\28\231\165\219\242\113\241\135\82\10\71\50\47\6\41\42\232\125\151\168\32\62\230\14\128\236\224\17\79\90\219\167\166\126\162\96\253\124\14\101\115\107\40\127\29\244\207\51\140\161\242\241\70\242\175\186\103\17\76\107\86\191\135\251\91\152\212\38\144\2\115\5\16\187\12\180\81\119\137\237\233\62\224\38\148\129\242\238\31\50\98\179\19\79\90\141\46\11\76\78\195\230\171\246\127\9\67\23\247\57\93\220\146\231\80\242\29\160\175\113\93\93\149\145\216\55\139\151\9\2\18\95\6\190\145\135\2\51\119\236\208\0\45\74\78\20\123\175\172\5\160\77\212\182\127\208\220\93\46\160\93\136\84\188\125\161\247\12\77\96\155\213\96\172\156\165\235\246\144\109\207\253\118\26\255\166\167\190\4\216\56\19\170\214\244\37\36\234\96\175\244\96\42\232\106\133\44\80\28\187\20\13\38\95\208\180\55\30\224\110\10\137\212\64\9\136\35\13\201\202\43\24\110\44\198\41\117\211\72\149\185\185\46\81\211\209\69\7\31\10\32\185\45\118\207\104\83\14\14\85\6\252\0\5\91\161\91\195\176\189\22\146\225\36\9\213\85\238\21\145\151\204\107\72\179\165\139\225\136\255\132\171\99\7\153\212\42\247\16\201\183\239\125\198\192\79\253\204\146\216\46\17\196\156\31\51\145\236\13\34\86\241\40\126\30\19\153\175\85\227\137\56\31\59\146\180\202\72\90\56\189\129\42\80\152\189\15\176\70\28\29\73\174\53\207\73\61\188\132\115\102\169\158\85\105\112\217\122\132\168\206\144\215\100\193\172\135\244\54\240\175\131\107\73\150\106\74\222\19\28\250\245\171\125\110\90\23\221\190\36\112\81\50\101\171\155\82\21\47\26\121\64\232\167\200\233\43\242\73\93\1\249\50\62\157\57\235\218\146\62\56\63\40\189\52\101\242\189\207\215\75\5\127\160\215\223\113\51\99\146\52\236\186\94\162\15\107\118\233\89\209\20\193\242\186\68\232\51\166\4\117\120\205\74\178\41\10\95\62\160\18\201\87\131\106\199\33\109\109\60\215\76\125\47\163\232\170\155\70\118\118\229\132\163\23\210\11\169\130\134\119\140\110\115\168\156\37\253\168\215\124\62\234\136\242\218\116\153\48\29\136\66\202\189\114\232\215\210\88\89\195\10\15\130\110\38\46\230\174\85\131\12\160\195\8\26\101\97\164\162\242\39\70\42\229\153\221\24\130\127\88\236\122\202\242\40\37\60\241\238\31\60\132\26\120\95\242\153\225\56\116\235\249\107\240\133\173\36\99\58\40\85\67\50\170\159\35\195\51\228\48\46\64\43\44\218\44\161\35\80\139\210\70\217\145\54\39\168\118\192\159\220\4\177\133\253\36\195\207\160\82\198\226\224\224\199\107\248\73\50\193\242\136\6\50\39\217\120\166\41\146\161\35\24\205\1\173\160\247\245\156\10\141\69\239\205\243\88\20\134\84\230\64\199\108\214\21\169\90\176\242\40\119\143\199\250\87\161\76\1\104\147\32\78\226\254\226\201\140\21\136\12\226\237\100\204\60\127\75\179\71\168\161\163\172\219\171\134\76\217\80\89\126\229\225\136\227\216\90\10\234\61\49\227\5\84\91\202\118\221\223\227\198\246\64\151\248\127\172\131\118\26\83\249\27\65\21\86\252\89\33\65\130\151\40\231\178\167\211\131\183\171\253\38\41\102\57\206\46\36\126\225\51\195\121\71\45\227\56\75\90\2\25\44\20\23\44\187\159\32\193\20\43\90\155\157\104\25\98\16\109\100\87\165\117\148\29\141\225\205\28\43\202\7\13\32\171\118\12\64\169\162\171\167\4\3\214\235\96\152\127\231\107\148\207\56\57\95\43\203\86\197\140\245\120\156\193\71\54\95\232\121\117\254\120\119\172\162\223\107\206\32\69\17\51\120\34\4\23\212\156\3\107\195\163\148\232\49\210\144\101\1\189\10\90\84\210\27\126\147\205\247\62\153\138\162\233\164\98\180\181\93\113\252\35\31\212\163\178\44\160\206\238\152\116\78\91\198\164\2\145\247\120\191\215\109\34\235\150\118\58\216\50\243\183\99\119\223\226\104\35\200\21\208\181\198\76\111\200\68\235\180\59\161\181\7\212\192\19\27\45\239\152\171\182\192\67\140\11\181\253\204\146\245\24\185\89\224\211\113\35\220\42\12\173\145\38\144\4\114\228\165\40\25\99\50\169\213\76\72\159\3\153\71\96\237\240\103\35\99\104\52\240\200\101\86\255\58\95\235\214\202\224\158\179\40\213\113\60\223\19\40\209\122\110\190\177\131\53\68\168\250\155\164\194\160\216\76\201\176\232\158\79\201\69\179\125\55\40\96\195\169\17\115\59\113\193\251\22\192\90\16\173\93\123\187\231\152\174\30\83\70\25\167\125\25\146\249\227\129\113\95\79\117\238\135\87\33\77\128\210\22\234\23\70\179\64\40\165\154\168\199\170\108\184\105\172\40\30\190\186\56\59\202\17\150\103\119\183\179\142\231\168\119\47\203\78\60\217\4\38\185\138\33\128\26\100\0\205\123\68\21\113\234\77\44\27\130\97\134\156\91\60\209\163\224\156\210\226\95\62\97\155\21\239\240\38\93\92\14\193\213\141\148\208\30\206\101\62\49\184\239\122\237\65\79\23\60\95\62\209\237\47\178\126\29\163\145\132\218\36\214\16\8\52\0\45\246\8\177\186\36\245\196\208\84\195\83\92\246\38\119\94\254\44\200\102\127\181\224\110\5\14\182\41\28\106\15\194\6\197\7\20\38\64\178\141\22\136\47\52\36\22\1\103\213\46\65\200\20\173\110\109\1\223\124\17\199\199\242\236\42\214\62\97\88\7\119\58\105\248\70\216\106\126\158\220\61\96\180\237\156\13\178\160\25\95\40\137\127\105\83\12\23\249\253\195\64\97\166\30\33\22\236\138\127\126\189\253\173\89\127\22\251\200\176\25\245\223\205\211\106\205\169\190\45\231\249\225\174\238\88\115\44\222\7\11\210\107\157\251\98\146\164\221\184\191\243\11\44\213\26\138\200\195\105\63\69\238\53\205\166\72\161\54\216\176\244\103\246\119\25\78\161\230\180\250\100\23\183\116\5\64\55\206\58\55\227\102\117\44\164\192\196\51\52\35\112\203\225\221\30\225\250\144\130\127\122\31\203\219\150\168\4\176\210\38\188\122\7\68\147\4\172\242\183\122\23\77\104\95\100\69\65\218\233\244\212\79\27\167\49\92\0\28\122\190\166\236\229\223\83\153\114\207\252\101\46\192\222\54\173\188\51\248\173\145\79\20\63\245\200\12\206\228\186\199\109\87\90\68\203\130\42\6\32\116\44\212\80\22\243\221\124\23\151\214\61\138\241\170\148\13\103\95\68\174\192\47\152\255\101\70\82\201\124\138\18\228\88\97\234\94\244\238\18\111\208\75\19\108\175\67\130\254\193\194\107\193\89\78\243\4\74\252\80\213\20\116\251\200\225\247\233\17\28\82\117\45\166\131\17\3\95\255\45\20\229\3\188\103\11\89\222\92\179\195\217\198\69\135\195\118\244\115\132\184\63\235\97\23\45\97\6\18\56\187\14\26\144\196\228\238\54\197\234\243\77\109\177\31\66\17\176\54\6\66\73\90\116\99\69\246\11\253\229\223\111\206\250\47\121\36\131\174\112\241\154\249\205\111\39\5\155\125\75\148\205\143\120\196\58\202\149\255\237\1\236\54\225\75\250\41\58\117\20\117\208\155\152\152\165\233\204\60\143\180\127\108\226\171\48\70\57\20\150\109\100\234\83\246\131\65\7\199\248\193\66\245\187\59\96\44\99\17\34\94\3\203\204\109\12\137\13\139\112\200\55\78\214\16\225\97\193\76\208\111\15\148\71\245\177\28\211\17\34\178\57\125\18\48\190\20\64\119\67\194\29\54\6\29\96\17\157\180\250\24\220\124\178\238\192\72\182\9\189\42\124\79\48\129\201\122\3\146\216\132\79\49\68\250\180\102\110\84\70\5\133\57\98\240\217\170\172\232\185\24\12\131\74\8\133\3\67\158\65\225\83\208\57\71\253\189\102\250\29\161\254\78\1\56\228\86\182\4\61\134\77\65\57\86\183\172\158\156\159\83\80\246\43\103\117\146\174\108\3\196\213\85\227\10\223\251\236\238\15\248\136\111\208\245\30\212\219\198\176\114\160\187\119\222\253\200\62\23\15\208\203\138\70\70\181\100\95\226\173\95\40\231\147\195\145\127\2\197\126\213\89\20\183\34\155\153\46\9\103\165\211\218\116\170\23\77\144\36\150\46\47\172\129\195\187\231\32\198\189\119\145\204\176\71\173\220\190\93\35\80\13\115\218\68\234\214\142\71\191\253\135\166\204\247\190\189\195\118\189\214\23\132\74\224\246\250\34\80\34\46\129\114\32\143\163\152\40\8\199\148\159\146\43\76\141\231\215\103\217\145\117\92\212\96\255\5\245\58\243\53\219\124\45\241\209\206\57\205\247\56\56\120\114\87\79\21\29\105\200\34\119\203\255\0\50\108\220\247\67\71\4\100\109\215\153\238\187\212\136\76\68\223\234\178\141\69\66\23\181\209\246\184\32\42\83\175\177\250\52\104\231\21\205\190\61\193\104\248\40\167\160\3\199\231\110\188\102\107\14\108\157\242\20\201\135\216\106\61\220\177\197\199\23\22\139\63\137\154\232\219\99\87\236\151\123\166\157\93\56\148\158\110\200\18\37\7\186\152\51\96\75\141\66\209\131\188\106\58\160\28\69\114\231\21\176\219\197\63\159\110\46\120\19\180\109\202\30\87\19\113\142\90\216\218\219\26\92\41\13\82\86\60\136\91\147\208\143\238\50\87\185\38\75\73\182\230\204\204\161\208\241\30\69\165\6\219\22\233\136\185\214\174\195\32\252\100\103\97\184\151\202\164\210\158\67\55\198\92\60\47\116\137\219\215\244\163\158\107\235\73\99\229\92\49\178\205\55\105\26\103\17\64\99\156\116\236\228\161\73\185\108\66\80\144\62\71\85\103\76\1\19\39\23\97\252\73\117\87\110\128\40\73\228\161\24\62\221\7\43\234\9\127\250\71\214\42\77\40\132\34\56\15\22\103\120\182\145\25\97\54\243\117\214\250\142\141\195\101\237\74\102\154\216\159\219\6\250\93\10\44\186\98\190\127\18\125\141\143\180\201\56\194\53\64\79\122\99\29\192\66\138\123\203\117\187\131\61\195\5\72\249\167\72\151\33\165\8\30\100\63\153\0\208\174\105\229\59\55\131\17\65\177\91\217\52\14\154\248\244\173\33\146\101\103\182\91\242\54\64\208\249\197\210\196\27\17\52\67\88\142\46\113\91\6\161\201\113\188\55\187\6\223\108\42\57\30\88\183\38\246\57\187\70\13\149\228\214\192\240\111\250\118\23\43\58\8\97\139\18\85\122\99\44\72\79\82\203\187\169\188\160\195\70\235\197\178\113\181\22\188\177\43\180\175\94\186\110\159\99\34\123\120\53\126\20\208\111\130\131\10\200\63\49\31\253\130\236\239\135\57\140\153\148\175\175\205\108\75\141\240\0\247\81\219\249\153\71\165\236\161\104\173\173\187\39\74\122\205\252\130\113\205\84\121\208\210\17\109\114\122\134\142\194\128\25\176\126\128\198\186\217\65\145\68\36\4\83\40\120\218\149\88\93\239\251\6\235\35\252\173\151\206\17\136\17\137\45\101\22\42\88\123\63\197\152\34\216\70\16\142\31\5\140\225\161\32\221\162\109\85\127\50\26\118\88\168\95\178\45\85\158\68\35\194\124\140\114\206\109\43\144\156\80\120\220\49\234\255\222\24\79\32\38\119\77\193\209\32\68\35\138\162\24\167\37\3\253\180\39\150\151\45\186\113\178\164\168\88\68\194\40\217\183\219\203\160\49\251\137\18\7\242\189\137\13\237\120\76\205\156\133\2\17\112\43\214\114\123\236\129\167\167\240\198\222\120\180\166\162\174\70\205\145\187\113\39\1\62\200\196\65\53\105\145\125\239\71\88\64\52\196\201\241\200\90\36\18\153\104\60\186\172\42\21\249\75\236\229\91\71\27\36\167\155\208\127\166\228\110\194\83\160\108\84\92\94\45\202\70\207\133\241\34\20\71\124\168\91\86\143\48\76\161\187\135\189\44\210\10\143\224\122\156\222\253\167\62\13\115\191\107\197\69\199\193\230\35\58\61\212\5\169\127\33\178\40\85\158\21\53\170\42\89\195\200\135\113\121\92\105\144\161\77\201\114\31\98\24\98\143\243\58\187\12\142\118\65\156\167\200\68\229\196\244\244\160\18\113\180\130\21\111\212\164\150\183\60\67\108\186\71\210\220\199\207\137\214\116\158\227\25\191\124\67\122\149\34\102\168\30\135\55\239\252\197\78\244\12\178\176\240\209\231\23\114\209\100\178\216\139\150\96\111\5\35\238\9\175\211\111\56\228\18\128\165\151\145\244\150\164\247\13\253\121\48\42\83\214\6\252\73\204\2\63\82\14\240\229\181\227\137\24\0\188\60\111\0\11\245\88\72\90\136\26\123\64\248\185\241\95\17\202\111\80\108\174\233\106\9\194\87\34\110\61\107\28\230\218\101\73\85\27\97\2\253\184\62\252\91\202\121\38\54\35\196\211\237\184\66\129\67\219\113\58\249\115\23\190\40\97\120\35\51\5\138\103\92\129\31\214\156\42\138\192\92\185\111\217\47\72\54\122\81\228\26\41\73\88\223\98\61\254\68\166\242\7\70\232\176\29\214\41\170\163\205\211\232\100\121\97\8\58\64\145\252\175\146\253\210\162\114\27\127\73\65\33\244\123\73\141\111\87\10\184\52\58\132\189\153\193\247\162\220\227\9\71\37\43\32\72\20\183\50\13\58\48\38\83\255\170\14\83\89\195\59\32\128\200\85\53\143\250\153\98\167\243\231\4\134\55\206\194\205\242\104\220\150\137\242\95\20\125\27\19\54\63\171\61\25\110\202\39\213\8\191\85\174\162\31\151\87\188\252\241\155\214\230\111\55\28\135\33\111\96\1\70\213\139\114\100\71\242\75\41\46\14\214\115\235\247\155\66\182\253\228\200\238\21\177\253\27\149\1\64\85\14\194\29\230\18\116\220\246\94\37\163\193\24\169\116\68\14\27\8\156\185\205\118\196\135\191\50\101\101\243\183\72\30\74\51\146\9\79\36\170\59\240\104\114\82\183\64\158\189\185\142\121\113\227\164\100\114\195\9\45\143\154\154\129\242\148\217\162\4\174\213\86\171\203\191\48\54\176\236\8\196\104\156\226\228\71\167\137\237\68\223\135\180\96\130\93\201\55\236\63\103\82\112\10\117\198\73\133\160\34\163\124\181\52\193\177\245\9\104\142\25\82\171\197\236\17\33\222\183\228\43\206\99\186\153\179\31\129\78\159\99\18\14\209\25\199\21\229\136\72\245\145\215\86\114\184\135\91\135\142\193\5\11\208\231\62\87\90\27\186\122\163\252\200\211\76\144\238\93\45\16\189\142\40\173\89\213\10\13\153\226\166\145\38\108\53\11\28\11\193\180\95\175\240\68\95\154\180\252\143\228\229\202\93\54\68\52\116\189\184\35\129\71\220\61\18\9\206\216\75\202\151\25\162\14\22\231\190\234\90\53\57\142\83\96\60\187\243\88\219\39\206\106\76\185\196\32\109\217\109\175\11\214\248\113\125\99\197\79\197\61\212\95\11\167\137\186\65\184\197\84\82\133\78\89\170\93\172\226\166\5\181\222\122\187\89\38\200\66\148\105\121\29\98\89\92\155\240\127\225\34\100\101\237\78\228\112\195\100\27\55\45\64\17\145\93\23\188\59\37\72\88\105\1\241\208\38\77\203\235\2\221\94\179\46\238\146\234\198\84\217\223\196\33\38\245\26\69\124\52\242\231\23\10\39\200\231\89\252\74\48\175\184\113\175\8\23\22\13\138\182\74\132\229\249\147\146\226\172\184\16\138\88\5\85\4\54\62\130\34\131\139\86\86\114\84\8\124\60\82\87\196\87\243\10\33\154\120\179\237\57\176\255\249\107\132\38\27\8\145\116\238\213\159\92\97\14\140\204\169\176\13\188\131\140\46\198\48\188\36\253\123\126\176\24\136\126\227\89\161\195\221\129\119\51\239\24\164\225\46\111\95\13\1\0\241\45\85\232\103\248\96\62\65\151\234\41\21\188\114\141\157\24\180\65\150\86\246\49\127\32\171\28\58\23\76\243\78\190\52\32\79\72\10\58\129\90\178\197\165\240\245\161\110\210\144\85\53\252\72\106\151\42\210\204\108\160\178\134\255\75\110\92\52\54\17\18\141\191\238\94\235\111\125\189\249\129\143\142\232\37\114\66\179\223\95\35\186\161\255\144\156\248\50\104\141\216\201\101\58\109\207\16\201\14\191\229\245\224\65\126\112\70\238\180\68\38\97\100\40\8\25\163\221\118\15\102\21\95\134\203\128\85\15\16\250\203\78\70\217\196\224\107\157\106\45\95\41\13\70\71\152\192\62\5\198\96\77\215\57\220\161\71\19\69\97\118\169\127\252\47\54\246\253\219\245\144\96\202\225\122\25\124\187\125\210\252\154\190\42\202\243\65\188\18\152\185\167\81\246\178\159\9\40\211\92\61\71\177\230\50\102\42\224\233\239\255\85\152\247\135\17\235\185\60\82\65\0\72\86\14\157\62\207\254\17\149\16\22\83\54\112\162\66\136\234\207\79\222\194\253\253\101\138\155\255\200\95\27\8\83\42\121\250\84\42\129\66\216\69\186\237\120\121\74\153\135\97\127\50\207\89\157\18\86\119\110\157\67\60\244\26\117\121\237\80\35\101\19\113\190\99\60\168\51\227\123\239\11\176\34\239\241\87\3\131\237\178\221\215\0\212\153\244\152\115\189\11\57\194\177\54\200\187\55\151\79\105\165\3\172\68\11\209\118\169\70\83\204\108\44\29\59\47\129\11\85\21\73\3\148\233\127\152\153\17\126\60\169\62\6\86\122\142\216\48\37\167\51\81\193\175\131\82\145\37\113\36\59\194\176\153\254\90\85\160\63\157\96\5\204\241\249\109\122\139\243\217\184\3\226\227\75\137\236\30\168\158\36\250\254\108\56\87\158\143\39\217\42\250\117\107\46\131\52\12\230\119\16\174\37\182\136\208\192\111\78\180\183\198\136\90\215\106\135\138\84\235\187\119\77\212\209\175\87\37\171\45\191\112\219\161\189\193\55\181\8\61\241\177\186\246\111\41\22\12\181\47\164\7\154\220\30\84\105\168\25\81\198\8\13\227\60\163\193\62\2\156\119\190\123\67\188\173\59\217\53\147\178\30\29\113\87\218\235\110\104\35\165\150\81\195\92\216\93\246\230\178\118\254\198\183\27\62\53\232\43\204\225\139\246\196\5\7\102\17\110\65\151\64\134\177\124\56\235\239\253\37\91\203\143\92\115\79\230\193\4\1\229\66\230\144\234\132\185\124\203\68\234\204\7\202\85\136\135\121\61\73\20\50\157\74\178\43\130\53\33\169\229\204\186\237\83\24\201\122\130\9\77\100\99\238\57\80\23\227\25\106\135\142\161\173\206\183\215\198\253\83\41\210\126\194\114\164\248\84\203\141\84\238\126\243\23\252\146\225\247\160\231\32\33\177\33\198\241\16\40\69\16\216\166\239\133\129\13\229\232\182\173\118\141\42\179\225\162\183\108\2\98\150\208\65\203\223\252\135\217\157\147\140\15\197\118\17\42\24\50\64\40\206\157\135\248\154\8\50\153\44\138\117\24\229\235\145\219\76\72\123\18\12\247\97\120\34\234\214\54\182\113\175\61\39\50\138\85\72\213\193\227\197\137\53\198\238\130\22\181\89\223\44\5\211\188\136\83\185\184\63\12\177\140\79\118\29\200\82\157\133\143\245\160\163\159\1\193\86\4\3\136\144\242\227\117\20\75\204\146\93\252\12\83\184\82\110\95\69\59\174\123\176\11\101\22\108\76\30\158\21\80\161\8\150\199\165\184\191\7\175\135\78\154\252\222\201\77\101\41\97\48\95\192\161\153\172\124\223\75\80\150\119\81\19\12\204\188\2\179\82\252\197\76\130\18\128\71\103\223\196\253\235\202\110\26\165\247\195\204\28\96\83\166\243\7\181\69\95\178\2\14\28\141\18\96\93\239\156\123\235\197\227\20\83\15\149\200\76\184\12\54\254\26\61\41\163\15\223\165\44\54\105\188\149\109\211\195\223\26\236\15\23\177\94\92\158\70\123\248\167\82\64\217\120\160\24\133\236\230\204\125\160\37\128\145\74\246\59\35\169\96\187\148\183\14\175\71\231\129\223\148\29\10\155\201\174\232\189\54\227\93\137\161\37\101\209\115\152\128\69\200\243\12\11\171\163\118\226\86\63\206\43\2\150\108\171\28\110\171\238\198\234\31\156\181\212\204\204\85\184\145\40\113\164\58\126\79\150\147\110\106\64\93\195\15\50\108\46\70\90\94\88\187\16\64\33\125\152\255\82\175\231\196\153\152\179\239\58\137\255\209\48\226\110\88\91\220\67\92\222\17\181\195\96\239\214\88\101\187\24\220\19\64\81\235\253\27\135\253\109\57\129\23\205\43\23\222\203\37\40\239\111\73\85\89\128\156\22\175\239\238\120\36\15\95\105\88\31\159\78\61\199\8\203\71\208\138\44\236\205\135\54\138\240\248\21\71\100\88\152\18\18\90\225\32\11\154\103\76\93\92\8\50\144\122\141\6\185\246\245\7\225\192\5\190\118\58\44\8\116\230\229\181\94\169\242\144\126\25\185\83\250\45\57\10\166\181\189\62\86\155\108\85\34\145\96\241\25\254\10\186\99\182\71\254\150\175\119\35\249\22\58\123\17\255\116\149\136\197\170\6\89\199\94\189\88\82\226\32\205\245\25\129\165\232\62\245\163\6\9\228\223\63\95\250\66\157\48\70\225\79\122\1\239\102\112\34\31\93\190\65\183\197\248\145\64\135\36\225\164\126\192\181\21\96\116\204\74\254\123\214\61\17\143\102\127\118\209\182\127\100\166\55\51\12\181\205\15\87\154\56\193\143\172\147\230\255\172\167\205\236\218\189\168\162\143\223\84\164\219\123\164\159\197\115\147\98\148\26\137\72\228\195\119\120\204\60\201\250\80\41\227\160\206\114\25\73\233\226\44\64\190\169\111\185\3\234\146\122\126\118\74\228\238\186\166\170\26\147\254\186\191\47\30\180\7\109\80\208\222\54\155\123\166\92\113\116\254\42\108\242\167\50\128\71\112\19\42\169\236\71\158\145\165\252\90\75\33\168\165\135\229\195\46\184\69\181\136\97\48\201\190\144\21\239\198\102\229\139\237\39\218\103\115\132\157\1\218\206\152\93\201\233\143\97\233\134\199\160\150\158\249\239\187\135\40\37\27\217\166\73\102\82\179\207\106\141\32\95\209\57\201\145\5\248\38\230\73\167\94\89\42\158\146\153\38\181\205\23\124\203\88\87\47\213\70\153\212\1\123\102\98\185\70\211\31\2\81\136\139\81\78\41\57\185\168\149\51\197\167\199\242\123\251\169\141\85\168\214\187\85\251\189\43\197\93\52\141\148\1\130\48\62\107\38\91\176\163\58\197\0\151\96\17\23\163\111\140\196\67\209\85\108\90\108\160\23\140\52\169\58\205\253\38\39\182\160\8\14\147\151\138\176\215\97\182\76\235\85\254\128\130\194\144\229\44\33\92\185\145\82\24\177\126\122\163\71\153\154\227\159\45\0\51\94\168\223\211\19\30\70\201\21\145\133\167\204\183\205\100\240\21\205\62\49\99\228\115\64\7\63\212\113\248\167\140\107\190\54\128\251\48\193\180\191\252\189\237\67\167\105\33\195\208\60\138\227\236\106\83\154\45\67\14\224\17\252\50\214\119\217\130\43\18\174\65\126\58\101\243\117\52\144\7\40\76\143\185\74\15\184\114\207\1\52\89\161\212\188\56\202\221\89\174\171\145\188\191\90\218\218\182\251\51\189\64\160\6\165\63\17\56\216\217\38\164\64\101\7\82\11\71\250\174\157\166\136\14\157\48\14\38\150\149\27\159\216\65\70\245\85\22\102\9\62\162\224\0\234\52\26\192\134\82\103\44\41\19\151\55\1\175\6\81\38\109\3\9\61\43\100\187\19\151\226\100\111\133\212\140\87\186\233\120\31\143\238\169\30\9\86\155\40\190\218\58\45\225\231\73\216\153\209\248\128\44\229\94\71\207\207\190\244\95\58\251\23\40\220\159\199\239\195\96\28\125\55\251\69\13\41\69\10\191\176\230\61\8\166\157\235\155\143\220\187\177\183\49\200\48\84\4\10\167\97\117\135\111\249\166\141\181\212\40\126\123\235\71\166\55\156\232\54\97\18\208\195\4\90\128\196\130\225\47\196\244\155\108\85\152\98\248\179\45\46\61\110\43\253\12\130\67\18\121\65\227\130\50\51\50\169\54\143\253\167\60\115\8\155\70\159\170\247\164\164\10\136\116\83\12\164\141\44\137\159\61\63\209\30\189\19\244\68\22\36\211\182\51\121\107\88\165\183\194\244\111\109\145\16\251\62\147\136\170\235\168\246\182\64\211\131\53\146\92\29\196\171\253\34\36\28\173\191\242\16\114\7\78\176\75\189\217\231\133\185\218\224\11\77\27\222\31\176\93\190\198\0\89\140\84\195\177\111\57\129\105\209\88\111\182\158\123\105\12\73\90\64\194\167\51\72\2\210\47\198\225\225\188\200\57\36\151\138\144\243\123\59\166\51\222\108\230\4\20\137\128\18\204\62\149\57\209\116\251\197\115\135\60\9\88\7\49\197\86\205\40\4\131\53\246\98\158\42\128\131\226\114\141\12\209\79\251\245\125\254\126\245\32\14\121\168\45\126\65\8\71\232\221\127\91\222\197\43\227\181\246\36\69\154\49\93\35\104\19\76\48\111\123\137\245\176\209\101\139\254\217\167\207\110\7\125\26\115\136\102\173\204\40\8\81\137\196\163\240\45\39\163\92\152\253\12\148\94\1\214\245\167\113\181\212\161\231\96\235\200\68\106\171\255\80\104\135\65\29\40\221\192\6\76\205\0\179\161\123\157\23\140\102\140\26\58\147\105\204\82\17\161\89\241\78\35\211\9\162\163\163\202\36\158\189\177\95\152\210\57\235\180\224\249\36\38\209\29\22\115\64\7\197\17\14\138\134\50\147\239\208\173\95\147\187\179\213\17\158\89\13\143\239\72\10\109\197\52\227\19\8\13\217\193\59\251\232\142\73\45\229\48\36\217\199\149\92\157\196\252\224\200\140\232\71\61\55\240\24\133\147\168\4\183\124\115\185\149\252\113\53\105\211\196\13\41\227\135\182\223\141\248\69\172\238\113\90\90\53\97\128\172\19\103\76\66\118\119\210\64\66\190\247\7\25\10\11\92\156\120\195\135\250\45\24\146\206\220\230\136\64\134\184\85\142\211\131\230\252\243\59\84\59\193\26\138\108\153\219\18\63\64\172\105\3\67\167\74\103\246\175\210\116\139\220\161\102\132\105\100\253\94\23\22\198\70\74\246\77\163\33\158\38\23\202\139\173\2\180\133\90\97\89\66\163\250\128\149\64\230\85\31\255\135\77\165\247\80\17\61\148\3\78\10\184\114\73\69\170\110\8\193\226\226\18\166\86\17\205\196\134\240\39\144\101\243\103\67\32\54\183\139\150\187\91\23\244\120\92\162\113\134\56\165\100\122\175\172\170\65\216\220\57\207\71\36\107\211\198\32\185\184\246\17\106\139\71\230\79\146\128\223\199\74\183\91\118\62\245\43\219\150\120\205\111\79\78\112\94\41\43\228\38\103\150\229\213\255\103\135\15\218\213\69\165\199\80\28\177\233\229\126\164\64\112\80\41\160\226\232\203\135\161\37\65\2\58\247\116\162\179\220\2\15\133\215\170\219\39\8\211\254\25\228\21\82\38\143\38\89\65\162\216\189\172\50\6\182\9\75\65\58\238\39\149\8\4\244\182\32\4\225\79\89\145\5\58\72\195\202\247\16\57\16\202\39\162\239\54\171\235\104\251\148\141\119\26\98\195\89\35\86\155\158\104\227\90\141\103\29\237\229\115\225\11\39\33\224\211\59\139\88\128\236\129\54\255\200\227\12\152\115\50\181\229\16\81\243\121\71\219\228\114\0\60\167\122\146\165\139\114\129\43\36\157\98\190\49\16\107\83\33\242\87\197\116\158\167\97\234\6\238\58\99\58\73\0\237\86\182\134\245\249\137\137\129\193\255\169\50\128\198\12\144\158\189\208\147\218\128\222\129\66\194\240\81\69\201\150\70\45\193\136\245\133\152\40\156\245\219\127\218\50\148\0\208\143\2\138\78\171\186\18\148\88\218\37\25\206\233\91\64\195\37\1\106\84\146\75\15\184\220\31\23\39\19\147\164\205\135\183\166\167\64\34\15\209\136\13\200\198\63\93\63\219\86\142\160\191\162\140\70\155\44\238\53\154\189\140\57\105\52\83\49\115\83\148\161\23\226\219\42\204\114\182\43\33\234\84\128\77\128\211\78\106\129\234\173\22\138\132\168\131\114\29\144\162\117\157\245\119\139\202\239\152\75\174\219\137\155\223\116\50\169\240\175\240\10\101\199\24\18\9\167\249\246\184\87\145\123\64\128\36\184\219\224\205\69\188\220\82\212\211\15\191\64\137\172\249\9\23\87\79\185\119\99\175\20\131\115\36\177\195\221\42\92\194\140\85\129\116\100\247\155\118\41\204\100\69\121\27\47\141\51\230\124\59\201\76\157\225\144\13\111\164\24\235\77\53\207\26\35\82\112\189\253\246\202\104\111\183\158\167\253\21\65\61\3\211\155\106\190\203\181\218\116\108\64\194\109\159\60\119\125\187\125\17\115\20\252\71\145\227\103\59\13\52\78\231\194\143\251\81\108\194\85\55\155\221\251\65\80\41\87\199\129\151\201\243\48\8\236\134\202\59\163\167\139\36\118\206\183\76\171\246\113\56\107\93\225\66\156\240\155\251\116\139\183\69\11\43\168\77\247\114\55\249\35\49\42\184\223\45\51\5\74\204\222\110\53\73\134\180\12\113\53\250\220\121\246\41\242\144\216\238\191\99\119\75\190\167\115\147\108\92\189\176\228\79\9\177\223\213\182\118\187\239\59\70\170\39\168\90\84\163\70\153\251\108\112\100\70\92\3\230\117\11\188\84\105\238\180\62\19\28\1\223\17\78\106\134\209\14\82\74\51\216\160\94\191\158\62\224\139\122\53\63\169\124\114\0\221\11\1\52\137\217\199\131\140\191\90\207\174\174\122\169\154\4\140\249\110\182\7\212\211\142\156\6\239\197\158\227\22\130\137\0\21\232\55\156\114\126\125\141\153\137\53\135\120\1\92\30\224\232\223\251\9\79\143\91\104\14\135\160\174\38\180\71\250\143\6\34\142\0\176\113\211\240\170\228\177\129\242\78\192\90\93\119\184\76\193\63\220\24\3\106\81\220\19\210\162\45\227\208\98\112\108\200\76\161\236\15\209\59\158\153\4\217\203\46\27\239\73\157\88\63\85\114\127\74\155\199\220\160\6\186\138\71\203\99\98\235\115\1\243\66\123\192\37\44\159\172\24\63\252\131\227\100\113\157\202\106\94\146\18\5\90\216\0\254\148\19\243\13\76\98\147\35\62\88\251\202\185\174\245\219\145\54\63\63\125\26\227\123\22\213\190\204\237\119\95\37\136\162\144\52\159\166\50\182\20\61\121\201\195\24\130\233\21\190\122\167\204\66\107\157\252\88\241\24\156\5\141\251\45\130\178\175\171\110\123\74\32\35\201\90\126\100\129\154\237\149\152\19\106\12\127\3\212\81\210\195\137\134\112\149\130\172\209\130\75\135\89\126\8\109\126\196\201\166\185\173\102\27\2\207\89\126\213\76\97\244\23\94\4\247\184\66\165\114\198\4\94\116\9\133\177\98\156\219\48\78\99\17\15\51\130\69\175\4\26\176\187\2\62\26\7\49\139\154\79\142\14\77\114\29\44\68\38\8\27\47\239\167\163\121\27\56\102\114\95\47\87\128\59\44\244\61\214\252\205\98\231\160\18\8\72\221\246\74\171\131\3\130\69\18\186\22\9\191\110\36\207\124\46\170\108\227\168\121\50\56\166\250\11\138\69\148\39\12\245\154\112\154\189\136\45\20\63\64\156\95\173\180\88\147\82\81\191\243\52\211\226\129\174\56\223\204\156\196\140\164\142\59\101\225\132\251\98\187\11\243\11\58\179\10\72\20\203\180\29\225\233\4\60\169\31\59\199\196\228\16\229\222\62\203\156\237\118\245\37\202\159\39\75\176\148\253\67\144\150\215\227\95\247\30\61\210\31\80\79\37\244\72\175\2\148\36\8\25\217\1\61\232\136\111\16\11\174\235\204\223\145\188\184\167\81\189\192\225\123\164\33\231\248\118\202\104\54\193\251\41\171\91\139\116\25\116\206\121\226\212\46\104\67\189\147\207\115\31\227\202\79\117\105\212\15\74\138\41\151\139\146\185\4\27\34\23\201\222\248\33\180\135\3\70\193\188\190\182\150\91\233\73\95\170\46\23\29\148\69\219\77\2\232\109\197\197\71\93\79\240\217\42\13\238\233\31\211\161\205\107\81\34\251\69\194\119\193\219\216\255\164\55\15\73\11\45\241\204\94\184\162\225\202\59\136\164\136\127\114\159\246\232\34\114\56\61\16\172\94\176\249\23\28\151\205\48\146\117\15\236\38\230\188\29\5\68\188\20\162\72\81\255\6\176\190\211\207\168\249\107\237\30\177\125\30\104\234\31\214\86\8\214\180\146\216\143\125\62\74\205\68\96\106\127\30\194\127\70\54\232\166\194\162\97\161\123\91\113\70\220\56\19\67\74\97\135\186\153\206\142\248\232\184\132\19\99\225\15\81\167\254\150\230\227\48\22\77\26\128\148\244\91\197\12\27\68\252\14\31\204\1\82\59\28\53\38\209\109\188\75\33\76\124\253\160\75\248\102\133\100\76\212\13\141\103\112\124\121\141\107\237\68\153\45\136\30\122\20\197\203\61\179\4\79\122\138\94\210\132\37\254\145\133\17\190\145\77\166\241\91\205\28\106\175\76\236\210\103\137\133\180\39\223\129\48\111\178\97\139\186\212\2\15\88\66\2\176\166\38\184\225\182\122\62\250\250\251\133\128\41\125\134\158\167\134\118\51\114\99\232\29\27\94\173\109\98\198\25\50\213\32\29\30\210\8\73\238\17\249\134\118\119\229\168\146\233\221\7\129\32\39\212\63\58\196\213\114\61\236\191\103\166\200\50\138\144\75\252\191\73\223\246\199\142\7\116\222\32\204\163\71\216\193\10\225\248\8\146\196\85\167\116\64\196\243\8\139\150\49\43\94\179\224\95\84\91\40\175\19\38\25\109\68\124\185\12\187\58\192\187\201\250\210\111\156\71\133\198\100\222\170\233\107\155\158\135\56\156\87\16\67\154\158\23\236\190\59\204\212\70\168\23\164\81\7\117\37\177\48\212\173\162\213\7\0\20\137\92\187\165\133\183\39\63\236\162\186\77\135\119\147\159\46\228\90\145\11\62\214\212\177\26\137\144\230\100\247\44\49\225\53\237\14\6\29\221\194\135\205\207\15\170\167\71\27\83\46\10\77\32\213\197\46\217\50\169\17\45\114\203\34\181\46\181\50\52\197\162\114\15\134\63\154\166\13\113\166\130\48\25\25\101\38\20\70\229\48\21\254\179\208\146\241\158\24\8\159\187\28\37\198\4\236\205\138\211\55\44\155\91\254\127\198\132\213\40\181\243\78\124\150\227\6\77\49\61\230\185\115\14\8\160\25\43\140\147\44\141\250\183\13\86\186\117\245\59\75\91\112\37\216\84\29\84\36\112\32\38\244\175\206\14\83\2\146\247\41\191\154\130\145\165\251\3\96\129\196\146\48\45\90\249\208\54\102\130\193\63\25\8\127\20\162\235\197\213\114\147\150\176\243\128\115\170\232\220\165\9\63\100\173\66\17\166\161\16\255\73\43\23\240\120\177\132\110\207\243\188\162\131\248\20\44\208\108\171\167\142\244\243\242\149\65\229\130\76\178\252\9\115\227\228\98\86\173\225\159\37\245\155\90\220\143\114\149\132\227\152\168\15\22\102\225\6\218\224\127\48\45\39\253\57\130\60\92\64\135\251\200\177\222\250\166\80\46\15\212\100\241\179\145\162\120\34\212\70\110\27\244\82\114\167\179\141\116\197\223\216\78\156\253\203\179\187\202\114\193\55\127\82\31\101\114\213\124\238\77\179\199\63\199\175\145\42\237\139\217\102\201\92\254\184\115\179\133\185\13\71\29\85\102\23\125\174\70\132\153\54\170\125\247\41\54\5\163\82\132\154\166\249\10\71\81\93\110\148\174\28\107\55\6\165\160\206\212\107\126\3\136\177\143\100\23\36\82\79\60\96\165\221\40\21\185\2\189\27\237\227\73\65\189\110\25\75\49\6\220\131\64\221\5\1\163\165\54\117\38\93\99\119\245\179\177\245\222\98\13\245\177\12\88\202\191\68\67\90\191\39\0\182\22\220\88\36\82\120\1\240\183\196\92\162\109\41\63\116\245\136\176\18\253\11\87\127\248\209\161\155\55\99\42\206\230\62\7\128\188\110\124\65\165\131\104\59\165\250\128\245\179\29\227\146\155\170\216\121\52\136\88\0\121\197\37\157\220\170\169\198\248\138\230\37\97\108\191\74\155\209\160\160\225\204\149\181\127\58\28\93\89\66\107\33\204\9\61\244\114\101\69\90\255\155\200\101\8\202\158\141\226\81\175\21\56\65\67\170\217\32\107\178\67\191\228\87\124\224\25\163\189\255\78\195\101\201\141\81\121\125\242\90\85\147\142\1\12\46\50\201\10\194\138\240\194\213\149\118\11\30\56\158\199\1\226\217\61\196\60\213\0\68\61\17\7\35\76\17\190\140\138\133\5\13\188\54\125\51\115\5\18\100\56\89\175\191\151\51\149\139\248\151\106\83\214\29\202\228\1\216\131\60\180\188\198\163\116\159\221\31\254\171\64\144\165\23\166\200\212\14\125\47\201\14\139\5\191\128\41\72\221\126\126\34\253\193\91\88\196\75\162\219\23\214\166\164\230\183\36\0\207\50\6\153\15\133\184\24\220\125\86\169\163\47\113\72\1\228\27\193\28\253\38\156\228\255\244\206\168\215\62\27\21\141\119\150\197\57\184\25\83\152\101\35\31\140\31\209\143\116\251\193\239\227\194\251\34\123\193\75\162\24\48\190\18\118\76\253\254\192\227\205\143\200\207\194\243\251\33\232\118\49\169\192\141\114\67\54\199\66\16\29\162\36\220\100\51\188\7\90\47\238\150\82\230\201\143\252\96\57\217\90\74\140\193\122\202\168\83\82\121\61\246\143\178\175\16\147\4\31\6\63\170\123\134\35\89\231\127\127\132\78\192\31\63\198\203\216\71\74\205\57\230\19\252\23\155\156\202\165\95\185\88\205\237\53\106\163\129\45\141\145\132\229\223\110\131\74\194\255\82\14\37\94\49\78\109\229\116\1\91\5\150\99\33\116\216\138\242\127\157\194\236\232\49\64\13\169\211\123\182\45\6\41\202\59\234\183\50\108\68\187\25\201\83\155\23\235\113\37\110\54\124\222\79\208\205\115\204\182\166\97\203\158\67\132\227\27\10\162\193\250\75\166\140\61\152\233\159\52\238\215\114\130\99\53\161\160\214\63\83\171\75\193\206\253\155\92\84\80\107\27\96\98\48\152\112\23\133\142\18\190\232\138\98\39\113\240\199\166\139\161\201\190\161\143\83\96\111\46\254\83\69\14\158\63\69\79\182\199\81\142\168\138\12\82\73\153\54\22\48\126\77\125\69\133\120\124\53\8\132\186\198\18\41\163\3\37\22\113\173\0\160\149\207\250\135\43\132\204\9\239\198\198\1\62\2\21\196\3\133\150\133\184\232\183\165\78\163\147\85\239\145\69\71\60\78\68\176\13\107\118\239\64\112\104\51\4\180\161\27\82\151\234\173\206\29\183\55\239\24\249\71\20\177\206\138\186\219\11\11\144\236\83\245\155\55\245\39\253\3\42\243\137\208\180\221\9\144\200\66\68\223\183\23\62\5\199\55\149\82\109\193\57\196\3\62\85\7\177\174\30\193\4\83\101\67\34\161\37\92\211\4\182\83\128\174\190\152\99\98\100\205\6\47\93\166\239\196\194\229\28\6\212\59\9\169\235\77\122\209\8\19\27\222\203\149\69\153\27\141\3\141\4\67\54\182\164\47\124\151\66\20\191\112\66\60\254\242\23\48\109\136\46\139\157\68\172\57\235\27\46\181\175\223\47\129\196\42\19\165\82\169\18\205\72\99\207\80\104\100\184\239\144\9\40\37\136\30\122\189\63\179\55\185\126\246\199\77\80\85\85\157\34\54\213\254\7\79\85\172\222\163\12\155\34\92\142\217\145\113\144\171\117\103\242\33\72\38\157\125\32\198\199\189\89\249\142\108\200\153\99\63\14\159\250\97\199\85\187\157\136\43\75\209\100\114\46\29\136\245\23\162\55\154\165\106\252\183\174\98\5\56\27\240\54\18\147\233\231\82\239\87\81\208\155\195\84\50\144\89\58\92\198\158\175\61\102\18\111\121\49\32\180\184\250\163\225\201\167\104\233\198\209\173\151\173\89\204\97\212\16\104\81\226\210\68\71\140\26\139\102\59\241\88\34\170\24\243\232\240\232\105\232\110\157\78\87\174\72\6\56\15\251\32\205\172\248\167\78\136\252\84\146\78\148\1\222\201\221\187\19\254\100\237\55\132\228\15\222\186\57\199\68\23\163\95\198\56\209\179\158\47\67\146\183\169\227\1\204\167\208\122\252\57\18\79\81\69\184\99\208\122\1\130\101\13\123\227\96\163\32\186\154\55\74\177\79\112\152\203\81\100\65\214\155\140\51\217\169\74\197\243\21\230\207\216\59\164\80\246\18\218\98\144\229\249\146\48\107\175\164\39\23\243\119\42\164\229\214\98\34\115\185\239\169\228\133\234\24\143\199\237\143\17\250\156\205\226\79\59\199\128\185\84\108\226\9\252\31\76\69\105\237\228\16\99\105\16\252\27\98\19\30\44\149\49\192\188\70\189\33\59\19\135\70\9\234\229\230\199\26\131\28\74\235\79\166\250\226\178\197\32\1\87\163\114\205\230\93\119\219\34\91\148\154\240\185\49\48\24\121\10\155\112\65\45\156\26\166\78\120\222\193\55\104\56\119\102\122\154\167\1\226\110\225\155\118\18\232\234\52\38\43\6\18\245\189\127\47\194\4\59\223\127\118\219\124\29\216\240\58\229\243\168\87\109\73\80\88\109\206\109\176\113\20\226\79\47\237\226\191\156\176\69\146\47\232\145\188\241\94\228\71\200\86\170\153\137\237\206\234\213\138\25\150\195\157\117\216\38\77\240\88\185\91\79\75\185\198\174\9\51\217\13\14\39\82\182\156\218\129\86\166\25\29\223\239\238\43\247\177\205\126\21\47\117\86\124\111\23\255\34\17\6\213\223\195\174\161\143\105\57\43\167\117\161\248\37\47\117\10\110\133\94\26\52\201\0\97\15\164\232\187\114\61\162\76\167\40\223\202\119\46\223\248\186\62\229\211\30\44\92\121\250\251\153\228\66\216\162\140\5\158\33\232\88\227\154\168\148\177\93\106\141\71\82\231\103\27\177\232\66\152\9\152\175\125\194\23\62\223\209\187\191\247\105\167\89\234\253\189\190\43\58\200\106\244\15\13\63\228\170\97\79\175\178\249\202\56\47\190\245\117\51\106\69\151\20\168\172\67\97\130\152\163\224\6\207\14\207\62\48\172\93\84\168\254\241\114\221\130\32\5\181\187\48\253\79\95\78\254\200\229\156\168\122\88\203\194\225\1\110\37\42\111\68\196\115\96\124\12\107\228\159\219\7\145\200\65\62\191\199\193\59\72\16\170\30\244\3\53\44\7\107\16\56\122\7\218\122\22\98\83\244\22\222\143\105\253\47\143\121\32\9\194\165\252\129\103\1\30\45\169\107\146\108\107\225\129\97\40\168\124\231\175\111\116\199\196\212\184\25\230\196\183\233\210\202\13\95\64\24\22\228\89\240\185\158\152\126\252\120\163\110\226\74\52\172\181\227\148\40\126\233\107\64\180\212\0\83\232\158\56\82\201\26\28\15\134\130\199\104\254\105\142\139\59\48\34\91\19\2\76\38\195\143\142\0\146\14\228\9\242\30\0\213\11\63\134\38\130\174\72\81\24\164\37\199\56\107\243\28\70\88\94\216\44\152\171\11\177\86\49\77\219\223\136\170\224\170\151\35\102\208\226\246\183\41\1\72\177\129\40\17\52\221\98\248\118\119\147\249\170\144\221\34\179\106\165\56\169\143\57\60\119\145\29\16\35\126\179\86\213\210\152\141\89\243\105\103\163\172\43\75\190\66\102\197\193\227\152\122\243\201\159\35\245\110\122\198\217\52\46\66\231\213\127\131\30\176\222\142\189\224\34\171\161\246\67\69\138\155\35\131\184\238\56\104\232\48\59\189\197\42\21\100\200\116\243\235\27\83\47\39\147\58\222\230\150\98\172\235\130\7\233\39\100\38\42\73\190\180\161\201\106\209\82\88\211\37\242\246\45\180\123\47\81\52\67\131\236\50\195\72\204\137\45\218\27\7\215\134\219\206\153\16\241\143\180\173\248\92\16\46\163\225\138\102\252\86\255\188\222\36\85\136\71\204\104\7\86\118\170\103\2\187\33\155\190\175\105\71\64\4\255\34\35\207\212\216\106\21\203\160\98\115\7\105\3\252\121\48\27\51\53\225\204\81\23\169\112\163\104\15\15\164\104\104\242\131\252\252\61\114\141\221\219\110\219\236\27\32\249\147\209\34\185\65\15\248\6\220\121\239\112\60\50\95\0\209\29\133\207\164\23\162\19\186\190\87\136\90\149\83\170\19\125\192\36\19\198\190\182\91\33\25\68\64\227\167\64\33\216\87\193\152\196\251\214\34\242\79\61\182\82\31\159\182\202\189\185\206\117\140\20\28\229\249\217\142\140\94\170\19\230\206\128\235\31\207\152\251\188\231\61\33\10\108\96\199\32\166\184\154\196\245\21\26\96\233\183\51\32\59\116\253\56\175\28\87\93\154\99\67\38\112\159\18\121\183\248\168\240\160\67\148\234\235\204\51\66\255\189\21\209\53\60\57\207\228\139\34\186\143\232\73\60\6\131\37\9\7\79\218\4\18\150\31\242\125\75\52\245\221\20\152\248\24\106\153\134\143\49\48\45\42\55\185\33\174\142\65\151\56\95\1\100\92\97\223\235\158\28\176\6\112\36\33\75\247\78\255\91\244\42\211\134\145\7\44\103\179\24\231\179\118\146\72\165\215\73\196\191\242\60\73\198\153\110\37\188\69\179\55\181\45\188\131\195\246\147\12\224\28\119\145\163\148\131\222\17\173\192\32\188\106\231\58\123\53\89\10\51\81\117\135\57\78\83\23\254\230\137\135\249\208\174\67\40\7\51\135\106\252\208\80\203\172\114\45\193\211\169\225\221\161\161\203\218\50\177\57\230\195\34\216\17\243\190\227\47\95\180\185\3\11\219\64\35\231\19\173\232\253\192\83\219\174\63\165\189\180\18\84\134\82\137\65\35\57\152\83\128\189\234\213\130\48\161\190\31\46\240\61\63\152\153\73\99\151\205\198\69\54\115\66\218\19\204\115\53\108\215\68\25\71\233\142\102\214\79\34\190\165\146\183\121\220\144\17\66\203\245\33\59\51\71\219\135\9\30\145\200\66\231\114\214\36\125\111\118\182\49\139\185\99\175\197\41\178\164\206\197\77\146\41\53\53\127\159\82\142\5\35\35\145\187\194\205\61\40\225\201\178\190\96\190\2\124\213\117\47\60\62\170\169\197\196\170\77\141\62\150\86\128\154\71\3\46\243\194\160\33\108\160\158\229\16\130\216\96\7\234\45\40\172\187\158\209\237\203\84\186\153\20\43\116\254\245\191\171\226\133\106\15\71\110\229\74\252\78\80\210\226\114\105\126\144\47\248\122\250\67\252\178\1\172\190\199\24\172\4\134\13\42\147\117\239\218\16\193\208\81\72\151\3\13\193\8\86\175\193\91\154\90\189\45\32\178\26\190\53\195\215\180\219\4\214\65\51\167\223\149\206\115\171\75\48\117\168\130\111\227\136\30\143\183\123\72\150\185\245\131\161\41\85\118\161\110\8\111\223\151\246\81\85\166\82\120\253\33\252\214\181\219\204\253\39\167\118\80\222\33\230\97\187\167\123\246\178\0\81\157\185\209\79\37\178\134\45\130\74\217\19\220\129\45\19\203\66\249\158\124\58\235\244\95\234\221\135\196\148\119\52\251\92\32\51\178\234\114\210\223\145\140\143\160\65\42\25\186\22\214\117\212\219\81\56\156\125\221\213\88\197\244\218\24\242\14\234\98\101\174\239\12\48\91\253\79\106\11\216\162\86\223\234\26\135\125\128\152\215\4\167\236\226\228\170\164\145\220\185\204\2\75\211\150\8\157\217\65\236\4\90\217\133\133\164\218\108\213\210\236\151\199\203\141\90\150\185\156\108\41\12\76\78\211\21\143\71\216\233\117\91\132\128\221\61\239\218\225\140\173\94\234\60\100\16\212\66\252\34\21\139\132\150\32\204\233\164\55\143\232\72\42\31\176\178\170\34\222\202\10\211\222\231\14\234\235\34\120\9\40\55\137\245\236\103\8\205\96\42\172\12\102\97\149\47\146\223\231\107\216\255\15\151\39\182\5\106\168\185\38\128\3\180\121\200\217\210\61\84\193\192\140\139\136\232\236\248\96\72\234\78\64\14\38\244\208\14\126\69\16\165\162\106\58\237\226\158\184\27\229\157\170\224\84\202\253\67\61\114\178\212\161\88\209\129\135\154\127\165\140\33\150\65\60\87\183\91\100\249\85\14\74\8\235\247\241\249\184\245\219\21\173\163\4\251\25\11\225\225\201\46\215\195\162\100\154\219\221\236\187\143\170\220\38\97\244\148\179\91\251\6\185\251\153\16\100\222\185\70\81\231\34\153\77\156\108\76\21\104\106\34\81\93\148\232\248\41\177\173\209\193\82\122\180\51\90\78\53\97\230\62\72\155\158\103\151\124\172\212\12\173\242\115\242\234\168\92\167\208\181\7\28\8\18\59\187\72\193\167\142\114\243\213\211\29\95\14\183\159\251\211\179\190\50\143\191\2\88\68\206\231\5\136\126\96\129\201\190\135\57\78\224\141\41\79\29\174\38\150\181\17\100\89\146\114\118\150\66\227\161\226\251\42\96\18\33\100\8\60\1\67\179\31\255\32\163\107\118\218\49\246\97\22\103\29\162\33\114\226\205\158\41\87\243\179\91\118\68\28\217\97\17\94\193\100\18\83\15\112\249\149\152\213\68\74\200\186\68\25\76\3\134\83\96\49\29\134\120\253\50\138\38\116\60\203\47\171\135\93\161\58\82\168\114\53\56\22\66\233\105\83\44\227\43\47\197\116\97\47\243\171\190\19\97\58\230\201\191\8\22\94\209\41\89\167\211\78\30\192\193\104\124\154\39\141\237\123\58\116\91\127\197\41\121\167\177\67\46\49\183\255\120\85\138\158\113\7\92\38\116\179\191\36\232\188\184\201\216\104\249\76\6\1\110\125\167\234\59\160\62\111\133\71\209\32\217\153\214\54\179\188\22\41\7\165\213\97\0\227\241\57\249\42\171\125\118\195\44\226\240\129\196\183\249\67\170\152\149\46\33\240\181\37\177\240\247\84\166\98\52\51\169\168\83\223\187\173\89\203\240\8\211\144\186\29\17\239\192\46\78\246\139\214\109\22\195\37\225\223\173\158\234\250\172\8\24\224\143\223\238\139\3\37\192\228\174\91\180\4\128\110\58\162\254\184\53\240\231\185\89\242\234\115\184\159\250\98\73\53\160\159\207\223\188\245\240\147\10\205\48\158\81\210\7\27\152\135\71\72\135\2\23\78\85\63\149\118\194\41\72\44\135\79\70\141\195\77\82\172\15\122\89\98\218\189\147\44\91\251\19\198\209\170\156\92\230\205\10\121\245\157\181\231\221\157\29\4\54\94\239\86\227\8\81\4\125\81\144\123\231\220\13\194\62\47\3\160\184\72\158\227\136\197\151\173\232\95\26\42\150\212\167\189\180\81\112\160\39\100\46\32\92\138\4\51\211\141\68\83\250\200\128\170\6\12\225\185\34\107\85\132\142\51\25\152\210\45\199\33\198\141\95\14\49\89\20\142\69\24\224\246\243\239\243\138\162\11\169\36\46\20\78\131\31\189\168\92\203\178\146\187\17\250\18\230\93\223\244\207\45\178\78\22\72\55\47\31\191\32\46\201\254\84\252\165\52\176\110\115\209\57\242\1\31\174\3\126\54\127\22\19\147\192\22\155\123\43\220\102\101\208\70\179\114\133\185\63\78\113\236\240\212\79\199\214\241\82\23\177\18\16\229\220\175\212\140\72\171\113\253\72\140\221\140\19\94\51\213\55\242\111\141\233\37\0\201\182\30\249\189\136\222\4\186\237\37\66\83\74\237\183\54\139\205\6\185\171\0\94\43\61\16\170\143\34\143\230\252\81\86\214\52\239\185\83\104\68\212\159\241\10\32\121\250\197\63\211\27\86\18\246\185\122\144\147\41\249\98\166\166\205\50\26\232\116\149\5\59\115\190\69\242\28\111\0\93\148\66\26\34\206\186\68\76\46\204\181\201\230\101\95\78\107\150\12\27\47\77\155\251\16\216\119\249\199\16\7\52\115\12\149\82\238\50\219\25\104\10\173\111\25\77\200\218\175\89\139\193\64\43\128\110\99\187\97\120\98\228\104\132\200\184\97\239\199\223\34\190\36\27\182\96\91\169\204\209\46\121\220\122\190\205\220\247\201\137\95\112\73\169\186\123\242\110\66\185\189\221\118\235\249\6\229\204\192\190\190\42\2\184\222\128\41\12\177\2\70\13\200\191\112\146\109\165\162\130\154\111\250\51\236\116\122\34\92\189\194\28\114\196\43\231\181\84\186\21\76\36\48\208\174\133\42\218\45\211\156\10\23\103\198\152\123\129\238\167\27\105\22\200\183\186\13\160\131\49\188\129\196\14\253\250\31\225\207\107\158\25\160\74\147\124\177\240\36\240\11\68\100\234\82\123\190\248\92\185\155\107\254\18\71\98\157\114\101\11\31\220\143\139\238\1\23\14\216\41\246\43\244\190\146\3\178\249\219\188\23\176\198\183\119\183\106\154\39\89\34\84\39\164\124\76\189\242\80\51\168\9\56\1\162\28\32\229\184\162\182\72\181\0\237\30\206\121\149\67\55\186\10\129\249\155\31\45\194\215\225\38\49\141\181\194\121\47\249\21\14\236\234\65\36\154\64\179\32\181\30\84\245\2\225\148\186\249\233\103\204\210\56\137\144\33\109\26\132\17\148\97\211\97\91\52\69\182\248\255\58\63\130\176\17\98\46\247\85\116\83\123\26\146\252\0\78\151\84\189\21\139\229\220\244\1\36\112\244\236\106\201\107\66\170\108\49\62\123\36\26\135\44\30\243\85\21\123\150\99\203\108\217\183\129\233\110\1\117\35\73\237\80\117\178\194\191\234\240\157\190\218\243\1\108\154\248\88\27\240\239\150\154\224\74\46\179\144\8\161\211\239\157\15\50\152\151\218\24\60\249\49\24\159\59\180\201\178\54\84\124\15\224\93\151\43\91\109\236\181\106\134\237\130\94\167\158\15\41\14\21\105\97\14\94\239\91\8\242\91\68\61\237\11\88\151\132\22\227\138\248\229\77\153\164\104\140\202\116\104\219\244\123\239\133\88\1\93\35\196\98\20\77\48\225\160\96\220\5\229\53\76\167\7\6\247\141\91\23\29\254\123\3\94\74\210\164\113\58\43\140\56\49\136\25\202\48\131\213\152\81\67\169\133\176\5\52\214\185\138\203\158\53\40\157\141\195\74\202\164\22\70\226\162\3\50\126\100\205\121\64\10\187\209\23\73\71\57\106\33\35\165\251\13\1\235\201\217\150\142\19\174\57\249\202\70\106\153\71\83\56\185\50\117\215\52\241\43\109\141\66\241\34\14\241\46\39\39\76\12\87\105\214\208\91\242\191\191\24\254\246\237\4\71\226\210\154\11\118\151\176\61\34\10\16\195\180\199\125\88\250\151\242\236\236\18\132\17\81\215\24\127\119\211\124\219\143\237\26\196\66\86\76\78\244\52\162\76\125\57\250\145\184\37\141\189\113\188\248\24\11\194\156\88\64\49\224\249\70\238\4\40\237\69\183\240\215\1\22\1\34\72\152\215\150\61\141\119\164\252\19\158\37\210\86\25\126\160\12\41\226\175\212\186\193\244\210\34\100\88\84\59\107\8\205\140\212\210\53\199\198\206\232\238\38\104\110\162\23\114\166\169\20\169\19\160\131\183\159\174\79\73\35\68\6\70\175\14\69\228\203\192\160\120\159\120\164\178\124\217\175\99\168\251\175\25\255\233\31\82\37\175\187\71\38\209\148\76\2\91\203\134\62\229\69\136\147\54\31\127\233\186\3\78\123\222\102\139\0\174\120\50\25\236\145\184\30\33\35\88\100\41\205\127\147\222\84\53\138\233\205\71\20\183\141\249\91\12\226\28\21\22\153\151\233\119\10\157\230\152\66\77\200\179\100\94\142\110\46\201\212\3\6\149\194\57\56\200\46\20\58\114\34\137\102\144\232\105\137\216\2\12\127\185\144\2\124\228\180\32\250\134\105\82\97\61\171\21\206\0\171\151\159\19\160\173\244\231\86\102\234\100\44\67\14\65\95\107\95\254\76\24\232\190\233\118\18\128\152\127\83\243\4\138\43\20\178\91\185\157\68\155\81\197\189\60\199\182\240\69\41\166\228\93\7\174\248\88\198\203\87\247\60\230\252\142\175\154\14\147\193\59\163\174\200\121\147\182\179\220\150\125\44\161\142\161\0\52\80\98\79\207\91\118\23\216\104\96\253\227\91\106\195\157\66\225\56\196\85\1\221\196\221\70\95\215\83\62\146\74\238\32\48\162\140\48\142\239\124\57\46\29\69\22\89\52\154\20\34\168\44\225\216\15\239\120\62\194\206\191\237\66\30\143\80\68\36\107\13\237\189\114\106\7\250\44\36\60\136\215\111\107\113\194\66\15\223\220\6\130\62\154\246\173\76\120\155\106\146\195\229\251\126\181\51\220\202\165\139\187\226\174\65\202\11\45\46\71\2\215\206\87\131\22\72\214\33\111\97\178\238\133\95\4\34\38\113\224\195\118\197\196\117\10\191\168\154\223\223\11\225\34\156\205\184\61\43\121\170\74\28\59\32\166\211\33\82\246\69\20\199\89\70\223\156\227\242\225\75\213\215\254\88\81\185\90\226\163\93\113\38\74\20\75\138\3\52\224\186\198\74\155\161\125\92\110\57\21\72\71\127\133\144\211\232\115\95\189\11\83\54\2\57\219\87\214\120\111\123\184\225\64\228\95\176\31\248\200\166\226\131\211\32\15\148\89\251\218\254\75\118\204\87\171\149\46\129\241\191\158\124\119\166\226\94\77\170\222\99\172\184\77\56\213\179\110\179\170\1\137\248\205\80\250\189\250\137\168\175\185\181\227\218\221\18\0\22\192\54\3\169\97\170\223\55\234\236\26\182\249\5\217\161\182\58\225\224\163\11\121\104\156\209\62\173\254\66\227\112\90\103\232\159\243\58\132\151\70\139\19\242\134\22\110\150\29\170\164\196\252\87\14\165\42\73\62\209\171\72\254\57\199\95\50\133\67\63\184\57\190\241\199\224\48\120\52\8\30\49\67\249\15\69\67\37\167\166\170\253\242\156\16\47\62\57\246\151\168\123\213\227\215\249\55\5\146\88\81\155\228\196\192\108\245\119\25\103\187\215\50\214\197\133\111\129\223\24\172\5\83\45\119\16\41\79\243\16\181\170\98\78\212\113\23\223\43\129\167\152\212\40\116\156\62\64\152\239\229\138\5\158\15\50\139\82\247\25\138\52\220\15\174\183\118\1\143\138\79\69\12\12\171\74\65\153\178\58\243\205\196\249\200\170\34\108\117\99\53\43\215\134\157\142\93\47\178\245\5\59\155\117\5\222\88\242\234\238\73\53\163\15\20\191\0\77\231\39\151\215\245\47\107\123\177\254\33\41\86\110\242\21\88\206\135\161\141\50\52\246\123\71\26\236\113\90\176\15\187\223\13\215\111\127\148\33\89\221\238\108\1\203\142\67\249\129\152\18\64\203\31\38\40\229\209\160\119\125\45\188\131\201\209\250\91\93\68\198\124\83\156\198\57\114\39\26\47\254\149\161\92\137\64\229\151\167\115\171\175\215\103\171\162\243\105\54\235\103\175\246\36\246\98\242\29\178\92\81\93\193\126\176\230\22\171\248\112\160\248\104\181\106\233\215\194\185\219\36\123\49\75\57\14\88\194\162\33\24\149\188\218\236\28\191\251\94\84\221\172\121\230\56\63\44\183\182\182\3\51\209\67\21\157\216\227\53\155\144\48\67\175\239\20\240\186\15\134\242\129\196\59\153\29\150\165\130\55\254\0\245\217\174\238\185\28\254\212\110\217\74\143\34\69\63\35\44\234\190\220\186\6\146\199\133\243\31\140\130\72\82\228\29\27\115\111\132\225\32\134\16\146\98\20\239\165\250\18\251\141\167\104\212\199\18\158\152\223\138\73\159\147\169\101\55\42\69\92\9\13\212\241\229\67\23\16\124\146\169\32\111\111\25\224\16\193\54\238\51\136\9\248\231\209\177\84\17\244\66\80\180\36\234\222\253\25\158\135\206\250\36\17\247\233\252\34\188\77\16\15\174\4\60\126\47\255\106\232\91\27\31\19\186\44\156\255\167\254\164\165\31\8\101\48\81\22\27\160\79\184\223\182\146\159\140\201\144\230\19\2\173\208\75\18\119\214\170\117\170\214\92\2\253\227\158\25\21\216\223\4\77\220\225\131\164\195\208\235\1\14\194\127\117\81\106\192\106\98\25\30\57\251\75\37\228\136\94\15\223\219\236\7\224\219\96\195\83\167\111\113\96\251\187\21\41\253\210\163\156\135\76\119\68\133\186\21\135\18\23\189\96\56\58\5\104\138\99\37\125\214\230\20\41\2\52\33\196\228\124\111\238\162\239\138\101\125\5\179\70\232\194\39\227\97\200\244\34\124\1\184\93\61\25\100\0\206\181\119\79\178\120\223\231\81\41\35\151\146\134\187\167\68\202\209\52\18\184\220\163\47\37\140\237\172\167\153\178\247\230\147\58\234\226\40\85\123\45\239\229\215\51\96\142\11\231\205\26\81\75\139\163\22\135\232\236\195\47\235\43\5\52\132\254\215\178\121\238\101\137\75\50\168\90\144\19\207\116\71\2\44\71\78\47\45\241\59\24\114\228\226\103\248\61\220\15\199\197\18\230\85\85\229\160\32\45\154\71\8\19\64\121\7\29\178\16\99\28\23\21\101\117\131\33\13\105\218\133\83\177\20\90\142\142\205\118\220\28\250\87\62\95\254\13\145\168\77\236\86\148\165\227\38\55\227\217\43\207\64\208\215\2\14\34\120\122\243\70\209\100\251\159\171\81\23\224\66\212\61\191\93\40\189\102\76\4\100\169\224\116\1\169\181\31\130\53\200\5\195\185\230\149\72\178\112\54\117\5\150\181\84\22\58\177\89\2\43\77\56\35\188\28\190\69\172\110\165\68\221\164\184\68\230\246\230\55\115\214\206\181\51\63\168\47\70\38\105\186\111\36\115\223\20\188\36\55\62\164\146\183\128\145\242\210\166\254\125\72\135\127\79\74\160\76\161\139\237\93\123\128\141\94\194\245\34\243\71\78\31\187\99\147\17\70\55\151\252\129\197\183\20\170\36\49\15\3\27\251\103\163\157\141\90\171\22\45\245\223\143\22\223\122\80\149\79\227\9\34\176\212\167\206\231\194\181\50\55\119\144\23\221\228\89\52\127\227\45\255\169\122\154\230\33\240\72\235\111\219\239\140\212\51\37\97\205\52\79\190\225\201\106\144\205\139\55\180\250\80\75\126\249\90\214\175\243\118\255\221\148\125\0\147\227\103\90\4\87\11\217\29\244\4\245\38\135\28\173\151\72\126\123\218\195\184\59\17\226\15\49\220\11\216\30\186\54\24\53\180\155\35\26\230\1\2\47\1\73\232\160\182\7\60\2\20\229\82\148\98\82\105\110\251\84\33\99\188\8\20\37\39\38\124\185\85\137\214\48\127\215\143\92\245\1\79\41\18\3\190\72\172\243\4\17\57\9\254\70\180\179\26\187\162\211\87\171\14\232\181\30\1\110\115\171\119\19\88\1\2\83\157\197\65\131\254\124\170\29\63\105\117\118\93\130\34\44\220\173\52\226\119\222\82\102\187\228\97\60\174\228\93\67\81\118\127\72\166\233\32\151\45\83\8\187\184\171\185\70\242\7\28\120\175\132\96\173\105\214\254\167\235\153\41\19\243\92\26\101\31\96\231\89\202\12\104\210\100\174\114\207\5\238\194\51\124\124\174\8\212\170\89\9\208\35\58\130\244\119\111\234\66\247\20\17\152\6\240\108\199\233\121\125\83\223\200\23\228\7\216\143\113\94\131\107\83\51\63\133\223\206\204\29\243\59\34\169\46\17\251\156\97\202\109\191\226\28\28\2\87\210\49\162\108\47\95\80\199\18\40\185\172\164\89\192\228\207\40\19\59\246\102\223\86\1\8\132\71\125\40\55\82\214\24\74\85\12\176\152\40\29\223\155\110\96\152\140\243\89\98\128\179\96\172\236\21\156\87\13\180\203\163\129\211\219\186\25\74\38\2\220\204\246\35\31\234\244\114\246\230\3\7\221\61\47\128\51\12\133\46\17\120\130\13\60\165\128\136\94\154\212\180\84\58\231\212\56\202\156\22\128\63\144\144\3\227\14\112\180\82\62\66\39\253\73\185\114\217\16\212\146\40\92\153\201\157\213\33\70\88\94\55\222\234\18\224\233\174\116\175\52\84\144\227\203\247\49\219\32\19\181\103\244\106\83\55\201\232\158\115\129\153\216\255\46\190\98\139\125\5\108\210\168\105\251\5\108\147\42\65\219\177\30\95\162\228\143\133\93\193\74\105\8\34\180\188\208\96\205\76\102\114\149\200\159\96\139\199\27\7\139\163\37\7\110"
+  local _r=_e(_b,(323-38-42),(116-47-29),(219-7-44))
+  _e=nil;_b=nil
+  return _r
+end)()
+local _e1,_f1 = _x(_d1)
+_d1=nil;_x=nil
+_f(_e1,_f1,_g,{})
+_f=nil;_e1=nil;_f1=nil
+end)()

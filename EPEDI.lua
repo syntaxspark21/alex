@@ -1,6 +1,7 @@
 --[[
     NEX HUB - VIOLENCE DISTRICT (FULL FIX + AUTO STOP EMOTE)
-    Semua fitur berfungsi, dropdown muncul, auto leave gen cooldown, recovery after hook.
+    Fixed: getgenv guard, hookmetamethod existence, Drawing.Fonts, unpack, VirtualInputManager, duplicate removal.
+    All features included and functional.
 ]]
 
 -- WINDOW SETUP & THEME (WindUI)
@@ -34,156 +35,81 @@ local LocalPlayer = Players.LocalPlayer
 local Camera = Workspace.CurrentCamera
 
 -- SAFE DRAWING UTILS
-local function SafeDrawing(type)
-    local success, result = pcall(function() return Drawing.new(type) end)
-    if success then return result end
+local function SafeDrawing(dtype)
+    local ok, result = pcall(function() return Drawing.new(dtype) end)
+    if ok then return result end
     return nil
 end
-
 local function SafeRemove(obj)
-    if obj and obj.Remove then
-        pcall(function() obj:Remove() end)
-    end
+    if obj and obj.Remove then pcall(function() obj:Remove() end) end
+end
+local DrawingAvailable = (typeof(Drawing) == "table" and typeof(Drawing.new) == "function")
+
+-- GUARDED Drawing.Fonts
+local DrawFont = DrawingAvailable and (pcall(function() return Drawing.Fonts.Monospace end) and Drawing.Fonts.Monospace or 0) or 0
+
+-- FALLBACK unpack
+local _unpack = table.unpack or unpack
+
+-- GUARDED VirtualInputManager
+local VIM = nil
+pcall(function() VIM = game:GetService("VirtualInputManager") end)
+local function SimKey(down, key)
+    if not VIM then return end
+    pcall(function() VIM:SendKeyEvent(down, key, false, game) end)
 end
 
-local DrawingAvailable = (typeof(Drawing) == "table" and Drawing.new ~= nil)
-
--- CONFIG (global)
-getgenv().VD = getgenv().VD or {
-    -- Basic ESP
-    ESP = false,
-    MaxDistance = 2000,
-    ShowDistance = false,
-
-    -- Generator / AntiFail / Healing
-    GeneratorESP = false,
-    GenAntiFail = false,
-    HealAntiFail = false,
-
-    -- Visual / UI
-    HideSkillUI = false,
-    Fullbright = false,
-
-    -- Movement
-    Speed = false,
-    SpeedValue = 16,
-    Jump = false,
-    JumpValue = 50,
-    InfiniteJump = false,
-    Noclip = false,
-
-    -- Auto Features
-    AUTO_Generator = false,
-    AUTO_GenMode = "Fast",
-    AUTO_LeaveGen = false,
-    AUTO_LeaveDist = 18,
-    AUTO_Attack = false,
-    AUTO_AttackRange = 12,
-    HITBOX_Enabled = false,
-    HITBOX_Size = 15,
-    AUTO_TeleAway = false,
-    AUTO_TeleAwayDist = 40,
-    AUTO_Parry = false,
-    AUTO_StopEmote = false,        -- baru: stop emote setelah parry
-    AUTO_SkillCheck = false,
-    SURV_AutoWiggle = false,
-    SURV_NoFall = false,
-    KILLER_DestroyPallets = false,
-    KILLER_FullGenBreak = false,
-    KILLER_NoPalletStun = false,
-    KILLER_AutoHook = false,
-    KILLER_AntiBlind = false,
-    KILLER_NoSlowdown = false,
-    KILLER_DoubleTap = false,
-    KILLER_InfiniteLunge = false,
-
-    -- Speed hack tambahan
-    SPEED_Enabled = false,
-    SPEED_Value = 32,
-    SPEED_Method = "Attribute",
-
-    -- Fly
-    FLY_Enabled = false,
-    FLY_Speed = 50,
-    FLY_Method = "CFrame",
-
-    -- Visual extras
-    NO_Fog = false,
-    CAM_FOVEnabled = false,
-    CAM_FOV = 90,
-    CAM_ThirdPerson = false,
-    CAM_ShiftLock = false,
-
-    -- Fling
-    FLING_Enabled = false,
-    FLING_Strength = 10000,
-
-    -- Beat game
-    BEAT_Survivor = false,
-    BEAT_Killer = false,
-    TP_Offset = 3,
-
-    -- Drawing / Advanced ESP
-    DRAWING_ESP = false,
-    ESP_PlayerChams = false,
-    ESP_ObjectChams = true,
-    ESP_Skeleton = false,
-    ESP_Offscreen = true,
-    ESP_Velocity = false,
-    ESP_ClosestHook = true,
-
-    -- Radar
-    RADAR_Enabled = false,
-    RADAR_Size = 120,
-    RADAR_Circle = false,
-    RADAR_Killer = true,
-    RADAR_Survivor = true,
-    RADAR_Generator = true,
-    RADAR_Pallet = true,
-
-    -- Aimbot
-    AIM_Enabled = false,
-    AIM_UseRMB = true,
-    AIM_FOV = 120,
-    AIM_Smooth = 0.3,
-    AIM_TargetPart = "Head",
-    AIM_VisCheck = true,
-    AIM_ShowFOV = true,
-    AIM_Predict = true,
-
-    -- Spear Aimbot
-    SPEAR_Aimbot = false,
-    SPEAR_Gravity = 50,
-    SPEAR_Speed = 100,
-
-    -- Internal
-    Destroyed = false,
-    _BeatSurvivorDone = false,
-    _BeatKillerDone = false,
-    _LastTeleAway = 0,
-    _KillerTarget = nil,
-    _LastTeleportTime = 0,
-    _TeleportCooldown = 1,
+-- CONFIG
+local _genv = (typeof(getgenv) == "function" and getgenv()) or _G or {}
+_genv.VD = _genv.VD or {
+    ESP = false, MaxDistance = 2000, ShowDistance = false,
+    GeneratorESP = false, GenAntiFail = false, HealAntiFail = false,
+    HideSkillUI = false, Fullbright = false,
+    Speed = false, SpeedValue = 16, Jump = false, JumpValue = 50,
+    InfiniteJump = false, Noclip = false,
+    AUTO_Generator = false, AUTO_GenMode = "Fast",
+    AUTO_LeaveGen = false, AUTO_LeaveDist = 18,
+    AUTO_Attack = false, AUTO_AttackRange = 12,
+    HITBOX_Enabled = false, HITBOX_Size = 15,
+    AUTO_TeleAway = false, AUTO_TeleAwayDist = 40,
+    AUTO_Parry = false, AUTO_StopEmote = false,
+    AUTO_SkillCheck = false, SURV_AutoWiggle = false, SURV_NoFall = false,
+    KILLER_DestroyPallets = false, KILLER_FullGenBreak = false,
+    KILLER_NoPalletStun = false, KILLER_AutoHook = false,
+    KILLER_AntiBlind = false, KILLER_NoSlowdown = false,
+    KILLER_DoubleTap = false, KILLER_InfiniteLunge = false,
+    FLY_Enabled = false, FLY_Speed = 50, FLY_Method = "CFrame",
+    NO_Fog = false, CAM_FOVEnabled = false, CAM_FOV = 90,
+    CAM_ThirdPerson = false, CAM_ShiftLock = false,
+    FLING_Enabled = false, FLING_Strength = 10000,
+    BEAT_Survivor = false, BEAT_Killer = false, TP_Offset = 3,
+    DRAWING_ESP = false, ESP_PlayerChams = false, ESP_ObjectChams = true,
+    ESP_Skeleton = false, ESP_Offscreen = true, ESP_Velocity = false, ESP_ClosestHook = true,
+    RADAR_Enabled = false, RADAR_Size = 120, RADAR_Circle = false,
+    RADAR_Killer = true, RADAR_Survivor = true, RADAR_Generator = true, RADAR_Pallet = true,
+    AIM_Enabled = false, AIM_UseRMB = true, AIM_FOV = 120, AIM_Smooth = 0.3,
+    AIM_TargetPart = "Head", AIM_VisCheck = true, AIM_ShowFOV = true, AIM_Predict = true,
+    SPEAR_Aimbot = false, SPEAR_Gravity = 50, SPEAR_Speed = 100,
+    Destroyed = false, _BeatSurvivorDone = false, _BeatKillerDone = false,
+    _LastTeleAway = 0, _KillerTarget = nil, _LastTeleportTime = 0, _TeleportCooldown = 1,
 }
+local VD = _genv.VD
 
 -- SAVE ORIGINAL LIGHTING
 local originalLighting = {
-    Brightness = Lighting.Brightness,
-    ClockTime = Lighting.ClockTime,
-    FogEnd = Lighting.FogEnd,
-    FogStart = Lighting.FogStart,
-    GlobalShadows = Lighting.GlobalShadows,
-    OutdoorAmbient = Lighting.OutdoorAmbient
+    Brightness = Lighting.Brightness, ClockTime = Lighting.ClockTime,
+    FogEnd = Lighting.FogEnd, FogStart = Lighting.FogStart,
+    GlobalShadows = Lighting.GlobalShadows, OutdoorAmbient = Lighting.OutdoorAmbient
 }
 do
     local atm = Lighting:FindFirstChildOfClass("Atmosphere")
-    if atm then originalLighting.Atmosphere = { Density = atm.Density, Offset = atm.Offset, Glare = atm.Glare, Haze = atm.Haze } end
+    if atm then originalLighting.Atmosphere = {Density=atm.Density,Offset=atm.Offset,Glare=atm.Glare,Haze=atm.Haze} end
     local blur = Lighting:FindFirstChildOfClass("BlurEffect")
-    if blur then originalLighting.Blur = { Size = blur.Size } end
+    if blur then originalLighting.Blur = {Size=blur.Size} end
     local cc = Lighting:FindFirstChildOfClass("ColorCorrectionEffect")
-    if cc then originalLighting.ColorCorrection = { Enabled = cc.Enabled } end
+    if cc then originalLighting.ColorCorrection = {Enabled=cc.Enabled} end
     local sr = Lighting:FindFirstChildOfClass("SunRaysEffect")
-    if sr then originalLighting.SunRays = { Enabled = sr.Enabled } end
+    if sr then originalLighting.SunRays = {Enabled=sr.Enabled} end
 end
 
 -- CHARACTER REFS
@@ -192,214 +118,163 @@ local function updateChar()
     Character = LocalPlayer.Character
     if Character then
         Humanoid = Character:FindFirstChildOfClass("Humanoid")
-        Root = Character:FindFirstChild("HumanoidRootPart")
+        Root     = Character:FindFirstChild("HumanoidRootPart")
     else
-        Humanoid, Root = nil, nil
+        Humanoid, Root, Character = nil, nil, nil
     end
 end
 updateChar()
 LocalPlayer.CharacterAdded:Connect(updateChar)
-LocalPlayer.CharacterRemoving:Connect(function() Character, Humanoid, Root = nil, nil end)
+LocalPlayer.CharacterRemoving:Connect(function() Character, Humanoid, Root = nil, nil, nil end)
 
--- HELPER FUNCTIONS
+-- HELPER
 local function isTeammate(player)
     if not LocalPlayer.Team or not player.Team then return false end
     return player.Team == LocalPlayer.Team
 end
-
-local TeamColor = Color3.fromRGB(0, 255, 0)
-local EnemyColor = Color3.fromRGB(255, 0, 0)
-
+local TeamColor  = Color3.fromRGB(0,255,0)
+local EnemyColor = Color3.fromRGB(255,0,0)
 local function getPlayerColor(player)
-    if isTeammate(player) then return TeamColor else return EnemyColor end
+    return isTeammate(player) and TeamColor or EnemyColor
 end
-
 local function GetRole()
     if not LocalPlayer.Team then return "Unknown" end
-    local name = LocalPlayer.Team.Name
-    if name == "Killer" then return "Killer" end
-    if name == "Survivors" then return "Survivor" end
+    local n = LocalPlayer.Team.Name
+    if n == "Killer"    then return "Killer"   end
+    if n == "Survivors" then return "Survivor" end
     return "Lobby"
 end
+local function IsKiller(p)   return p and p.Team and p.Team.Name == "Killer" end
+local function IsSurvivor(p) return p and p.Team and p.Team.Name == "Survivors" end
 
-local function IsKiller(player)
-    return player and player.Team and player.Team.Name == "Killer"
-end
-
-local function IsSurvivor(player)
-    return player and player.Team and player.Team.Name == "Survivors"
-end
-
--- ANTI-FAIL HOOK
+-- ANTI-FAIL HOOK (dengan guard hookmetamethod)
 local AntiFailHooked = false
 local oldNamecall
 local function setupAntiFail()
     if AntiFailHooked then return end
+    if typeof(hookmetamethod) ~= "function" then
+        warn("[NEX HUB] Anti-Fail: hookmetamethod tidak tersedia")
+        return
+    end
     task.spawn(function()
-        local success, err = pcall(function()
+        local ok, err = pcall(function()
             local Remotes = ReplicatedStorage:WaitForChild("Remotes", 10)
-            local Events = ReplicatedStorage:WaitForChild("Events", 10)
+            local Events  = ReplicatedStorage:WaitForChild("Events",  10)
             if not Remotes then warn("AntiFail: Remotes not found") return end
-
-            local GenFolder = Remotes:FindFirstChild("Generator")
-            local GenResult = GenFolder and GenFolder:FindFirstChild("SkillCheckResultEvent")
-            local GenFail = GenFolder and GenFolder:FindFirstChild("SkillCheckFailEvent")
+            local GenFolder  = Remotes:FindFirstChild("Generator")
+            local GenResult  = GenFolder and GenFolder:FindFirstChild("SkillCheckResultEvent")
+            local GenFail    = GenFolder and GenFolder:FindFirstChild("SkillCheckFailEvent")
             local HealFolder = Events and Events:FindFirstChild("Healing")
             local HealResult = HealFolder and HealFolder:FindFirstChild("SkillCheckResultEvent")
-            local HealFail = HealFolder and HealFolder:FindFirstChild("SkillCheckFailEvent")
+            local HealFail   = HealFolder and HealFolder:FindFirstChild("SkillCheckFailEvent")
 
             oldNamecall = hookmetamethod(game, "__namecall", function(self, ...)
                 local method = getnamecallmethod()
                 local args = {...}
-
                 if GenResult and VD.GenAntiFail then
                     if GenFail and self == GenFail and method == "FireServer" then return nil end
                     if self == GenResult and method == "FireServer" then
                         if UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) then
                             args[1] = true
-                            return oldNamecall(self, unpack(args))
+                            return oldNamecall(self, _unpack(args))
                         else
                             return nil
                         end
                     end
                 end
-
                 if HealResult and VD.HealAntiFail then
                     if HealFail and self == HealFail and method == "FireServer" then return nil end
                     if self == HealResult and method == "FireServer" then
                         args[1] = true
-                        return oldNamecall(self, unpack(args))
+                        return oldNamecall(self, _unpack(args))
                     end
                 end
-
                 return oldNamecall(self, ...)
             end)
-
             AntiFailHooked = true
             print("[NEX HUB] Anti-Fail: Hooked")
         end)
-        if not success then warn("[NEX HUB] Anti-Fail setup failed:", err) end
+        if not ok then warn("[NEX HUB] Anti-Fail setup failed:", err) end
     end)
 end
 setupAntiFail()
 
 -- SIMPLE ESP (Highlight + Billboard)
 local SimpleESP = {}
-
 local function createSimpleESPForCharacter(player, char)
     if not player or not char then return end
     if SimpleESP[player] and SimpleESP[player].Folder and SimpleESP[player].Folder.Parent then
         pcall(function() SimpleESP[player].Folder:Destroy() end)
     end
-
-    local folder = Instance.new("Folder")
-    folder.Name = "SimpleESP"
-    folder.Parent = char
-
-    local highlight = Instance.new("Highlight")
-    highlight.Parent = folder
-    highlight.Adornee = char
-    highlight.FillTransparency = 0.6
-    highlight.OutlineTransparency = 0
-    highlight.Enabled = VD.ESP
-
+    local folder    = Instance.new("Folder"); folder.Name = "SimpleESP"; folder.Parent = char
+    local highlight = Instance.new("Highlight"); highlight.Parent = folder
+    highlight.Adornee = char; highlight.FillTransparency = 0.6
+    highlight.OutlineTransparency = 0; highlight.Enabled = VD.ESP
     local head = char:FindFirstChild("Head") or char:FindFirstChild("HumanoidRootPart") or char.PrimaryPart
-    local billboard = Instance.new("BillboardGui")
-    billboard.Name = "NameESP"
-    billboard.Size = UDim2.new(0, 160, 0, 30)
-    billboard.Adornee = head
-    billboard.AlwaysOnTop = true
-    billboard.ExtentsOffset = Vector3.new(0, 2.5, 0)
+    local billboard = Instance.new("BillboardGui"); billboard.Name = "NameESP"
+    billboard.Size = UDim2.new(0,160,0,30); billboard.Adornee = head
+    billboard.AlwaysOnTop = true; billboard.ExtentsOffset = Vector3.new(0,2.5,0)
     billboard.Parent = folder
-
-    local label = Instance.new("TextLabel")
-    label.Size = UDim2.new(1, 0, 1, 0)
-    label.BackgroundTransparency = 1
-    label.TextColor3 = getPlayerColor(player)
-    label.Font = Enum.Font.SourceSansBold
-    label.TextSize = 14
-    label.Text = player.Name
+    local label = Instance.new("TextLabel"); label.Size = UDim2.new(1,0,1,0)
+    label.BackgroundTransparency = 1; label.TextColor3 = getPlayerColor(player)
+    label.Font = Enum.Font.SourceSansBold; label.TextSize = 14; label.Text = player.Name
     label.Parent = billboard
-
-    SimpleESP[player] = {
-        Folder = folder,
-        Highlight = highlight,
-        Billboard = billboard,
-        Label = label
-    }
+    SimpleESP[player] = {Folder=folder,Highlight=highlight,Billboard=billboard,Label=label}
 end
-
 local function createSimpleESP(player)
     if not player or player == LocalPlayer then return end
-    if player.Character then
-        createSimpleESPForCharacter(player, player.Character)
-    end
-    if not SimpleESP[player] or not SimpleESP[player].CharacterListener then
-        player.CharacterAdded:Connect(function(char)
-            task.wait(0.4)
-            if VD.ESP then createSimpleESPForCharacter(player, char) end
-        end)
-    end
+    if player.Character then createSimpleESPForCharacter(player, player.Character) end
+    player.CharacterAdded:Connect(function(char)
+        task.wait(0.4)
+        if VD.ESP then createSimpleESPForCharacter(player, char) end
+    end)
 end
-
 local function removeSimpleESP(player)
     if SimpleESP[player] and SimpleESP[player].Folder and SimpleESP[player].Folder.Parent then
         pcall(function() SimpleESP[player].Folder:Destroy() end)
     end
     SimpleESP[player] = nil
 end
-
 local function updateSimpleESP()
     Camera = Workspace.CurrentCamera or Camera
     for player, data in pairs(SimpleESP) do
         if not player or not player.Parent or not player.Character then
-            removeSimpleESP(player)
-            continue
+            removeSimpleESP(player); continue
         end
-        local char = player.Character
-        local hrp = char:FindFirstChild("HumanoidRootPart")
-        local head = char:FindFirstChild("Head")
+        local char  = player.Character
+        local hrp   = char:FindFirstChild("HumanoidRootPart")
+        local head  = char:FindFirstChild("Head")
         local posRef = head or hrp or char.PrimaryPart
         if not posRef then
             if data.Highlight then pcall(function() data.Highlight.Enabled = false end) end
-            if data.Label then pcall(function() data.Label.Visible = false end) end
+            if data.Label     then pcall(function() data.Label.Visible = false end) end
             continue
         end
-
         local distance = (posRef.Position - (Camera and Camera.CFrame.Position or posRef.Position)).Magnitude
         if distance > VD.MaxDistance then
             if data.Highlight then pcall(function() data.Highlight.Enabled = false end) end
-            if data.Label then pcall(function() data.Label.Visible = false end) end
+            if data.Label     then pcall(function() data.Label.Visible = false end) end
             continue
         end
-
         local _, onScreen = Camera:WorldToViewportPoint(posRef.Position)
         if data.Label then data.Label.Visible = onScreen end
-
         local color = getPlayerColor(player)
         if data.Highlight then
-            data.Highlight.FillColor = color
-            data.Highlight.OutlineColor = color
+            data.Highlight.FillColor = color; data.Highlight.OutlineColor = color
             data.Highlight.Enabled = VD.ESP
         end
         if data.Label then
             data.Label.TextColor3 = color
-            if VD.ShowDistance then
-                data.Label.Text = string.format("%s [%.0fm]", player.Name, distance)
-            else
-                data.Label.Text = player.Name
-            end
+            data.Label.Text = VD.ShowDistance
+                and string.format("%s [%.0fm]", player.Name, distance)
+                or  player.Name
             if data.Billboard and (not data.Billboard.Adornee or data.Billboard.Adornee.Parent ~= char) then
-                local newHead = char:FindFirstChild("Head") or char:FindFirstChild("HumanoidRootPart") or char.PrimaryPart
-                data.Billboard.Adornee = newHead
+                data.Billboard.Adornee = char:FindFirstChild("Head") or char:FindFirstChild("HumanoidRootPart") or char.PrimaryPart
             end
         end
     end
 end
-
-for _, p in pairs(Players:GetPlayers()) do
-    if p ~= LocalPlayer then createSimpleESP(p) end
-end
+for _, p in pairs(Players:GetPlayers()) do if p ~= LocalPlayer then createSimpleESP(p) end end
 Players.PlayerAdded:Connect(function(p) if p ~= LocalPlayer then createSimpleESP(p) end end)
 Players.PlayerRemoving:Connect(removeSimpleESP)
 
@@ -407,19 +282,25 @@ Players.PlayerRemoving:Connect(removeSimpleESP)
 local GeneratorESP = {}
 local function createGeneratorESP(gen)
     if not gen or not gen:IsA("Model") or gen:FindFirstChild("GenESP") then return end
-    local folder = Instance.new("Folder", gen); folder.Name = "GenESP"
-    local highlight = Instance.new("Highlight", folder); highlight.Adornee = gen; highlight.FillColor = Color3.fromRGB(0,255,255); highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-    local billboard = Instance.new("BillboardGui", folder); billboard.Size = UDim2.new(0,80,0,40); billboard.AlwaysOnTop = true
-    billboard.Adornee = gen:FindFirstChild("HitBox") or gen.PrimaryPart; billboard.ExtentsOffset = Vector3.new(0,3,0)
-    local textLabel = Instance.new("TextLabel", billboard); textLabel.Size = UDim2.new(1,0,1,0); textLabel.BackgroundTransparency = 1; textLabel.TextColor3 = Color3.new(1,1,1); textLabel.Font = Enum.Font.SourceSansBold; textLabel.TextSize = 14
+    local folder    = Instance.new("Folder", gen); folder.Name = "GenESP"
+    local highlight = Instance.new("Highlight", folder)
+    highlight.Adornee = gen; highlight.FillColor = Color3.fromRGB(0,255,255)
+    highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+    local billboard = Instance.new("BillboardGui", folder)
+    billboard.Size = UDim2.new(0,80,0,40); billboard.AlwaysOnTop = true
+    billboard.Adornee = gen:FindFirstChild("HitBox") or gen.PrimaryPart
+    billboard.ExtentsOffset = Vector3.new(0,3,0)
+    local textLabel = Instance.new("TextLabel", billboard)
+    textLabel.Size = UDim2.new(1,0,1,0); textLabel.BackgroundTransparency = 1
+    textLabel.TextColor3 = Color3.new(1,1,1); textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.TextSize = 14
     GeneratorESP[gen] = folder
     task.spawn(function()
         while gen.Parent and folder.Parent and not VD.Destroyed do
             local progress = gen:GetAttribute("RepairProgress") or 0
             textLabel.Text = math.floor(progress) .. "%"
-            highlight.Enabled = VD.GeneratorESP
-            textLabel.Visible = VD.GeneratorESP
-            if progress >= 100 then highlight.FillColor = Color3.new(0,1,0) else highlight.FillColor = Color3.new(0,1,1) end
+            highlight.Enabled = VD.GeneratorESP; textLabel.Visible = VD.GeneratorESP
+            highlight.FillColor = progress >= 100 and Color3.new(0,1,0) or Color3.new(0,1,1)
             task.wait(1)
         end
     end)
@@ -428,7 +309,9 @@ task.spawn(function()
     while not VD.Destroyed do
         if VD.GeneratorESP then
             for _, obj in pairs(Workspace:GetDescendants()) do
-                if obj.Name == "Generator" and obj:IsA("Model") and not obj:FindFirstChild("GenESP") then createGeneratorESP(obj) end
+                if obj.Name == "Generator" and obj:IsA("Model") and not obj:FindFirstChild("GenESP") then
+                    createGeneratorESP(obj)
+                end
             end
         end
         task.wait(3)
@@ -439,31 +322,32 @@ end)
 task.spawn(function()
     while not VD.Destroyed do
         if VD.Fullbright then
-            Lighting.Brightness = 2; Lighting.ClockTime = 14; Lighting.GlobalShadows = false; Lighting.OutdoorAmbient = Color3.fromRGB(128,128,128)
+            Lighting.Brightness = 2; Lighting.ClockTime = 14
+            Lighting.GlobalShadows = false; Lighting.OutdoorAmbient = Color3.fromRGB(128,128,128)
             Lighting.FogStart = 0; Lighting.FogEnd = 100000
             for _, v in pairs(Lighting:GetChildren()) do
-                if v:IsA("Atmosphere") then v.Density = 0; v.Offset = 0; v.Glare = 0; v.Haze = 0 end
+                if v:IsA("Atmosphere") then v.Density=0;v.Offset=0;v.Glare=0;v.Haze=0 end
                 if v:IsA("BlurEffect") then v.Size = 0 end
                 if v:IsA("ColorCorrectionEffect") then v.Enabled = false end
                 if v:IsA("SunRaysEffect") then v.Enabled = false end
             end
         else
-            Lighting.Brightness = originalLighting.Brightness
-            Lighting.ClockTime = originalLighting.ClockTime
-            Lighting.FogEnd = originalLighting.FogEnd
-            Lighting.FogStart = originalLighting.FogStart or 0
+            Lighting.Brightness    = originalLighting.Brightness
+            Lighting.ClockTime     = originalLighting.ClockTime
+            Lighting.FogEnd        = originalLighting.FogEnd
+            Lighting.FogStart      = originalLighting.FogStart or 0
             Lighting.GlobalShadows = originalLighting.GlobalShadows
             Lighting.OutdoorAmbient = originalLighting.OutdoorAmbient
             for _, v in pairs(Lighting:GetChildren()) do
                 if v:IsA("Atmosphere") and originalLighting.Atmosphere then
                     v.Density = originalLighting.Atmosphere.Density or 0.3
-                    v.Offset = originalLighting.Atmosphere.Offset or 0.25
-                    v.Glare = originalLighting.Atmosphere.Glare or 0
-                    v.Haze = originalLighting.Atmosphere.Haze or 0
+                    v.Offset  = originalLighting.Atmosphere.Offset  or 0.25
+                    v.Glare   = originalLighting.Atmosphere.Glare   or 0
+                    v.Haze    = originalLighting.Atmosphere.Haze    or 0
                 end
-                if v:IsA("BlurEffect") and originalLighting.Blur then v.Size = originalLighting.Blur.Size or 0 end
+                if v:IsA("BlurEffect")           and originalLighting.Blur            then v.Size    = originalLighting.Blur.Size            or 0     end
                 if v:IsA("ColorCorrectionEffect") and originalLighting.ColorCorrection then v.Enabled = originalLighting.ColorCorrection.Enabled or false end
-                if v:IsA("SunRaysEffect") and originalLighting.SunRays then v.Enabled = originalLighting.SunRays.Enabled or false end
+                if v:IsA("SunRaysEffect")         and originalLighting.SunRays         then v.Enabled = originalLighting.SunRays.Enabled         or false end
             end
         end
         task.wait(0.5)
@@ -473,8 +357,7 @@ end)
 -- NOCLIP
 local originalCanCollide = {}
 local function enableNoclipOnce()
-    local char = LocalPlayer.Character
-    if not char then return end
+    local char = LocalPlayer.Character; if not char then return end
     for _, part in pairs(char:GetDescendants()) do
         if part:IsA("BasePart") then
             if originalCanCollide[part] == nil then originalCanCollide[part] = part.CanCollide end
@@ -484,7 +367,9 @@ local function enableNoclipOnce()
 end
 local function disableNoclipRestore()
     for part, val in pairs(originalCanCollide) do
-        if part and part:IsA("BasePart") then pcall(function() part.CanCollide = val end) end
+        if part and part.Parent and part:IsA("BasePart") then
+            pcall(function() part.CanCollide = val end)
+        end
     end
     originalCanCollide = {}
 end
@@ -493,9 +378,8 @@ RunService.Heartbeat:Connect(function()
     updateChar()
     if Humanoid then
         if VD.Speed then Humanoid.WalkSpeed = VD.SpeedValue end
-        if VD.Jump then Humanoid.JumpPower = VD.JumpValue end
+        if VD.Jump  then Humanoid.JumpPower = VD.JumpValue  end
     end
-
     if VD.ESP then
         for _, p in pairs(Players:GetPlayers()) do
             if p ~= LocalPlayer and not SimpleESP[p] and p.Character then
@@ -504,7 +388,6 @@ RunService.Heartbeat:Connect(function()
         end
     end
     updateSimpleESP()
-
     if VD.Noclip and LocalPlayer.Character then
         enableNoclipOnce()
     elseif not VD.Noclip and next(originalCanCollide) then
@@ -521,89 +404,56 @@ end)
 -- HIDE SKILL CHECK UI
 local cachedPlayerGui = LocalPlayer:WaitForChild("PlayerGui")
 RunService.RenderStepped:Connect(function()
-    if VD.HideSkillUI then
-        if not cachedPlayerGui then cachedPlayerGui = LocalPlayer:FindFirstChild("PlayerGui") end
-        local a = cachedPlayerGui and cachedPlayerGui:FindFirstChild("SkillCheckPromptGui")
-        local b = cachedPlayerGui and cachedPlayerGui:FindFirstChild("SkillCheckPromptGui-con")
-        if a and a.Enabled then a.Enabled = false end
-        if b and b.Enabled then b.Enabled = false end
-    end
+    if not VD.HideSkillUI then return end
+    if not cachedPlayerGui then cachedPlayerGui = LocalPlayer:FindFirstChild("PlayerGui") end
+    local a = cachedPlayerGui and cachedPlayerGui:FindFirstChild("SkillCheckPromptGui")
+    local b = cachedPlayerGui and cachedPlayerGui:FindFirstChild("SkillCheckPromptGui-con")
+    if a and a.Enabled then a.Enabled = false end
+    if b and b.Enabled then b.Enabled = false end
 end)
 
 -- MAP CACHE
-local NEX_Cache = {
-    Generators = {},
-    Gates = {},
-    Hooks = {},
-    Pallets = {},
-    Windows = {},
-    ClosestHook = nil
-}
-
+local NEX_Cache = {Generators={},Gates={},Hooks={},Pallets={},Windows={},ClosestHook=nil}
 local function NEX_ScanMap()
     local map = Workspace:FindFirstChild("Map")
     if not map then
-        NEX_Cache.Generators = {}
-        NEX_Cache.Gates = {}
-        NEX_Cache.Hooks = {}
-        NEX_Cache.Pallets = {}
-        NEX_Cache.Windows = {}
+        NEX_Cache.Generators={}; NEX_Cache.Gates={}; NEX_Cache.Hooks={}
+        NEX_Cache.Pallets={}; NEX_Cache.Windows={}
         return
     end
-
-    local newGenerators = {}
-    local newGates = {}
-    local newHooks = {}
-    local newPallets = {}
-    local newWindows = {}
-
+    local newG,newGt,newH,newP,newW = {},{},{},{},{}
     for _, obj in ipairs(map:GetDescendants()) do
         if obj:IsA("Model") then
             local part = obj:FindFirstChildWhichIsA("BasePart")
             if part then
-                if obj.Name == "Generator" then
-                    table.insert(newGenerators, {model = obj, part = part})
-                elseif obj.Name == "Gate" then
-                    table.insert(newGates, {model = obj, part = part})
-                elseif obj.Name == "Hook" then
-                    table.insert(newHooks, {model = obj, part = part})
-                elseif obj.Name == "Palletwrong" or obj.Name:lower():find("pallet") then
-                    table.insert(newPallets, {model = obj, part = part})
-                elseif obj.Name == "Window" then
-                    table.insert(newWindows, {model = obj, part = part})
+                local n = obj.Name
+                if     n == "Generator"                         then table.insert(newG,  {model=obj,part=part})
+                elseif n == "Gate"                              then table.insert(newGt, {model=obj,part=part})
+                elseif n == "Hook"                              then table.insert(newH,  {model=obj,part=part})
+                elseif n == "Palletwrong" or n:lower():find("pallet") then table.insert(newP,{model=obj,part=part})
+                elseif n == "Window"                            then table.insert(newW,  {model=obj,part=part})
                 end
             end
         end
     end
-
-    NEX_Cache.Generators = newGenerators
-    NEX_Cache.Gates = newGates
-    NEX_Cache.Hooks = newHooks
-    NEX_Cache.Pallets = newPallets
-    NEX_Cache.Windows = newWindows
-
-    local root = Root
-    if root and #NEX_Cache.Hooks > 0 then
+    NEX_Cache.Generators=newG; NEX_Cache.Gates=newGt; NEX_Cache.Hooks=newH
+    NEX_Cache.Pallets=newP; NEX_Cache.Windows=newW
+    if Root and #NEX_Cache.Hooks > 0 then
         local closest, closestDist = nil, math.huge
         for _, hook in ipairs(NEX_Cache.Hooks) do
             if hook.part then
-                local d = (hook.part.Position - root.Position).Magnitude
-                if d < closestDist then
-                    closestDist = d
-                    closest = hook
-                end
+                local d = (hook.part.Position - Root.Position).Magnitude
+                if d < closestDist then closestDist=d; closest=hook end
             end
         end
         NEX_Cache.ClosestHook = closest
     end
 end
 
--- TELEPORT HELPER (dengan cooldown)
+-- TELEPORT HELPER
 local function NEX_TeleportToPosition(pos)
     if not pos then return false end
-    local root = Root
-    if not root then return false end
-
+    local root = Root; if not root then return false end
     if LocalPlayer.Character then
         for _, part in ipairs(LocalPlayer.Character:GetDescendants()) do
             if part:IsA("BasePart") then
@@ -612,9 +462,7 @@ local function NEX_TeleportToPosition(pos)
             end
         end
     end
-
     root.CFrame = CFrame.new(pos + Vector3.new(0, VD.TP_Offset, 0))
-
     task.delay(0.3, function()
         if LocalPlayer.Character then
             for _, part in ipairs(LocalPlayer.Character:GetDescendants()) do
@@ -625,7 +473,6 @@ local function NEX_TeleportToPosition(pos)
         end
         originalCanCollide = {}
     end)
-
     VD._LastTeleportTime = tick()
     return true
 end
@@ -633,31 +480,23 @@ end
 local function NEX_TeleportToGenerator(index)
     NEX_ScanMap()
     if #NEX_Cache.Generators == 0 then print("[NEX HUB] Generator tidak ditemukan") return false end
-
     local sorted = {}
     for _, gen in ipairs(NEX_Cache.Generators) do
-        table.insert(sorted, {gen = gen, dist = (Root and (gen.part.Position - Root.Position).Magnitude) or math.huge})
+        table.insert(sorted, {gen=gen, dist=Root and (gen.part.Position-Root.Position).Magnitude or math.huge})
     end
-    table.sort(sorted, function(a, b) return a.dist < b.dist end)
-
-    local target = sorted[index or 1]
-    if not target then return false end
+    table.sort(sorted, function(a,b) return a.dist < b.dist end)
+    local target = sorted[index or 1]; if not target then return false end
     return NEX_TeleportToPosition(target.gen.part.Position)
 end
 
 local function NEX_TeleportToGate()
     NEX_ScanMap()
     if #NEX_Cache.Gates == 0 then print("[NEX HUB] Gate tidak ditemukan") return false end
-
     local closest, closestDist = nil, math.huge
     for _, gate in ipairs(NEX_Cache.Gates) do
-        local dist = (Root and (gate.part.Position - Root.Position).Magnitude) or math.huge
-        if dist < closestDist then
-            closestDist = dist
-            closest = gate
-        end
+        local dist = Root and (gate.part.Position-Root.Position).Magnitude or math.huge
+        if dist < closestDist then closestDist=dist; closest=gate end
     end
-
     if not closest then return false end
     return NEX_TeleportToPosition(closest.part.Position)
 end
@@ -668,43 +507,30 @@ local function NEX_TeleportToHook()
     return NEX_TeleportToPosition(NEX_Cache.ClosestHook.part.Position)
 end
 
--- AUTO LEAVE GENERATOR (dengan cooldown)
+-- AUTO LEAVE GENERATOR
 local function NEX_LeaveGenerator()
     if not VD.AUTO_LeaveGen then return end
     if GetRole() == "Killer" then return end
-    if tick() - VD._LastTeleportTime < VD._TeleportCooldown then
-        return
-    end
-    local root = Root
-    if not root then return end
-
-    local nearestGen = nil
-    local nearestDist = math.huge
+    if tick() - VD._LastTeleportTime < VD._TeleportCooldown then return end
+    local root = Root; if not root then return end
+    local nearestGen, nearestDist = nil, math.huge
     for _, gen in ipairs(NEX_Cache.Generators) do
         if gen.part then
             local dist = (gen.part.Position - root.Position).Magnitude
-            if dist < nearestDist then
-                nearestDist = dist
-                nearestGen = gen
-            end
+            if dist < nearestDist then nearestDist=dist; nearestGen=gen end
         end
     end
-
     if nearestGen and nearestDist <= VD.AUTO_LeaveDist then
         local dir = (root.Position - nearestGen.part.Position).Unit
-        if dir.Magnitude ~= dir.Magnitude then dir = Vector3.new(1,0,0) end
-        local escapePos = root.Position + dir * (VD.AUTO_LeaveDist + 5)
-        NEX_TeleportToPosition(escapePos)
-        print("[NEX HUB] Auto Leave Gen: teleport away from generator")
+        if dir ~= dir then dir = Vector3.new(1,0,0) end -- NaN guard
+        NEX_TeleportToPosition(root.Position + dir * (VD.AUTO_LeaveDist + 5))
+        print("[NEX HUB] Auto Leave Gen")
     end
 end
 
 -- AUTO GENERATOR
 task.spawn(function()
-    local repairRemote, skillRemote
-    local lastScan = 0
-    local genPoints = {}
-
+    local repairRemote, skillRemote, lastScan, genPoints = nil, nil, 0, {}
     while not VD.Destroyed do
         if VD.AUTO_Generator then
             if not repairRemote or not skillRemote then
@@ -712,10 +538,9 @@ task.spawn(function()
                     local r = ReplicatedStorage:FindFirstChild("Remotes")
                     local g = r and r:FindFirstChild("Generator")
                     repairRemote = g and g:FindFirstChild("RepairEvent")
-                    skillRemote = g and g:FindFirstChild("SkillCheckResultEvent")
+                    skillRemote  = g and g:FindFirstChild("SkillCheckResultEvent")
                 end)
             end
-
             if tick() - lastScan > 2 then
                 genPoints = {}
                 local m = Workspace:FindFirstChild("Map")
@@ -723,25 +548,18 @@ task.spawn(function()
                     for _, v in ipairs(m:GetDescendants()) do
                         if v:IsA("Model") and v.Name == "Generator" then
                             for _, c in ipairs(v:GetChildren()) do
-                                if c.Name:match("GeneratorPoint") then
-                                    table.insert(genPoints, {gen = v, pt = c})
-                                end
+                                if c.Name:match("GeneratorPoint") then table.insert(genPoints,{gen=v,pt=c}) end
                             end
                         end
                     end
                 end
                 lastScan = tick()
             end
-
             if repairRemote and skillRemote then
-                local mode = VD.AUTO_GenMode == "Fast"
+                local fast = VD.AUTO_GenMode == "Fast"
                 for _, data in ipairs(genPoints) do
-                    pcall(function()
-                        repairRemote:FireServer(data.pt, true)
-                    end)
-                    pcall(function()
-                        skillRemote:FireServer(mode and "success" or "neutral", mode and 1 or 0, data.gen, data.pt)
-                    end)
+                    pcall(function() repairRemote:FireServer(data.pt, true) end)
+                    pcall(function() skillRemote:FireServer(fast and "success" or "neutral", fast and 1 or 0, data.gen, data.pt) end)
                 end
             end
         end
@@ -749,335 +567,176 @@ task.spawn(function()
     end
 end)
 
--- AUTO ATTACK (KILLER)
+-- AUTO ATTACK
 local LastAutoAttackTime = 0
 local function NEX_AutoAttack()
-    if not VD.AUTO_Attack then return end
-    if GetRole() ~= "Killer" then return end
+    if not VD.AUTO_Attack or GetRole() ~= "Killer" then return end
     if tick() - LastAutoAttackTime < 0.5 then return end
-
-    local root = Root
-    if not root then return end
-
+    local root = Root; if not root then return end
     for _, player in ipairs(Players:GetPlayers()) do
         if player == LocalPlayer or not player.Character then continue end
-
-        local targetRoot = player.Character:FindFirstChild("HumanoidRootPart")
-        local targetHum = player.Character:FindFirstChildOfClass("Humanoid")
-
-        if not targetRoot or not targetHum or targetHum.Health <= 0 then continue end
-
-        local dist = (targetRoot.Position - root.Position).Magnitude
-        if dist > VD.AUTO_AttackRange then continue end
-
+        local tRoot = player.Character:FindFirstChild("HumanoidRootPart")
+        local tHum  = player.Character:FindFirstChildOfClass("Humanoid")
+        if not tRoot or not tHum or tHum.Health <= 0 then continue end
+        if (tRoot.Position - root.Position).Magnitude > VD.AUTO_AttackRange then continue end
         pcall(function()
-            local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-            if not remotes then return end
-
+            local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
             local attacks = remotes:FindFirstChild("Attacks")
-            if attacks then
-                local basicAttack = attacks:FindFirstChild("BasicAttack")
-                if basicAttack then
-                    basicAttack:FireServer(false)
-                    LastAutoAttackTime = tick()
-                    return
-                end
-            end
-
-            local basicAttack = remotes:FindFirstChild("BasicAttack")
-            if basicAttack then
-                basicAttack:FireServer(false)
-                LastAutoAttackTime = tick()
-                return
-            end
-
-            local killer = remotes:FindFirstChild("Killer")
-            if killer then
-                local attack = killer:FindFirstChild("Attack")
-                if attack then
-                    attack:FireServer()
-                    LastAutoAttackTime = tick()
-                end
-            end
+            local basicAttack = (attacks and attacks:FindFirstChild("BasicAttack"))
+                             or remotes:FindFirstChild("BasicAttack")
+                             or (remotes:FindFirstChild("Killer") and remotes:FindFirstChild("Killer"):FindFirstChild("Attack"))
+            if basicAttack then basicAttack:FireServer(false); LastAutoAttackTime = tick() end
         end)
-
         break
     end
 end
 
--- AUTO PARRY + AUTO STOP EMOTE (digabung)
+-- AUTO PARRY + AUTO STOP EMOTE
 local LastParryTime = 0
 local function NEX_AutoParry()
-    if not VD.AUTO_Parry then return end
-    if GetRole() ~= "Survivor" then return end
+    if not VD.AUTO_Parry or GetRole() ~= "Survivor" then return end
     if tick() - LastParryTime < 0.7 then return end
-
-    local root = Root
-    if not root then return end
-
+    local root = Root; if not root then return end
     for _, player in ipairs(Players:GetPlayers()) do
-        if not player.Parent or not player.Character then continue end
-        if not IsKiller(player) then continue end
-
-        local killerRoot = player.Character:FindFirstChild("HumanoidRootPart")
-        if not killerRoot then continue end
-
-        local dist = (killerRoot.Position - root.Position).Magnitude
-        if dist > 20 then continue end
-
+        if not player.Parent or not player.Character or not IsKiller(player) then continue end
+        local kRoot = player.Character:FindFirstChild("HumanoidRootPart"); if not kRoot then continue end
+        if (kRoot.Position - root.Position).Magnitude > 20 then continue end
         pcall(function()
-            local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-            if not remotes then return end
-
-            -- Parry menggunakan Parrying Dagger
+            local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
+            local function doStopEmote()
+                if VD.AUTO_StopEmote then
+                    local eh = remotes:FindFirstChild("EmoteHandler")
+                    if eh then eh:FireServer("StopEmote") end
+                end
+            end
+            -- Try Parrying Dagger first
             local items = remotes:FindFirstChild("Items")
             if items then
                 local dagger = items:FindFirstChild("Parrying Dagger")
                 if dagger then
                     local parry = dagger:FindFirstChild("parry")
-                    if parry then
-                        parry:FireServer()
-                        LastParryTime = tick()
-
-                        -- Jika Auto Stop Emote aktif, hentikan emote setelah parry
-                        if VD.AUTO_StopEmote then
-                            local emoteHandler = remotes:FindFirstChild("EmoteHandler")
-                            if emoteHandler then
-                                emoteHandler:FireServer("StopEmote")
-                            end
-                        end
-                        return
-                    end
+                    if parry then parry:FireServer(); LastParryTime=tick(); doStopEmote(); return end
                 end
             end
-
-            -- Fallback: cari remote parry alternatif
+            -- Fallback remotes
             local parryEvent = remotes:FindFirstChild("Parry")
-            if parryEvent then
-                parryEvent:FireServer()
-                LastParryTime = tick()
-                if VD.AUTO_StopEmote then
-                    local emoteHandler = remotes:FindFirstChild("EmoteHandler")
-                    if emoteHandler then emoteHandler:FireServer("StopEmote") end
-                end
-                return
-            end
-
+            if parryEvent then parryEvent:FireServer(); LastParryTime=tick(); doStopEmote(); return end
             local survivor = remotes:FindFirstChild("Survivor")
             if survivor then
-                local parry2 = survivor:FindFirstChild("Parry")
-                if parry2 then
-                    parry2:FireServer()
-                    LastParryTime = tick()
-                    if VD.AUTO_StopEmote then
-                        local emoteHandler = remotes:FindFirstChild("EmoteHandler")
-                        if emoteHandler then emoteHandler:FireServer("StopEmote") end
-                    end
-                end
+                local p2 = survivor:FindFirstChild("Parry")
+                if p2 then p2:FireServer(); LastParryTime=tick(); doStopEmote() end
             end
         end)
-
         break
     end
 end
 
--- AUTO WIGGLE (SURVIVOR)
+-- AUTO WIGGLE
 local LastWiggleTime = 0
 local function NEX_AutoWiggle()
-    if not VD.SURV_AutoWiggle then return end
-    if GetRole() ~= "Survivor" then return end
+    if not VD.SURV_AutoWiggle or GetRole() ~= "Survivor" then return end
     if tick() - LastWiggleTime < 0.3 then return end
     pcall(function()
-        local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-        if remotes then
-            local carry = remotes:FindFirstChild("Carry")
-            if carry then
-                local selfUnhook = carry:FindFirstChild("SelfUnHookEvent")
-                if selfUnhook then
-                    selfUnhook:FireServer()
-                    LastWiggleTime = tick()
-                end
-            end
-        end
+        local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
+        local carry   = remotes:FindFirstChild("Carry"); if not carry then return end
+        local selfUnhook = carry:FindFirstChild("SelfUnHookEvent")
+        if selfUnhook then selfUnhook:FireServer(); LastWiggleTime=tick() end
     end)
 end
 
--- HITBOX EXPAND (KILLER)
+-- HITBOX EXPAND
 local OriginalHitboxSizes = {}
 local function NEX_UpdateHitboxes()
-    if GetRole() ~= "Killer" then
+    if GetRole() ~= "Killer" or not VD.HITBOX_Enabled then
         for player, originalSize in pairs(OriginalHitboxSizes) do
             if player and player.Character then
-                local root = player.Character:FindFirstChild("HumanoidRootPart")
-                if root then
-                    root.Size = originalSize
-                    root.Transparency = 1
-                    root.CanCollide = true
-                end
+                local r = player.Character:FindFirstChild("HumanoidRootPart")
+                if r then r.Size=originalSize; r.Transparency=1; r.CanCollide=true end
             end
         end
-        OriginalHitboxSizes = {}
-        return
+        OriginalHitboxSizes = {}; return
     end
-
-    if not VD.HITBOX_Enabled then
-        for player, originalSize in pairs(OriginalHitboxSizes) do
-            if player and player.Character then
-                local root = player.Character:FindFirstChild("HumanoidRootPart")
-                if root then
-                    root.Size = originalSize
-                    root.Transparency = 1
-                    root.CanCollide = true
-                end
-            end
-        end
-        OriginalHitboxSizes = {}
-        return
-    end
-
     for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= LocalPlayer and IsSurvivor(player) then
-            local char = player.Character
-            if char then
-                local root = char:FindFirstChild("HumanoidRootPart")
-                local hum = char:FindFirstChildOfClass("Humanoid")
-                if root and hum and hum.Health > 0 then
-                    if not OriginalHitboxSizes[player] then
-                        OriginalHitboxSizes[player] = root.Size
-                    end
-                    local size = VD.HITBOX_Size
-                    root.Size = Vector3.new(size, size, size)
-                    root.CanCollide = false
-                    root.Transparency = 0.7
-                elseif root then
-                    if OriginalHitboxSizes[player] then
-                        root.Size = OriginalHitboxSizes[player]
-                        root.Transparency = 1
-                        root.CanCollide = true
-                        OriginalHitboxSizes[player] = nil
-                    end
-                end
+        if player ~= LocalPlayer and IsSurvivor(player) and player.Character then
+            local root = player.Character:FindFirstChild("HumanoidRootPart")
+            local hum  = player.Character:FindFirstChildOfClass("Humanoid")
+            if root and hum and hum.Health > 0 then
+                if not OriginalHitboxSizes[player] then OriginalHitboxSizes[player] = root.Size end
+                local s = VD.HITBOX_Size
+                root.Size=Vector3.new(s,s,s); root.CanCollide=false; root.Transparency=0.7
             end
         end
     end
 end
 
--- DESTROY PALLETS (KILLER)
+-- DESTROY PALLETS
 local LastDestroyTime = 0
 local function NEX_DestroyAllPallets()
-    if not VD.KILLER_DestroyPallets then return end
-    if GetRole() ~= "Killer" then return end
+    if not VD.KILLER_DestroyPallets or GetRole() ~= "Killer" then return end
     if tick() - LastDestroyTime < 0.3 then return end
-
     pcall(function()
-        local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-        if not remotes then return end
-
-        local pallet = remotes:FindFirstChild("Pallet")
-        if pallet then
-            local jason = pallet:FindFirstChild("Jason")
-            if jason then
-                local destroy = jason:FindFirstChild("Destroy")
-                if destroy then
-                    for _, obj in ipairs(workspace:GetDescendants()) do
-                        if (obj.Name == "Palletwrong" or obj.Name:lower():find("pallet")) 
-                           and obj:IsA("Model") then
-                            pcall(function() destroy:FireServer(obj) end)
-                            LastDestroyTime = tick()
-                        end
-                    end
-                    return
-                end
-            end
-        end
-
-        local palletDestroy = remotes:FindFirstChild("DestroyPallet")
-        if palletDestroy then
-            for _, obj in ipairs(workspace:GetDescendants()) do
-                if (obj.Name == "Palletwrong" or obj.Name:lower():find("pallet")) 
-                   and obj:IsA("Model") then
-                    pcall(function() palletDestroy:FireServer(obj) end)
-                    LastDestroyTime = tick()
-                end
+        local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
+        local pallet  = remotes:FindFirstChild("Pallet")
+        local destroy = pallet and pallet:FindFirstChild("Jason") and pallet:FindFirstChild("Jason"):FindFirstChild("Destroy")
+                     or remotes:FindFirstChild("DestroyPallet")
+        if not destroy then return end
+        for _, obj in ipairs(workspace:GetDescendants()) do
+            if (obj.Name == "Palletwrong" or obj.Name:lower():find("pallet")) and obj:IsA("Model") then
+                pcall(function() destroy:FireServer(obj) end)
+                LastDestroyTime = tick()
             end
         end
     end)
 end
 
--- FULL GEN BREAK (KILLER)
+-- FULL GEN BREAK
 local LastGenBreakTime = 0
 local function NEX_FullGenBreak()
-    if not VD.KILLER_FullGenBreak then return end
-    if GetRole() ~= "Killer" then return end
+    if not VD.KILLER_FullGenBreak or GetRole() ~= "Killer" then return end
     if tick() - LastGenBreakTime < 0.3 then return end
-    local root = Root
-    if not root then return end
+    local root = Root; if not root then return end
     pcall(function()
-        local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-        if remotes then
-            local generator = remotes:FindFirstChild("Generator")
-            if generator then
-                local breakEvent = generator:FindFirstChild("BreakGenEvent")
-                if breakEvent then
-                    for _, obj in ipairs(workspace:GetDescendants()) do
-                        if obj.Name:lower():find("generator") or obj.Name:lower():find("gen") then
-                            local genPart = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
-                            if genPart then
-                                local dist = (genPart.Position - root.Position).Magnitude
-                                if dist <= 15 then
-                                    breakEvent:FireServer(obj)
-                                    LastGenBreakTime = tick()
-                                end
-                            end
-                        end
-                    end
+        local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
+        local g = remotes:FindFirstChild("Generator"); if not g then return end
+        local breakEvent = g:FindFirstChild("BreakGenEvent"); if not breakEvent then return end
+        for _, obj in ipairs(workspace:GetDescendants()) do
+            if obj.Name:lower():find("generator") or obj.Name:lower():find("gen") then
+                local genPart = obj:IsA("BasePart") and obj or obj:FindFirstChildWhichIsA("BasePart")
+                if genPart and (genPart.Position - root.Position).Magnitude <= 15 then
+                    breakEvent:FireServer(obj); LastGenBreakTime=tick()
                 end
             end
         end
     end)
 end
 
--- DOUBLE TAP (KILLER)
+-- DOUBLE TAP
 local LastDoubleTapTime = 0
 local function NEX_DoubleTap()
-    if not VD.KILLER_DoubleTap then return end
-    if GetRole() ~= "Killer" then return end
+    if not VD.KILLER_DoubleTap or GetRole() ~= "Killer" then return end
     if tick() - LastDoubleTapTime < 0.5 then return end
     pcall(function()
-        local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-        if not remotes then return end
-        local attacks = remotes:FindFirstChild("Attacks")
-        if not attacks then return end
-        local basicAttack = attacks:FindFirstChild("BasicAttack")
-        if basicAttack then
-            basicAttack:FireServer(false)
-            task.wait(0.05)
-            basicAttack:FireServer(false)
-            LastDoubleTapTime = tick()
-        end
+        local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
+        local attacks = remotes:FindFirstChild("Attacks"); if not attacks then return end
+        local basic   = attacks:FindFirstChild("BasicAttack"); if not basic then return end
+        basic:FireServer(false); task.wait(0.05); basic:FireServer(false)
+        LastDoubleTapTime = tick()
     end)
 end
 
--- INFINITE LUNGE (KILLER)
+-- INFINITE LUNGE
 local function NEX_InfiniteLunge()
-    if not VD.KILLER_InfiniteLunge then return end
-    if GetRole() ~= "Killer" then return end
-    local char = LocalPlayer.Character
-    if not char then return end
-    local root = char:FindFirstChild("HumanoidRootPart")
-    if root then
-        local lookVector = root.CFrame.LookVector
-        root.Velocity = lookVector * 100 + Vector3.new(0, 10, 0)
-    end
+    if not VD.KILLER_InfiniteLunge or GetRole() ~= "Killer" then return end
+    local char = LocalPlayer.Character; if not char then return end
+    local root = char:FindFirstChild("HumanoidRootPart"); if not root then return end
+    root.Velocity = root.CFrame.LookVector * 100 + Vector3.new(0,10,0)
 end
 
--- NO FALL DAMAGE (SURVIVOR)
+-- NO FALL DAMAGE
 local function UpdateNoFall()
     if not VD.SURV_NoFall then return end
-    local char = LocalPlayer.Character
-    if not char then return end
-    local hum = char:FindFirstChildOfClass("Humanoid")
-    if not hum then return end
+    local char = LocalPlayer.Character; if not char then return end
+    local hum  = char:FindFirstChildOfClass("Humanoid"); if not hum then return end
     pcall(function()
         hum:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
         hum:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
@@ -1085,256 +744,165 @@ local function UpdateNoFall()
     end)
 end
 
--- NO SLOWDOWN (KILLER)
+-- NO SLOWDOWN
 local function UpdateNoSlowdown()
-    if not VD.KILLER_NoSlowdown then return end
-    if GetRole() ~= "Killer" then return end
-    local char = LocalPlayer.Character
-    if not char then return end
-    local hum = char:FindFirstChildOfClass("Humanoid")
-    if not hum then return end
+    if not VD.KILLER_NoSlowdown or GetRole() ~= "Killer" then return end
+    local char = LocalPlayer.Character; if not char then return end
+    local hum  = char:FindFirstChildOfClass("Humanoid"); if not hum then return end
     if hum.WalkSpeed < 16 then hum.WalkSpeed = 16 end
 end
 
--- TELEPORT AWAY (SURVIVOR)
+-- TELEPORT AWAY
 local function NEX_GetKillerDistance()
-    local root = Root
-    if not root then return math.huge, nil end
+    local root = Root; if not root then return math.huge, nil end
     for _, player in ipairs(Players:GetPlayers()) do
         if player ~= LocalPlayer and IsKiller(player) then
-            local killerRoot = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-            if killerRoot then
-                return (killerRoot.Position - root.Position).Magnitude, killerRoot.Position
-            end
+            local kRoot = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+            if kRoot then return (kRoot.Position-root.Position).Magnitude, kRoot.Position end
         end
     end
     return math.huge, nil
 end
-
 local function NEX_TeleportAway()
-    if not VD.AUTO_TeleAway then return end
-    if GetRole() == "Killer" then return end
-    local now = tick()
+    if not VD.AUTO_TeleAway or GetRole() == "Killer" then return end
     if not VD._LastTeleAway then VD._LastTeleAway = 0 end
-    if now - VD._LastTeleAway < 3 then return end
-    local root = Root
-    if not root then return end
+    if tick() - VD._LastTeleAway < 3 then return end
+    local root = Root; if not root then return end
     local killerDist, killerPos = NEX_GetKillerDistance()
     if killerDist > VD.AUTO_TeleAwayDist then return end
-    VD._LastTeleAway = now
-    local bestSpot = nil
-    local bestDist = 0
+    VD._LastTeleAway = tick()
+    local bestSpot, bestDist = nil, 0
     for _, gate in ipairs(NEX_Cache.Gates) do
         if gate.part and killerPos then
-            local gatePos = gate.part.Position
-            local distFromKiller = (gatePos - killerPos).Magnitude
-            if distFromKiller > bestDist then
-                bestDist = distFromKiller
-                bestSpot = gatePos
-            end
+            local d = (gate.part.Position - killerPos).Magnitude
+            if d > bestDist then bestDist=d; bestSpot=gate.part.Position end
         end
     end
     if not bestSpot then
         for _, gen in ipairs(NEX_Cache.Generators) do
             if gen.part and killerPos then
-                local genPos = gen.part.Position
-                local distFromKiller = (genPos - killerPos).Magnitude
-                if distFromKiller > bestDist then
-                    bestDist = distFromKiller
-                    bestSpot = genPos
-                end
+                local d = (gen.part.Position - killerPos).Magnitude
+                if d > bestDist then bestDist=d; bestSpot=gen.part.Position end
             end
         end
     end
     if not bestSpot and killerPos then
-        local direction = (root.Position - killerPos).Unit
-        bestSpot = root.Position + direction * 80
+        bestSpot = root.Position + (root.Position - killerPos).Unit * 80
     end
-    if bestSpot then
-        NEX_TeleportToPosition(bestSpot)
-    end
+    if bestSpot then NEX_TeleportToPosition(bestSpot) end
 end
 
--- BEAT GAME SURVIVOR
+-- BEAT GAME
 local function NEX_BeatGameSurvivor()
-    if not VD.BEAT_Survivor then return end
-    if GetRole() ~= "Survivor" then return end
-    if VD._BeatSurvivorDone then return end
-
-    local root = Root
-    if not root then return end
-
+    if not VD.BEAT_Survivor or GetRole() ~= "Survivor" or VD._BeatSurvivorDone then return end
+    local root = Root; if not root then return end
     local exitPos = nil
-
     pcall(function()
         for _, obj in ipairs(workspace:GetDescendants()) do
-            local name = obj.Name:lower()
-            if (name:find("finish") or name:find("exit") or name:find("end")) 
-               and obj:IsA("BasePart") then
-                exitPos = obj.Position
-                return
+            local n = obj.Name:lower()
+            if (n:find("finish") or n:find("exit") or n:find("end")) and obj:IsA("BasePart") then
+                exitPos = obj.Position; return
             end
         end
-
-        for _, obj in ipairs(workspace:GetDescendants()) do
-            local name = obj.Name:lower()
-            if (name:find("finish") or name:find("exit") or name:find("end")) 
-               and obj:IsA("Model") then
-                local part = obj:FindFirstChildWhichIsA("BasePart")
-                if part then
-                    exitPos = part.Position
-                    return
+        if not exitPos then
+            for _, obj in ipairs(workspace:GetDescendants()) do
+                local n = obj.Name:lower()
+                if (n:find("finish") or n:find("exit") or n:find("end")) and obj:IsA("Model") then
+                    local part = obj:FindFirstChildWhichIsA("BasePart")
+                    if part then exitPos = part.Position; return end
                 end
             end
         end
-
-        local map = Workspace:FindFirstChild("Map")
-        if map then
-            if map:FindFirstChild("RooftopHitbox") then
-                exitPos = Vector3.new(3098.16, 454.04, -4918.74)
-            elseif map:FindFirstChild("HooksMeat") then
-                exitPos = Vector3.new(1546.12, 152.21, -796.72)
-            elseif map:FindFirstChild("churchbell") then
-                exitPos = Vector3.new(760.98, -20.14, -78.48)
+        if not exitPos then
+            local map = Workspace:FindFirstChild("Map")
+            if map then
+                if map:FindFirstChild("RooftopHitbox") then exitPos = Vector3.new(3098.16,454.04,-4918.74)
+                elseif map:FindFirstChild("HooksMeat")  then exitPos = Vector3.new(1546.12,152.21,-796.72)
+                elseif map:FindFirstChild("churchbell") then exitPos = Vector3.new(760.98,-20.14,-78.48) end
             end
         end
     end)
-
-    if not exitPos then
-        print("[NEX HUB] Exit position tidak ditemukan")
-        return
-    end
-
-    root.CFrame = CFrame.new(exitPos + Vector3.new(0, 3, 0))
+    if not exitPos then print("[NEX HUB] Exit tidak ditemukan"); return end
+    root.CFrame = CFrame.new(exitPos + Vector3.new(0,3,0))
     VD._BeatSurvivorDone = true
-    print("[NEX HUB] Survivor beat! Teleported to exit")
+    print("[NEX HUB] Survivor beat!")
 end
-
--- BEAT GAME KILLER
 local function NEX_BeatGameKiller()
-    if not VD.BEAT_Killer then return end
-    if GetRole() ~= "Killer" then return end
-
-    local root = Root
-    if not root then return end
-
+    if not VD.BEAT_Killer or GetRole() ~= "Killer" then return end
+    local root = Root; if not root then return end
     if not VD._KillerTarget or not VD._KillerTarget.Parent then
-        local survivors = {}
+        local closest, closestDist = nil, math.huge
         for _, player in ipairs(Players:GetPlayers()) do
             if player ~= LocalPlayer and IsSurvivor(player) and player.Character then
-                local pHum = player.Character:FindFirstChildOfClass("Humanoid")
-                if pHum and pHum.Health > 0 then
-                    table.insert(survivors, player)
+                local pHum  = player.Character:FindFirstChildOfClass("Humanoid")
+                local pRoot = player.Character:FindFirstChild("HumanoidRootPart")
+                if pHum and pHum.Health > 0 and pRoot then
+                    local d = (pRoot.Position - root.Position).Magnitude
+                    if d < closestDist then closestDist=d; closest=player end
                 end
             end
         end
-
-        if #survivors == 0 then return end
-
-        local closest, closestDist = nil, math.huge
-        for _, player in ipairs(survivors) do
-            local pRoot = player.Character:FindFirstChild("HumanoidRootPart")
-            local dist = (pRoot.Position - root.Position).Magnitude
-            if dist < closestDist then
-                closestDist = dist
-                closest = player
-            end
-        end
-
         VD._KillerTarget = closest
     end
-
     if not VD._KillerTarget or not VD._KillerTarget.Parent or not VD._KillerTarget.Character then
-        VD._KillerTarget = nil
-        return
+        VD._KillerTarget = nil; return
     end
-
-    local target = VD._KillerTarget
+    local target     = VD._KillerTarget
     local targetRoot = target.Character:FindFirstChild("HumanoidRootPart")
-    local targetHum = target.Character:FindFirstChildOfClass("Humanoid")
-
-    if not targetRoot or not targetHum or targetHum.Health <= 0 then
-        VD._KillerTarget = nil
-        return
-    end
-
-    local direction = (targetRoot.Position - root.Position).Unit
-    if direction.Magnitude == direction.Magnitude then
-        root.CFrame = CFrame.new(root.Position + direction * 2, targetRoot.Position)
-    end
-
+    local targetHum  = target.Character:FindFirstChildOfClass("Humanoid")
+    if not targetRoot or not targetHum or targetHum.Health <= 0 then VD._KillerTarget=nil; return end
+    local dir = (targetRoot.Position - root.Position).Unit
+    if dir == dir then root.CFrame = CFrame.new(root.Position + dir*2, targetRoot.Position) end
     pcall(function()
-        local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-        if remotes then
-            local attacks = remotes:FindFirstChild("Attacks")
-            if attacks then
-                local basicAttack = attacks:FindFirstChild("BasicAttack")
-                if basicAttack then
-                    basicAttack:FireServer(false)
-                end
-            end
-        end
+        local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
+        local attacks = remotes:FindFirstChild("Attacks"); if not attacks then return end
+        local basic   = attacks:FindFirstChild("BasicAttack"); if not basic then return end
+        basic:FireServer(false)
     end)
 end
 
--- AUTO HOOK (KILLER)
+-- AUTO HOOK
 local LastAutoHookTime = 0
-local AutoHookState = { phase = 0, target = nil, startTime = 0 }
+local AutoHookState = {phase=0,target=nil,startTime=0}
 local function NEX_AutoHook()
-    if not VD.KILLER_AutoHook then AutoHookState.phase = 0; AutoHookState.target = nil return end
-    if GetRole() ~= "Killer" then AutoHookState.phase = 0; AutoHookState.target = nil return end
-    local root = Root
-    if not root then return end
+    if not VD.KILLER_AutoHook then AutoHookState.phase=0; AutoHookState.target=nil; return end
+    if GetRole() ~= "Killer" then AutoHookState.phase=0; AutoHookState.target=nil; return end
+    local root = Root; if not root then return end
     if tick() - LastAutoHookTime < 0.5 then return end
-
-    local closestDowned = nil
-    local closestDist = math.huge
+    local closestDowned, closestDist = nil, math.huge
     for _, player in ipairs(Players:GetPlayers()) do
         if player ~= LocalPlayer and IsSurvivor(player) and player.Character then
-            local targetRoot = player.Character:FindFirstChild("HumanoidRootPart")
-            local targetHum = player.Character:FindFirstChildOfClass("Humanoid")
-            if targetRoot and targetHum then
-                local pct = 0
-                if targetHum.MaxHealth > 0 then pct = targetHum.Health / targetHum.MaxHealth end
-                if pct <= 0.25 and pct > 0 then
-                    local dist = (targetRoot.Position - root.Position).Magnitude
-                    if dist < closestDist then
-                        closestDist = dist
-                        closestDowned = {player = player, root = targetRoot}
-                    end
+            local tRoot = player.Character:FindFirstChild("HumanoidRootPart")
+            local tHum  = player.Character:FindFirstChildOfClass("Humanoid")
+            if tRoot and tHum and tHum.MaxHealth > 0 then
+                local pct = tHum.Health / tHum.MaxHealth
+                if pct > 0 and pct <= 0.25 then
+                    local d = (tRoot.Position - root.Position).Magnitude
+                    if d < closestDist then closestDist=d; closestDowned={player=player,root=tRoot} end
                 end
             end
         end
     end
-
     if closestDowned then
         for _, part in ipairs(LocalPlayer.Character:GetDescendants()) do
-            if part:IsA("BasePart") then pcall(function() part.CanCollide = false end) end
+            if part:IsA("BasePart") then pcall(function() part.CanCollide=false end) end
         end
-        local targetPos = closestDowned.root.Position
-        root.CFrame = CFrame.new(targetPos + Vector3.new(0, 3, 0), targetPos)
-
+        root.CFrame = CFrame.new(closestDowned.root.Position + Vector3.new(0,3,0), closestDowned.root.Position)
         task.spawn(function()
-            pcall(function()
-                local vim = game:GetService("VirtualInputManager")
-                local endTime = tick() + 1.5
-                while tick() < endTime do
-                    vim:SendKeyEvent(true, Enum.KeyCode.Space, false, game)
-                    task.wait(0.05)
-                    vim:SendKeyEvent(false, Enum.KeyCode.Space, false, game)
-                    task.wait(0.08)
-                end
-            end)
+            local endTime = tick() + 1.5
+            while tick() < endTime do
+                SimKey(true,  Enum.KeyCode.Space)
+                task.wait(0.05)
+                SimKey(false, Enum.KeyCode.Space)
+                task.wait(0.08)
+            end
         end)
-
-        AutoHookState.phase = 1
-        AutoHookState.target = closestDowned.player
-        AutoHookState.startTime = tick()
+        AutoHookState.phase=1; AutoHookState.target=closestDowned.player; AutoHookState.startTime=tick()
         task.delay(0.5, function()
             if LocalPlayer.Character then
                 for _, part in ipairs(LocalPlayer.Character:GetDescendants()) do
                     if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
-                        pcall(function() part.CanCollide = true end)
+                        pcall(function() part.CanCollide=true end)
                     end
                 end
             end
@@ -1344,165 +912,91 @@ local function NEX_AutoHook()
 end
 
 -- FLING
-function NEX_FlingNearest()
+local function NEX_FlingNearest()
     if not VD.FLING_Enabled then return end
-    local root = Root
-    if not root then return end
+    local root = Root; if not root then return end
     local closest, closestDist = nil, math.huge
     for _, player in ipairs(Players:GetPlayers()) do
         if player ~= LocalPlayer and player.Character then
-            local targetRoot = player.Character:FindFirstChild("HumanoidRootPart")
-            if targetRoot then
-                local dist = (targetRoot.Position - root.Position).Magnitude
-                if dist < closestDist then
-                    closestDist = dist
-                    closest = player
-                end
+            local tRoot = player.Character:FindFirstChild("HumanoidRootPart")
+            if tRoot then
+                local d = (tRoot.Position - root.Position).Magnitude
+                if d < closestDist then closestDist=d; closest=player end
             end
         end
     end
-    if closest and closest.Character then
-        local targetRoot = closest.Character:FindFirstChild("HumanoidRootPart")
-        if targetRoot then
-            local originalPos = root.CFrame
-            for i = 1, 10 do
-                root.CFrame = targetRoot.CFrame
-                root.Velocity = Vector3.new(VD.FLING_Strength, VD.FLING_Strength/2, VD.FLING_Strength)
-                root.RotVelocity = Vector3.new(9999, 9999, 9999)
-                task.wait()
-            end
-            root.CFrame = originalPos
-            root.Velocity = Vector3.zero
-            root.RotVelocity = Vector3.zero
-        end
+    if not closest or not closest.Character then return end
+    local tRoot = closest.Character:FindFirstChild("HumanoidRootPart"); if not tRoot then return end
+    local origPos = root.CFrame
+    for _ = 1, 10 do
+        root.CFrame    = tRoot.CFrame
+        root.Velocity  = Vector3.new(VD.FLING_Strength, VD.FLING_Strength/2, VD.FLING_Strength)
+        root.RotVelocity = Vector3.new(9999,9999,9999)
+        task.wait()
     end
+    root.CFrame = origPos; root.Velocity = Vector3.zero; root.RotVelocity = Vector3.zero
 end
-
-function NEX_FlingAll()
+local function NEX_FlingAll()
     if not VD.FLING_Enabled then return end
-    local root = Root
-    if not root then return end
-    local originalPos = root.CFrame
+    local root = Root; if not root then return end
+    local origPos = root.CFrame
     for _, player in ipairs(Players:GetPlayers()) do
         if player ~= LocalPlayer and player.Character then
-            local targetRoot = player.Character:FindFirstChild("HumanoidRootPart")
-            if targetRoot then
-                for i = 1, 5 do
-                    root.CFrame = targetRoot.CFrame
-                    root.Velocity = Vector3.new(VD.FLING_Strength, VD.FLING_Strength/2, VD.FLING_Strength)
-                    root.RotVelocity = Vector3.new(9999, 9999, 9999)
+            local tRoot = player.Character:FindFirstChild("HumanoidRootPart")
+            if tRoot then
+                for _ = 1, 5 do
+                    root.CFrame    = tRoot.CFrame
+                    root.Velocity  = Vector3.new(VD.FLING_Strength, VD.FLING_Strength/2, VD.FLING_Strength)
+                    root.RotVelocity = Vector3.new(9999,9999,9999)
                     task.wait()
                 end
             end
         end
     end
-    root.CFrame = originalPos
-    root.Velocity = Vector3.zero
-    root.RotVelocity = Vector3.zero
+    root.CFrame = origPos; root.Velocity = Vector3.zero; root.RotVelocity = Vector3.zero
 end
 
--- SKILL CHECK MONITOR (QTE)
-local QTEHandler = {
-    Monitoring = false,
-    FrameConn = nil,
-    UIConn = nil,
-    Elements = nil
-}
-
+-- SKILL CHECK MONITOR
+local QTEHandler = {Monitoring=false,FrameConn=nil,UIConn=nil,Elements=nil}
 local function QTE_StopMonitoring()
-    if QTEHandler.FrameConn then
-        pcall(function() QTEHandler.FrameConn:Disconnect() end)
-        QTEHandler.FrameConn = nil
-    end
+    if QTEHandler.FrameConn then pcall(function() QTEHandler.FrameConn:Disconnect() end); QTEHandler.FrameConn=nil end
     QTEHandler.Monitoring = false
 end
-
 local function QTE_IsNeedleInZone(needleAngle, targetAngle)
-    local needle = needleAngle % 360
-    local target = targetAngle % 360
-    local sweetSpot = 20
-    if math.abs(needle - target) < sweetSpot then
-        return true
-    elseif math.abs((needle - 360) - target) < sweetSpot then
-        return true
-    elseif math.abs(needle - (target - 360)) < sweetSpot then
-        return true
-    end
-    return false
+    local n, t = needleAngle % 360, targetAngle % 360
+    local sweet = 20
+    return math.abs(n-t) < sweet or math.abs((n-360)-t) < sweet or math.abs(n-(t-360)) < sweet
 end
-
 local function QTE_SimulateInput()
     task.spawn(function()
-        pcall(function()
-            local vim = game:GetService("VirtualInputManager")
-            vim:SendKeyEvent(true, Enum.KeyCode.Space, false, game)
-            task.wait(0.08)
-            vim:SendKeyEvent(false, Enum.KeyCode.Space, false, game)
-        end)
+        SimKey(true,  Enum.KeyCode.Space)
+        task.wait(0.08)
+        SimKey(false, Enum.KeyCode.Space)
     end)
 end
-
 local function SetupSkillCheckMonitor()
     pcall(function()
         QTE_StopMonitoring()
-
-        if QTEHandler.UIConn then
-            pcall(function() QTEHandler.UIConn:Disconnect() end)
-            QTEHandler.UIConn = nil
-        end
-
+        if QTEHandler.UIConn then pcall(function() QTEHandler.UIConn:Disconnect() end); QTEHandler.UIConn=nil end
         task.wait(0.2)
-
-        local pg = LocalPlayer:WaitForChild("PlayerGui", 3)
-        if not pg then return end
-
-        local prompt = pg:FindFirstChild("SkillCheckPromptGui")
-                    or pg:FindFirstChild("SkillCheck")
-                    or pg:FindFirstChild("SkillCheckGUI")
-
+        local pg = LocalPlayer:WaitForChild("PlayerGui", 3); if not pg then return end
+        local prompt = pg:FindFirstChild("SkillCheckPromptGui") or pg:FindFirstChild("SkillCheck") or pg:FindFirstChild("SkillCheckGUI")
         if not prompt then return end
-
-        local check = prompt:FindFirstChild("Check")
-                   or prompt:FindFirstChild("Frame")
-                   or prompt:FindFirstChildOfClass("Frame")
-
-        if not check then return end
-
-        local needle = check:FindFirstChild("Line")
-                    or check:FindFirstChild("Needle")
-                    or check:FindFirstChild("Arrow")
-
-        local target = check:FindFirstChild("Goal")
-                    or check:FindFirstChild("Target")
-                    or check:FindFirstChild("Zone")
-
-        if not needle or not target then
-            return
-        end
-
-        QTEHandler.Elements = {
-            frame = check,
-            needle = needle,
-            target = target
-        }
-
+        local check  = prompt:FindFirstChild("Check") or prompt:FindFirstChild("Frame") or prompt:FindFirstChildOfClass("Frame")
+        if not check  then return end
+        local needle = check:FindFirstChild("Line") or check:FindFirstChild("Needle") or check:FindFirstChild("Arrow")
+        local target = check:FindFirstChild("Goal") or check:FindFirstChild("Target") or check:FindFirstChild("Zone")
+        if not needle or not target then return end
+        QTEHandler.Elements = {frame=check,needle=needle,target=target}
         QTEHandler.UIConn = check:GetPropertyChangedSignal("Visible"):Connect(function()
             if not VD.AUTO_SkillCheck then return end
             if check.Visible then
                 if not QTEHandler.Monitoring then
                     QTEHandler.Monitoring = true
                     QTEHandler.FrameConn = RunService.Heartbeat:Connect(function()
-                        if not VD.AUTO_SkillCheck or not check.Visible then
-                            QTE_StopMonitoring()
-                            return
-                        end
-
-                        local needleRotation = needle.Rotation
-                        local targetRotation = target.Rotation
-
-                        if QTE_IsNeedleInZone(needleRotation, targetRotation) then
-                            QTE_SimulateInput()
-                            QTE_StopMonitoring()
+                        if not VD.AUTO_SkillCheck or not check.Visible then QTE_StopMonitoring(); return end
+                        if QTE_IsNeedleInZone(needle.Rotation, target.Rotation) then
+                            QTE_SimulateInput(); QTE_StopMonitoring()
                         end
                     end)
                 end
@@ -1512,7 +1006,6 @@ local function SetupSkillCheckMonitor()
         end)
     end)
 end
-
 pcall(SetupSkillCheckMonitor)
 
 -- NO PALLET STUN
@@ -1522,28 +1015,19 @@ local function SetupNoPalletStun()
             while not VD.Destroyed do
                 if VD.KILLER_NoPalletStun and GetRole() == "Killer" then
                     pcall(function()
-                        local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-                        if remotes then
-                            local pallet = remotes:FindFirstChild("Pallet")
-                            if pallet then
-                                for _, child in ipairs(pallet:GetChildren()) do
-                                    pcall(function()
-                                        if child:IsA("RemoteEvent") then
-                                            child.OnServerEvent:Connect(function() return nil end)
-                                        end
-                                    end)
-                                end
-
-                                local jason = pallet:FindFirstChild("Jason")
-                                if jason then
-                                    for _, child in ipairs(jason:GetChildren()) do
-                                        pcall(function()
-                                            if child:IsA("RemoteEvent") and (child.Name == "Stun" or child.Name == "StunDrop") then
-                                                child.OnServerEvent:Connect(function() return nil end)
-                                            end
-                                        end)
+                        local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
+                        local pallet  = remotes:FindFirstChild("Pallet"); if not pallet then return end
+                        for _, child in ipairs(pallet:GetChildren()) do
+                            pcall(function() if child:IsA("RemoteEvent") then child.OnServerEvent:Connect(function() return nil end) end end)
+                        end
+                        local jason = pallet:FindFirstChild("Jason")
+                        if jason then
+                            for _, child in ipairs(jason:GetChildren()) do
+                                pcall(function()
+                                    if child:IsA("RemoteEvent") and (child.Name=="Stun" or child.Name=="StunDrop") then
+                                        child.OnServerEvent:Connect(function() return nil end)
                                     end
-                                end
+                                end)
                             end
                         end
                     end)
@@ -1558,47 +1042,33 @@ pcall(SetupNoPalletStun)
 -- ANTI BLIND
 local function SetupAntiBlind()
     pcall(function()
-        local remotes = ReplicatedStorage:FindFirstChild("Remotes")
-        if not remotes then return end
-        local items = remotes:FindFirstChild("Items")
-        if not items then return end
-        local flashlight = items:FindFirstChild("Flashlight")
-        if not flashlight then return end
-        local gotBlinded = flashlight:FindFirstChild("GotBlinded")
-        if gotBlinded and gotBlinded:IsA("RemoteEvent") then
-            local oldFire = gotBlinded.FireServer
-            gotBlinded.FireServer = function(self, ...)
-                if VD.KILLER_AntiBlind and GetRole() == "Killer" then
-                    return nil
-                end
-                return oldFire(self, ...)
+        local remotes = ReplicatedStorage:FindFirstChild("Remotes"); if not remotes then return end
+        local items   = remotes:FindFirstChild("Items"); if not items then return end
+        local fl      = items:FindFirstChild("Flashlight"); if not fl then return end
+        local gb      = fl:FindFirstChild("GotBlinded")
+        if gb and gb:IsA("RemoteEvent") then
+            local old = gb.FireServer
+            gb.FireServer = function(self, ...)
+                if VD.KILLER_AntiBlind and GetRole() == "Killer" then return nil end
+                return old(self, ...)
             end
         end
     end)
 end
 pcall(SetupAntiBlind)
 
--- CAMERA FOV
+-- CAMERA
 local OriginalFOV = nil
 local function UpdateCameraFOV()
-    local cam = workspace.CurrentCamera
-    if not cam then return end
+    local cam = workspace.CurrentCamera; if not cam then return end
     if not OriginalFOV then OriginalFOV = cam.FieldOfView end
-    if VD.CAM_FOVEnabled then
-        cam.FieldOfView = VD.CAM_FOV or 90
-    elseif OriginalFOV then
-        cam.FieldOfView = OriginalFOV
-    end
+    cam.FieldOfView = VD.CAM_FOVEnabled and (VD.CAM_FOV or 90) or OriginalFOV
 end
 
--- THIRD PERSON
-local OriginalCameraType = nil
-local ThirdPersonWasActive = false
+local OriginalCameraType, ThirdPersonWasActive = nil, false
 local function UpdateThirdPerson()
-    local cam = workspace.CurrentCamera
-    if not cam then return end
-    local isKiller = GetRole() == "Killer"
-    local shouldBeActive = VD.CAM_ThirdPerson and isKiller
+    local cam = workspace.CurrentCamera; if not cam then return end
+    local shouldBeActive = VD.CAM_ThirdPerson and GetRole() == "Killer"
     if shouldBeActive then
         if not ThirdPersonWasActive then OriginalCameraType = cam.CameraType end
         cam.CameraType = Enum.CameraType.Custom
@@ -1613,17 +1083,14 @@ local function UpdateThirdPerson()
     end
 end
 
--- SHIFT LOCK
 local function UpdateShiftLock()
     if not VD.CAM_ShiftLock then return end
-    local char = LocalPlayer.Character
-    if not char then return end
+    local char = LocalPlayer.Character; if not char then return end
     local root = char:FindFirstChild("HumanoidRootPart")
-    local cam = workspace.CurrentCamera
+    local cam  = workspace.CurrentCamera
     if not root or not cam then return end
-    local camLook = cam.CFrame.LookVector
-    local flatLook = Vector3.new(camLook.X, 0, camLook.Z).Unit
-    root.CFrame = CFrame.new(root.Position, root.Position + flatLook)
+    local flat = Vector3.new(cam.CFrame.LookVector.X, 0, cam.CFrame.LookVector.Z).Unit
+    root.CFrame = CFrame.new(root.Position, root.Position + flat)
 end
 
 -- NO FOG
@@ -1634,61 +1101,51 @@ local function RemoveFog()
         if map then
             for _, obj in ipairs(map:GetDescendants()) do
                 if obj.Name:lower():find("fog") or obj:IsA("Atmosphere") or obj:IsA("BloomEffect") or obj:IsA("BlurEffect") or obj:IsA("ColorCorrectionEffect") then
-                    if not FogCache[obj] then FogCache[obj] = {enabled = obj:IsA("PostEffect") and obj.Enabled or true, parent = obj.Parent} end
-                    if obj:IsA("PostEffect") then obj.Enabled = false else obj.Parent = nil end
+                    if not FogCache[obj] then FogCache[obj]={enabled=obj:IsA("PostEffect") and obj.Enabled or true, parent=obj.Parent} end
+                    if obj:IsA("PostEffect") then obj.Enabled=false else obj.Parent=nil end
                 end
             end
         end
-    end)
-    pcall(function()
         local lighting = game:GetService("Lighting")
         for _, obj in ipairs(lighting:GetChildren()) do
             if obj:IsA("Atmosphere") or obj.Name:lower():find("fog") then
-                if not FogCache[obj] then FogCache[obj] = {enabled = obj:IsA("Atmosphere") or true, parent = obj.Parent} end
-                if obj:IsA("Atmosphere") then obj.Density = 0 else obj.Parent = nil end
+                if not FogCache[obj] then FogCache[obj]={enabled=true,parent=obj.Parent} end
+                if obj:IsA("Atmosphere") then obj.Density=0 else obj.Parent=nil end
             end
         end
-        lighting.FogEnd = 100000
-        lighting.FogStart = 0
+        lighting.FogEnd=100000; lighting.FogStart=0
     end)
 end
-
 local function RestoreFog()
     pcall(function()
         for obj, data in pairs(FogCache) do
             if obj and data.parent then
-                if obj:IsA("PostEffect") then obj.Enabled = data.enabled else obj.Parent = data.parent end
+                if obj:IsA("PostEffect") then obj.Enabled=data.enabled else obj.Parent=data.parent end
             end
         end
-        FogCache = {}
-        local lighting = game:GetService("Lighting")
-        lighting.FogEnd = 1000
+        FogCache={}
+        game:GetService("Lighting").FogEnd = 1000
     end)
 end
 
 -- FLY
-local FlyBodyVelocity = nil
-local FlyBodyGyro = nil
+local FlyBodyVelocity, FlyBodyGyro = nil, nil
 local function UpdateFly()
-    local char = LocalPlayer.Character
-    if not char then return end
+    local char = LocalPlayer.Character; if not char then return end
     local root = char:FindFirstChild("HumanoidRootPart")
-    local hum = char:FindFirstChildOfClass("Humanoid")
+    local hum  = char:FindFirstChildOfClass("Humanoid")
     if not root or not hum then return end
-
     if VD.FLY_Enabled then
         hum.PlatformStand = true
         if not FlyBodyVelocity then
             FlyBodyVelocity = Instance.new("BodyVelocity")
-            FlyBodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
-            FlyBodyVelocity.Velocity = Vector3.zero
-            FlyBodyVelocity.Parent = root
+            FlyBodyVelocity.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+            FlyBodyVelocity.Velocity = Vector3.zero; FlyBodyVelocity.Parent = root
         end
         if not FlyBodyGyro then
             FlyBodyGyro = Instance.new("BodyGyro")
-            FlyBodyGyro.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
-            FlyBodyGyro.P = 9e4
-            FlyBodyGyro.Parent = root
+            FlyBodyGyro.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+            FlyBodyGyro.P = 9e4; FlyBodyGyro.Parent = root
         end
         local cam = workspace.CurrentCamera
         local moveDir = Vector3.zero
@@ -1696,86 +1153,61 @@ local function UpdateFly()
         if UserInputService:IsKeyDown(Enum.KeyCode.S) then moveDir = moveDir - cam.CFrame.LookVector end
         if UserInputService:IsKeyDown(Enum.KeyCode.A) then moveDir = moveDir - cam.CFrame.RightVector end
         if UserInputService:IsKeyDown(Enum.KeyCode.D) then moveDir = moveDir + cam.CFrame.RightVector end
-        if UserInputService:IsKeyDown(Enum.KeyCode.Space) then moveDir = moveDir + Vector3.new(0,1,0) end
-        if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) or UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then moveDir = moveDir - Vector3.new(0,1,0) end
+        if UserInputService:IsKeyDown(Enum.KeyCode.Space)       then moveDir = moveDir + Vector3.new(0,1,0) end
+        if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) or
+           UserInputService:IsKeyDown(Enum.KeyCode.LeftShift)   then moveDir = moveDir - Vector3.new(0,1,0) end
         if moveDir.Magnitude > 0 then moveDir = moveDir.Unit * (VD.FLY_Speed or 50) end
         if VD.FLY_Method == "Velocity" then
             FlyBodyVelocity.Velocity = moveDir
         else
             FlyBodyVelocity.Velocity = Vector3.zero
-            if moveDir.Magnitude > 0 then
-                root.CFrame = root.CFrame + moveDir * 0.05
-            end
+            if moveDir.Magnitude > 0 then root.CFrame = root.CFrame + moveDir * 0.05 end
         end
         FlyBodyGyro.CFrame = cam.CFrame
     else
-        if FlyBodyVelocity then FlyBodyVelocity:Destroy(); FlyBodyVelocity = nil end
-        if FlyBodyGyro then FlyBodyGyro:Destroy(); FlyBodyGyro = nil end
+        if FlyBodyVelocity then FlyBodyVelocity:Destroy(); FlyBodyVelocity=nil end
+        if FlyBodyGyro     then FlyBodyGyro:Destroy();     FlyBodyGyro=nil     end
         if hum then hum.PlatformStand = false end
     end
 end
 
--- AIMBOT STATE & FUNCTIONS
-local State = {
-    AimTarget = nil,
-    AimHolding = false,
-    Unloaded = false
-}
-
+-- AIMBOT
+local State = {AimTarget=nil,AimHolding=false,Unloaded=false}
 local Aimbot = {}
-
 function Aimbot.GetTargetPart(char)
     if not char then return nil end
-    local partName = VD.AIM_TargetPart or "Head"
-    if partName == "Head" then
-        return char:FindFirstChild("Head")
-    elseif partName == "Torso" then
-        return char:FindFirstChild("UpperTorso") or char:FindFirstChild("Torso")
-    else
-        return char:FindFirstChild("HumanoidRootPart")
-    end
+    local n = VD.AIM_TargetPart or "Head"
+    if n == "Head"  then return char:FindFirstChild("Head") end
+    if n == "Torso" then return char:FindFirstChild("UpperTorso") or char:FindFirstChild("Torso") end
+    return char:FindFirstChild("HumanoidRootPart")
 end
-
 function Aimbot.GetClosestTarget(cam, screenCenter)
     if not cam or not VD.AIM_Enabled then return nil end
-
     local myRole = GetRole()
     if myRole == "Lobby" or myRole == "Unknown" then return nil end
-
-    local closestPlayer = nil
-    local closestDist = VD.AIM_FOV or 120
-
+    local closestPlayer, closestDist = nil, VD.AIM_FOV or 120
     for _, player in ipairs(Players:GetPlayers()) do
         if player == LocalPlayer or not player.Parent or not player.Character then continue end
-
-        local shouldTarget = false
-        if myRole == "Survivor" and IsKiller(player) then shouldTarget = true
-        elseif myRole == "Killer" and IsSurvivor(player) then shouldTarget = true end
-
+        local shouldTarget = (myRole=="Survivor" and IsKiller(player)) or (myRole=="Killer" and IsSurvivor(player))
         if shouldTarget then
-            local targetPart = Aimbot.GetTargetPart(player.Character)
-            if targetPart then
-                local passVisCheck = true
+            local tp = Aimbot.GetTargetPart(player.Character)
+            if tp then
+                local passVis = true
                 if VD.AIM_VisCheck then
                     pcall(function()
-                        local camPos = cam.CFrame.Position
                         local params = RaycastParams.new()
                         params.FilterType = Enum.RaycastFilterType.Blacklist
                         params.FilterDescendantsInstances = {LocalPlayer.Character, player.Character}
-                        local dir = (targetPart.Position - camPos)
-                        local ray = workspace:Raycast(camPos, dir.Unit * math.clamp(dir.Magnitude, 1, 5000), params)
-                        passVisCheck = (ray == nil)
+                        local dir = tp.Position - cam.CFrame.Position
+                        local ray = workspace:Raycast(cam.CFrame.Position, dir.Unit*math.clamp(dir.Magnitude,1,5000), params)
+                        passVis = (ray == nil)
                     end)
                 end
-                if passVisCheck then
-                    local screenPos = cam:WorldToViewportPoint(targetPart.Position)
-                    local onScreen = screenPos.Z > 0
-                    if onScreen then
-                        local dist = (Vector2.new(screenPos.X, screenPos.Y) - screenCenter).Magnitude
-                        if dist < closestDist then
-                            closestDist = dist
-                            closestPlayer = player
-                        end
+                if passVis then
+                    local sp = cam:WorldToViewportPoint(tp.Position)
+                    if sp.Z > 0 then
+                        local dist = (Vector2.new(sp.X,sp.Y) - screenCenter).Magnitude
+                        if dist < closestDist then closestDist=dist; closestPlayer=player end
                     end
                 end
             end
@@ -1783,274 +1215,183 @@ function Aimbot.GetClosestTarget(cam, screenCenter)
     end
     return closestPlayer
 end
-
 function Aimbot.GetPredictedPosition(target, targetPart)
     if not target or not targetPart then return nil end
     local pos = targetPart.Position
     if VD.AIM_Predict then
         local root = target.Character and target.Character:FindFirstChild("HumanoidRootPart")
-        if root then
-            local velocity = root.Velocity or Vector3.zero
-            local predScalar = 0.08
-            pos = pos + velocity * predScalar
-        end
+        if root then pos = pos + (root.Velocity or Vector3.zero) * 0.08 end
     end
     return pos
 end
-
 function Aimbot.AimAt(cam, targetPos)
     if not cam or not targetPos then return end
-    local currentCF = cam.CFrame
-    local targetCF = CFrame.new(currentCF.Position, targetPos)
-    local smooth = VD.AIM_Smooth or 0.3
-    smooth = math.clamp(smooth, 0.02, 1)
-    cam.CFrame = currentCF:Lerp(targetCF, smooth)
+    local smooth = math.clamp(VD.AIM_Smooth or 0.3, 0.02, 1)
+    cam.CFrame = cam.CFrame:Lerp(CFrame.new(cam.CFrame.Position, targetPos), smooth)
 end
-
 function Aimbot.Update(cam, screenSize, screenCenter)
-    if not VD.AIM_Enabled then State.AimTarget = nil; return end
-    if not State.AimHolding then State.AimTarget = nil; return end
+    if not VD.AIM_Enabled then State.AimTarget=nil; return end
+    if not State.AimHolding then State.AimTarget=nil; return end
     local target = Aimbot.GetClosestTarget(cam, screenCenter)
     State.AimTarget = target
     if target and target.Character then
-        local targetPart = Aimbot.GetTargetPart(target.Character)
-        if targetPart then
-            local predictedPos = Aimbot.GetPredictedPosition(target, targetPart)
-            if predictedPos then Aimbot.AimAt(cam, predictedPos) end
+        local tp = Aimbot.GetTargetPart(target.Character)
+        if tp then
+            local pp = Aimbot.GetPredictedPosition(target, tp)
+            if pp then Aimbot.AimAt(cam, pp) end
         end
     end
 end
 
--- Spear Aimbot
+-- SPEAR AIMBOT
 local function SpearAimbotCalc(targetPos)
-    if not VD.SPEAR_Aimbot then return nil end
-    if GetRole() ~= "Killer" then return nil end
-    local root = Root
-    if not root then return nil end
+    if not VD.SPEAR_Aimbot or GetRole() ~= "Killer" then return nil end
+    local root = Root; if not root then return nil end
     local startPos = root.Position + Vector3.new(0,2,0)
     local distance = (targetPos - startPos).Magnitude
-    local speed = VD.SPEAR_Speed or 100
-    local gravity = VD.SPEAR_Gravity or 50
-    local time = distance / math.max(speed, 1)
-    local gravityDrop = 0.5 * gravity * time * time
-    local aimPos = targetPos + Vector3.new(0, gravityDrop, 0)
-    return aimPos
+    local speed    = math.max(VD.SPEAR_Speed or 100, 1)
+    local gravity  = VD.SPEAR_Gravity or 50
+    local time     = distance / speed
+    return targetPos + Vector3.new(0, 0.5 * gravity * time * time, 0)
 end
-
 local function UpdateSpearAim()
-    if not VD.SPEAR_Aimbot then return end
-    if GetRole() ~= "Killer" then return end
-    local root = Root
-    if not root then return end
+    if not VD.SPEAR_Aimbot or GetRole() ~= "Killer" then return end
+    local root = Root; if not root then return end
     local closest, closestDist = nil, math.huge
     for _, player in ipairs(Players:GetPlayers()) do
         if player ~= LocalPlayer and IsSurvivor(player) and player.Character then
-            local targetRoot = player.Character:FindFirstChild("HumanoidRootPart")
-            if targetRoot then
-                local dist = (targetRoot.Position - root.Position).Magnitude
-                if dist < closestDist then
-                    closestDist = dist
-                    closest = player
-                end
+            local tRoot = player.Character:FindFirstChild("HumanoidRootPart")
+            if tRoot then
+                local d = (tRoot.Position - root.Position).Magnitude
+                if d < closestDist then closestDist=d; closest=player end
             end
         end
     end
-    if closest and closest.Character then
-        local targetRoot = closest.Character:FindFirstChild("HumanoidRootPart")
-        if targetRoot then
-            local aimPos = SpearAimbotCalc(targetRoot.Position)
-            if aimPos then
-                local cam = workspace.CurrentCamera
-                if cam then
-                    cam.CFrame = CFrame.new(cam.CFrame.Position, aimPos)
-                end
-            end
-        end
+    if not closest or not closest.Character then return end
+    local tRoot = closest.Character:FindFirstChild("HumanoidRootPart"); if not tRoot then return end
+    local aimPos = SpearAimbotCalc(tRoot.Position)
+    if aimPos then
+        local cam = workspace.CurrentCamera
+        if cam then cam.CFrame = CFrame.new(cam.CFrame.Position, aimPos) end
     end
 end
 
--- Input handling for Aimbot RMB
-UserInputService.InputBegan:Connect(function(input, gp)
+-- INPUT
+UserInputService.InputBegan:Connect(function(input, _)
     if State.Unloaded then return end
-    if input.UserInputType == Enum.UserInputType.MouseButton2 then
-        if VD.AIM_Enabled and VD.AIM_UseRMB then
-            State.AimHolding = true
-        end
+    if input.UserInputType == Enum.UserInputType.MouseButton2 and VD.AIM_Enabled and VD.AIM_UseRMB then
+        State.AimHolding = true
+    end
+end)
+UserInputService.InputEnded:Connect(function(input, _)
+    if State.Unloaded then return end
+    if input.UserInputType == Enum.UserInputType.MouseButton2 and VD.AIM_Enabled and VD.AIM_UseRMB then
+        State.AimHolding = false; State.AimTarget = nil
     end
 end)
 
-UserInputService.InputEnded:Connect(function(input, gp)
-    if State.Unloaded then return end
-    if input.UserInputType == Enum.UserInputType.MouseButton2 then
-        if VD.AIM_Enabled and VD.AIM_UseRMB then
-            State.AimHolding = false
-            State.AimTarget = nil
-        end
-    end
-end)
-
--- FOV Circle (Drawing)
-local FOVCircle = nil
-if DrawingAvailable then
-    FOVCircle = SafeDrawing("Circle")
-    if FOVCircle then
-        FOVCircle.Thickness = 1
-        FOVCircle.Color = Color3.fromRGB(220,70,70)
-        FOVCircle.Filled = false
-        FOVCircle.NumSides = 64
-        FOVCircle.Transparency = 0.8
-        FOVCircle.Visible = false
-    end
+-- FOV CIRCLE
+local FOVCircle = DrawingAvailable and SafeDrawing("Circle") or nil
+if FOVCircle then
+    FOVCircle.Thickness=1; FOVCircle.Color=Color3.fromRGB(220,70,70)
+    FOVCircle.Filled=false; FOVCircle.NumSides=64
+    FOVCircle.Transparency=0.8; FOVCircle.Visible=false
 end
 
--- CHAMS MODULE
-local Chams = {
-    Objects = {}
-}
-
+-- CHAMS
+local Chams = {Objects={}}
 function Chams.Create(target, colorData, label)
     if not target or not target:IsA("Instance") then return nil end
-
-    local existing = target:FindFirstChild("_ViolenceChams")
-    if existing then existing:Destroy() end
-
+    local ex = target:FindFirstChild("_ViolenceChams"); if ex then ex:Destroy() end
     local highlight = Instance.new("Highlight")
-    highlight.Name = "_ViolenceChams"
-    highlight.Adornee = target
-    highlight.FillColor = colorData.fill
-    highlight.OutlineColor = colorData.outline
-    highlight.FillTransparency = colorData.fillTrans or 0.5
-    highlight.OutlineTransparency = 0
-    highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-    highlight.Parent = target
-
-    local data = {highlight = highlight, target = target}
-
+    highlight.Name = "_ViolenceChams"; highlight.Adornee = target
+    highlight.FillColor = colorData.fill; highlight.OutlineColor = colorData.outline
+    highlight.FillTransparency = colorData.fillTrans or 0.5; highlight.OutlineTransparency = 0
+    highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop; highlight.Parent = target
+    local data = {highlight=highlight,target=target}
     if label then
         local rootPart = target:IsA("Model") and (target:FindFirstChild("HumanoidRootPart") or target:FindFirstChildWhichIsA("BasePart")) or target
         if rootPart then
             local billboard = Instance.new("BillboardGui")
-            billboard.Name = "_ViolenceLabel"
-            billboard.Size = UDim2.new(0, 80, 0, 18)
-            billboard.AlwaysOnTop = true
-            billboard.StudsOffset = Vector3.new(0, 3, 0)
-            billboard.Adornee = rootPart
-            billboard.Parent = target
-
+            billboard.Name="_ViolenceLabel"; billboard.Size=UDim2.new(0,80,0,18)
+            billboard.AlwaysOnTop=true; billboard.StudsOffset=Vector3.new(0,3,0)
+            billboard.Adornee=rootPart; billboard.Parent=target
             local textLabel = Instance.new("TextLabel")
-            textLabel.Size = UDim2.new(1, 0, 1, 0)
-            textLabel.BackgroundTransparency = 1
-            textLabel.TextColor3 = colorData.outline
-            textLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
-            textLabel.TextStrokeTransparency = 0.2
-            textLabel.Font = Enum.Font.Gotham
-            textLabel.TextSize = 10
-            textLabel.Text = label
-            textLabel.Parent = billboard
-
-            data.billboard = billboard
-            data.textLabel = textLabel
-            data.rootPart = rootPart
+            textLabel.Size=UDim2.new(1,0,1,0); textLabel.BackgroundTransparency=1
+            textLabel.TextColor3=colorData.outline; textLabel.TextStrokeColor3=Color3.new(0,0,0)
+            textLabel.TextStrokeTransparency=0.2; textLabel.Font=Enum.Font.Gotham
+            textLabel.TextSize=10; textLabel.Text=label; textLabel.Parent=billboard
+            data.billboard=billboard; data.textLabel=textLabel; data.rootPart=rootPart
         end
     end
-
-    Chams.Objects[target] = data
-    return data
+    Chams.Objects[target] = data; return data
 end
-
 function Chams.Update(target, newLabel, newDist)
-    local data = Chams.Objects[target]
-    if not data then return end
+    local data = Chams.Objects[target]; if not data then return end
     if data.textLabel and newLabel then
-        local text = newLabel
-        if newDist and VD.ShowDistance then
-            text = text .. "\n" .. math.floor(newDist) .. "m"
-        end
-        data.textLabel.Text = text
+        data.textLabel.Text = VD.ShowDistance and (newLabel.."\n"..math.floor(newDist or 0).."m") or newLabel
     end
 end
-
 function Chams.SetColor(target, colorData)
-    local data = Chams.Objects[target]
-    if not data or not data.highlight then return end
-    data.highlight.FillColor = colorData.fill
-    data.highlight.OutlineColor = colorData.outline
-    data.highlight.FillTransparency = colorData.fillTrans or 0.5
-    if data.textLabel then
-        data.textLabel.TextColor3 = colorData.outline
-    end
+    local data = Chams.Objects[target]; if not data or not data.highlight then return end
+    data.highlight.FillColor=colorData.fill; data.highlight.OutlineColor=colorData.outline
+    data.highlight.FillTransparency=colorData.fillTrans or 0.5
+    if data.textLabel then data.textLabel.TextColor3=colorData.outline end
 end
-
 function Chams.Remove(target)
     local data = Chams.Objects[target]
     if data then
-        if data.highlight and data.highlight.Parent then
-            data.highlight:Destroy()
-        end
-        if data.billboard and data.billboard.Parent then
-            data.billboard:Destroy()
-        end
+        if data.highlight and data.highlight.Parent then data.highlight:Destroy() end
+        if data.billboard and data.billboard.Parent then data.billboard:Destroy() end
         Chams.Objects[target] = nil
     end
     if target then
-        local existing = target:FindFirstChild("_ViolenceChams")
-        if existing then existing:Destroy() end
-        local existingLabel = target:FindFirstChild("_ViolenceLabel")
-        if existingLabel then existingLabel:Destroy() end
+        local ex = target:FindFirstChild("_ViolenceChams"); if ex then ex:Destroy() end
+        local el = target:FindFirstChild("_ViolenceLabel"); if el then el:Destroy() end
     end
 end
-
 function Chams.ClearAll()
-    for target, _ in pairs(Chams.Objects) do
-        Chams.Remove(target)
-    end
+    for target,_ in pairs(Chams.Objects) do Chams.Remove(target) end
     Chams.Objects = {}
 end
 
--- DRAWING-BASED ESP & RADAR
-local DrawingESP = {
-    cache = {},
-    objectCache = {},
-    velocityData = {}
-}
-
+-- DRAWING ESP
+local DrawingESP = {cache={},objectCache={},velocityData={}}
 local function DrawingESP_create()
     local skel = {}
     for i = 1, 14 do
         skel[i] = SafeDrawing("Line")
-        if skel[i] then skel[i].Thickness = 1; skel[i].Visible = false end
+        if skel[i] then skel[i].Thickness=1; skel[i].Visible=false end
     end
-
     local box = {}
     for i = 1, 4 do
         box[i] = SafeDrawing("Line")
-        if box[i] then box[i].Thickness = 1; box[i].Visible = false end
+        if box[i] then box[i].Thickness=1; box[i].Visible=false end
     end
-
     return {
-        Box = box,
-        Name = SafeDrawing("Text"),
-        Dist = SafeDrawing("Text"),
-        Skel = skel,
-        HealthBg = SafeDrawing("Square"),
-        HealthBar = SafeDrawing("Square"),
-        Offscreen = SafeDrawing("Triangle"),
-        VelLine = SafeDrawing("Line"),
-        VelArrow = SafeDrawing("Triangle")
+        Box=box, Name=SafeDrawing("Text"), Dist=SafeDrawing("Text"), Skel=skel,
+        HealthBg=SafeDrawing("Square"), HealthBar=SafeDrawing("Square"),
+        Offscreen=SafeDrawing("Triangle"), VelLine=SafeDrawing("Line"), VelArrow=SafeDrawing("Triangle")
     }
 end
-
 local function DrawingESP_setup(esp)
     if not esp then return end
-    for _, l in ipairs(esp.Box) do if l then l.Thickness = 1; l.Visible = false end end
-    if esp.Name then esp.Name.Size = 14; esp.Name.Font = Drawing.Fonts.Monospace; esp.Name.Center = true; esp.Name.Outline = true; esp.Name.Visible = false end
-    if esp.Dist then esp.Dist.Size = 12; esp.Dist.Font = Drawing.Fonts.Monospace; esp.Dist.Center = true; esp.Dist.Outline = true; esp.Dist.Color = Color3.fromRGB(180,180,180); esp.Dist.Visible = false end
-    for _, l in ipairs(esp.Skel) do if l then l.Thickness = 1; l.Visible = false end end
-    if esp.HealthBg then esp.HealthBg.Filled = true; esp.HealthBg.Color = Color3.fromRGB(25,25,25); esp.HealthBg.Visible = false end
-    if esp.HealthBar then esp.HealthBar.Filled = true; esp.HealthBar.Visible = false end
-    if esp.Offscreen then esp.Offscreen.Filled = true; esp.Offscreen.Visible = false end
-    if esp.VelLine then esp.VelLine.Thickness = 2; esp.VelLine.Color = Color3.fromRGB(0,255,255); esp.VelLine.Visible = false end
-    if esp.VelArrow then esp.VelArrow.Filled = true; esp.VelArrow.Color = Color3.fromRGB(0,255,255); esp.VelArrow.Visible = false end
+    for _, l in ipairs(esp.Box) do if l then l.Thickness=1; l.Visible=false end end
+    if esp.Name then
+        esp.Name.Size=14; esp.Name.Font=DrawFont
+        esp.Name.Center=true; esp.Name.Outline=true; esp.Name.Visible=false
+    end
+    if esp.Dist then
+        esp.Dist.Size=12; esp.Dist.Font=DrawFont
+        esp.Dist.Center=true; esp.Dist.Outline=true
+        esp.Dist.Color=Color3.fromRGB(180,180,180); esp.Dist.Visible=false
+    end
+    for _, l in ipairs(esp.Skel) do if l then l.Thickness=1; l.Visible=false end end
+    if esp.HealthBg  then esp.HealthBg.Filled=true;  esp.HealthBg.Color=Color3.fromRGB(25,25,25); esp.HealthBg.Visible=false end
+    if esp.HealthBar then esp.HealthBar.Filled=true;  esp.HealthBar.Visible=false end
+    if esp.Offscreen then esp.Offscreen.Filled=true;  esp.Offscreen.Visible=false end
+    if esp.VelLine   then esp.VelLine.Thickness=2;    esp.VelLine.Color=Color3.fromRGB(0,255,255); esp.VelLine.Visible=false end
+    if esp.VelArrow  then esp.VelArrow.Filled=true;   esp.VelArrow.Color=Color3.fromRGB(0,255,255); esp.VelArrow.Visible=false end
 end
 
 local Bones_R15 = {
@@ -2306,7 +1647,7 @@ local function DrawingESP_renderObject(esp, pos, label, color, cam)
     if esp.Dist then esp.Dist.Text = math.floor(dist) .. "m"; esp.Dist.Position = Vector2.new(screen.X, screen.Y + size/2 + 2); esp.Dist.Visible = true end
 end
 
--- Radar drawing
+-- RADAR
 local Radar = {
     bg = DrawingAvailable and SafeDrawing("Square") or nil,
     circleBg = DrawingAvailable and SafeDrawing("Circle") or nil,
@@ -2320,13 +1661,13 @@ local Radar = {
     palletSquares = {}
 }
 if DrawingAvailable then
-    Radar.bg.Filled = true; Radar.bg.Color = Color3.fromRGB(20,20,20); Radar.bg.Transparency = 0.8
-    Radar.circleBg.Filled = true; Radar.circleBg.Color = Color3.fromRGB(20,20,20); Radar.circleBg.Transparency = 0.8; Radar.circleBg.NumSides = 64
-    Radar.border.Filled = false; Radar.border.Color = Color3.fromRGB(255,65,65); Radar.border.Thickness = 2
-    Radar.circleBorder.Filled = false; Radar.circleBorder.Color = Color3.fromRGB(255,65,65); Radar.circleBorder.Thickness = 2; Radar.circleBorder.NumSides = 64
-    Radar.cross1.Color = Color3.fromRGB(40,40,40); Radar.cross1.Thickness = 1
-    Radar.cross2.Color = Color3.fromRGB(40,40,40); Radar.cross2.Thickness = 1
-    Radar.center.Filled = true; Radar.center.Color = Color3.fromRGB(0,255,0)
+    if Radar.bg then Radar.bg.Filled = true; Radar.bg.Color = Color3.fromRGB(20,20,20); Radar.bg.Transparency = 0.8 end
+    if Radar.circleBg then Radar.circleBg.Filled = true; Radar.circleBg.Color = Color3.fromRGB(20,20,20); Radar.circleBg.Transparency = 0.8; Radar.circleBg.NumSides = 64 end
+    if Radar.border then Radar.border.Filled = false; Radar.border.Color = Color3.fromRGB(255,65,65); Radar.border.Thickness = 2 end
+    if Radar.circleBorder then Radar.circleBorder.Filled = false; Radar.circleBorder.Color = Color3.fromRGB(255,65,65); Radar.circleBorder.Thickness = 2; Radar.circleBorder.NumSides = 64 end
+    if Radar.cross1 then Radar.cross1.Color = Color3.fromRGB(40,40,40); Radar.cross1.Thickness = 1 end
+    if Radar.cross2 then Radar.cross2.Color = Color3.fromRGB(40,40,40); Radar.cross2.Thickness = 1 end
+    if Radar.center then Radar.center.Filled = true; Radar.center.Color = Color3.fromRGB(0,255,0) end
     for i = 1, 100 do
         local d = SafeDrawing("Triangle")
         if d then d.Filled = true; d.Visible = false end
@@ -2346,13 +1687,13 @@ end
 
 local function Radar_hideAll()
     if not DrawingAvailable then return end
-    Radar.bg.Visible = false
-    Radar.circleBg.Visible = false
-    Radar.border.Visible = false
-    Radar.circleBorder.Visible = false
-    Radar.center.Visible = false
-    Radar.cross1.Visible = false
-    Radar.cross2.Visible = false
+    if Radar.bg then Radar.bg.Visible = false end
+    if Radar.circleBg then Radar.circleBg.Visible = false end
+    if Radar.border then Radar.border.Visible = false end
+    if Radar.circleBorder then Radar.circleBorder.Visible = false end
+    if Radar.center then Radar.center.Visible = false end
+    if Radar.cross1 then Radar.cross1.Visible = false end
+    if Radar.cross2 then Radar.cross2.Visible = false end
     for _, d in pairs(Radar.dots) do if d then d.Visible = false end end
     for _, d in pairs(Radar.objectDots) do if d then d.Visible = false end end
     for _, d in pairs(Radar.palletSquares) do if d then d.Visible = false end end
@@ -2367,37 +1708,25 @@ local function Radar_step(cam)
     local center = pos + Vector2.new(size/2, size/2)
 
     if VD.RADAR_Circle then
-        Radar.bg.Visible = false
-        Radar.border.Visible = false
-        Radar.circleBg.Position = center
-        Radar.circleBg.Radius = size/2
-        Radar.circleBg.Visible = true
-        Radar.circleBorder.Position = center
-        Radar.circleBorder.Radius = size/2
-        Radar.circleBorder.Visible = true
+        if Radar.bg then Radar.bg.Visible = false end
+        if Radar.border then Radar.border.Visible = false end
+        if Radar.circleBg then Radar.circleBg.Position = center; Radar.circleBg.Radius = size/2; Radar.circleBg.Visible = true end
+        if Radar.circleBorder then Radar.circleBorder.Position = center; Radar.circleBorder.Radius = size/2; Radar.circleBorder.Visible = true end
     else
-        Radar.circleBg.Visible = false
-        Radar.circleBorder.Visible = false
-        Radar.bg.Position = pos
-        Radar.bg.Size = Vector2.new(size, size)
-        Radar.bg.Visible = true
-        Radar.border.Position = pos
-        Radar.border.Size = Vector2.new(size, size)
-        Radar.border.Visible = true
+        if Radar.circleBg then Radar.circleBg.Visible = false end
+        if Radar.circleBorder then Radar.circleBorder.Visible = false end
+        if Radar.bg then Radar.bg.Position = pos; Radar.bg.Size = Vector2.new(size, size); Radar.bg.Visible = true end
+        if Radar.border then Radar.border.Position = pos; Radar.border.Size = Vector2.new(size, size); Radar.border.Visible = true end
     end
 
-    Radar.cross1.From = Vector2.new(center.X, pos.Y + 10)
-    Radar.cross1.To = Vector2.new(center.X, pos.Y + size - 10)
-    Radar.cross1.Visible = true
-    Radar.cross2.From = Vector2.new(pos.X + 10, center.Y)
-    Radar.cross2.To = Vector2.new(pos.X + size - 10, center.Y)
-    Radar.cross2.Visible = true
+    if Radar.cross1 then Radar.cross1.From = Vector2.new(center.X, pos.Y + 10); Radar.cross1.To = Vector2.new(center.X, pos.Y + size - 10); Radar.cross1.Visible = true end
+    if Radar.cross2 then Radar.cross2.From = Vector2.new(pos.X + 10, center.Y); Radar.cross2.To = Vector2.new(pos.X + size - 10, center.Y); Radar.cross2.Visible = true end
 
     local myChar = LocalPlayer.Character
     local myRoot = myChar and myChar:FindFirstChild("HumanoidRootPart")
     local myLook = cam.CFrame.LookVector
     if not myRoot then
-        Radar.center.Visible = false
+        if Radar.center then Radar.center.Visible = false end
         for _, d in pairs(Radar.dots) do if d then d.Visible = false end end
         for _, d in pairs(Radar.objectDots) do if d then d.Visible = false end end
         for _, d in pairs(Radar.palletSquares) do if d then d.Visible = false end end
@@ -2555,10 +1884,12 @@ local function Radar_step(cam)
     for i = objIdx, #Radar.objectDots do if Radar.objectDots[i] then Radar.objectDots[i].Visible = false end end
     for i = palletIdx, #Radar.palletSquares do if Radar.palletSquares[i] then Radar.palletSquares[i].Visible = false end end
 
-    Radar.center.PointA = center + Vector2.new(0, -8)
-    Radar.center.PointB = center + Vector2.new(-4, 4)
-    Radar.center.PointC = center + Vector2.new(4, 4)
-    Radar.center.Visible = true
+    if Radar.center then
+        Radar.center.PointA = center + Vector2.new(0, -8)
+        Radar.center.PointB = center + Vector2.new(-4, 4)
+        Radar.center.PointC = center + Vector2.new(4, 4)
+        Radar.center.Visible = true
+    end
 end
 
 -- RENDER STEP (Drawing ESP, Radar, Aimbot, Camera)
@@ -2776,25 +2107,14 @@ else
     end)
 end
 
--- MAIN AUTO LOOP (periodic features)
+-- MAIN AUTO LOOP
 task.spawn(function()
     while not VD.Destroyed do
-        pcall(NEX_AutoAttack)
-        pcall(NEX_AutoParry)
-        pcall(NEX_AutoWiggle)
-        pcall(NEX_UpdateHitboxes)
-        pcall(NEX_DestroyAllPallets)
-        pcall(NEX_FullGenBreak)
-        pcall(NEX_DoubleTap)
-        pcall(NEX_InfiniteLunge)
-        pcall(NEX_TeleportAway)
-        pcall(NEX_LeaveGenerator)
-        pcall(NEX_BeatGameSurvivor)
-        pcall(NEX_BeatGameKiller)
-        pcall(NEX_AutoHook)
-        pcall(UpdateNoFall)
-        pcall(UpdateNoSlowdown)
-        pcall(UpdateFly)
+        pcall(NEX_AutoAttack); pcall(NEX_AutoParry); pcall(NEX_AutoWiggle)
+        pcall(NEX_UpdateHitboxes); pcall(NEX_DestroyAllPallets); pcall(NEX_FullGenBreak)
+        pcall(NEX_DoubleTap); pcall(NEX_InfiniteLunge); pcall(NEX_TeleportAway)
+        pcall(NEX_LeaveGenerator); pcall(NEX_BeatGameSurvivor); pcall(NEX_BeatGameKiller)
+        pcall(NEX_AutoHook); pcall(UpdateNoFall); pcall(UpdateNoSlowdown); pcall(UpdateFly)
         task.wait(0.12)
     end
 end)
@@ -2827,7 +2147,7 @@ PlayerTab:Button({ Title="TP to Gen", Callback=function() pcall(function() NEX_T
 PlayerTab:Button({ Title="TP to Gate", Callback=function() pcall(NEX_TeleportToGate) end})
 PlayerTab:Button({ Title="TP to Hook", Callback=function() pcall(NEX_TeleportToHook) end})
 
--- FLY (tambahan)
+-- FLY
 local flySection = PlayerTab:Section({
     Title = "Fly",
     Icon = "solar:wing-bold",

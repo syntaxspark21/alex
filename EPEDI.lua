@@ -1,7 +1,7 @@
 --[[
-    NEX HUB - VIOLENCE DISTRICT (FULL FIX + AUTO STOP EMOTE)
-    Fixed: getgenv guard, hookmetamethod existence, Drawing.Fonts, unpack, VirtualInputManager, duplicate removal.
-    All features included and functional.
+    NEX HUB - VIOLENCE DISTRICT (FULL FIX + AUTO STOP EMOTE + TELEPORT DROPDOWN)
+    Fixed: getgenv guard, hookmetamethod existence, Drawing.Fonts, unpack, VirtualInputManager.
+    Added: Teleport to specific Generator, Gate, Hook via dropdown lists.
 ]]
 
 -- WINDOW SETUP & THEME (WindUI)
@@ -450,7 +450,7 @@ local function NEX_ScanMap()
     end
 end
 
--- TELEPORT HELPER
+-- TELEPORT HELPER (with index support)
 local function NEX_TeleportToPosition(pos)
     if not pos then return false end
     local root = Root; if not root then return false end
@@ -480,31 +480,67 @@ end
 local function NEX_TeleportToGenerator(index)
     NEX_ScanMap()
     if #NEX_Cache.Generators == 0 then print("[NEX HUB] Generator tidak ditemukan") return false end
-    local sorted = {}
-    for _, gen in ipairs(NEX_Cache.Generators) do
-        table.insert(sorted, {gen=gen, dist=Root and (gen.part.Position-Root.Position).Magnitude or math.huge})
+    local target
+    if index then
+        target = NEX_Cache.Generators[index]
+        if not target then print("[NEX HUB] Generator index not found") return false end
+    else
+        local closest, closestDist = nil, math.huge
+        for _, gen in ipairs(NEX_Cache.Generators) do
+            local dist = Root and (gen.part.Position - Root.Position).Magnitude or math.huge
+            if dist < closestDist then
+                closestDist = dist
+                closest = gen
+            end
+        end
+        target = closest
     end
-    table.sort(sorted, function(a,b) return a.dist < b.dist end)
-    local target = sorted[index or 1]; if not target then return false end
-    return NEX_TeleportToPosition(target.gen.part.Position)
+    if not target then return false end
+    return NEX_TeleportToPosition(target.part.Position)
 end
 
-local function NEX_TeleportToGate()
+local function NEX_TeleportToGate(index)
     NEX_ScanMap()
     if #NEX_Cache.Gates == 0 then print("[NEX HUB] Gate tidak ditemukan") return false end
-    local closest, closestDist = nil, math.huge
-    for _, gate in ipairs(NEX_Cache.Gates) do
-        local dist = Root and (gate.part.Position-Root.Position).Magnitude or math.huge
-        if dist < closestDist then closestDist=dist; closest=gate end
+    local target
+    if index then
+        target = NEX_Cache.Gates[index]
+        if not target then print("[NEX HUB] Gate index not found") return false end
+    else
+        local closest, closestDist = nil, math.huge
+        for _, gate in ipairs(NEX_Cache.Gates) do
+            local dist = Root and (gate.part.Position - Root.Position).Magnitude or math.huge
+            if dist < closestDist then
+                closestDist = dist
+                closest = gate
+            end
+        end
+        target = closest
     end
-    if not closest then return false end
-    return NEX_TeleportToPosition(closest.part.Position)
+    if not target then return false end
+    return NEX_TeleportToPosition(target.part.Position)
 end
 
-local function NEX_TeleportToHook()
+local function NEX_TeleportToHook(index)
     NEX_ScanMap()
-    if not NEX_Cache.ClosestHook then print("[NEX HUB] Hook tidak ditemukan") return false end
-    return NEX_TeleportToPosition(NEX_Cache.ClosestHook.part.Position)
+    if #NEX_Cache.Hooks == 0 then print("[NEX HUB] Hook tidak ditemukan") return false end
+    local target
+    if index then
+        target = NEX_Cache.Hooks[index]
+        if not target then print("[NEX HUB] Hook index not found") return false end
+    else
+        local closest, closestDist = nil, math.huge
+        for _, hook in ipairs(NEX_Cache.Hooks) do
+            local dist = Root and (hook.part.Position - Root.Position).Magnitude or math.huge
+            if dist < closestDist then
+                closestDist = dist
+                closest = hook
+            end
+        end
+        target = closest
+    end
+    if not target then return false end
+    return NEX_TeleportToPosition(target.part.Position)
 end
 
 -- AUTO LEAVE GENERATOR
@@ -2143,9 +2179,124 @@ end})
 PlayerTab:Slider({ Title="Jump Power", Value={Min=50,Max=300,Default=50}, Callback=function(v) VD.JumpValue = v end})
 PlayerTab:Toggle({ Title="Infinite Jump", Callback=function(v) VD.InfiniteJump = v end})
 PlayerTab:Toggle({ Title="Noclip", Callback=function(v) VD.Noclip = v end})
-PlayerTab:Button({ Title="TP to Gen", Callback=function() pcall(function() NEX_TeleportToGenerator(1) end) end})
-PlayerTab:Button({ Title="TP to Gate", Callback=function() pcall(NEX_TeleportToGate) end})
-PlayerTab:Button({ Title="TP to Hook", Callback=function() pcall(NEX_TeleportToHook) end})
+
+-- Buttons for teleport to closest
+PlayerTab:Button({ Title="TP to Closest Generator", Callback=function() pcall(NEX_TeleportToGenerator) end})
+PlayerTab:Button({ Title="TP to Closest Gate", Callback=function() pcall(NEX_TeleportToGate) end})
+PlayerTab:Button({ Title="TP to Closest Hook", Callback=function() pcall(NEX_TeleportToHook) end})
+
+-- Dropdowns for selecting specific object
+local GenDropdown = PlayerTab:Dropdown({
+    Title = "Select Generator",
+    Options = {},
+    Callback = function(selected)
+        if selected and selected ~= "" then
+            for i, gen in ipairs(NEX_Cache.Generators) do
+                local label = string.format("Gen %d (%.0fm)", i, (Root and (gen.part.Position - Root.Position).Magnitude or 0))
+                if label == selected then
+                    NEX_TeleportToGenerator(i)
+                    break
+                end
+            end
+        end
+    end
+})
+
+local GateDropdown = PlayerTab:Dropdown({
+    Title = "Select Gate",
+    Options = {},
+    Callback = function(selected)
+        if selected and selected ~= "" then
+            for i, gate in ipairs(NEX_Cache.Gates) do
+                local label = string.format("Gate %d (%.0fm)", i, (Root and (gate.part.Position - Root.Position).Magnitude or 0))
+                if label == selected then
+                    NEX_TeleportToGate(i)
+                    break
+                end
+            end
+        end
+    end
+})
+
+local HookDropdown = PlayerTab:Dropdown({
+    Title = "Select Hook",
+    Options = {},
+    Callback = function(selected)
+        if selected and selected ~= "" then
+            for i, hook in ipairs(NEX_Cache.Hooks) do
+                local label = string.format("Hook %d (%.0fm)", i, (Root and (hook.part.Position - Root.Position).Magnitude or 0))
+                if label == selected then
+                    NEX_TeleportToHook(i)
+                    break
+                end
+            end
+        end
+    end
+})
+
+-- Refresh button
+PlayerTab:Button({ Title = "Refresh Teleport Lists", Callback = function()
+    NEX_ScanMap()
+    local function updateDropdowns()
+        local genOpts = {}
+        for i, gen in ipairs(NEX_Cache.Generators) do
+            local dist = Root and (gen.part.Position - Root.Position).Magnitude or 0
+            table.insert(genOpts, string.format("Gen %d (%.0fm)", i, dist))
+        end
+        if #genOpts == 0 then table.insert(genOpts, "No generators found") end
+        GenDropdown:SetOptions(genOpts)
+
+        local gateOpts = {}
+        for i, gate in ipairs(NEX_Cache.Gates) do
+            local dist = Root and (gate.part.Position - Root.Position).Magnitude or 0
+            table.insert(gateOpts, string.format("Gate %d (%.0fm)", i, dist))
+        end
+        if #gateOpts == 0 then table.insert(gateOpts, "No gates found") end
+        GateDropdown:SetOptions(gateOpts)
+
+        local hookOpts = {}
+        for i, hook in ipairs(NEX_Cache.Hooks) do
+            local dist = Root and (hook.part.Position - Root.Position).Magnitude or 0
+            table.insert(hookOpts, string.format("Hook %d (%.0fm)", i, dist))
+        end
+        if #hookOpts == 0 then table.insert(hookOpts, "No hooks found") end
+        HookDropdown:SetOptions(hookOpts)
+    end
+    updateDropdowns()
+    print("[NEX HUB] Teleport lists refreshed")
+end})
+
+-- Periodically update dropdowns
+task.spawn(function()
+    while not VD.Destroyed do
+        task.wait(5)
+        if PlayerTab and PlayerTab.Visible then
+            local genOpts = {}
+            for i, gen in ipairs(NEX_Cache.Generators) do
+                local dist = Root and (gen.part.Position - Root.Position).Magnitude or 0
+                table.insert(genOpts, string.format("Gen %d (%.0fm)", i, dist))
+            end
+            if #genOpts == 0 then table.insert(genOpts, "No generators found") end
+            GenDropdown:SetOptions(genOpts)
+
+            local gateOpts = {}
+            for i, gate in ipairs(NEX_Cache.Gates) do
+                local dist = Root and (gate.part.Position - Root.Position).Magnitude or 0
+                table.insert(gateOpts, string.format("Gate %d (%.0fm)", i, dist))
+            end
+            if #gateOpts == 0 then table.insert(gateOpts, "No gates found") end
+            GateDropdown:SetOptions(gateOpts)
+
+            local hookOpts = {}
+            for i, hook in ipairs(NEX_Cache.Hooks) do
+                local dist = Root and (hook.part.Position - Root.Position).Magnitude or 0
+                table.insert(hookOpts, string.format("Hook %d (%.0fm)", i, dist))
+            end
+            if #hookOpts == 0 then table.insert(hookOpts, "No hooks found") end
+            HookDropdown:SetOptions(hookOpts)
+        end
+    end
+end)
 
 -- FLY
 local flySection = PlayerTab:Section({
@@ -2295,4 +2446,4 @@ end)
 
 LocalPlayer:GetPropertyChangedSignal("Team"):Connect(ForceRefresh)
 
-print("[NEX HUB] Violence District Final Loaded (All features fixed, auto stop emote added, auto leave gen cooldown)")
+print("[NEX HUB] Violence District Final Loaded (All features fixed, teleport dropdown added)")

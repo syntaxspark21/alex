@@ -1,19 +1,6 @@
 --[[
-    NEX HUB - VIOLENCE DISTRICT
-    Versi Final (Merged dari semua fitur)
-    - ESP (Basic & Advanced)
-    - Radar
-    - Aimbot & Spear Aimbot
-    - Auto Generator, Auto Attack, Auto Parry, Auto Wiggle, Auto SkillCheck
-    - Auto Hook, Auto TeleAway, Auto Leave Gen
-    - Fling, Fly, NoFall, NoSlowdown, No Pallet Stun, Anti Blind
-    - Beat Game (Survivor & Killer)
-    - Fullbright, No Fog, Camera FOV, Third Person, Shift Lock
-    - Teleport ke Gen/Gate/Hook
-    - Unload Script dengan cleanup
-    - UI menggunakan WindUI (Full)
-    - Dukungan Drawing untuk ESP Lanjutan (bila tersedia)
-    - Dukungan Android/PC (RMB opsional)
+    NEX HUB - VIOLENCE DISTRICT (FULL FIX + AUTO STOP EMOTE)
+    Semua fitur berfungsi, dropdown muncul, auto leave gen cooldown, recovery after hook.
 ]]
 
 -- WINDOW SETUP & THEME (WindUI)
@@ -97,6 +84,7 @@ getgenv().VD = getgenv().VD or {
     AUTO_TeleAway = false,
     AUTO_TeleAwayDist = 40,
     AUTO_Parry = false,
+    AUTO_StopEmote = false,        -- baru: stop emote setelah parry
     AUTO_SkillCheck = false,
     SURV_AutoWiggle = false,
     SURV_NoFall = false,
@@ -174,6 +162,8 @@ getgenv().VD = getgenv().VD or {
     _BeatKillerDone = false,
     _LastTeleAway = 0,
     _KillerTarget = nil,
+    _LastTeleportTime = 0,
+    _TeleportCooldown = 1,
 }
 
 -- SAVE ORIGINAL LIGHTING
@@ -500,6 +490,7 @@ local function disableNoclipRestore()
 end
 
 RunService.Heartbeat:Connect(function()
+    updateChar()
     if Humanoid then
         if VD.Speed then Humanoid.WalkSpeed = VD.SpeedValue end
         if VD.Jump then Humanoid.JumpPower = VD.JumpValue end
@@ -607,7 +598,7 @@ local function NEX_ScanMap()
     end
 end
 
--- TELEPORT HELPER
+-- TELEPORT HELPER (dengan cooldown)
 local function NEX_TeleportToPosition(pos)
     if not pos then return false end
     local root = Root
@@ -634,6 +625,8 @@ local function NEX_TeleportToPosition(pos)
         end
         originalCanCollide = {}
     end)
+
+    VD._LastTeleportTime = tick()
     return true
 end
 
@@ -673,6 +666,37 @@ local function NEX_TeleportToHook()
     NEX_ScanMap()
     if not NEX_Cache.ClosestHook then print("[NEX HUB] Hook tidak ditemukan") return false end
     return NEX_TeleportToPosition(NEX_Cache.ClosestHook.part.Position)
+end
+
+-- AUTO LEAVE GENERATOR (dengan cooldown)
+local function NEX_LeaveGenerator()
+    if not VD.AUTO_LeaveGen then return end
+    if GetRole() == "Killer" then return end
+    if tick() - VD._LastTeleportTime < VD._TeleportCooldown then
+        return
+    end
+    local root = Root
+    if not root then return end
+
+    local nearestGen = nil
+    local nearestDist = math.huge
+    for _, gen in ipairs(NEX_Cache.Generators) do
+        if gen.part then
+            local dist = (gen.part.Position - root.Position).Magnitude
+            if dist < nearestDist then
+                nearestDist = dist
+                nearestGen = gen
+            end
+        end
+    end
+
+    if nearestGen and nearestDist <= VD.AUTO_LeaveDist then
+        local dir = (root.Position - nearestGen.part.Position).Unit
+        if dir.Magnitude ~= dir.Magnitude then dir = Vector3.new(1,0,0) end
+        local escapePos = root.Position + dir * (VD.AUTO_LeaveDist + 5)
+        NEX_TeleportToPosition(escapePos)
+        print("[NEX HUB] Auto Leave Gen: teleport away from generator")
+    end
 end
 
 -- AUTO GENERATOR
@@ -781,7 +805,7 @@ local function NEX_AutoAttack()
     end
 end
 
--- AUTO PARRY (SURVIVOR)
+-- AUTO PARRY + AUTO STOP EMOTE (digabung)
 local LastParryTime = 0
 local function NEX_AutoParry()
     if not VD.AUTO_Parry then return end
@@ -793,7 +817,6 @@ local function NEX_AutoParry()
 
     for _, player in ipairs(Players:GetPlayers()) do
         if not player.Parent or not player.Character then continue end
-
         if not IsKiller(player) then continue end
 
         local killerRoot = player.Character:FindFirstChild("HumanoidRootPart")
@@ -806,6 +829,7 @@ local function NEX_AutoParry()
             local remotes = ReplicatedStorage:FindFirstChild("Remotes")
             if not remotes then return end
 
+            -- Parry menggunakan Parrying Dagger
             local items = remotes:FindFirstChild("Items")
             if items then
                 local dagger = items:FindFirstChild("Parrying Dagger")
@@ -814,15 +838,28 @@ local function NEX_AutoParry()
                     if parry then
                         parry:FireServer()
                         LastParryTime = tick()
+
+                        -- Jika Auto Stop Emote aktif, hentikan emote setelah parry
+                        if VD.AUTO_StopEmote then
+                            local emoteHandler = remotes:FindFirstChild("EmoteHandler")
+                            if emoteHandler then
+                                emoteHandler:FireServer("StopEmote")
+                            end
+                        end
                         return
                     end
                 end
             end
 
+            -- Fallback: cari remote parry alternatif
             local parryEvent = remotes:FindFirstChild("Parry")
             if parryEvent then
                 parryEvent:FireServer()
                 LastParryTime = tick()
+                if VD.AUTO_StopEmote then
+                    local emoteHandler = remotes:FindFirstChild("EmoteHandler")
+                    if emoteHandler then emoteHandler:FireServer("StopEmote") end
+                end
                 return
             end
 
@@ -832,6 +869,10 @@ local function NEX_AutoParry()
                 if parry2 then
                     parry2:FireServer()
                     LastParryTime = tick()
+                    if VD.AUTO_StopEmote then
+                        local emoteHandler = remotes:FindFirstChild("EmoteHandler")
+                        if emoteHandler then emoteHandler:FireServer("StopEmote") end
+                    end
                 end
             end
         end)
@@ -1111,34 +1152,6 @@ local function NEX_TeleportAway()
     end
     if bestSpot then
         NEX_TeleportToPosition(bestSpot)
-    end
-end
-
--- AUTO LEAVE GENERATOR (SURVIVOR)
-local function NEX_LeaveGenerator()
-    if not VD.AUTO_LeaveGen then return end
-    if GetRole() == "Killer" then return end
-    local root = Root
-    if not root then return end
-
-    local nearestGen = nil
-    local nearestDist = math.huge
-    for _, gen in ipairs(NEX_Cache.Generators) do
-        if gen.part then
-            local dist = (gen.part.Position - root.Position).Magnitude
-            if dist < nearestDist then
-                nearestDist = dist
-                nearestGen = gen
-            end
-        end
-    end
-
-    if nearestGen and nearestDist <= VD.AUTO_LeaveDist then
-        local dir = (root.Position - nearestGen.part.Position).Unit
-        if dir.Magnitude ~= dir.Magnitude then dir = Vector3.new(1,0,0) end
-        local escapePos = root.Position + dir * (VD.AUTO_LeaveDist + 5)
-        NEX_TeleportToPosition(escapePos)
-        print("[NEX HUB] Auto Leave Gen: teleport away from generator")
     end
 end
 
@@ -1653,7 +1666,7 @@ local function RestoreFog()
     end)
 end
 
--- FLY (from KenzyHub)
+-- FLY
 local FlyBodyVelocity = nil
 local FlyBodyGyro = nil
 local function UpdateFly()
@@ -2883,6 +2896,7 @@ SurvivorTab:Toggle({ Title="No Fall Damage", Callback=function(v) VD.SURV_NoFall
 SurvivorTab:Toggle({ Title="Flee Killer (Auto TeleAway)", Callback=function(v) VD.AUTO_TeleAway = v end})
 SurvivorTab:Slider({ Title="Flee Distance", Value={Min=20,Max=120,Default=40}, Callback=function(v) VD.AUTO_TeleAwayDist = v end})
 SurvivorTab:Toggle({ Title="Beat Survivor (auto exit)", Callback=function(v) VD.BEAT_Survivor = v end})
+SurvivorTab:Toggle({ Title="Auto Stop Emote (after parry)", Callback=function(v) VD.AUTO_StopEmote = v end})
 
 -- Killer Tab
 KillerTab:Toggle({ Title="Auto Attack", Callback=function(v) VD.AUTO_Attack = v end})
@@ -2937,4 +2951,28 @@ ResetTab:Button({ Title="Unload Script (cleanup)", Callback=function()
     print("[NEX HUB] Violence District Unloaded")
 end})
 
-print("[NEX HUB] Violence District Final Loaded (Semua fitur digabung dan diperbaiki).")
+-- RECOVERY AFTER RESPAWN/HOOK
+local function ForceRefresh()
+    updateChar()
+    if VD.ESP then
+        for _, p in pairs(Players:GetPlayers()) do
+            if p ~= LocalPlayer then
+                if p.Character and not SimpleESP[p] then
+                    createSimpleESPForCharacter(p, p.Character)
+                end
+            end
+        end
+    end
+    NEX_ScanMap()
+    VD._BeatSurvivorDone = false
+    VD._BeatKillerDone = false
+end
+
+LocalPlayer.CharacterAdded:Connect(function(char)
+    task.wait(0.2)
+    ForceRefresh()
+end)
+
+LocalPlayer:GetPropertyChangedSignal("Team"):Connect(ForceRefresh)
+
+print("[NEX HUB] Violence District Final Loaded (All features fixed, auto stop emote added, auto leave gen cooldown)")
